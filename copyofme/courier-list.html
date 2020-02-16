@@ -66,57 +66,182 @@
               <div class="container">
                 <ul class="breadcrumb-list list-unstyled row no-gutters">
                   <li class="breadcrumb-list_item col-auto"><a class="breadcrumb-list_link" href="./index.html">Главная</a></li>
-                  <li class="breadcrumb-list_item col-auto"><a class="breadcrumb-list_link" href="./profile.html">Личный кабинет</a></li>
-                  <li class="breadcrumb-list_item col-auto"><span class="breadcrumb-list_link">Ваш заказ</span></li>
+                  <li class="breadcrumb-list_item col-auto"><span class="breadcrumb-list_link">Курьеры</span></li>
                 </ul>
               </div>
             </div>
-      <section class="profile order">
+      <section class="cooperator">
         <div class="container">
-          <h1 class="page-title">Личный кабинет</h1>
-          <div class="row-l">
-                        <aside class="aside col-auto">
-                          <ul class="profile-list list-unstyled">
-                            <li class="profile-list_item is-active"><a class="profile-list_link" href="./order.html">Заказы</a></li>
-                            <li class="profile-list_item"><a class="profile-list_link" href="./favorite.html">Мои фавориты</a></li>
-                            <li class="profile-list_item"><a class="profile-list_link" href="./profile.html">Профиль</a></li>
-                          </ul>
-                        </aside>
-            <div class="col">
-              <h2 class="h3 no-strong mb-5">Ваш заказ</h2>
-              <div class="card-block card-shadow card-round">
-                <ul class="profile-block_list list-unstyled">
-                  <li class="pofile-block_item"><strong class="mr-4">Username донора:</strong>@ermolayev</li>
-                  <li class="profile-block_item"><strong class="mr-4">Наименование:</strong>Яйцеклетка</li>
-                  <li class="profile-block_item d-flex"><strong class="mr-4">Колическтво единиц (порций), шт.:</strong>
-                    <div class="d-flex">
-                      <button class="btn btn-xs btn-icon">
-                        <svg class="icon icon-minus">
-                          <use xlink:href="#icon-minus"></use>
-                        </svg>
-                      </button><span class="mx-3">1												</span>
-                      <button class="btn btn-xs btn-icon">
-                        <svg class="icon icon-plus">
-                          <use xlink:href="#icon-plus"></use>
-                        </svg>
-                      </button>
+          <h1 class="page-title">Курьеры</h1>
+          <form class="form" action="">
+            <div class="cooperator-search row justify-content-between align-items-center">
+              <div class="col-7">
+                <input class="form-control" type="text" placeholder="Поиск сотрудничка">
+              </div>
+              <div class="col-auto">
+                <input class="form-check" type="checkbox" name="date" id="date">
+                <label class="form-sort dropdown-control" for="date">Статус
+                  <svg class="icon icon-dropdown icon-right">
+                    <use xlink:href="#icon-dropdown"></use>
+                  </svg>
+                  <div class="dropdown dropdown-right">
+                    <div class="dropdown-item">
+                      <input class="form-radio" type="radio" name="date-sort" value="0" id="date-sort_0" checked>
+                      <label class="form-label" for="date-sort_0">Свободен</label>
                     </div>
-                  </li>
-                  <li class="profile-block_item"><strong class="mr-4">Тип доставки:</strong>доставка</li>
-                  <li class="profile-block_item"><strong class="mr-4">Время доставки:</strong>25 дней</li>
-                </ul>
-                <div class="card-accent card-round">
-                  <div class="profile-price">
-                    <div class="d-flex justify-content-between mb-4"><strong>Стоимость:</strong><span>300$</span></div>
-                    <div class="d-flex justify-content-between mb-4"><strong>Доставка:</strong><span>100$</span></div>
-                    <div class="line my-4"></div>
-                    <div class="d-flex justify-content-between"><strong>Итого:</strong><span>400$</span></div>
+                    <div class="dropdown-item">
+                      <input class="form-radio" type="radio" name="date-sort" value="1" id="date-sort_1">
+                      <label class="form-label" for="date-sort_1">Выполняет доставку</label>
+                    </div>
                   </div>
+                </label>
+              </div>
+            </div>
+          </form>
+          <div class="card-box">
+            <div class="card-block card-shadow card-round">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="cooperator-img image image-con" style="background-image: url(./img/data/cooperator-img.png)"></div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                  <h2 class="h3 mb-5">Ермолаев Пётр Иванович</h2>
+                  <ul class="profile-block_list cooperator-list list-unstyled">
+                    <li class="profile-block_item"><strong class="mr-3">Статус:</strong>Свободен</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Должность:</strong>Курьер</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Адрес:</strong>Россия, г. Москва, ул. Строителей 17, д.2</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Телефон:</strong>+375(29)6842618</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Дата начала работы:</strong>12.09.2015</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Контракт до:</strong>12.09.2025</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Login:</strong>ermolaevpi</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Пароль:</strong>*********<a class="link-decorated ml-4" href="">Показать</a></li>
+                    <li class="profile-block_item"><strong class="mr-3">Страна нахождения:</strong>Португалия</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Список стран для въезда по визе:</strong><a class="link-decorated" href="">Показать</a></li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Виза действительна до:</strong>30.02.2023</li>
+                  </ul>
                 </div>
               </div>
-              <div class="order-control row justify-content-between">
-                <div class="col-4"><a class="btn btn-m btn-white btn-round" href="./order.html">Назад</a></div>
-                <div class="col-4"><a class="btn btn-m btn-black btn-round" href="./order-checkout.html">Оплатить</a><span class="text-xs">* Нажимая оплатить вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных...</span></div>
+              <div class="order-control row justify-content-center">
+                <div class="col-auto">
+                  <button class="cooperator-more btn btn-m btn-blue btn-round">Подробнее</button>
+                </div>
+                <div class="col-auto"><a class="btn btn-m btn-black btn-round" href="./courier-add.html">Редактировать</a></div>
+              </div>
+            </div>
+            <div class="card-block card-shadow card-round">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="cooperator-img image image-con" style="background-image: url(./img/data/cooperator-img.png)"></div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                  <h2 class="h3 mb-5">Ермолаев Пётр Иванович</h2>
+                  <ul class="profile-block_list cooperator-list list-unstyled">
+                    <li class="profile-block_item"><strong class="mr-3">Статус:</strong>Свободен</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Должность:</strong>Курьер</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Адрес:</strong>Россия, г. Москва, ул. Строителей 17, д.2</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Телефон:</strong>+375(29)6842618</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Дата начала работы:</strong>12.09.2015</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Контракт до:</strong>12.09.2025</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Login:</strong>ermolaevpi</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Пароль:</strong>*********<a class="link-decorated ml-4" href="">Показать</a></li>
+                    <li class="profile-block_item"><strong class="mr-3">Страна нахождения:</strong>Португалия</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Список стран для въезда по визе:</strong><a class="link-decorated" href="">Показать</a></li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Виза действительна до:</strong>30.02.2023</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-control row justify-content-center">
+                <div class="col-auto">
+                  <button class="cooperator-more btn btn-m btn-blue btn-round">Подробнее</button>
+                </div>
+                <div class="col-auto"><a class="btn btn-m btn-black btn-round" href="./courier-add.html">Редактировать</a></div>
+              </div>
+            </div>
+            <div class="card-block card-shadow card-round">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="cooperator-img image image-con" style="background-image: url(./img/data/cooperator-img.png)"></div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                  <h2 class="h3 mb-5">Ермолаев Пётр Иванович</h2>
+                  <ul class="profile-block_list cooperator-list list-unstyled">
+                    <li class="profile-block_item"><strong class="mr-3">Статус:</strong>Свободен</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Должность:</strong>Курьер</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Адрес:</strong>Россия, г. Москва, ул. Строителей 17, д.2</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Телефон:</strong>+375(29)6842618</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Дата начала работы:</strong>12.09.2015</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Контракт до:</strong>12.09.2025</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Login:</strong>ermolaevpi</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Пароль:</strong>*********<a class="link-decorated ml-4" href="">Показать</a></li>
+                    <li class="profile-block_item"><strong class="mr-3">Страна нахождения:</strong>Португалия</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Список стран для въезда по визе:</strong><a class="link-decorated" href="">Показать</a></li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Виза действительна до:</strong>30.02.2023</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-control row justify-content-center">
+                <div class="col-auto">
+                  <button class="cooperator-more btn btn-m btn-blue btn-round">Подробнее</button>
+                </div>
+                <div class="col-auto"><a class="btn btn-m btn-black btn-round" href="./courier-add.html">Редактировать</a></div>
+              </div>
+            </div>
+            <div class="card-block card-shadow card-round">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="cooperator-img image image-con" style="background-image: url(./img/data/cooperator-img.png)"></div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                  <h2 class="h3 mb-5">Ермолаев Пётр Иванович</h2>
+                  <ul class="profile-block_list cooperator-list list-unstyled">
+                    <li class="profile-block_item"><strong class="mr-3">Статус:</strong>Свободен</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Должность:</strong>Курьер</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Адрес:</strong>Россия, г. Москва, ул. Строителей 17, д.2</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Телефон:</strong>+375(29)6842618</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Дата начала работы:</strong>12.09.2015</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Контракт до:</strong>12.09.2025</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Login:</strong>ermolaevpi</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Пароль:</strong>*********<a class="link-decorated ml-4" href="">Показать</a></li>
+                    <li class="profile-block_item"><strong class="mr-3">Страна нахождения:</strong>Португалия</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Список стран для въезда по визе:</strong><a class="link-decorated" href="">Показать</a></li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Виза действительна до:</strong>30.02.2023</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-control row justify-content-center">
+                <div class="col-auto">
+                  <button class="cooperator-more btn btn-m btn-blue btn-round">Подробнее</button>
+                </div>
+                <div class="col-auto"><a class="btn btn-m btn-black btn-round" href="./courier-add.html">Редактировать</a></div>
+              </div>
+            </div>
+            <div class="card-block card-shadow card-round">
+              <div class="row">
+                <div class="col-auto">
+                  <div class="cooperator-img image image-con" style="background-image: url(./img/data/cooperator-img.png)"></div>
+                </div>
+                <div class="col d-flex flex-column justify-content-between">
+                  <h2 class="h3 mb-5">Ермолаев Пётр Иванович</h2>
+                  <ul class="profile-block_list cooperator-list list-unstyled">
+                    <li class="profile-block_item"><strong class="mr-3">Статус:</strong>Свободен</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Должность:</strong>Курьер</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Адрес:</strong>Россия, г. Москва, ул. Строителей 17, д.2</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Телефон:</strong>+375(29)6842618</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Дата начала работы:</strong>12.09.2015</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Контракт до:</strong>12.09.2025</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Login:</strong>ermolaevpi</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Пароль:</strong>*********<a class="link-decorated ml-4" href="">Показать</a></li>
+                    <li class="profile-block_item"><strong class="mr-3">Страна нахождения:</strong>Португалия</li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Список стран для въезда по визе:</strong><a class="link-decorated" href="">Показать</a></li>
+                    <li class="profile-block_item is-hide"><strong class="mr-3">Виза действительна до:</strong>30.02.2023</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-control row justify-content-center">
+                <div class="col-auto">
+                  <button class="cooperator-more btn btn-m btn-blue btn-round">Подробнее</button>
+                </div>
+                <div class="col-auto"><a class="btn btn-m btn-black btn-round" href="./courier-add.html">Редактировать</a></div>
               </div>
             </div>
           </div>

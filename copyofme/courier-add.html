@@ -66,60 +66,70 @@
               <div class="container">
                 <ul class="breadcrumb-list list-unstyled row no-gutters">
                   <li class="breadcrumb-list_item col-auto"><a class="breadcrumb-list_link" href="./index.html">Главная</a></li>
-                  <li class="breadcrumb-list_item col-auto"><a class="breadcrumb-list_link" href="./profile.html">Личный кабинет</a></li>
-                  <li class="breadcrumb-list_item col-auto"><span class="breadcrumb-list_link">Ваш заказ</span></li>
+                  <li class="breadcrumb-list_item col-auto"><span class="breadcrumb-list_link">Добавить Сотрудника</span></li>
                 </ul>
               </div>
             </div>
-      <section class="profile order">
+      <section class="cooperator">
         <div class="container">
-          <h1 class="page-title">Личный кабинет</h1>
-          <div class="row-l">
-                        <aside class="aside col-auto">
-                          <ul class="profile-list list-unstyled">
-                            <li class="profile-list_item is-active"><a class="profile-list_link" href="./order.html">Заказы</a></li>
-                            <li class="profile-list_item"><a class="profile-list_link" href="./favorite.html">Мои фавориты</a></li>
-                            <li class="profile-list_item"><a class="profile-list_link" href="./profile.html">Профиль</a></li>
-                          </ul>
-                        </aside>
-            <div class="col">
-              <h2 class="h3 no-strong mb-5">Ваш заказ</h2>
-              <div class="card-block card-shadow card-round">
-                <ul class="profile-block_list list-unstyled">
-                  <li class="pofile-block_item"><strong class="mr-4">Username донора:</strong>@ermolayev</li>
-                  <li class="profile-block_item"><strong class="mr-4">Наименование:</strong>Яйцеклетка</li>
-                  <li class="profile-block_item d-flex"><strong class="mr-4">Колическтво единиц (порций), шт.:</strong>
-                    <div class="d-flex">
-                      <button class="btn btn-xs btn-icon">
-                        <svg class="icon icon-minus">
-                          <use xlink:href="#icon-minus"></use>
-                        </svg>
-                      </button><span class="mx-3">1												</span>
-                      <button class="btn btn-xs btn-icon">
-                        <svg class="icon icon-plus">
-                          <use xlink:href="#icon-plus"></use>
-                        </svg>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="profile-block_item"><strong class="mr-4">Тип доставки:</strong>доставка</li>
-                  <li class="profile-block_item"><strong class="mr-4">Время доставки:</strong>25 дней</li>
-                </ul>
-                <div class="card-accent card-round">
-                  <div class="profile-price">
-                    <div class="d-flex justify-content-between mb-4"><strong>Стоимость:</strong><span>300$</span></div>
-                    <div class="d-flex justify-content-between mb-4"><strong>Доставка:</strong><span>100$</span></div>
-                    <div class="line my-4"></div>
-                    <div class="d-flex justify-content-between"><strong>Итого:</strong><span>400$</span></div>
-                  </div>
+          <h1 class="page-title">Добавить Сотрудника</h1>
+          <form class="form form-cooperator" action="">
+            <div class="form-group row align-items-center">
+              <div class="col-auto">
+                <label class="form-label">ФИО:</label>
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <div class="col-auto">
+                <label class="form-label">Login:</label>
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <div class="col-auto">
+                <label class="form-label">Пароль:</label>
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="password">
+              </div>
+              <div class="col-auto"><a class="link-decorated" href="">Сгенерировать пароль</a></div>
+            </div>
+            <div class="form-group row align-items-center">
+              <div class="col-auto">
+                <label class="form-label">Дата начала работы:</label>
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <div class="col-auto">
+                <label class="form-label">Телефон:</label>
+              </div>
+              <div class="col-4">
+                <input class="form-control" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Описание:</label>
+              <div class="row">
+                <div class="col-8">
+                  <textarea class="form-control"></textarea>
                 </div>
               </div>
-              <div class="order-control row justify-content-between">
-                <div class="col-4"><a class="btn btn-m btn-white btn-round" href="./order.html">Назад</a></div>
-                <div class="col-4"><a class="btn btn-m btn-black btn-round" href="./order-checkout.html">Оплатить</a><span class="text-xs">* Нажимая оплатить вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных...</span></div>
-              </div>
             </div>
-          </div>
+            <div class="form-group">
+              <label class="form-label">Фото:</label>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Условия въезда в страны:</label>
+            </div>
+          </form>
         </div>
       </section>
     </main>
