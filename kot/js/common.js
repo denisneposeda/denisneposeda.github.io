@@ -61,6 +61,10 @@ $(function() {
         var link = $(this).attr('href'),
             parent =  $(this).closest('.header').is('.header-fixed');
         (parent) ? $(this).addClass('is-active').parent().siblings().children('.is-active').removeClass('is-active') : $('.header-fixed').find('.header-nav_link[href="'+ link +'"]').addClass('is-active').parent().siblings().children('.is-active').removeClass('is-active');
+        if ( $('html').is('.is-menu') ) {
+            $('html').removeClass('is-menu');
+            $('.hamburger').removeClass('is-active');
+        }
         $('html, body').animate({
             'scrollTop':   $(link).offset().top - $('.header-fixed').outerHeight()
         }, 500);       
@@ -81,5 +85,11 @@ $(function() {
         e.preventDefault();
         $('.header-fixed .header-nav_link.is-active').parent().next().children('.header-nav_link').click();
     });
+
+    $('.hamburger').click(function(e){
+        e.preventDefault();
+        $(this).toggleClass('is-active');
+        $('html').toggleClass('is-menu');
+    })
 
 });
