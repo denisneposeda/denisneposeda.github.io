@@ -124,4 +124,45 @@ $(function() {
         $('html').toggleClass('is-menu');
     })
 
+    $('.profile-edit').click(function(e){
+        e.preventDefault();
+        $(this).closest('.form').find('.form-control[type=text]').attr('readonly',false);
+        $(this).parent().hide().siblings().show();
+        //  $.fancybox.open('<div class="message"><p>Вы можете редактировать ваши данные.</p></div>');
+    });
+
+    $('.profile-save').click(function(e){
+        e.preventDefault();
+        $(this).closest('.form').find('.form-control[type=text]').attr('readonly',true);
+        $(this).closest('.profile-edited').hide().siblings().show();
+         $.fancybox.open('<div class="message"><p>Ваши изменения сохранены.</p></div>');
+    });
+
+    $('.profile-exit').click(function(e){
+        e.preventDefault();
+        $(this).closest('.form').find('.form-control[type=text]').attr('readonly',true);
+        $(this).closest('.profile-edited').hide().siblings().show();
+         $.fancybox.open('<div class="message"><p>Ваши изменения не были сохранены.</p></div>');
+    });
+
+    $('.doc-show').click(function(e){
+        e.preventDefault();
+        $(this).closest('tr').next().find('.table-doc_content').slideDown();
+    });
+
+    $('.doc-close').click(function(e){
+        e.preventDefault();
+        $(this).parent().slideUp();
+    });
+
+    $('.info-show').click(function(e){
+        e.preventDefault();
+        $(this).closest('tr').next().find('.table-info_content').slideDown();
+    });
+
+    $('.info-close').click(function(e){
+        e.preventDefault();
+        $(this).parent().slideUp();
+    });
+
 });
