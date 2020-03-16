@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html class="login">
+  <head>
+    <meta charset="utf-8">
+    <title>LOCA - сайт о чем то</title>
+    <meta name="description" сontent="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta property="og:image" content="img/favicon/favicon.png">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon.png">
+    <meta name="theme-color" content="#000">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/hamburgers.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/selectric.min.css">
+    <link rel="stylesheet" href="./css/jquery.jscrollpane.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="header-bar col-xl-auto col">
+            <div class="row justify-content-between align-items-center no-gutters">
+              <div class="header-logo col-auto order-2 order-xl-1 mx-xl-0 mx-auto"><img class="header-logo_img" src="./img/logo.svg" alt=""></div>
+              <div class="header-home col-auto order-1 order-xl-2"><a class="btn btn-small btn-secondary btn-icon" href="./index.html">
+                  <svg class="icon icon-home">
+                    <use xlink:href="#icon-home"></use>
+                  </svg></a></div>
+            </div>
+          </div>
+          <div class="header-navbar col-xl col-auto">
+            <div class="row align-items-center justify-content-between">
+              <div class="header-nav col-auto d-xl-block d-none">
+                <ul class="header-nav_list list-unstyled row">
+                  <li class="header-nav_item col-auto"><a class="header-nav_link" href="./about.html">О проекте</a></li>
+                  <li class="header-nav_item col-auto"><a class="header-nav_link" href="./contact.html">Обратная связь</a></li>
+                  <li class="header-nav_item col-auto"><a class="header-nav_link" href="./public.html">Публичная оферта</a></li>
+                  <li class="header-nav_item col-auto"><a class="header-nav_link" href="./faq.html">FAQ</a></li>
+                </ul>
+              </div>
+              <div class="header-dec col-auto d-xl-block d-none"><a class="header-dec_link" href="./adv-private.html"><i class="icon icon-plus"></i>Добавить объявление</a></div>
+              <div class="col-auto ml-auto d-xl-none d-block">
+                <button class="btn btn-small btn-secondary btn-icon" id="menu-open">
+                  <svg class="icon icon-hamburger">
+                    <use xlink:href="#icon-hamburger"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu" id="menu">
+      <div class="container">
+        <div class="menu-header row justify-content-between align-items-center">
+          <div class="col-auto"><a href="./index.html"><img class="header-logo_img" src="./img/logo.svg" alt=""></a></div>
+          <div class="col-auto">
+            <button class="btn btn-small btn-secondary btn-icon" id="menu-close">
+              <svg class="icon icon-closel">
+                <use xlink:href="#icon-closel"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="menu-content">
+          <div class="profile-photo row align-items-center">
+            <div class="col-auto">
+              <div class="profile-photo_image image image-con image-round" style="background-image: url('./img/placeholder.png');">
+                <button class="btn btn-big btn-icon btn-round btn-secondary">
+                  <svg class="icon icon-edit">
+                    <use xlink:href="#icon-edit"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="col"><span class="h4 d-block mb-2">MistercatPizza</span>
+              <div class="row">
+                <div class="col-auto"><span class="badge badge-medium badge-success">4.0</span></div>
+                <div class="col-auto">
+                  <div class="rating-box row row-xs">
+                    <div class="rating-block col-auto">
+                      <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rating-block col-auto">
+                      <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rating-block col-auto">
+                      <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rating-block col-auto">
+                      <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                    <div class="rating-block col-auto">
+                      <svg class="icon icon-star">
+                        <use xlink:href="#icon-star"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-views row justify-content-center">
+            <div class="col-auto"><span class="badge badge-large badge-warning badge-icon badge-round">
+                <svg class="icon icon-eye">
+                  <use xlink:href="#icon-eye"></use>
+                </svg></span></div>
+            <div class="col"><span class="profile-views_title">Просмотры</span>
+              <div class="profile-views_box row">
+                <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">день</strong><strong class="text-xxsmall">45</strong></div>
+                <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">год</strong><strong class="text-xxsmall">55 810</strong></div>
+                <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">месяц</strong><strong class="text-xxsmall">1 205</strong></div>
+              </div>
+            </div>
+          </div>
+          <ul class="menu-list list-unstyled">
+            <li class="menu-list_item"><a class="menu-list_link" href="./profile.html">Pедактировать профиль</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./exit.html">Выход</a></li>
+          </ul>
+          <ul class="menu-list list-unstyled">
+            <li class="menu-list_item"><a class="menu-list_link" href="./about.html">О проекте</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./contact.html">Обратная связь</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./public.html">Публичная оферта</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./faq.html">FAQ</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./help.html">Помощь</a></li>
+          </ul>
+          <ul class="menu-list list-unstyled">
+            <li class="menu-list_item"><a class="menu-list_link" href="./add-private.html">Добавить объявление</a></li>
+            <li class="menu-list_item"><a class="menu-list_link" href="./add-company.html">Добавить компанию</a></li>
+          </ul>
+        </div>
+        <div class="menu-footer row align-items-center justify-content-center">
+          <div class="col-auto"><span class="footer-author_text">
+              <svg class="icon icon-author icon-left">
+                <use xlink:href="#icon-author"></use>
+              </svg>Создание сайта <a class="footer-author_link" href="https://zmitroc.by/" target="_blank">ZmitroC.by™</a></span></div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+      <div class="container-fluid">
+        <div class="row">
+                    <aside class="profile-pages col-auto"><a class="profile-pages_block row align-items-center" href="./profile.html">
+                                  <div class="col-auto">
+                                    <svg class="icon icon-company">
+                                      <use xlink:href="#icon-company"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="col"><span class="profile-pages_title">Личная информация</span></div></a><a class="profile-pages_block row align-items-center is-active" href="./profile-adv.html">
+                                  <div class="col-auto">
+                                    <svg class="icon icon-adv">
+                                      <use xlink:href="#icon-adv"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="col"><span class="profile-pages_title">Объявления</span></div></a><a class="profile-pages_block row align-items-center" href="./profile-reviews.html">
+                                  <div class="col-auto">
+                                    <svg class="icon icon-review">
+                                      <use xlink:href="#icon-review"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="col"><span class="profile-pages_title">Отзывы </span></div></a><a class="profile-pages_block row align-items-center" href="./profile-access.html">
+                                  <div class="col-auto">
+                                    <svg class="icon icon-access">
+                                      <use xlink:href="#icon-access"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="col"><span class="profile-pages_title">Доступ</span></div></a>
+                    </aside>
+          <div class="col-auto">
+            <div class="login-content scroll-pane">
+              <div class="login-content_inner">
+                <div class="row">
+                  <div class="col-xxxl-9 col-12">
+                    <div class="tabs">
+                      <div class="tabs-control">
+                        <div class="tabs-control_list row">
+                          <div class="col-xxl col-md-6 col-12">
+                            <button class="btn btn-medium tabs-control_item">Базовая информация</button>
+                          </div>
+                          <div class="col-xxl col-md-6 col-12 is-active">
+                            <button class="btn btn-medium tabs-control_item">Контакты</button>
+                          </div>
+                          <div class="col-xxl col-md-6 col-12">
+                            <button class="btn btn-medium tabs-control_item">Адреса</button>
+                          </div>
+                          <div class="col-xxl col-md-6 col-12">
+                            <button class="btn btn-medium tabs-control_item">Галерея</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-content">
+                        <div class="tabs-content_block">
+                          <form class="form" action="">
+                            <div class="form-group row">
+                              <div class="col-xxl-4 col-12">
+                                <label class="form-label">Телефон<span class="form-label_info">предподчительный для связи с клиентом</span></label>
+                              </div>
+                              <div class="col-xxl-8 col-12 mt-xxl-0 mt-1">
+                                <div class="form-phone row align-items-center">
+                                  <div class="col-auto">
+                                    <select class="form-select">
+                                      <option>RUS</option>
+                                      <option>BLR</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="+375  XX  XXX  XX  XX">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Сайт</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="http://">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Facebook</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="Введите данные">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Vk.com</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="Введите данные">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Instagram</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="Введите данные">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Одноклассники </label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="Введите данные">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Город</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <select class="form-select">
+                                  <option>Выберите из списка</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Станция метро</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <select class="form-select">
+                                  <option>Выберите из списка</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4 col-12">
+                                <label class="form-label">Улица</label>
+                              </div>
+                              <div class="col-md-8 col-12 mt-md-0 mt-1">
+                                <input class="form-control" type="text" placeholder="Введите данные">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-xxl-4 col-12">
+                                <label class="form-label">Номер дома</label>
+                              </div>
+                              <div class="col-xxl-8 col-12 mt-xxxl-0 mt-1">
+                                <div class="form-address row align-items-center">
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="XXX">
+                                  </div>
+                                  <div class="col-auto">
+                                    <label class="form-label">Корпус</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="XXX">
+                                  </div>
+                                  <div class="col-auto">
+                                    <label class="form-label">Офис</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="XXX">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-xxl-4 col-12">
+                                <label class="form-label">Телефон</label>
+                              </div>
+                              <div class="col-xxl-8 col-12 mt-xxxl-0 mt-1">
+                                <div class="form-phone row align-items-center">
+                                  <div class="col-auto">
+                                    <select class="form-select">
+                                      <option>RUS</option>
+                                      <option>BLR</option>
+                                    </select>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="+375  XX  XXX  XX  XX">
+                                  </div>
+                                  <div class="col-auto">
+                                    <button class="btn btn-small btn-icon">
+                                      <svg class="icon icon-add">
+                                        <use xlink:href="#icon-add"></use>
+                                      </svg>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-xxl-4 col-12">
+                                <label class="form-label">График работы</label>
+                              </div>
+                              <div class="col-xxl-8 col-12 mt-xxxl-0 mt-1">
+                                <div class="form-days row no-gutters">
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-0">
+                                    <label class="form-label" for="day-0">Пн</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-1">
+                                    <label class="form-label" for="day-1">Вт</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-2">
+                                    <label class="form-label" for="day-2">Ср</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-3">
+                                    <label class="form-label" for="day-3">Чт</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-4">
+                                    <label class="form-label" for="day-4">Пт</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-5">
+                                    <label class="form-label" for="day-5">Сб</label>
+                                  </div>
+                                  <div class="col-auto">
+                                    <input class="form-checkbox hidden" type="checkbox" name="" id="day-6">
+                                    <label class="form-label" for="day-6">Вс</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-auto offset-xxl-4 offset-0">
+                                <label class="form-label">Основное время</label>
+                              </div>
+                              <div class="col">
+                                <div class="form-time row justify-content-end align-items-center">
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="00 : 00">
+                                  </div>
+                                  <div class="col-auto"><span class="form-text">—</span></div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="00 : 00">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-auto offset-xxl-4 offset-0">
+                                <label class="form-label">Перерыв</label>
+                              </div>
+                              <div class="col">
+                                <div class="form-time row justify-content-end align-items-center">
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="00 : 00">
+                                  </div>
+                                  <div class="col-auto"><span class="form-text">—</span></div>
+                                  <div class="col-auto">
+                                    <input class="form-control" type="text" placeholder="00 : 00">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-auto offset-4">
+                                <input class="form-checkbox hidden" type="checkbox" id="around">
+                                <label class="form-label" for="around">Круглосуточно</label>
+                              </div>
+                              <div class="col-auto">
+                                <input class="form-checkbox hidden" type="checkbox" id="weekend">
+                                <label class="form-label" for="weekend">Выходной</label>
+                              </div>
+                            </div>
+                            <div class="form-group row mt-5">
+                              <div class="col offset-4">
+                                <button class="btn btn-medium btn-secondary">Создать интервал для другого дня</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <aside class="profile col-auto d-xl-block d-none">
+                      <div class="profile-exit row justify-content-end align-items-center mb-2">
+                        <div class="col-auto"><a class="profile-exit_link" href=""><strong class="text-xsmall text-secondary">Выход</strong></a></div>
+                      </div>
+                      <div class="profile-photo row justify-content-center mb-5">
+                        <div class="col-auto">
+                          <div class="profile-photo_image image image-con image-round" style="background-image: url('./img/placeholder.png');">
+                            <button class="btn btn-big btn-icon btn-round btn-secondary">
+                              <svg class="icon icon-edit">
+                                <use xlink:href="#icon-edit"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div><span class="h3 d-block text-center mb-4">MistercatPizza</span>
+                      <div class="row justify-content-center">
+                        <div class="col-auto"><span class="badge badge-medium badge-success">4.0</span></div>
+                        <div class="col-auto">
+                          <div class="rating-box row row-xs">
+                            <div class="rating-block col-auto">
+                              <svg class="icon icon-star">
+                                <use xlink:href="#icon-star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block col-auto">
+                              <svg class="icon icon-star">
+                                <use xlink:href="#icon-star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block col-auto">
+                              <svg class="icon icon-star">
+                                <use xlink:href="#icon-star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block col-auto">
+                              <svg class="icon icon-star">
+                                <use xlink:href="#icon-star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating-block col-auto">
+                              <svg class="icon icon-star">
+                                <use xlink:href="#icon-star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="profile-views row justify-content-center">
+                        <div class="col-auto"><span class="badge badge-large badge-warning badge-icon badge-round">
+                            <svg class="icon icon-eye">
+                              <use xlink:href="#icon-eye"></use>
+                            </svg></span></div>
+                        <div class="col"><span class="profile-views_title">Просмотры</span>
+                          <div class="profile-views_box row">
+                            <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">день</strong><strong class="text-xxsmall">45</strong></div>
+                            <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">год</strong><strong class="text-xxsmall">55 810</strong></div>
+                            <div class="profile-views_block col-auto"><strong class="text-xxsmall text-info">месяц</strong><strong class="text-xxsmall">1 205</strong></div>
+                          </div>
+                        </div>
+                      </div>
+                    </aside>
+        </div>
+      </div>
+    </main>
+    <div class="catalog" id="catalog">
+      <div class="catalog-block">
+        <div class="catalog-block_aside">
+          <div class="catalog-block_btn">
+            <button class="btn btn-large btn-primary" id="catalog-close">
+              <svg class="icon icon-closel icon-left">
+                <use xlink:href="#icon-closel"></use>
+              </svg>Каталог компаний
+            </button>
+          </div>
+          <div class="catalog-sections">
+            <ul class="catalog-sections_list list-unstyled">
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Поесть</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Недвижимость</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Услуги</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Автосервисы</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Образование  </a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Гостиницы</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Промышленность</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Интернет, связь, телефония</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Зоомир</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Культура</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Банки</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Бизнес-услуги, финансы</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Красота</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Строительство</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Ремонт</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Сельское хозяйство</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Сми</a></li>
+              <li class="catalog-sections_item"><a class="catalog-sections_link" href=""><i class="image image-con" style="background-image: url('');"></i>Работа</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="catalog-block_details">
+          <div class="catalog-company">
+            <ul class="catalog-company_list list-unstyled">
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+              <li class="catalog-company_item"><a class="catalog-company_link" href="/link"><i class="image image-con" style="background-image: url('./img/data/company-img_03.jpg');"></i></a></li>
+            </ul>
+          </div>
+          <div class="catalog-category"><span class="h6">Категории</span>
+            <ul class="catalog-category_list list-unstyled list-rolled">
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Суши</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кафе и рестораны</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пицца</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Вегетарианская кухня</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Ужин</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Десерты</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Летние террас</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Бургеры</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Шашлык</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Бары. Пабы</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кофе</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кальян</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Дни рождения, банкеты</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Паст</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Шаурма</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кухни мира</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Самовывоз</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Доставка</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пироги</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Суши</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кафе и рестораны</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пицца</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Вегетарианская кухня</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Ужин</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Десерты</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Летние террас</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Бургеры</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Шашлык</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Бары. Пабы</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кофе</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кальян</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Дни рождения, банкеты</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Паст</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Шаурма</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кухни мира</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Самовывоз</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Доставка</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пироги</a></li>
+            </ul>
+            <div class="row justify-content-center mb-5">
+              <div class="col-auto"><span class="catalog-category_all">cмотреть все</span></div>
+            </div><span class="h6">Теги</span>
+            <ul class="catalog-category_list list-unstyled">
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Молекулярная кухня</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Итальянская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Китайская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Японская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Мексиканская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Уругвайская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Гандурасская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Китайская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">ВОК</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Французская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Кубинская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Бургеры</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пиццы</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Высокая кухня</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Вегетарианская</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">С живой музыкой</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Региональные продукты</a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Самовывоз </a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Доставка </a></li>
+              <li class="catalog-category_item"><a class="catalog-category_link" href="/link">Пироги</a></li>
+            </ul>
+          </div>
+          <div class="catalog-back d-sm-none d-flex justify-content-center">
+            <button class="btn btn-secondary btn-small" id="catalog-back">Вернуться в каталог</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="city"><span class="popup-title h3">Города</span>
+      <form class="form form-city" action="">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Введите населенный пункт">
+        </div>
+      </form>
+      <ul class="city-list list-unstyled">
+        <li class="city-list_item"><a class="city-list_link" href="link">Город</a></li>
+        <li class="city-list_item"><a class="city-list_link" href="link">Город</a></li>
+        <li class="city-list_item"><a class="city-list_link" href="link">Город</a></li>
+        <li class="city-list_item"><a class="city-list_link" href="link">Город</a></li>
+        <li class="city-list_item"><a class="city-list_link" href="link">Город</a></li>
+      </ul>
+    </div>
+    <div class="popup" id="registration"><span class="popup-title h3">Регистрация</span>
+      <form class="form form-registration" action="">
+        <div class="form-group">
+          <lable class="form-label">Логин</lable>
+          <input class="form-control" type="text" placeholder="Введите данные">
+        </div>
+        <div class="form-group">
+          <lable class="form-label">E-mail</lable>
+          <input class="form-control" type="text" placeholder="Введите данные">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Телефон</label>
+          <div class="form-phone row align-items-center">
+            <div class="col-auto">
+              <select class="form-select">
+                <option>RUS</option>
+                <option>BLR</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <input class="form-control" type="text" placeholder="+375  XX  XXX  XX  XX">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Код из смс</label>
+          <div class="form-phone row align-items-center">
+            <div class="col-auto">
+              <input class="form-control" type="text" placeholder="Введите данные">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-secondary btn-medium">Получить код</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <lable class="form-label">Пароль</lable>
+          <input class="form-control" type="password" placeholder="Введите данные">
+        </div>
+        <div class="form-group">
+          <lable class="form-label">Повтор пароля</lable>
+          <input class="form-control" type="password" placeholder="Введите данные">
+        </div>
+        <div class="form-gropu">
+          <input class="form-checkbox hidden" id="rule" type="checkbox" name="">
+          <label class="form-label" for="rule">Принимаю условия пользовательского соглашения</label>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-primary btn-large" type="submit">Зарегистрироваться!</button>
+        </div>
+        <div class="row justify-content-between mt-4">
+          <div class="col-auto"><span class="text-small">Я уже присоединился к MoreOver.</span></div>
+          <div class="col-auto"><a class="text-xxsmall" href="">Войти →</a></div>
+        </div>
+      </form>
+    </div>
+    <div class="popup" id="login"><span class="popup-title h3">Вход</span>
+      <form class="form form-registration" action="">
+        <div class="form-group">
+          <lable class="form-label">E-mail</lable>
+          <input class="form-control" type="text" placeholder="Введите данные">
+        </div>
+        <div class="form-group">
+          <lable class="form-label">Пароль</lable>
+          <input class="form-control" type="password" placeholder="Введите данные">
+        </div>
+        <div class="form-group text-center"><a class="text-small" href="">Забыли пароль?</a></div>
+        <div class="form-submit">
+          <button class="btn btn-primary btn-large" type="submit">Войти</button>
+        </div>
+        <div class="row justify-content-between mt-4">
+          <div class="col-auto"><span class="text-small">У меня еще нет аккаунта.</span></div>
+          <div class="col-auto"><a class="text-xxsmall" href="">Регистрация →</a></div>
+        </div>
+      </form>
+    </div>
+    <div class="popup" id="thankPrivate"><span class="popup-title h3">Спасибо. Вы успешно зарегистрировались в системе!</span><span class="text-center text-secondary">чтобы начать  размещать объявления расскажите о нам о себе</span>
+      <div class="row justify-content-center mb-4">
+        <div class="col-auto">
+          <button class="btn btn-primary btn-large">Заполнить профиль</button>
+        </div>
+      </div>
+      <div class="text-center"><a class="text-xxsmall" href="">Не сейчас</a></div>
+    </div>
+    <div class="popup" id="thankCompany"><span class="popup-title h3">Спасибо. Вы успешно зарегистрировались в системе</span>
+      <div class="row justify-content-center mb-4">
+        <div class="col-auto">
+          <button class="btn btn-dark btn-large"><i class="icon icon-plus icon-left"></i>Добавить компанию</button>
+        </div>
+      </div>
+      <div class="text-center"><a class="text-xxsmall" href="">Не сейчас</a></div>
+    </div>
+    <div class="popup" id="recovery"><span class="popup-title h3">Восстановление пароля</span>
+      <form class="form form-registration" action="">
+        <div class="form-group">
+          <label class="form-label">Телефон</label>
+          <div class="form-phone row align-items-center">
+            <div class="col-auto">
+              <select class="form-select">
+                <option>RUS</option>
+                <option>BLR</option>
+              </select>
+            </div>
+            <div class="col-auto">
+              <input class="form-control" type="text" placeholder="+375  XX  XXX  XX  XX">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Код из смс</label>
+          <div class="form-phone row align-items-center">
+            <div class="col-auto">
+              <input class="form-control" type="text" placeholder="Введите данные">
+            </div>
+            <div class="col-auto">
+              <button class="btn btn-secondary btn-medium">Получить код</button>
+            </div>
+          </div>
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-primary btn-large" type="submit">Восставновить пароль</button>
+        </div>
+        <div class="text-center mt-4"><span class="text-small">Запросить код  повторно возможно через 5:00</span></div>
+      </form>
+    </div>
+    <div class="popup" id="recovery-2"><span class="popup-title h3">Введите новый пароль</span>
+      <form class="form form-registration" action="">
+        <div class="form-group">
+          <lable class="form-label">Пароль</lable>
+          <input class="form-control" type="password" placeholder="Введите данные">
+        </div>
+        <div class="form-group">
+          <lable class="form-label">Повтор нового пароля </lable>
+          <input class="form-control" type="password" placeholder="Введите данные">
+        </div>
+        <div class="form-submit">
+          <button class="btn btn-primary btn-large" type="submit">Готово</button>
+        </div>
+      </form>
+    </div>
+    <div class="popup" id="recoverySuccess">
+      <div class="text-center mb-4">
+        <svg class="icon icon-done">
+          <use xlink:href="#icon-done"></use>
+        </svg>
+      </div><span class="popup-title h4">Пароль успешно изменен</span>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button class="btn btn-primary btn-large">Продолжить</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="messageSuccess">
+      <div class="text-center mb-4">
+        <svg class="icon icon-done">
+          <use xlink:href="#icon-done"></use>
+        </svg>
+      </div><span class="popup-title h4">Спасибо. Ваше сообщение приянто</span>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button class="btn btn-primary btn-large">Перейти на главную страницу</button>
+        </div>
+      </div>
+    </div>
+    <div class="popup" id="reviewSuccess">
+      <div class="text-center mb-4">
+        <svg class="icon icon-done">
+          <use xlink:href="#icon-done"></use>
+        </svg>
+      </div><span class="popup-title h4">Ваш отзыв принят!</span>
+      <div class="text-center mb-5"><span class="text-secondary">Спасибо что делитись свом опытом и впечатлениями</span></div>
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button class="btn btn-primary btn-large">Перейти на главную страницу</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/jquery.selectric.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/jquery.mousewheel.js"></script>
+    <script src="./js/jquery.jscrollpane.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/calc.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <svg class="hidden" width="0" height="0">
+      <symbol id="icon-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 19">
+        <path fill="#fff" d="M0 1.5A1.5 1.5 0 0 1 1.5 0h17a1.5 1.5 0 0 1 0 3h-17A1.5 1.5 0 0 1 0 1.5zm0 8A1.5 1.5 0 0 1 1.5 8h17a1.5 1.5 0 0 1 0 3h-17A1.5 1.5 0 0 1 0 9.5zm0 7.23a1.5 1.5 0 0 1 1.5-1.5h17a1.5 1.5 0 0 1 0 3h-17a1.5 1.5 0 0 1-1.5-1.5z"></path>
+      </symbol>
+      <symbol id="icon-home" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15 16">
+        <path fill="#90b1d9" d="M-.08 6.441L7.387.53l7.466 5.911v8.089c0 .515-.445.933-.995.933H9.544v-4.355H5.23v4.355H.916c-.55 0-.996-.417-.996-.933z"></path>
+      </symbol>
+      <symbol id="icon-search" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 14 14">
+        <path fill="#90b1d9" d="M2 5.807a3.807 3.807 0 1 1 7.614 0 3.807 3.807 0 0 1-7.614 0zM5.807 0A5.807 5.807 0 1 0 8.61 10.893l2.845 2.845c.24.24.601.24.841 0l.842-.841c.24-.18.24-.6 0-.841l-2.72-2.72A5.807 5.807 0 0 0 5.807 0z"></path>
+      </symbol>
+      <symbol id="icon-plus" viewbox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d)">
+          <path fill="#253751" d="M15.15 16.199h14.7v12.6h-14.7z"></path>
+          <g filter="url(#filter1_d)">
+            <mask id="a" maskunits="userSpaceOnUse" x="11" y="11" width="23" height="23" fill="#000">
+              <path fill="#fff" d="M11 11h23v23H11z"></path>
+              <path d="M33 22.5C33 28.299 28.299 33 22.5 33S12 28.299 12 22.5 16.701 12 22.5 12 33 16.701 33 22.5z"></path>
+            </mask>
+            <path d="M33 22.5C33 28.299 28.299 33 22.5 33S12 28.299 12 22.5 16.701 12 22.5 12 33 16.701 33 22.5z" fill="#FFBA42"></path>
+            <path d="M32 22.5a9.5 9.5 0 0 1-9.5 9.5v2C28.851 34 34 28.851 34 22.5h-2zM22.5 32a9.5 9.5 0 0 1-9.5-9.5h-2C11 28.851 16.149 34 22.5 34v-2zM13 22.5a9.5 9.5 0 0 1 9.5-9.5v-2C16.149 11 11 16.149 11 22.5h2zm9.5-9.5a9.5 9.5 0 0 1 9.5 9.5h2C34 16.149 28.851 11 22.5 11v2z" fill="#fff" mask="url(#a)"></path>
+          </g>
+          <path d="M22.5 18.3v8.4m-4.2-4.2h8.4" stroke="#111625" stroke-width="2"></path>
+        </g>
+        <defs>
+          <filter id="filter0_d" x="8" y="8" width="29" height="29" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+            <fecolormatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+            <feoffset></feoffset>
+            <fegaussianblur stddeviation="1.5"></fegaussianblur>
+            <fecolormatrix values="0 0 0 0 0.780392 0 0 0 0 0.843137 0 0 0 0 0.921569 0 0 0 1 0"></fecolormatrix>
+            <feblend in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+            <feblend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+          </filter>
+          <filter id="filter1_d" x="7" y="9" width="31" height="31" filterunits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feflood flood-opacity="0" result="BackgroundImageFix"></feflood>
+            <fecolormatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"></fecolormatrix>
+            <feoffset dy="2"></feoffset>
+            <fegaussianblur stddeviation="2"></fegaussianblur>
+            <fecolormatrix values="0 0 0 0 0.00392157 0 0 0 0 0.447059 0 0 0 0 1 0 0 0 0.5 0"></fecolormatrix>
+            <feblend in2="BackgroundImageFix" result="effect1_dropShadow"></feblend>
+            <feblend in="SourceGraphic" in2="effect1_dropShadow" result="shape"></feblend>
+          </filter>
+        </defs>
+      </symbol>
+      <symbol id="icon-author" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <path fill="#0172ff" d="M0 0h16v16H0z"></path>
+        <path fill="#fff" d="M3 7h2V5h4v2h2V5h2V3H3zm6 2V7H7v2zM5 9v2H3v2h10V9h-2v2H7V9z"></path>
+      </symbol>
+      <symbol id="icon-dropdown" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="8" height="8" rx="2" fill="#0172FF"></rect>
+        <path d="M3.5 4.5l1.5 1 1.5-1" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-add" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 30">
+        <path fill="#c7d7eb" d="M0 15C0 6.716 6.716 0 15 0c8.284 0 15 6.716 15 15 0 8.284-6.716 15-15 15-8.284 0-15-6.716-15-15z"></path>
+        <path fill="#0172ff" d="M14 16v4h2v-4h4v-2h-4v-4h-2v4h-4v2z"></path>
+      </symbol>
+      <symbol id="icon-camera" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 18">
+        <path fill="#111625" d="M13 0l1.83 2H18c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H2c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h3.17L7 0zm2 10c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5 5-2.24 5-5z" opacity=".2"></path>
+      </symbol>
+      <symbol id="icon-star" viewbox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.077 1.22c.342-.822 1.505-.822 1.847 0l1.222 2.94a1 1 0 0 0 .844.612l3.173.254c.887.071 1.246 1.178.571 1.757l-2.418 2.07a1 1 0 0 0-.322.992l.739 3.097c.206.865-.735 1.55-1.494 1.085l-2.717-1.66a1 1 0 0 0-1.043 0l-2.717 1.66c-.759.464-1.7-.22-1.494-1.085l.739-3.097a1 1 0 0 0-.322-.991L1.267 6.783c-.676-.58-.316-1.686.57-1.757l3.174-.254a1 1 0 0 0 .843-.613l1.223-2.94z" stroke="#C7D7EB"></path>
+      </symbol>
+      <symbol id="icon-eye" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 15">
+        <path fill="#fff" d="M22 7.5c-1.73 4.39-6 7.5-11 7.5S1.73 11.89 0 7.5C1.73 3.11 6 0 11 0s9.27 3.11 11 7.5zm-6 0c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5 5-2.24 5-5zm-2 0c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"></path>
+      </symbol>
+      <symbol id="icon-heart" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 21 20">
+        <path fill="#fff" d="M10.532 2.1l-.761-.666a5.795 5.795 0 0 0-8.17.538 6.439 6.439 0 0 0 .14 8.652L10.531 20l8.791-9.376a6.439 6.439 0 0 0 .141-8.652 5.795 5.795 0 0 0-8.17-.538z"></path>
+      </symbol>
+      <symbol id="icon-review" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32">
+        <path d="M10 12H20" stroke-width="2" stroke-miterlimit="10"></path>
+        <path d="M10 16H17" stroke-width="2" stroke-miterlimit="10"></path>
+        <path d="M22.2969 23.2569L23.1228 23.624L22.995 22.7293L22.6965 20.6397L22.6211 19.886L23.1536 19.3536C24.6354 17.8717 25.5 15.9486 25.5 14C25.5 9.22551 20.6663 5.5 15 5.5C9.33374 5.5 4.5 9.22551 4.5 14C4.5 18.7745 9.33374 22.5 15 22.5C16.1557 22.5 17.4011 22.2907 18.5316 21.9824L18.5316 21.9824L18.5374 21.9808L19.0664 21.8296L19.6 22.0583L22.2969 23.2569ZM19.1988 22.9412L19.0294 22.8678L18.853 22.9221C17.6002 23.3076 16.3498 23.5 15 23.5C8.58691 23.5 3.5 19.1424 3.5 14C3.5 8.85763 8.58691 4.5 15 4.5C21.4131 4.5 26.5 8.85763 26.5 14C26.5 16.2474 25.4678 18.4251 23.8464 20.0464L23.6697 20.2232L23.705 20.4707L24.3786 25.1858L19.1988 22.9412Z"></path>
+      </symbol>
+      <symbol id="icon-access" viewbox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g stroke-width="2" stroke-miterlimit="10">
+          <path d="M15 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 0v3"></path>
+          <path d="M22 26H9c-1.7 0-3-1.3-3-3v-9c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2zm-2-14H10V9c0-2.8 2.2-5 5-5s5 2.2 5 5v3z"></path>
+        </g>
+      </symbol>
+      <symbol id="icon-adv" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-width="2" stroke-miterlimit="10" d="M4 6h22v12H4zm9 12h4v9h-4zm-6 9.5h16M9 7V3m12 4V3"></path>
+      </symbol>
+      <symbol id="icon-company" viewbox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <g>
+            <path d="M21.6 8H26v18H4V8h4.4" stroke-width="2" stroke-miterlimit="10"></path>
+            <path d="M17.334 11.848l.243-.425-.42-.252c-.544-.326-1.434-.671-2.157-.671-.37 0-.8.09-1.178.211-.375.121-.759.292-1.022.489l-.353.265.219.383c.215.377.556.873.919 1.327.353.442.769.895 1.138 1.141l.277.185.277-.185c.37-.246.784-.699 1.138-1.141.363-.454.704-.95.92-1.327zM11.5 11.3c0-.156.075-.347.28-.567.205-.22.51-.435.884-.625.752-.382 1.675-.608 2.336-.608.608 0 1.532.225 2.301.61.382.19.697.407.91.629.214.222.289.411.289.561 0 .2-.108.567-.359 1.054-.24.468-.58.987-.968 1.47-.39.485-.814.919-1.218 1.227-.421.32-.748.449-.955.449-.207 0-.534-.129-.955-.45-.404-.307-.829-.74-1.217-1.225a9.026 9.026 0 0 1-.97-1.47c-.25-.488-.358-.855-.358-1.055z"></path>
+            <path d="M10.325 7.92L9.5 7.213v6.194l.854-.853 2.1-2.1.381-.382-.41-.352-2.1-1.8zM8.5 5.087l5.765 4.941L8.5 15.793V5.087zM19.675 7.92l.825-.707v6.194l-.854-.853-2.1-2.1-.381-.382.41-.352 2.1-1.8zM21.5 5.087l-5.765 4.941 5.765 5.765V5.087z"></path>
+            <path d="M8 4.5h14" stroke-width="2" stroke-miterlimit="10"></path>
+            <path d="M11.5 25.5L14 15m4.7 10.5L16.2 15" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path>
+          </g>
+        </g>
+      </symbol>
+      <symbol id="icon-up" viewbox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1h15M9 5h7M9 9h7m-7 4h7" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path>
+        <path d="M2.6 4.533a.5.5 0 0 1 .8 0l2 2.667A.5.5 0 0 1 5 8H1a.5.5 0 0 1-.4-.8l2-2.667z" fill="#FFBA42"></path>
+        <path d="M3 7v7" stroke="#FFBA42" stroke-width="1.5"></path>
+      </symbol>
+      <symbol id="icon-basket" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.798 22.142L8.074 12h13.852l-.724 10.142A2 2 0 0 1 19.207 24h-8.414a2 2 0 0 1-1.995-1.858z" stroke="#91B1D9" stroke-width="2"></path>
+        <path d="M6 8h18" stroke="#91B1D9" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M11 6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2h-8V6z" stroke="#91B1D9" stroke-width="2"></path>
+      </symbol>
+      <symbol id="icon-edit" viewbox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.5 7h-7a1 1 0 0 0-1 1v15a1 1 0 0 0 1 1h15a1 1 0 0 0 1-1v-6" stroke-width="2" stroke-miterlimit="10"></path>
+        <path d="M10.904 17.383a1 1 0 0 0 1.213 1.213l2.137-.535c.161-.04.31-.12.433-.233L25.73 7.706a1 1 0 0 0 .032-1.445l-1.585-1.584a1 1 0 0 0-1.383-.03l-11.072 10.15a1 1 0 0 0-.295.494l-.523 2.092zM20.9 6.2l3 3" stroke-width="2" stroke-miterlimit="10"></path>
+      </symbol>
+      <symbol id="icon-aright" viewbox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1l5.294 5L1 11" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-stars" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.077 3.22c.342-.822 1.505-.822 1.847 0l1.222 2.94a1 1 0 0 0 .844.612l3.173.254c.887.071 1.247 1.178.571 1.757l-2.418 2.07a1 1 0 0 0-.322.992l.739 3.097c.206.865-.735 1.55-1.494 1.085l-2.717-1.66a1 1 0 0 0-1.043 0l-2.717 1.66c-.759.464-1.7-.22-1.494-1.085l.739-3.097a1 1 0 0 0-.322-.991L3.267 8.783c-.676-.58-.316-1.686.57-1.757l3.174-.254a1 1 0 0 0 .843-.613l1.223-2.94z" fill="#7CB6FF"></path>
+      </symbol>
+      <symbol id="icon-eye_small" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.333 5C7 5 4.153 7.073 3 10c1.153 2.927 4 5 7.333 5 3.334 0 6.18-2.073 7.334-5-1.154-2.927-4-5-7.334-5zm0 8.333a3.335 3.335 0 0 1 0-6.666A3.335 3.335 0 0 1 13.667 10a3.335 3.335 0 0 1-3.334 3.333zm0-5.333c-1.106 0-2 .893-2 2s.894 2 2 2c1.107 0 2-.893 2-2s-.893-2-2-2z" fill="#91B1D9"></path>
+      </symbol>
+      <symbol id="icon-metro" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.989 2.04l-.11-.001-2.323 4.573L5.148 2l-3.296 8.33H1V11h4.667v-.67H4.74l.926-2.603L7.556 11 9.37 7.727l.926 2.604H9.37V11H14v-.67h-.802l-3.21-8.29z" fill="#253751"></path>
+      </symbol>
+      <symbol id="icon-location" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 1.75c2.481 0 4.5 1.884 4.5 4.2 0 3.15-4.5 7.8-4.5 7.8S3 9.1 3 5.95c0-2.316 2.019-4.2 4.5-4.2zm0 5.75a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" fill="#253751"></path>
+      </symbol>
+      <symbol id="icon-phone" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 2A1.5 1.5 0 0 0 4 3.5v8A1.5 1.5 0 0 0 5.5 13h4a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 9.5 2h-4zm1 1a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zM6 11a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 6 11z" fill="#253751"></path>
+      </symbol>
+      <symbol id="icon-down" viewbox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.72 10.5l4.165 3 4.165-3" stroke="#0172FF" stroke-width="2" stroke-linecap="round"></path>
+      </symbol>
+      <symbol id="icon-done" viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="30" fill="#37B452"></circle>
+        <circle opacity=".2" cx="30" cy="30" r="25.5" stroke="#253751"></circle>
+        <path d="M40.79 21.094L26.405 35.477l-5.25-5.305c-.273-.219-.71-.219-.93 0l-1.585 1.586c-.22.219-.22.656 0 .93l7.328 7.273a.63.63 0 0 0 .93 0l16.406-16.406c.218-.22.218-.657 0-.93l-1.586-1.531c-.219-.274-.657-.274-.93 0z" fill="#fff"></path>
+      </symbol>
+      <symbol id="icon-close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 12">
+        <path fill="#0172ff" d="M1.059 11.27a1.024 1.024 0 0 1 0-1.45L10.487.392a1.026 1.026 0 0 1 1.45 1.45L2.51 11.27c-.4.4-1.05.4-1.45 0z"></path>
+        <path fill="#0172ff" d="M1.091.156c.401-.4 1.051-.4 1.451 0l9.428 9.428a1.026 1.026 0 0 1-1.45 1.45L1.092 1.608c-.4-.401-.4-1.05 0-1.45z"></path>
+      </symbol>
+      <svg class="hidden" width="0" height="0">
+        <symbol id="icon-closel" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 19">
+          <path fill="#fff" d="M.49 17.16a1.539 1.539 0 0 1 0-2.177L14.632.84a1.538 1.538 0 0 1 2.176 2.175L2.666 17.16a1.539 1.539 0 0 1-2.176 0z"></path>
+          <path fill="#fff" d="M1.195 1.584a1.538 1.538 0 0 1 2.175 0l14.142 14.142a1.538 1.538 0 0 1-2.176 2.176L1.194 3.76a1.538 1.538 0 0 1 .001-2.176z"></path>
+        </symbol>
+      </svg>
+    </svg>
+  </body>
+</html>
