@@ -53,4 +53,65 @@ $(function() {
         items:4,
         autoWidth:true
     })
+
+    var page = window.location.hash,
+    lastBlock = $('.main').children().first(),
+    scrollItems = $('.main').children().map(function(){
+      var item = $(this);
+      if (item.length) { return item; }
+    });
+
+    $(window).scroll(function(event){
+        var fromTop = $(this).scrollTop() + $(window).outerHeight()*.25;
+        var cur = scrollItems.map(function(){
+          if ($(this).offset().top < fromTop)
+            return this;
+        });
+
+        cur = cur[cur.length-1];
+        var Block = cur && cur.length ? cur : "";
+        
+        if (lastBlock !== Block) {
+            lastBlock = Block;
+        }
+    });
+
+    $('.scroll-btn_prev').click(function(e){
+        e.preventDefault();
+        if ( lastBlock.prev().length ) {
+            $('html, body').animate({
+                'scrollTop': lastBlock.prev().offset().top
+            }, 500);
+        }
+    });
+    $('.scroll-btn_next').click(function(e){
+        e.preventDefault();
+        if ( lastBlock.next().length ) {
+            $('html, body').animate({
+                'scrollTop': lastBlock.next().offset().top
+            }, 500);
+        }
+    });
+
+    $('input[name=y-phone]').mask("+375 (99) 999-99-99");
+    $('input[name=y-phone]').click(function(){
+        if($(this).val() == '+375 (__) ___-__-__'){
+            $(this).setCursorPosition(6);
+        }
+	});			
+	// set cursore position
+    $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+
+
 });

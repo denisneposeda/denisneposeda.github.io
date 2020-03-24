@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
-  <body class="undefined">
+  <body>
     <header class="header">
       <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -34,7 +34,7 @@
               </li>
               <li class="header-nav_item col-md-auto col-12"><a class="header-nav_link" href="./download.html">Скачать</a>
               </li>
-              <li class="header-nav_item col-md-auto col-12"><a class="header-nav_link" href="./buying.html">Гду купить</a>
+              <li class="header-nav_item col-md-auto col-12"><a class="header-nav_link" href="./buying.html">Где купить</a>
               </li>
             </ul>
           </div>
@@ -51,11 +51,11 @@
       <div class="header-dropdown">
         <div class="container">
           <div class="header-dropdown_item row justify-content-around">
-            <div class="col-auto"><a href="./catalog.html">
+            <div class="col-auto"><a href="./catalog.html#section-1">
                 <div class="image image-con" style="background-image: url('./img/data/header-dropdown_01.png');"></div><span>Для дома</span></a></div>
-            <div class="col-auto"><a href="./catalog.html">
+            <div class="col-auto"><a href="./catalog.html#section-2">
                 <div class="image image-con" style="background-image: url('./img/data/header-dropdown_02.png');"></div><span>Для улицы</span></a></div>
-            <div class="col-auto"><a href="./catalog.html">
+            <div class="col-auto"><a href="./catalog.html#section-3">
                 <div class="image image-con" style="background-image: url('./img/data/header-dropdown_03.png');"></div><span>Роутеры/Регистраторы</span></a></div>
           </div>
         </div>
@@ -423,16 +423,28 @@
           <div class="footer-copy col-sm-auto col-12"><span class="text-gray">2020 — Официальный интернет-магазин</span></div>
           <div class="footer-social col-sm-auto col-12">
             <div class="row-xs align-items-center justify-content-sm-start justify-content-center">
-              <div class="col-auto"><a href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_01.svg" alt=""></a></div>
-              <div class="col-auto"><a href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_02.svg" alt=""></a></div>
-              <div class="col-auto"><a href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_03.svg" alt=""></a></div>
-              <div class="col-auto"><a href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_04.svg" alt=""></a></div>
-              <div class="col-auto"><a href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_05.svg" alt=""></a></div>
+              <div class="col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_01.svg" alt=""></a></div>
+              <div class="col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_02.svg" alt=""></a></div>
+              <div class="col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_03.svg" alt=""></a></div>
+              <div class="col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_04.svg" alt=""></a></div>
+              <div class="col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank"><img src="./img/data/footer-social_05.svg" alt=""></a></div>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="scroll">
+      <button class="scroll-btn scroll-btn_prev">
+        <svg class="icon icon-arrow">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+      </button>
+      <button class="scroll-btn scroll-btn_next">
+        <svg class="icon icon-arrow">
+          <use xlink:href="#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
     <svg class="hidden" width="0" height="0">
       <symbol id="icon-arrow" viewbox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M.839 7.359a.741.741 0 0 0 0 1.058.747.747 0 0 0 1.048 0l5.366-5.366v17.708c0 .413.329.741.742.741a.745.745 0 0 0 .751-.74V3.05l5.357 5.367a.76.76 0 0 0 1.058 0 .741.741 0 0 0 0-1.058L8.524.722a.729.729 0 0 0-1.048 0L.84 7.36z" fill="#1E201D"></path>
@@ -454,6 +466,7 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/calc.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>
