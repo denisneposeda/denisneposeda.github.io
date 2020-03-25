@@ -2053,10 +2053,12 @@ a[href^="#"]:hover,a[href^=mail]:hover,a[href^=tel]:hover{text-decoration:none}
 .bg-b{background-color:#78d6fe}
 .bg-gr{background-color:#f3f3f3}
 .bg-bl{background-color:#a3d4f7}
+.bg-p{background-color:#ffb6c1}
 a.bg-y:hover{background-color:#f8ba35}
 a.bg-g:hover{background-color:#8dd980}
 a.bg-b:hover{background-color:#45c7fe}
 a.bg-gr:hover{background-color:#dadada}
+a.bg-p:hover{background-color:#ff8396}
 .breadcrumb-list{color:#7e7e7e}
 .breadcrumb-list_item:not(:first-child):before{content:'-';position:absolute;left:-.2rem;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
 .breadcrumb-list_link{color:#7e7e7e}
