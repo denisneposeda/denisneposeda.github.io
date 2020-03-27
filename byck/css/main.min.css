@@ -2794,6 +2794,7 @@ a.link-decorated:hover{text-decoration:none}
 .aside-block:not(:first-child){margin-top:4.4rem}
 .aside-block_title{display:block;font-size:2rem;margin-bottom:2.2rem}
 .aside-control{display:block;margin-bottom:2rem;text-align:center;text-transform:uppercase;cursor:pointer}
+.aside-price_slider{margin-bottom:3rem}
 .color-list{padding-left:2.1rem}
 .color-list_item:not(:first-child){margin-top:1.2rem}
 .category-list{margin-bottom:4.3rem}

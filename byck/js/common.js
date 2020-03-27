@@ -66,4 +66,43 @@ $(function() {
         $(this).next().slideToggle();
     })
 
+
+    if ( $('#uo').length > 0 ) {
+
+        var softSlider = document.getElementById('uo');
+
+        noUiSlider.create(softSlider, {
+            range: {
+                'min': 26,
+                'max': 450
+            },
+            start: [26, 450],
+            connect: true,
+            format: wNumb({
+                decimals: 0
+            }),
+            tooltips: true
+        });
+
+        var inputNumberMin = document.getElementById('input-number-min'),
+            inputNumberMax = document.getElementById('input-number-max');
+
+        softSlider.noUiSlider.on('update', function (values, handle) {
+            var value = values[handle];
+            if (handle) {
+                inputNumberMax.value = value;
+            } else {
+                inputNumberMin.value = value;
+            }
+        });
+
+        inputNumberMin.addEventListener('change', function () {
+            softSlider.noUiSlider.set([this.value, null]);
+        });
+
+        inputNumberMax.addEventListener('change', function () {
+            softSlider.noUiSlider.set([null, this.value]);
+        });
+    }
+
 });
