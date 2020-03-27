@@ -83,26 +83,6 @@ $(function() {
             }),
             tooltips: true
         });
-
-        var inputNumberMin = document.getElementById('input-number-min'),
-            inputNumberMax = document.getElementById('input-number-max');
-
-        softSlider.noUiSlider.on('update', function (values, handle) {
-            var value = values[handle];
-            if (handle) {
-                inputNumberMax.value = value;
-            } else {
-                inputNumberMin.value = value;
-            }
-        });
-
-        inputNumberMin.addEventListener('change', function () {
-            softSlider.noUiSlider.set([this.value, null]);
-        });
-
-        inputNumberMax.addEventListener('change', function () {
-            softSlider.noUiSlider.set([null, this.value]);
-        });
     }
 
 });
