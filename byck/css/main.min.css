@@ -2867,7 +2867,7 @@ a.link-decorated:hover{text-decoration:none}
 .header-menu_link .icon{margin-bottom:0}
 .header-hamburger{margin-top:0}
 .footer-title{margin-bottom:1rem;text-align:center}
-.header-nav_list{margin-left:-.5rem;margin-right:-.5rem}
+.header-nav_list{margin-left:-.5rem!important;margin-right:-.5rem!important}
 .header-nav_item{padding-left:.5rem;padding-right:.5rem}
 .promo-carousel_block{max-height:40vh}
 .promo-carousel_link{white-space:nowrap;bottom:5rem}
