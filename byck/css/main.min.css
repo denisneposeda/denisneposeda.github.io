@@ -2881,6 +2881,8 @@ a.link-decorated:hover{text-decoration:none}
 .products-block_price,.products-block_title{font-size:1.4rem}
 .products-block .image{margin-bottom:-3.6rem}
 .catalog .products-block .row{margin-left:-1rem;margin-right:-1rem}
+.row-xl{margin-left:-1rem;margin-right:-1rem}
+.row-xl>*{padding-left:1rem;padding-right:1rem}
 }
 @media (max-width:409.98px){
 .header-logo_link{font-size:2.4rem}
