@@ -131,4 +131,9 @@ $(function() {
         $('.buying-control .btn').eq(1).click();
     }
 
+    $('.products-block .btn').click(function(e) {
+        e.preventDefault();
+        location.href = location.origin + "/gde-kupit/#entity";
+    })
+
 });
