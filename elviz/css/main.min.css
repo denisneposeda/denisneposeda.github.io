@@ -2131,6 +2131,7 @@ a.bg-p:hover{background-color:#ff8396}
 .product-option{margin-bottom:1.9rem}
 .product-option_checkbox:checked+.btn{border:.1rem solid #009cdd}
 .product-option_checkbox+.btn{padding-left:0;padding-right:0;width:9.4rem}
+.product-prices .product-price:not(:first-child){display:none}
 .product-price{font-size:2.8rem;display:block;margin-bottom:2.1rem}
 .product-price:after{content:"\20BD";font-size:2.4rem;margin-left:.5rem}
 .product-sales{color:#009cdd;display:block}

@@ -136,4 +136,9 @@ $(function() {
         location.href = location.origin + "/gde-kupit/#entity";
     })
 
+    $('.product-option .btn').click(function(e){
+        var option = $(this).attr('for');
+        $('.product-price[data-option='+ option +']').show().siblings().hide();
+    })
+
 });
