@@ -11,11 +11,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/favicon.png">
     <meta name="theme-color" content="#000">
     <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/hamburgers.min.css">
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./css/nouislider.css">
+    <link rel="stylesheet" href="./css/datepicker.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
@@ -33,12 +33,15 @@
           <div class="logo col-auto"><a class="logo-link" href="./index.html"><img class="hogo-img" src="./img/data/header-logo.png" alt=""></a></div>
           <div class="header-nav col-auto">
             <ul class="header-nav_list list-unstyled row">
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./news.html">Новости</a></li>
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./news.html">Статьи</a></li>
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./reviews.html">Отзывы</a></li>
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./open_doors.html">Дни открытых дверей</a></li>
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./professions.html">Профессии</a></li>
-              <li class="header-nav_item col-auto"><a class="header-nav_link" href="./colleges.html">Учебные заведения</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link" href="./news.html">Новости</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link" href="./news.html">Статьи</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link" href="./reviews.html">Отзывы</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link" href="./open_doors.html">Дни открытых дверей</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link" href="./professions.html">Профессии</a></li>
+              <li class="header-nav_item col-lg-auto col-12"><a class="header-nav_link header-nav_child" href="./colleges.html">Учебные заведения
+                  <svg class="icon icon-arrow icon-right d-inline d-lg-none">
+                    <use xlink:href="#icon-arrow_a"></use>
+                  </svg></a></li>
             </ul>
           </div>
           <div class="header-city col-auto d-sm-block d-none">
@@ -50,6 +53,55 @@
               <svg class="icon icon-location_w">
                 <use xlink:href="#icon-location_l"></use>
               </svg></span></div>
+        </div>
+      </div>
+      <div class="header-dropdown">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 mb-5 d-block d-lg-none"><a href="./colleges.html">Все учебные заведения</a></div>
+            <div class="col-lg-6 col-12"><span class="h2">Направление</span>
+              <ul class="header-dropdown_list list-unstyled column-2">
+                <li><a href="./colleges.html">Архитектурные вузы</a></li>
+                <li><a href="./colleges.html">Вузы сервиса</a></li>
+                <li><a href="./colleges.html">Вузы транспорта</a></li>
+                <li><a href="./colleges.html">Гуманитарные и социальные вузы</a></li>
+                <li><a href="./colleges.html">Естественно-научные вузы</a></li>
+                <li><a href="./colleges.html">Культура и искусство</a></li>
+                <li><a href="./colleges.html">Лингвистические вузы</a></li>
+                <li><a href="./colleges.html">Медицинские вузы</a></li>
+                <li><a href="./colleges.html">Менеджмент и маркетинг</a></li>
+                <li><a href="./colleges.html">Педагогические вузы</a></li>
+                <li><a href="./colleges.html">Сельскохозяйственные вузы</a></li>
+                <li><a href="./colleges.html">Спортивные вузы</a></li>
+                <li><a href="./colleges.html">Строительные вузы</a></li>
+                <li><a href="./colleges.html">Технические вузы</a></li>
+                <li><a href="./colleges.html">Финансовые вузы</a></li>
+                <li><a href="./colleges.html">Экономические вузы</a></li>
+                <li><a href="./colleges.html">Юридические вузы</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-12"><span class="h2">По статусу</span>
+              <ul class="header-dropdown_list list-unstyled">
+                <li><a href="./colleges.html">Государственные</a></li>
+                <li><a href="./colleges.html">Негосударственные</a></li>
+              </ul><span class="h2">По форме обучения</span>
+              <ul class="header-dropdown_list list-unstyled">
+                <li><a href="./colleges.html">Очная</a></li>
+                <li><a href="./colleges.html">Очно-заочная</a></li>
+                <li><a href="./colleges.html">Заочная</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-12"><span class="h2">По статусу</span>
+              <ul class="header-dropdown_list list-unstyled">
+                <li><a href="./colleges.html">Военная кафедра</a></li>
+                <li><a href="./colleges.html">Военный вуз / вуз силовых структур</a></li>
+                <li><a href="./colleges.html">Нет отсрочки от армии</a></li>
+                <li><a href="./colleges.html">Отсрочка от армии</a></li>
+                <li><a href="./colleges.html">Учебный военный центр</a></li>
+                <li><a href="./colleges.html">Факультет военного обучения</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -113,6 +165,22 @@
                                       <div class="col-auto"><span class="info-block_category">Академия труда и сициальных отношений</span></div>
                                     </div>
                                     <h3 class="h4">Студентов привлекут к производству медицинских масок</h3>
+                                    <p>Но чтобы осуществить задуманное, нужно хорошенько потрудиться. Важным шагом на пути к мечте станет поступление в хороший вуз, где вы сможете научиться практически всем тонкостям программирования.</p>
+                                  </div></a><a class="info-block row" href=" ./reviews-item.html ">
+                                  <div class="info-block_content col">
+                                    <div class="row">
+                                      <div class="col-auto"><span class="info-block_date">24.03.2020</span></div>
+                                      <div class="col-auto"><span class="info-block_category">Академия труда и сициальных отношений</span></div>
+                                    </div>
+                                    <h3 class="h4">Вузы могут перенести сроки сессии из-за коронавируса</h3>
+                                    <p>Но чтобы осуществить задуманное, нужно хорошенько потрудиться. Важным шагом на пути к мечте станет поступление в хороший вуз, где вы сможете научиться практически всем тонкостям программирования.</p>
+                                  </div></a><a class="info-block row" href=" ./reviews-item.html ">
+                                  <div class="info-block_content col">
+                                    <div class="row">
+                                      <div class="col-auto"><span class="info-block_date">24.03.2020</span></div>
+                                      <div class="col-auto"><span class="info-block_category">Академия труда и сициальных отношений</span></div>
+                                    </div>
+                                    <h3 class="h4">Составляем свой личный рейтинг вузов — дистанционно</h3>
                                     <p>Но чтобы осуществить задуманное, нужно хорошенько потрудиться. Важным шагом на пути к мечте станет поступление в хороший вуз, где вы сможете научиться практически всем тонкостям программирования.</p>
                                   </div></a>
               </div>
@@ -203,6 +271,9 @@
       <symbol id="icon-location_l" viewbox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.605.706C3.412.706 0 4.118 0 8.311c0 5.205 6.806 12.845 7.096 13.168a.685.685 0 0 0 1.019 0c.29-.323 7.096-7.963 7.096-13.168 0-4.193-3.412-7.605-7.606-7.605zm0 11.432A3.83 3.83 0 0 1 3.78 8.31a3.83 3.83 0 0 1 3.826-3.826 3.83 3.83 0 0 1 3.827 3.826 3.83 3.83 0 0 1-3.827 3.827z" fill="#fff"></path>
       </symbol>
+      <symbol id="icon-arrow_a" viewbox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.733 3.131L.774.341C.637.21.5.142.385.142c-.22 0-.358.244-.358.654v6.032c0 .409.137.653.358.653.114 0 .25-.068.387-.197l2.96-2.791a.93.93 0 0 0 .295-.682.927.927 0 0 0-.294-.681z" fill="#71AFCA"></path>
+      </symbol>
     </svg>
     <div class="popup" id="order"><span class="h1">Отправить заявку</span>
       <form class="form" action="">
@@ -226,8 +297,7 @@
     <script src="./js/calc.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
     <script src="./js/jquery.maskedinput.min.js"></script>
-    <script src="./js/wNumb.min.js"></script>
-    <script src="./js/nouislider.min.js"></script>
+    <script src="./js/datepicker.min.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>
