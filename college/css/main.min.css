@@ -2489,7 +2489,9 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .box{border-bottom:.1rem solid #f0f0f0}
 .colleges-box{border-bottom:1px solid #f0f0f0}
 .colleges-box .doors-item_content>.row{margin-bottom:.6rem}
-.colleges-box .doors-item_content .h4{margin-bottom:.8rem}
+.colleges-box .doors-item_content .h4{margin-bottom:.8rem;color:#000}
+.colleges-box .doors-block a:hover{text-decoration:none}
+.colleges-box .doors-block:hover .h4{color:#2a6883}
 .colleges-description{margin-bottom:2.5rem}
 .colleges-map{display:none}
 .colleges-top{padding:-webkit-calc(1.5rem + 4vh) -webkit-calc(3rem + 3.4vh) -webkit-calc(1.5rem + 3.4vh);padding:calc(1.5rem + 4vh) calc(3rem + 3.4vh) calc(1.5rem + 3.4vh);position:relative;display:block;text-decoration:none!important}
@@ -2605,6 +2607,9 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .colleges-search{margin-bottom:3rem}
 .colleges-search .form-profession{margin-bottom:1rem}
 .colleges-search .btn{width:100%}
+.header>.container{max-width:none;padding-right:0}
+.header>.container>.row{margin-left:0;margin-right:0}
+.header>.container>.row>*{padding-left:0;padding-right:0}
 }
 @media (max-width:409.98px){
 .breadcrumbs{display:none}

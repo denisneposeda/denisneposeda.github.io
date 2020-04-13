@@ -65,8 +65,10 @@ $(function() {
     })
 
     $('.header-nav_child').click(function(e){
-        e.preventDefault();
-        $('.header').addClass('is-dropdown');
+        if ( $('html').is('.is-menu') ) {
+            e.preventDefault();
+            $('.header').addClass('is-dropdown');
+        }
     })
 
 });
