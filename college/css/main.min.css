@@ -2355,6 +2355,7 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .form-submit{margin-top:1.2rem}
 .form-submit .btn{margin:0 auto}
 .form-control{border:.1rem solid #71afca;height:3.5rem;line-height:3.3rem;padding:0 1.5rem;color:#000;font-size:1.3rem}
+.form textarea.form-control{height:17rem;padding-top:.7rem;padding-bottom:.7rem}
 .form-checkbox+.form-label{cursor:pointer;padding-left:3rem;position:relative;margin-bottom:0;display:block}
 .form-checkbox+.form-label:after,.form-checkbox+.form-label:before{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);left:0}
 .form-checkbox+.form-label:before{content:'';width:1.4rem;height:1.4rem;border:.1rem solid #000}
@@ -2446,6 +2447,18 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .reviews-box .info-block:before{content:'';width:-webkit-calc(100% - 3rem);width:calc(100% - 3rem);height:.1rem;background-color:#f0f0f0;position:absolute;top:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .reviews-functional{margin-bottom:-webkit-calc(2rem + 1vh);margin-bottom:calc(2rem + 1vh)}
 .reviews-functional>*{margin-bottom:1rem}
+.reviews-rating{position:relative}
+.reviews-rating_pointer{content:'';position:absolute;display:block;width:2.1rem;height:3.4rem;pointer-events:none;top:0;background:url(../img/icon/icon-rating.svg) center no-repeat;-webkit-transform:translateX(-1.02rem);-ms-transform:translateX(-1.02rem);transform:translateX(-1.02rem)}
+.reviews-rating_box{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;position:relative;border-bottom:.3rem solid #e1e1e1;margin-bottom:1.2rem}
+.reviews-rating_item{cursor:pointer;position:relative;height:3.4rem;position:relative;width:-webkit-calc(100%/7);width:calc(100%/7)}
+.reviews-rating_item:hover:after{background-color:#c8c8c8}
+.reviews-rating_item:after{content:'';display:block;width:.3rem;height:1rem;background-color:#e1e1e1;position:absolute;bottom:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
+.reviews-rating_item:first-child,.reviews-rating_item:last-child{width:-webkit-calc(100%/16);width:calc(100%/16)}
+.reviews-rating_item:first-child:after{left:0;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+.reviews-rating_item:last-child:after{left:auto;right:0;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
+.reviews-rating_text{display:block;font-size:1.3rem;color:#646464}
+.reviews-date_text{display:block;color:#646464;font-size:1.3rem}
+.reviews-date .form-control{width:7rem;text-align:center;padding-left:0;padding-right:0}
 .alphabet-box{margin-bottom:.8rem;margin-right:-.9rem;margin-left:-.9rem}
 .alphabet-box>*{padding-left:.9rem;padding-right:.9rem}
 .alphabet-link{display:block;min-width:1.6rem;border-bottom:.2rem solid transparent;text-transform:uppercase;text-align:center;color:#000;font-size:1.6rem}
@@ -2562,6 +2575,12 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .popup-info{display:block;font-size:1.3rem;color:#646464}
 .popup .form{margin-bottom:2.6rem}
 .popup .form-submit .btn{width:100%;height:4rem;min-height:4rem;font-size:1.5rem;font-family:HelveticaNeueCyr,sans-serif}
+.popup#reviews{width:72rem}
+.popup#reviews .h1{text-align:left}
+.popup#reviews .form-group:not(:first-child){margin-top:3rem}
+.popup#reviews .article-info{padding:1.6rem 2rem}
+.popup#reviews .article-info .row{margin-left:-1rem;margin-right:-1rem}
+.popup#reviews .article-info .row>*{padding-left:1rem;padding-right:1rem}
 .footer{background-color:#f9f9f9;padding-top:2.8rem;padding-bottom:2.8rem}
 .footer-copy_text{display:block;font-size:1.3rem;color:#646464;margin-left:1.4rem;margin-right:1.4rem}
 .footer-author{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center}
@@ -2595,6 +2614,7 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .promo-block.bg-white{padding-top:2rem;padding-left:1.5rem;padding-right:1.5rem}
 .alphabet-box{-webkit-flex-wrap:nowrap;-ms-flex-wrap:nowrap;flex-wrap:nowrap;overflow-x:auto}
 .info-count>:not(:first-child){margin-left:0}
+#reviews{width:95vw}
 }
 @media (max-width:575.98px){
 .header{padding-top:0;padding-bottom:0}

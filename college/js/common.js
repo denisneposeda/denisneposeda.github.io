@@ -71,4 +71,32 @@ $(function() {
         }
     })
 
+    initRating();
+
+
+    function initRating() {
+        $('.reviews-rating').each(function(){
+            var left = $(this).data('position')
+            $(this).find('.reviews-rating_pointer').css({'left':left+'%'})
+        })
+    }
+
+    $('.reviews-rating_item').click(function(e){
+        e.preventDefault();
+        var index = $(this).index(),
+            position = 0,
+            widthElem = 100/7,
+            widthHalfElem = 100/16;
+            rating = $(this).closest('.reviews-rating');
+        rating.prev().val(index+1);
+        switch (index) {
+            case 0: position = 0; break;
+            case 4: position = 50; break;
+            case 8: position = 100; break;
+            default: position = (widthHalfElem * index) + (widthHalfElem * index )
+        }
+        rating.data('position', position);
+        initRating();
+    })
+
 });
