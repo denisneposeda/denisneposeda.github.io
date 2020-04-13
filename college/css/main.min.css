@@ -2526,6 +2526,7 @@ a.link-more{font-family:HelveticaNeueCyr,sans-serif;font-size:1.3rem;color:#000}
 .college-tab .doors-block:first-child{margin-top:-3rem}
 .college-tab .reviews-box{margin-top:-3rem}
 .college-tab .reviews-box .info-block:first-child:before{display:none}
+.college-tabs{margin-bottom:3rem}
 .college-contact{padding:-webkit-calc(1.5rem + 2vh) -webkit-calc(1.5rem + 2.4vh);padding:calc(1.5rem + 2vh) calc(1.5rem + 2.4vh);margin-bottom:-webkit-calc(3rem + .7vh);margin-bottom:calc(3rem + .7vh)}
 .college-contact .row>:not(:first-child){margin-left:1.7vw}
 .college-contact_title{display:block;font-size:1.3rem;color:#646464;margin-bottom:.5rem}
