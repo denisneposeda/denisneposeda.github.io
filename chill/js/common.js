@@ -9,6 +9,10 @@ $(function() {
       }
     })
 
-    AOS.init();
+    if(!Modernizr.touch){
+        myParaxify = paraxify('.paraxify');
+    }
+
+    AOS.init({disable: 'mobile'});
 
 });

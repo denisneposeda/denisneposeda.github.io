@@ -17,7 +17,7 @@
   </head>
   <body>
     <main class="main">
-      <div class="promo parallax-window" data-parallax="scroll" data-image-src="./img/data/promo-back.jpg">
+      <div class="promo paraxify">
         <div class="container"><img class="promo-image" src="./img/data/promo-text.png" alt=""><span class="promo-text">Visual search + design + writing</span></div>
       </div>
       <section class="who">
@@ -34,14 +34,14 @@
         </div>
       </section>
       <section class="what">
-        <div class="what-block_01 parallax-window" data-parallax="scroll" data-image-src="./img/data/what-back.jpg">
+        <div class="what-block_01 paraxify lazy" data-src="./img/data/what-back.jpg">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-auto"><span class="what-text h1">What we do</span></div>
             </div>
           </div>
         </div>
-        <div class="what-block_02 lazy" data-src="./img/data/what-back_02.jpg">
+        <div class="what-block_02 image image-cov lazy" data-src="./img/data/what-back_02.jpg">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-lg-4 col-sm-6 col-12">
@@ -177,11 +177,6 @@
           <div class="col-lg-4 col-sm-6 col-12">
             <ul class="footer-list list-unstyled">
               <li class="footer-list_item">
-                <svg class="icon icon-phone icon-left">
-                  <use xlink:href="#icon-phone"></use>
-                </svg><a href="tel:+74957411616">+7 495 741-1616</a>
-              </li>
-              <li class="footer-list_item">
                 <svg class="icon icon-mail icon-left">
                   <use xlink:href="#icon-mail"></use>
                 </svg><a href="mailto:info@chillvibes.community">info@chillvibes.community</a>
@@ -222,7 +217,8 @@
     <script src="./js/calc.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
-    <script src="./js/parallax.min.js"></script>
+    <script src="./js/modernizr-custom.js"></script>
+    <script src="./js/paraxify.min.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/common.js"></script>
   </body>
