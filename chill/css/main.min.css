@@ -2076,7 +2076,7 @@ a.link-decorated:hover{text-decoration:none}
 .what-text{text-align:center}
 }
 @media (min-width:1300px){
-.row-l{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-3rem;margin-left:-3rem}
-.row-l>*{padding-left:3rem;padding-right:3rem}
+.row-l{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-2.5rem;margin-left:-2.5rem}
+.row-l>*{padding-left:2.5rem;padding-right:2.5rem}
 }
 /*# sourceMappingURL=main.min.css.map */
