@@ -1984,7 +1984,7 @@ html{-webkit-box-sizing:border-box;box-sizing:border-box}
 body,html{height:100%}
 .main{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}
 html{font-size:10px}
-body{font-size:1.6rem;min-width:320px;position:relative;line-height:1.2;font-family:Sen,sans-serif;color:#000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
+body{background-color:#000;font-size:1.6rem;min-width:320px;position:relative;line-height:1.2;font-family:Sen,sans-serif;color:#000;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}
 body input,body textarea{display:block;width:100%;outline:0;resize:none;border:none}
 body a:active,body a:focus,body a:hover,body button:active,body button:focus,body button:hover,body input:active,body input:focus,body input:hover,body textarea:active,body textarea:focus,body textarea:hover{outline:0;outline-offset:0}
 body button{cursor:pointer;background-color:transparent;border:none;padding:0}
@@ -2020,15 +2020,15 @@ a.link-decorated:hover{text-decoration:none}
 .btn:after{content:"";display:inline-block;min-height:inherit;visibility:hidden}
 .hidden{position:absolute;top:0;left:0;opacity:0;visibility:hidden;pointer-events:none}
 .section-title{text-align:center;margin-bottom:33.411px}
-.promo{position:relative;overflow:hidden;text-align:center;background-image:url(../img/data/promo-back.jpg);padding-bottom:209.265px;padding-top:165.66px}
+.promo{text-align:center;padding-bottom:209.265px;padding-top:165.66px}
 .promo-image{max-width:100%;height:auto;display:block;margin:0 auto 34.38px}
 .promo-text{display:inline-block;margin:0 auto;background-color:#fdcb02;font-family:ModenaSans,sans-serif;font-size:1.7rem;padding:.4rem .2rem .1rem}
 .who{background-color:#000;padding-bottom:108.489px;padding-top:119.148px}
 .who-title{font-size:9.7rem;line-height:1.52;color:#fdcb02;text-align:right;display:inline-block}
 .who p{font-size:1.7rem;letter-spacing:.009rem;color:#fff}
 .who p span{color:#fdcb02}
-.what{color:#fff;margin-bottom:115.272px}
-.what-block_01{position:relative;overflow:hidden;padding-bottom:306.165px;padding-top:311.01px}
+.what{color:#fff}
+.what-block_01{padding-bottom:306.165px;padding-top:311.01px}
 .what-block_02{padding-bottom:117.21px;padding-top:148.218px}
 .what-block_03{padding-bottom:229.614px;padding-top:221.862px;background-color:#000}
 .what-list{counter-reset:item;text-align:center}
@@ -2038,7 +2038,7 @@ a.link-decorated:hover{text-decoration:none}
 .what-title{color:rgba(253,203,2,.2);font-size:7.2rem;line-height:1.49;text-align:right}
 .what p:not(:last-child){margin-bottom:2rem}
 .what p strong{background-color:#fdcb02;color:#000;font-weight:400;padding-left:.3rem;padding-right:.3rem}
-.samples{text-align:center;margin-bottom:100.737px}
+.samples{background-color:#fff;text-align:center;padding-top:115.272px;padding-bottom:100.737px}
 .samples p{letter-spacing:.009rem;font-size:1.8rem}
 .samples-control{margin-top:57.132px;margin-bottom:73.605px}
 .samples-control_item:not(:first-child){margin-left:.1rem}
@@ -2049,7 +2049,7 @@ a.link-decorated:hover{text-decoration:none}
 .samples-block .image{padding-bottom:67%}
 .samples-more{font-size:1.8rem;text-decoration:underline;cursor:pointer;letter-spacing:.009rem}
 .samples-more:hover{text-decoration:none}
-.client{margin-bottom:87.52px}
+.client{background-color:#fff;padding-bottom:87.52px}
 .client-box{margin-top:63.915px}
 .client-block{margin-bottom:2rem}
 .client-block img{max-width:100%;height:auto}
@@ -2063,8 +2063,6 @@ a.link-decorated:hover{text-decoration:none}
 .footer svg{fill:#fff}
 .footer-copy{border-top:.1rem solid #fff;padding-top:1.5rem;padding-bottom:1.3rem}
 .footer-copy_text{display:block;font-size:1.4rem}
-.simpleParallax{position:absolute;left:0;right:0;top:0;z-index:-1}
-.paraxify{background-attachment:fixed;background-position:center center;-webkit-background-size:cover;background-size:cover}
 @media (max-width:991.98px){
 .paraxify{-webkit-background-size:scroll scroll;background-size:scroll}
 .who-title{font-size:7rem}
