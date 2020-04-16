@@ -5,17 +5,19 @@
     <title>Chill Vibes</title>
     <meta name="description" сontent="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="viewport" content="width=1920px,initial-scale=.1">
     <meta property="og:image" content="./img/favicon/favicon.png">
     <link rel="icon" href="./img/favicon/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/favicon.png">
     <meta name="theme-color" content="#000">
     <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
     <main class="main">
-      <div class="promo image image-cov" style="background-image: url('./img/data/promo-back.jpg')">
+      <div class="promo parallax-window" data-parallax="scroll" data-image-src="./img/data/promo-back.jpg">
         <div class="container"><img class="promo-image" src="./img/data/promo-text.png" alt=""><span class="promo-text">Visual search + design + writing</span></div>
       </div>
       <section class="who">
@@ -25,14 +27,14 @@
               <h2 class="who-title">Who are we?</h2>
             </div>
             <div class="col-sm-6 col-12">
-              <p>We are a team of experienced Writers and Visualistsbased in Russia.</p>
+              <p>We are a team of experienced Writers and Visualists based in Russia.</p>
               <p><span>We love to create treatments. And we love to win, just like you.</span></p>
             </div>
           </div>
         </div>
       </section>
       <section class="what">
-        <div class="what-block_01 lazy" data-src="./img/data/what-back.jpg">
+        <div class="what-block_01 parallax-window" data-parallax="scroll" data-image-src="./img/data/what-back.jpg">
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-auto"><span class="what-text h1">What we do</span></div>
@@ -44,8 +46,8 @@
             <div class="row justify-content-center">
               <div class="col-lg-4 col-sm-6 col-12">
                 <ul class="what-list list-unstyled">
-                  <li class="what-list_item">We get your brief, study it inside and out.</li>
-                  <li class="what-list_item">And dedicate next few days of our life to your project</li>
+                  <li class="what-list_item" data-aos="zoom-in-up" data-aos-duration="1500">We get your brief, study it inside and out.</li>
+                  <li class="what-list_item" data-aos="zoom-in-up" data-aos-duration="1500">And dedicate next few days of our life to your project</li>
                 </ul>
               </div>
             </div>
@@ -78,25 +80,78 @@
             </div>
           </div>
           <div class="samples-control row justify-content-center no-gutters">
-            <div class="samples-control_item col-auto"><span class="samples-control_link is-active">Visual Search + Design</span></div>
-            <div class="samples-control_item col-auto"><span class="samples-control_link"> Writing</span></div>
+            <div class="samples-control_item col-auto"><a class="samples-control_link is-active" href="https://drive.google.com/drive/folders/1oDudmNroUkrf3GJqavFjXxCCmhiW2BCE" target="_blank" rel="nofollow">Visual Search + Design</a></div>
+            <div class="samples-control_item col-auto"><a class="samples-control_link" href="https://drive.google.com/drive/folders/1DCmrJNRJ7ZGmWppaFHvIJlgGJH9H06_p" target="_blank" rel="nofollow"> Writing</a></div>
           </div>
           <div class="samples-box row">
             <div class="samples-block col-xs-6 col-12">
-              <div class="image image-cov lazy" data-src="./img/data/samples_01.jpg"></div>
+              <div class="d-block" data-fancybox="project-1" data-src="/img/examples/1/Glo_by_Egor_Abramenko_001.jpeg">
+                <div class="image image-cov lazy image-hover" data-src="./img/data/samples_01.jpg"></div>
+                <div class="d-none">
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_002.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_003.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_004.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_006.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_008.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_013.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_035.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_043.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_049.jpeg"></div>
+                  <div data-fancybox="project-1" data-src="./img/examples/1/Glo_by_Egor_Abramenko_061.jpeg"></div>
+                </div>
+              </div>
             </div>
             <div class="samples-block col-xs-6 col-12">
-              <div class="image image-cov lazy" data-src="./img/data/samples_02.jpg"></div>
+              <div class="d-block" data-fancybox="project-2" data-src="/img/examples/2/Spotify_Template_001.jpeg">
+                <div class="image image-cov lazy image-hover" data-src="./img/data/samples_02.jpg"></div>
+                <div class="d-none">
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_002.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_003.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_004.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_007.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_012.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_014.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_017.jpeg"></div>
+                  <div data-fancybox="project-2" data-src="./img/examples/2/Spotify_Template_041.jpeg"></div>
+                </div>
+              </div>
             </div>
             <div class="samples-block col-xs-6 col-12">
-              <div class="image image-cov lazy" data-src="./img/data/samples_03.jpg"></div>
+              <div class="d-block" data-fancybox="project-3" data-src="/img/examples/3/Активиа_by_Matvey_Fiks_Template_001.jpeg">
+                <div class="image image-cov lazy image-hover" data-src="./img/data/samples_03.jpg"></div>
+                <div class="d-none">
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_002.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_003.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_004.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_005.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_006.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_007.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_008.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_009.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_010.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_011.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_016.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_030.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_031.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_034.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_035.jpeg"></div>
+                  <div data-fancybox="project-3" data-src="./img/examples/3/Активиа_by_Matvey_Fiks_Template_048.jpeg"></div>
+                </div>
+              </div>
             </div>
             <div class="samples-block col-xs-6 col-12">
-              <div class="image image-cov lazy" data-src="./img/data/samples_04.jpg"></div>
+              <div class="d-block" data-fancybox="project-4" data-src="/img/examples/4/Ostin_Template_001.jpeg">
+                <div class="image image-cov lazy image-hover" data-src="./img/data/samples_04.jpg"></div>
+                <div class="d-none">
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_002.jpeg"></div>
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_003.jpeg"></div>
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_004.jpeg"></div>
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_007.jpeg"></div>
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_016.jpeg"></div>
+                  <div data-fancybox="project-4" data-src="./img/examples/4/Ostin_Template_020.jpeg"></div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-auto"><span class="samples-more">Show more</span></div>
           </div>
         </div>
       </section>
@@ -122,11 +177,6 @@
           <div class="col-lg-4 col-sm-6 col-12">
             <ul class="footer-list list-unstyled">
               <li class="footer-list_item">
-                <svg class="icon icon-location icon-left">
-                  <use xlink:href="#icon-location"></use>
-                </svg>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              </li>
-              <li class="footer-list_item">
                 <svg class="icon icon-phone icon-left">
                   <use xlink:href="#icon-phone"></use>
                 </svg><a href="tel:+74957411616">+7 495 741-1616</a>
@@ -134,26 +184,8 @@
               <li class="footer-list_item">
                 <svg class="icon icon-mail icon-left">
                   <use xlink:href="#icon-mail"></use>
-                </svg><a href="mailto:info@gmail.com">info@gmail.com</a>
+                </svg><a href="mailto:info@chillvibes.community">info@chillvibes.community</a>
               </li>
-            </ul>
-            <ul class="footer-social row list-unstyled justify-content-center">
-              <li class="footer-social_item col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank">
-                  <svg class="icon icon-facebook">
-                    <use xlink:href="#icon-facebook"></use>
-                  </svg></a></li>
-              <li class="footer-social_item col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank">
-                  <svg class="icon icon-insta">
-                    <use xlink:href="#icon-insta"></use>
-                  </svg></a></li>
-              <li class="footer-social_item col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank">
-                  <svg class="icon icon-twitter">
-                    <use xlink:href="#icon-twitter"></use>
-                  </svg></a></li>
-              <li class="footer-social_item col-auto"><a class="footer-social_link" href="#" rel="nofollow" target="_blank">
-                  <svg class="icon icon-youtube">
-                    <use xlink:href="#icon-youtube"></use>
-                  </svg></a></li>
             </ul>
           </div>
         </div>
@@ -188,7 +220,10 @@
     </svg>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/calc.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/jquery.lazy.min.js"></script>
+    <script src="./js/parallax.min.js"></script>
+    <script src="./js/aos.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>
