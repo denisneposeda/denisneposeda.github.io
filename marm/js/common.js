@@ -17,6 +17,9 @@ $(function() {
         smartSpeed: 750,
         responsive:{
             0:{
+                items:1
+            },
+            415:{
                 items:2
             },
             576:{

@@ -2060,7 +2060,7 @@ a.link-decorated:hover{text-decoration:none}
 .owl-next{-webkit-transform:rotate(-180deg);-ms-transform:rotate(-180deg);transform:rotate(-180deg)}
 .numeral{position:relative;padding-top:11.9rem;padding-bottom:4.5rem}
 .numeral:before{content:'';position:absolute;background:url(../img/data/numeral-back.svg) right top no-repeat;-webkit-background-size:contain;background-size:contain;height:92%;left:0;right:0;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:-1;pointer-events:none}
-.numeral:after{content:'';position:absolute;left:0;right:0;height:50.4rem;background-color:#ffef00;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:-1;pointer-events:none}
+.numeral:after{content:'';position:absolute;left:0;right:0;height:51rem;background-color:#ffef00;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);z-index:-1;pointer-events:none}
 .numeral-img{max-width:100%;height:auto;display:block}
 .numeral-text{position:absolute;font-size:1.2rem;text-align:center;line-height:.95;right:33%;top:18%;letter-spacing:1.3px}
 .numeral-text:after{content:'';position:absolute;width:3.9rem;height:3.9rem;background:url(../img/data/llamas.png) center no-repeat;top:170%;left:7%}
@@ -2112,5 +2112,6 @@ a.link-decorated:hover{text-decoration:none}
 @media (max-width:414.98px){
 .logo{max-height:40vh}
 .h1,h1{font-size:4rem}
+.promo-phone{font-size:3rem}
 }
 /*# sourceMappingURL=main.min.css.map */
