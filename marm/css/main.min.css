@@ -2068,6 +2068,7 @@ a.link-decorated:hover{text-decoration:none}
 .numeral-title{margin-bottom:4.9rem}
 .numeral-list_item{margin-bottom:3rem}
 .numeral-list_item strong{margin-bottom:-.2rem}
+.numeral-list_item strong.rub:after{content:'\20BD';font-size:.8em}
 .numeral-list_item span{font-size:1.2rem;font-weight:900;text-transform:uppercase;text-decoration:underline;display:block;padding-left:1rem;letter-spacing:1.3px}
 .like{text-align:center;width:9.2rem;padding-top:.5rem}
 .like span{text-decoration:none;font-weight:400;padding-left:0;text-transform:none;line-height:.95;margin-top:.4rem}
