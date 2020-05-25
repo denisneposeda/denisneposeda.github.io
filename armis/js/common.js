@@ -37,4 +37,13 @@ $(function() {
         }
     })
 
+    $('.faq-block_control').click(function(e){
+        e.preventDefault();
+        $(this).next().slideToggle().parent().siblings().children('.faq-block_content:visible').slideUp();
+    })
+
+    $(window).scroll(function(e){
+        ( $(this).scrollTop() > $('.header:not(.header-scroll)').outerHeight() ) ? $('body').addClass('scroll') : $('body').removeClass('scroll');
+    })
+
 });
