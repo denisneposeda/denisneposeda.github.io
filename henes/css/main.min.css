@@ -2158,7 +2158,7 @@ a.link-decorated:hover{text-decoration:none}
 .promo .btn{margin:0 auto}
 .description-table .row{padding-top:.5rem;padding-bottom:.5rem}
 .description-table_text,.description-table_title{line-height:1.5}
-.description-img,.promo-img{overflow:hidden}
+.description,.promo{overflow:hidden}
 }
 @media (max-width:575.98px){
 .btn-l{width:24.7rem;height:5.8rem;font-size:1.8rem}
