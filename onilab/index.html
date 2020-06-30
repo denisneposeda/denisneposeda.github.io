@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Onilab</title>
+    <meta name="description" сontent="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta property="og:image" content="./img/favicon/favicon.png">
+    <link rel="icon" href="./img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/favicon.png">
+    <meta name="theme-color" content="#000">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/hamburgers.min.css">
+    <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/nouislider.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto"><span class="topbar-text">HUGE SCHOOL SALE NOW ON!!</span></div>
+          <div class="col-auto"><a class="btn btn-xs btn-white" href="#">Grab These Deals</a></div>
+          <div class="col-auto"><span class="topbar-timer"><strong>02 </strong>Days <strong>14 </strong>HRS</span></div>
+        </div>
+        <button class="topbar-close btn"></button>
+      </div>
+    </div>
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header-box row align-items-end">
+          <div class="col-auto"><a href=""><img src="./img/data/logo-bsk.png" srcset="./img/data/logo-bsk@2x.png 2x,./img/data/logo-bsk@3x.png 3x"></a></div>
+          <div class="col">
+            <ul class="menu-list row list-unstyled">
+              <li class="menu-list_item col-auto"><a class="menu-list_link" href="#">Help centre</a></li>
+              <li class="menu-list_item col-auto"><a class="menu-list_link" href="#">About  us</a></li>
+              <li class="menu-list_item col-auto"><a class="menu-list_link" href="#">Shipping</a></li>
+              <li class="menu-list_item col-auto"><a class="menu-list_link" href="#">Family club</a></li>
+              <li class="menu-list_item col-auto"><a class="menu-list_link" href="#">Blog</a></li>
+            </ul>
+            <div class="row align-items-center">
+              <div class="search col">
+                <form class="form" action="">
+                  <input class="form-control" type="text">
+                  <button class="btn" type="submit">
+                    <svg class="icon icon-l">
+                      <use xlink:href="#ic-search"></use>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="col-auto">
+                <ul class="function-list row list-unstyled">
+                  <li class="function-list_item col-auto"><a class="function-list_link" href="#">
+                      <svg class="icon icon-l">
+                        <use xlink:href="#ic-heart"></use>
+                      </svg></a></li>
+                  <li class="function-list_item col-auto"><a class="function-list_link" href="#">
+                      <svg class="icon icon-l">
+                        <use xlink:href="#ic-user"></use>
+                      </svg></a></li>
+                  <li class="function-list_item col-auto"><a class="function-list_link" href="#">
+                      <svg class="icon icon-l">
+                        <use xlink:href="#ic-cart"></use>
+                      </svg><span id="cart-count">3</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <ul class="category-list row justify-content-xl-between list-unstyled">
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Back to school</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Name labels</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">School supplies</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Educational</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Stationery</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Clothing</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Gifts</a></li>
+              <li class="category-list_item col-auto"><a class="category-list_link" href="#">Pets</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header-mobile d-md-none">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <svg class="icon icon-m">
+              <use xlink:href="#ic-burger"></use>
+            </svg>
+          </div>
+          <div class="col-auto">
+            <button class="btn" type="submit">
+              <svg class="icon icon-m">
+                <use xlink:href="#ic-search"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="col-auto mx-auto"><a href=""><img src="./img/data/logo-bskm.png" srcset="./img/data/logo-bskm@2x.png 2x,./img/data/logo-bskm@3x.png 3x"></a></div>
+          <div class="col-auto"><a class="function-list_link" href="#">
+              <svg class="icon icon-m">
+                <use xlink:href="#ic-user"></use>
+              </svg></a></div>
+          <div class="col-auto"><a href="#">
+              <svg class="icon icon-m">
+                <use xlink:href="#ic-cart"></use>
+              </svg></a></div>
+        </div>
+      </div>
+    </div>
+    <main class="main">
+            <div class="breadcrumbs d-sm-block d-none">
+              <div class="container-fluid">
+                <ul class="breadcrumbs-list list-unstyled row no-gutters">
+                  <li class="breadcrumbs-list_item col-auto"><a class="breadcrumbs-list_link" href="#">Home</a></li>
+                  <li class="breadcrumbs-list_item col-auto"><a class="breadcrumbs-list_link" href="#">Name Labels</a></li>
+                  <li class="breadcrumbs-list_item col-auto"><a class="breadcrumbs-list_link" href="#">Value label kit</a></li>
+                  <li class="breadcrumbs-list_item col-auto"><span class="breadcrumbs-list_link">Designer School Labels Value Kit</span></li>
+                </ul>
+              </div>
+            </div>
+      <div class="card">
+        <div class="container-fluid">
+          <div class="card-block row">
+            <div class="card-images col-md-auto col-12 mx-lg-0 mx-auto">
+              <div class="row no-gutters">
+                <div class="card-images_small col-md-auto col-12 order-md-1 order-2">
+                  <div class="card-thumb_carousel owl-carousel">
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                    <div class="image image-cov lazy" data-src="./img/data/bitmap.jpg"></div>
+                  </div>
+                </div>
+                <div class="card-images_big col-md-auto col-12 order-md-2 order-1"><span class="discount">20% OFF</span>
+                  <button class="card-zoom btn btn-white btn-round btn-l">
+                    <svg class="icon icon-l">
+                      <use xlink:href="#combined-shape"></use>
+                    </svg>
+                  </button>
+                  <div class="card-images_carousel owl-carousel">
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                    <div data-fancybox data-src="./img/data/bitmap.jpg">
+                      <div class="image image-cov image-hover lazy" data-src="./img/data/bitmap.jpg" data-srcset="./img/data/bitmap.jpg 1x, ./img/data/bitmap@2x.jpg 2x, ./img/data/bitmap@3x.jpg 3x"></div>
+                    </div>
+                  </div>
+                  <buttn class="card-create btn btn-xl btn-pink">Create your labels</buttn>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg col-12 mt-lg-0 mt-3">
+              <div class="info row no-gutters">
+                <div class="info-item col d-xs-block d-none"><strong>Free Shipping Over $60</strong></div>
+                <div class="info-item col d-xs-block d-none"><strong>Afterpay over $60</strong></div>
+                <div class="info-item col d-xs-block d-none"><strong>Printed in 1-3 Days*</strong></div>
+              </div>
+              <h1 class="card-title">Designer School Labels Value Kit</h1>
+              <div class="rating row">
+                <div class="col-auto">
+                  <ul class="rating-list row list-unstyled no-gutters">
+                    <li class="rating-list_item col-auto">
+                      <svg class="icon icon-m">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    </li>
+                    <li class="rating-list_item col-auto">
+                      <svg class="icon icon-m">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    </li>
+                    <li class="rating-list_item col-auto">
+                      <svg class="icon icon-m">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    </li>
+                    <li class="rating-list_item col-auto">
+                      <svg class="icon icon-m">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    </li>
+                    <li class="rating-list_item col-auto">
+                      <svg class="icon icon-m">
+                        <use xlink:href="#star"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-auto">
+                  <button class="btn rating-link">345 Reviews</button>
+                </div>
+              </div>
+              <div class="payment row">
+                <div class="col">
+                  <div class="payment-line row align-items-center">
+                    <div class="col-auto">
+                      <strike class="payment-number">$29.95</strike>
+                    </div>
+                    <div class="col-auto"><strong class="payment-number">$29.95</strong></div>
+                    <div class="col-auto"><strong class="payment-limit">for 200 Labels</strong></div>
+                  </div><span class="afterpay">or only <em>4 payments </em>of 6.25 with<img class="icon icon-right" src="./img/data/afterpay.svg" alt=""></span>
+                </div>
+                <div class="col-auto d-xl-block d-none">
+                  <button class="btn description-link">See Product Description ></button>
+                </div>
+              </div><strong class="calendar">
+                <svg class="icon icon-m icon-left">
+                  <use xlink:href="#calendar"></use>
+                </svg>We will produce your order within 3-5 business days</strong>
+              <div class="description">
+                <h2 class="h6">Description</h2>
+                <div class="description-toggle">
+                  <div class="description-content">
+                    <p>The Designer School Labels Value Kit contains 200 Name Labels including:</p>
+                    <ul>
+                      <li><strong>8</strong>x Large Name Labels</li>
+                      <li><strong>16</strong>x Medium Name Labels</li>
+                      <li><strong>8</strong>x Round Shoe Labels</li>
+                      <li><strong>8</strong>x Round Shoe Labels</li>
+                      <li><strong>8</strong>x Round Shoe Labels</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fugiat vero quidem ipsum similique rerum adipisci dolore blanditiis ipsa perspiciatis quos, natus voluptate non deleniti corrupti magni rem harum. Cumque.</p>
+                  </div>
+                </div><span class="description-control">Show More</span>
+              </div>
+              <div class="faq">
+                <div class="faq-block">
+                  <h2 class="faq-block_control h5">Shipping & Delivery</h2>
+                  <div class="faq-block_content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est minima fuga, dicta illum a laudantium repellat voluptates temporibus praesentium ut excepturi accusantium sint corrupti animi? Dolor error mollitia nostrum?</p>
+                  </div>
+                </div>
+                <div class="faq-block">
+                  <h2 class="faq-block_control h5">FAQ About Labels</h2>
+                  <div class="faq-block_content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est minima fuga, dicta illum a laudantium repellat voluptates temporibus praesentium ut excepturi accusantium sint corrupti animi? Dolor error mollitia nostrum?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommended">
+        <div class="container-fluid">
+          <h2 class="section-title h1">Recommended for you</h2>
+          <div class="recommended-carousel owl-carousel">
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="recommended-block"><a href="#">
+                <div class="image image-cov image-hover lazy" data-src="./img/data/pr-1.jpg" data-srcset="./img/data/pr-1.jpg 1x, ./img/data/pr-1@2x.jpg 2x, ./img/data/pr-1@3x.jpg 3x"><span class="discount">15% OFF</span></div>
+                <h3 class="recommended-block_title h6">Kids Large Drink Bottle</h3>
+                <div class="recommended-block_price row">
+                  <div class="col-auto">
+                    <strike>$40.95</strike>
+                  </div>
+                  <div class="col-auto"><strong>$40.95</strong></div>
+                </div>
+                <div class="recommended-block_rating row">
+                  <div class="col-auto">
+                    <ul class="row list-unstyled no-gutters">
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                      <li class="rating-list_item col-auto">
+                        <svg class="icon icon-xs">
+                          <use xlink:href="#star (1)"></use>
+                        </svg>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-auto"><span class="text-s">345 reviews</span></div>
+                </div><span class="recommended-block_text">4 Avatars available</span></a>
+              <div class="favorite">
+                <button class="btn btn-m btn-white btn-round">
+                  <svg class="icon icon-m">
+                    <use xlink:href="#ic-heart"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slidetop">
+        <div class="container-fluid"><span class="slidetop-text h5">Back to top
+            <svg class="icon icon-right icon-xs">
+              <use xlink:href="#path-copy-3"></use>
+            </svg></span></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-6 col-12">
+            <div class="footer-block row">
+              <div class="col-md-auto col-12"><span class="h6">Customer Care</span>
+                <ul class="footer-list list-unstyled">
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Contact Us</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Shipping &amp; Delivery</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Returns  &amp; Exchanges</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Payments methods</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Create an Account</a></li>
+                </ul>
+              </div>
+              <div class="col-md col-12 mt-md-0 mt-3"><span class="h6">Collaborate With Us</span>
+                <ul class="footer-list list-unstyled">
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Our Story</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Affiliates</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Partnerships</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Fundraising</a></li>
+                  <li class="footer-list_item"><a class="footer-list_link" href="#">Blog</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-12 mt-xs-0 mt-5">
+            <div class="footer-block row">
+              <div class="footer-contact_box col-lg-auto col-12">
+                <div class="footer-contact row align-items-center">
+                  <div class="col-auto"><span class="footer-icon">
+                      <svg class="icon icon-s">
+                        <use xlink:href="#ic-chat"></use>
+                      </svg></span></div>
+                  <div class="col"><span class="footer-contact_title">Live chat</span><strong class="text-xs">7 Days<br> 8am to Midnight (AEST)</strong></div>
+                </div>
+                <div class="footer-contact row align-items-center">
+                  <div class="col-auto"><span class="footer-icon">
+                      <svg class="icon icon-s">
+                        <use xlink:href="#ic-phone"></use>
+                      </svg></span></div>
+                  <div class="col"><span class="footer-contact_title">Call us</span><strong class="text-xs">1300 668 997<br> Mon - Fri  |  8am - 4pm</strong></div>
+                </div>
+                <div class="footer-contact row align-items-center">
+                  <div class="col-auto"><span class="footer-icon">
+                      <svg class="icon icon-s">
+                        <use xlink:href="#ic-mail"></use>
+                      </svg></span></div>
+                  <div class="col"><span class="footer-contact_title">Email us</span><strong class="text-xs">Our  team will<br> reply within 1 business day</strong></div>
+                </div>
+              </div>
+              <div class="footer-info col-lg col-12 mt-lg-0 mt-3">
+                <div class="footer-delivery"><span class="h6">Delivery time</span>
+                  <div class="footer-delivery_box row align-items-center justify-content-between">
+                    <div class="col-auto">
+                      <div class="footer-delivery_item row align-items-center">
+                        <div class="col-auto"><span class="footer-icon">
+                            <svg class="icon icon-m">
+                              <use xlink:href="#ic-print"></use>
+                            </svg></span></div>
+                        <div class="col"><strong class="text-xs">Production<br> 2-3 days</strong></div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <svg class="icon icon-xs">
+                        <use xlink:href="#ic-plus"></use>
+                      </svg>
+                    </div>
+                    <div class="col-auto">
+                      <div class="footer-delivery_item row align-items-center">
+                        <div class="col-auto"><span class="footer-icon">
+                            <svg class="icon icon-m">
+                              <use xlink:href="#ic-shipping-truck"></use>
+                            </svg></span></div>
+                        <div class="col"><strong class="text-xs">Transport<br> 3-4 days</strong></div>
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <svg class="icon icon-xs">
+                        <use xlink:href="#ic-equal"></use>
+                      </svg>
+                    </div>
+                    <div class="col-auto">
+                      <div class="footer-delivery_item row align-items-center">
+                        <div class="col-auto"><span class="footer-icon">
+                            <svg class="icon icon-m">
+                              <use xlink:href="#ic-home"></use>
+                            </svg></span></div>
+                        <div class="col"><strong class="text-xs">Delivery<br> 5-7 days</strong></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-payment"><span class="h6">Payment methods</span>
+                  <div class="footer-payment_box row justify-content-between">
+                    <div class="footer-payment_item col-auto"><img src="./img/data/amex.svg" alt=""></div>
+                    <div class="footer-payment_item col-auto"><img src="./img/data/visa.svg" alt=""></div>
+                    <div class="footer-payment_item col-auto"><img src="./img/data/master.svg" alt=""></div>
+                    <div class="footer-payment_item col-auto"><img src="./img/data/pay-pal.svg" alt=""></div>
+                    <div class="footer-payment_item col-auto"><img src="./img/data/afterpay.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        <div class="container-fluid">
+          <div class="row justify-content-xs-start justify-content-center">
+            <div class="col-auto"><span class="copy-text">© 2019 Bright Star Kids. All Rights Reserved</span></div>
+            <div class="col-auto ml-md-0 ml-xs-auto">
+              <ul class="copy-list list-unstyled row no-gutters">
+                <li class="copy-list_item"><a class="copy-list_link" href="#">Terms of use</a></li>
+                <li class="copy-list_item"><a class="copy-list_link" href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+            <div class="col-auto ml-auto d-md-block d-none"><span class="copy-develop">Magento development and support by <a href="//onilab.com/" target="_blank">Onilab</a></span></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <svg class="hidden" width="0" height="0">
+      <symbol id="ic-cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+        <g fill="none" fill-rule="evenodd" stroke="#606060" stroke-linecap="round" stroke-width="1.48">
+          <path d="M1 1s3.746 1.82 4.028 2.12l2.93 15.698a2.448 2.448 0 0 0 2.354 1.985h15.42"></path>
+          <path d="M5.615 5.77h23.189l-2.221 10.495s-.264 1.229-1.42 1.229H7.699m7.483 7.309a2.317 2.317 0 1 1-4.633 0 2.317 2.317 0 0 1 4.633 0zm8.47 0a2.321 2.321 0 1 1-4.643.008 2.321 2.321 0 0 1 4.643-.008z"></path>
+        </g>
+      </symbol>
+      <symbol id="ic-user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 30">
+        <path d="M19.958 9.025c0 4.43-2.874 8.025-6.415 8.025-3.54 0-6.414-3.596-6.414-8.025S10.003 1 13.543 1c3.54 0 6.415 3.591 6.415 8.025zm-1.907 9.242s7.187 1.514 7.535 3.865c.25 1.68.407 4.119.462 5.368a.765.765 0 0 1-.21.572.769.769 0 0 1-.558.243H1.77a.773.773 0 0 1-.769-.815c.074-1.25.232-3.702.463-5.368.342-2.351 7.534-3.865 7.534-3.865" fill="none" fill-rule="evenodd" stroke="#606060" stroke-linecap="round" stroke-width="1.48"></path>
+      </symbol>
+      <symbol id="ic-heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 27">
+        <path fill="#606060" d="M14.998 3.415l-.07-.076C12.105.305 8.806-.486 5.429.958 1.862 2.489-.159 6.214.333 10.28c.517 4.25 3.49 8.032 8.6 12.116l.605.478c.41.32.834.643 1.294.987l1.947 1.43 1.627 1.19.592.442.907-.675 2.155-1.57a87.785 87.785 0 0 0 3.003-2.279c5.113-4.084 8.087-7.868 8.604-12.12.492-4.066-1.53-7.79-5.094-9.322-3.365-1.445-6.677-.652-9.505 2.38l-.07.077zm8.991-1.097c2.946 1.266 4.624 4.356 4.208 7.785-.444 3.654-3.072 7.083-7.66 10.82l-.398.32c-.587.47-1.186.93-1.865 1.438l-3.276 2.397-2.188-1.595a89.655 89.655 0 0 1-2.659-2.008l-.295-.234c-4.831-3.862-7.597-7.38-8.053-11.139-.416-3.428 1.262-6.518 4.208-7.784 3.004-1.284 5.854-.45 8.413 2.695l.574.705.574-.705c2.56-3.144 5.426-3.98 8.417-2.695z"></path>
+      </symbol>
+      <symbol id="ic-search" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 30 29">
+        <path d="M24.605 12.675c0 6.437-5.218 11.655-11.655 11.655-6.437 0-11.655-5.218-11.655-11.655C1.295 6.238 6.513 1.02 12.95 1.02a11.652 11.652 0 0 1 11.655 11.655zM21.44 20.65l7.41 7.185" fill="none" fill-rule="evenodd" stroke="#606060" stroke-linecap="round" stroke-width="1.475"></path>
+      </symbol>
+      <symbol id="star" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 20">
+        <path fill="#FACD24" fill-rule="evenodd" d="M11 17.173l-5.373 2.683c-.643.321-1.439.086-1.777-.524a1.206 1.206 0 0 1-.132-.793l1.026-5.684L.397 8.829a1.207 1.207 0 0 1-.024-1.767c.202-.197.467-.325.753-.364l6.008-.83L9.82.697c.322-.619 1.11-.873 1.762-.568.26.122.47.321.598.568l2.686 5.171 6.007.83c.72.099 1.218.733 1.113 1.416a1.223 1.223 0 0 1-.383.715l-4.347 4.026 1.026 5.684c.123.68-.358 1.326-1.074 1.443a1.38 1.38 0 0 1-.835-.126L11 17.173z"></path>
+      </symbol>
+      <symbol id="calendar" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+        <g fill="#606060">
+          <path d="M19.219 13.75c.431 0 .781-.35.781-.781V4.688a3.128 3.128 0 0 0-3.125-3.125h-1.016V.78a.781.781 0 0 0-1.562 0v.781h-3.555v-.78A.782.782 0 0 0 9.18.78v.781H5.664v-.78a.781.781 0 0 0-1.562 0v.781h-.977A3.13 3.13 0 0 0 0 4.688v12.188A3.128 3.128 0 0 0 3.125 20h13.75A3.129 3.129 0 0 0 20 16.875a.781.781 0 0 0-1.563 0c0 .862-.7 1.563-1.562 1.563H3.125a1.565 1.565 0 0 1-1.563-1.563V4.687c0-.861.701-1.562 1.563-1.562h.977v.781a.78.78 0 0 0 1.562.001v-.782H9.18v.781a.78.78 0 0 0 1.562.001v-.782h3.555v.781a.78.78 0 0 0 1.562.001v-.782h1.016c.862 0 1.563.7 1.563 1.563v8.28c0 .432.35.782.78.782z"></path>
+          <circle cx="4.883" cy="8.203" r="1"></circle>
+          <circle cx="11.68" cy="8.203" r="1"></circle>
+          <circle cx="15.078" cy="8.203" r="1"></circle>
+          <circle cx="4.883" cy="11.602" r="1"></circle>
+          <circle cx="4.883" cy="15" r="1"></circle>
+          <circle cx="8.281" cy="8.203" r="1"></circle>
+          <circle cx="8.281" cy="11.602" r="1"></circle>
+          <circle cx="8.281" cy="15" r="1"></circle>
+          <circle cx="11.68" cy="11.602" r="1"></circle>
+          <circle cx="15.078" cy="11.602" r="1"></circle>
+          <circle cx="11.68" cy="15" r="1"></circle>
+        </g>
+      </symbol>
+      <symbol id="path-copy-3" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 8">
+        <path fill="#606060" d="M10.622 7.588c.544.55 1.42.55 1.964 0a1.444 1.444 0 0 0 0-2.024L7.482.41a1.378 1.378 0 0 0-1.964.002L.414 5.564a1.444 1.444 0 0 0 0 2.024c.544.55 1.42.55 1.964 0L6.5 3.428l4.122 4.16z"></path>
+      </symbol>
+      <symbol id="ic-mail" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 13">
+        <path fill="#FFF" d="M14.026.025c1.078 0 1.954.88 1.95 1.957v8.248a1.954 1.954 0 0 1-1.953 1.953H1.953A1.956 1.956 0 0 1 0 10.23V1.979C0 .9.876.025 1.954.025zM2.114 2.15a.447.447 0 0 0 .036.632l3.954 3.534-3.937 3.686a.447.447 0 0 0 .611.654l3.997-3.739 1.084.969a.447.447 0 0 0 .595-.003l1.115-.999 3.973 3.775a.442.442 0 0 0 .631-.017.446.446 0 0 0-.016-.63l-3.924-3.726 3.907-3.504a.448.448 0 0 0-.597-.665l-5.39 4.837-1.05-.94c-.004-.003-.007-.006-.007-.01a.744.744 0 0 0-.073-.062L2.745 2.114a.446.446 0 0 0-.631.036z"></path>
+      </symbol>
+      <symbol id="ic-phone" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <path fill="#FFF" fill-rule="evenodd" d="M15.641 12.655l-2.47-2.477c-.493-.49-1.308-.476-1.817.035l-1.245 1.247-.246-.137c-.786-.436-1.862-1.035-2.994-2.17-1.136-1.138-1.733-2.218-2.17-3.007-.046-.083-.09-.164-.134-.24l.836-.837.41-.412c.51-.511.524-1.328.033-1.82L3.374.358c-.491-.492-1.307-.477-1.817.035l-.696.702.019.019a4.011 4.011 0 0 0-.574 1.014 4.253 4.253 0 0 0-.256 1.03c-.326 2.71.91 5.188 4.265 8.55 4.637 4.647 8.373 4.296 8.535 4.279a4.154 4.154 0 0 0 2.038-.832l.015.013.705-.692c.51-.511.524-1.328.033-1.822z"></path>
+      </symbol>
+      <symbol id="ic-chat" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16">
+        <path fill="#FFF" fill-rule="evenodd" d="M13.176.01c1.544 0 2.8 1.257 2.8 2.801v6.4a2.805 2.805 0 0 1-2.447 2.779v2.789a.56.56 0 0 1-.956.396l-3.164-3.163H2.801A2.805 2.805 0 0 1 0 9.21v-6.4C0 1.266 1.257.01 2.801.01zm-1.064 7.105H3.865a.56.56 0 1 0 0 1.12h8.247a.56.56 0 1 0 0-1.12zm0-3.138H3.865a.56.56 0 1 0 0 1.12h8.247a.56.56 0 1 0 0-1.12z"></path>
+      </symbol>
+      <symbol id="ic-home" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 15">
+        <path fill="#FFF" d="M19.828 5.693L16.69 2.449a.576.576 0 0 0-.414-.178h-2.552v-.043C13.724.999 12.757 0 11.569 0H2.155C.967 0 0 1 0 2.228v8.11c0 1.23.967 2.228 2.155 2.228h.414C2.841 13.953 4.03 15 5.45 15c1.421 0 2.61-1.047 2.882-2.434h3.338C11.942 13.953 13.13 15 14.55 15s2.609-1.047 2.88-2.434h1.984c.324 0 .586-.27.586-.605V6.12a.615.615 0 0 0-.172-.428zm-3.795-2.21L18 5.515h-4.276V3.483h2.31zM5.45 13.788c-.975 0-1.768-.82-1.768-1.827 0-1.008.793-1.828 1.768-1.828s1.767.82 1.767 1.828c0 1.007-.793 1.827-1.767 1.827zm9.1 0c-.975 0-1.767-.82-1.767-1.827 0-1.008.792-1.828 1.767-1.828.975 0 1.768.82 1.768 1.828 0 1.007-.793 1.827-1.768 1.827z"></path>
+      </symbol>
+      <symbol id="ic-shipping-truck" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20">
+        <path fill="#FFF" d="M10.359.135l.09.067 9.264 8.12a.682.682 0 0 1-.817 1.086l-.08-.061-.718-.629V18.85a.68.68 0 0 1-.58.673l-.101.008H2.583a.682.682 0 0 1-.674-.58l-.007-.101V8.718l-.717.629a.681.681 0 0 1-.975-.945l.078-.08L9.55.202a.683.683 0 0 1 .808-.067zm1.568 11.033h-4a.5.5 0 0 0-.492.41l-.008.09v7.862h5v-7.862a.5.5 0 0 0-.5-.5zm-1.082-5.433h-1.69a.68.68 0 0 0 0 1.362h1.69a.68.68 0 0 0 0-1.362z"></path>
+      </symbol>
+      <symbol id="ic-print" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 19">
+        <g fill="#FFF">
+          <path d="M12.889 14.915H7.11a.667.667 0 0 0 0 1.334h5.778a.667.667 0 0 0 0-1.334zm0-2.102H7.11a.667.667 0 1 0 0 1.333h5.778a.667.667 0 1 0 0-1.333z"></path>
+          <path d="M18.444 4.528h-2.12V.669c0-.368-.3-.666-.667-.666H4.343a.666.666 0 0 0-.666.666v3.859H1.556C.698 4.528 0 5.225 0 6.083v6.707c0 .858.698 1.556 1.556 1.556h2.12v3.579c0 .368.3.666.668.666h11.312a.666.666 0 0 0 .667-.666v-3.58h2.121c.858 0 1.556-.697 1.556-1.555V6.083c0-.857-.698-1.555-1.556-1.555zM5.01 1.336h9.98v3.192H5.01V1.336zm9.98 15.922H5.01v-5.454h9.98v5.454zm.667-8.816H13.96a.666.666 0 1 1 0-1.333h1.697a.666.666 0 1 1 0 1.333z"></path>
+        </g>
+      </symbol>
+      <symbol id="combined-shape" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 28 28">
+        <path fill="none" fill-rule="evenodd" stroke="#5E5F5F" stroke-linecap="round" stroke-width="1.049" d="M11.853 23.56c6.134 0 11.107-4.974 11.107-11.108S17.987 1.345 11.853 1.345C5.719 1.345.746 6.318.746 12.452c0 6.134 4.973 11.107 11.107 11.107zm8.09-3.502L27 26.904M11.853 8.5v7.853m-3.926-3.926h7.853"></path>
+      </symbol>
+      <symbol id="ic-equal" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 7">
+        <path d="M11.11.375H1.89a.938.938 0 0 0 .001 1.875h9.218a.938.938 0 0 0 0-1.875zm0 4H1.89a.938.938 0 0 0 .001 1.875h9.218a.938.938 0 0 0 0-1.875z" fill="#7E7E7E"></path>
+      </symbol>
+      <symbol id="ic-plus" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 12">
+        <g fill="#7E7E7E">
+          <path d="M11.11 5.375H1.89a.938.938 0 0 0 .001 1.875h9.218a.938.938 0 0 0 0-1.875z"></path>
+          <path d="M7.438 10.922V1.703a.937.937 0 0 0-1.875 0v9.219a.937.937 0 1 0 1.875 0z"></path>
+        </g>
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 12" id="star (1)">
+        <path fill="#606060" fill-rule="evenodd" d="M6.5 10.304l-3.175 1.61a.793.793 0 0 1-1.05-.315.724.724 0 0 1-.078-.476l.606-3.41L.235 5.298a.73.73 0 0 1-.014-1.06.782.782 0 0 1 .445-.22l3.55-.497L5.802.418a.79.79 0 0 1 1.394 0l1.588 3.103 3.55.498c.424.06.719.44.657.85a.74.74 0 0 1-.227.429l-2.568 2.415.606 3.41a.754.754 0 0 1-.635.866.806.806 0 0 1-.493-.075L6.5 10.304z"></path>
+      </symbol>
+      <symbol id="ic-burger" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 22 16">
+        <path d="M20.971.654a.525.525 0 0 1 .095 1.041l-.095.009H1A.525.525 0 0 1 .905.662L1 .654h19.971zm0 6.814a.525.525 0 0 1 .095 1.041l-.095.009H1a.525.525 0 0 1-.095-1.042L1 7.468h19.971zm0 6.814a.525.525 0 0 1 .095 1.042l-.095.008H1a.525.525 0 0 1-.095-1.041L1 14.282h19.971z" fill="#606060"></path>
+      </symbol>
+    </svg>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.fancybox.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/calc.min.js"></script>
+    <script src="./js/jquery.lazy.min.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>
