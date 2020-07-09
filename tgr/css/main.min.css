@@ -2082,8 +2082,8 @@ a.link-decorated:hover{text-decoration:none}
 .gallery .gallery-control .col:first-child button{background:url(../img/data/Rectangle_6.png) center bottom no-repeat}
 .gallery .gallery-control button{width:100%;color:#fff;background:url(../img/data/Rectangle_6_copy.png) center bottom no-repeat;height:6.9rem}
 .gallery .gallery-img+.row{margin-top:3.5rem}
-.gallery .btn-1{width:32rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/btn.png) center no-repeat;margin-left:-1.5rem;margin-right:-1.5rem}
-.gallery .btn-2{width:28rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/btn-s.png) center no-repeat;margin-right:-1.5rem}
+.gallery .btn-1{width:32rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN.png) center no-repeat;margin-left:-1.5rem;margin-right:-1.5rem}
+.gallery .btn-2{width:28rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN-S.png) center no-repeat;margin-right:-1.5rem}
 .footer{background-color:#ed6e00;padding-bottom:5rem}
 .footer-content{background:url(../img/data/footer-back.png) center bottom no-repeat;padding-bottom:4.7rem}
 .footer-content .row{position:relative;padding-bottom:9.3rem}
