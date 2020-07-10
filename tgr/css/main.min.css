@@ -2019,25 +2019,10 @@ a.link-decorated:hover{text-decoration:none}
 .h5,h5{font-size:1.8rem}
 .h6,h6{font-size:1.6rem;margin-bottom:1.3rem}
 .btn{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;cursor:pointer;-webkit-transition:.25s;-o-transition:.25s;transition:.25s;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-decoration:none!important}
-.form-checkbox,.form-radio,.hidden{position:absolute;top:0;left:0;opacity:0;visibility:hidden;pointer-events:none}
+.hidden{position:absolute;top:0;left:0;opacity:0;visibility:hidden;pointer-events:none}
 .row-xs{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-.3rem;margin-left:-.3rem}
 .row-xs>*{padding-left:.3rem;padding-right:.3rem}
 .form{display:block}
-.form-group{position:relative}
-.form-group:not(:first-child){margin-top:1.6rem}
-.form-submit{margin-top:3rem}
-.form-submit .btn{margin:0 auto}
-.form-control{background:#f3f3f3;border:.1rem solid #d9d9d9;height:4rem;line-height:3.8rem;padding:0 2.4rem;color:#000;-webkit-border-radius:2rem;border-radius:2rem;font-size:1.6rem}
-.form-checkbox+.form-label{cursor:pointer;padding-left:3rem;position:relative;margin-bottom:0;display:block}
-.form-checkbox+.form-label:after,.form-checkbox+.form-label:before{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);left:0}
-.form-checkbox+.form-label:before{content:'';width:1.4rem;height:1.4rem;border:.1rem solid #000}
-.form-checkbox+.form-label:after{content:'\2714';width:1.4rem;height:1.4rem;line-height:1.4rem;text-align:center;opacity:0;-webkit-transition:.25s;-o-transition:.25s;transition:.25s}
-.form-checkbox:checked+.form-label:after{opacity:1}
-.form-radio+.form-label{cursor:pointer;padding-left:3rem;position:relative;margin-bottom:0;display:block}
-.form-radio+.form-label:after,.form-radio+.form-label:before{content:'';position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);-webkit-border-radius:100%;border-radius:100%}
-.form-radio+.form-label:before{width:1.4rem;height:1.4rem;border:.1rem solid #000;left:0}
-.form-radio+.form-label:after{width:.6rem;height:.6rem;opacity:0;-webkit-transition:.25s;-o-transition:.25s;transition:.25s;background-color:#000;left:.4rem}
-.form-radio:checked+.form-label:after{opacity:1}
 .header{padding-top:3.7rem;padding-bottom:7.7rem;background:url(../img/data/header-back.png) center bottom no-repeat}
 .header .row{position:relative}
 .header .container>.row>.col-auto:nth-child(2){position:absolute;top:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
@@ -2103,6 +2088,13 @@ a.link-decorated:hover{text-decoration:none}
 .footer .container strong{display:block;text-transform:uppercase;font-size:2.2rem;font-weight:700;margin-bottom:.8rem}
 .footer .container span{display:block;font-size:1.8rem;font-weight:500}
 .footer .container a strong{font-size:2rem;text-transform:none}
+.popup{padding:3rem;display:none}
+.popup-title{font-size:3.6rem;text-align:center;margin-bottom:3rem;display:block}
+.form{width:35rem}
+.form-control{height:5.3rem;border:1px solid #000;line-height:5.1rem;padding-left:1.5rem;padding-right:1.5rem}
+.form-group:not(:first-child){margin-top:1rem}
+.form-submit{margin-top:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.form-submit button{margin:0 auto;width:23.1rem;height:5.3rem;border:.2rem solid #ed6e00;font-size:2.2rem;font-weight:500;position:relative;background-color:#fff}
 @media (max-width:1199.98px){
 .footer-content .row .col-auto:last-child{margin-left:0}
 .projects ul{-webkit-background-size:70% auto;background-size:70% auto}

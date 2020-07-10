@@ -26,6 +26,8 @@ $(function() {
     $('.gallery-control button').click(function(e){
         if ( $(this).not('.is-active') ) {
             $('.btn-2').text('Цена: '+$(this).data('price')+ ' руб.');
+            $('#buy .popup-title strong').text('"'+$(this).text()+'"');
+            $('#buy [name="prod"]').val($(this).text());
             $('.gallery-size').html($(this).data('size')+ ' м<sup>2</sup>');
             $(this).addClass('is-active').parent().siblings().children('.is-active').removeClass('is-active');
             var index = $(this).parent().index();
