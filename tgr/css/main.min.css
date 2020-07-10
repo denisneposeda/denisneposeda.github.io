@@ -2080,11 +2080,13 @@ a.link-decorated:hover{text-decoration:none}
 .projects ul li{max-width:70%;line-height:1.2}
 .gallery span,.projects span{display:block;text-align:center;font-size:36px;font-weight:500;margin-bottom:7.4rem}
 .gallery{margin-bottom:12.3rem}
+.gallery-size{display:block;position:absolute;z-index:10;font-size:2rem!important;color:#fff;background-color:#000;padding:1rem 1.5rem;top:2rem;right:2rem}
 .gallery .gallery-control{max-width:94.2rem;margin:0 auto;font-size:18px;font-weight:500}
 .gallery .gallery-control button{width:100%;color:#fff;background-color:#ed6f00;height:5.6rem;margin-bottom:.1rem;position:relative;z-index:10}
 .gallery .gallery-control button.is-active,.gallery .gallery-control button:hover{background-color:#000}
 .gallery .gallery-control button.is-active:after,.gallery .gallery-control button:hover:after{border-color:#000 transparent transparent transparent}
 .gallery .gallery-control button:after{-webkit-transition:.25s;-o-transition:.25s;transition:.25s;content:'';position:absolute;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);pointer-events:none;top:100%;border-style:solid;border-width:13px 16.5px 0 16.5px;border-color:#ed6f00 transparent transparent transparent}
+.gallery .gallery-img{max-width:942px;margin:0 auto;position:relative}
 .gallery .gallery-img img{max-width:100%;height:auto}
 .gallery .gallery-img+.row{margin-top:3.5rem}
 .gallery .btn-1{width:32rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN.png) center no-repeat;margin-left:-1.5rem;margin-right:-1.5rem}
