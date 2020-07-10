@@ -2091,7 +2091,7 @@ a.link-decorated:hover{text-decoration:none}
 .gallery .btn-2{width:28rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN-S.png) center no-repeat;margin-right:-1.5rem}
 .footer{background-color:#ed6e00;padding-bottom:5rem}
 .footer-content{background:url(../img/data/footer-back.png) center bottom no-repeat;padding-bottom:4.7rem}
-.footer-content .row{position:relative;padding-bottom:9.3rem}
+.footer-content .row{position:relative;padding-bottom:7.3rem}
 .footer-content .row .col-auto:nth-child(2){position:absolute;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .footer-content .row .col-auto:last-child{margin-left:4.8rem}
 .footer-content+.container{padding-top:2rem}
