@@ -2050,8 +2050,9 @@ a.link-decorated:hover{text-decoration:none}
 .promo{margin-bottom:20.9rem;padding-top:5.5rem}
 .promo strong{display:block;font-size:3.5rem;color:#ed6e00;text-transform:uppercase}
 .promo span{display:block;font-size:2.2rem;margin-bottom:.8rem}
-.promo button{margin-top:5.8rem;width:23.1rem;height:5.3rem;border:.2rem solid #ed6e00;font-size:2.2rem;font-weight:500;position:relative}
-.promo button:after{content:'';position:absolute;width:100%;height:100%;top:.9rem;left:.9rem;display:block;border:.2rem solid #2f2e2e;border-top:none;border-left:none}
+.promo button{margin-top:5.8rem;width:23.1rem;height:5.3rem;border:.2rem solid #ed6e00;font-size:2.2rem;font-weight:500;position:relative;background-color:#fff}
+.promo button:after{content:'';position:absolute;width:100%;height:100%;top:.9rem;left:.9rem;display:block;border:.2rem solid #2f2e2e;border-top:none;border-left:none;-webkit-transition:.25s;-o-transition:.25s;transition:.25s;z-index:-1}
+.promo button:hover:after{top:0;left:0}
 .discount{background:url(../img/data/discount-back.png) center center no-repeat;padding-bottom:8.3rem}
 .discount .container:first-child span{display:block;font-size:2.4rem}
 .discount .container:first-child strong{text-transform:uppercase;color:#ed6e00;font-size:7.3rem}
@@ -2060,8 +2061,9 @@ a.link-decorated:hover{text-decoration:none}
 .discount .container:last-child .image{position:relative;width:20rem;height:20rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;margin-bottom:4.1rem}
 .discount .container:last-child .image em{color:#545454;font-size:64px;font-style:normal;font-weight:100}
 .discount .container:last-child .image+span{display:block;text-align:center;color:#545454;font-size:36px;font-weight:300;margin-bottom:4.3rem;font-weight:300}
-.discount button{margin-top:5.8rem;width:23.1rem;height:5.3rem;border:.2rem solid #ed6e00;font-size:2.2rem;font-weight:500;position:relative}
-.discount button:after{content:'';position:absolute;width:100%;height:100%;top:.9rem;left:.9rem;display:block;border:.2rem solid #2f2e2e;border-top:none;border-left:none}
+.discount button{margin-top:5.8rem;width:23.1rem;height:5.3rem;border:.2rem solid #ed6e00;font-size:2.2rem;font-weight:500;position:relative;background-color:#fff}
+.discount button:after{content:'';position:absolute;width:100%;height:100%;top:.9rem;left:.9rem;display:block;border:.2rem solid #2f2e2e;border-top:none;border-left:none;-webkit-transition:.25s;-o-transition:.25s;transition:.25s;z-index:-1}
+.discount button:hover:after{top:0;left:0}
 .advantages{margin-bottom:16.3rem;height:89.2rem;padding-top:7.1rem}
 .advantages li{font-size:21px;overflow:hidden;max-width:45rem;display:block;position:relative}
 .advantages li img{float:left;display:block}
@@ -2078,9 +2080,12 @@ a.link-decorated:hover{text-decoration:none}
 .projects ul li{max-width:70%;line-height:1.2}
 .gallery span,.projects span{display:block;text-align:center;font-size:36px;font-weight:500;margin-bottom:7.4rem}
 .gallery{margin-bottom:12.3rem}
-.gallery .gallery-control{max-width:94.2rem;margin:0 auto;font-size:18px;font-weight:500;margin-bottom:-1.2rem}
-.gallery .gallery-control .col:first-child button{background:url(../img/data/Rectangle_6.png) center bottom no-repeat}
-.gallery .gallery-control button{width:100%;color:#fff;background:url(../img/data/Rectangle_6_copy.png) center bottom no-repeat;height:6.9rem}
+.gallery .gallery-control{max-width:94.2rem;margin:0 auto;font-size:18px;font-weight:500}
+.gallery .gallery-control button{width:100%;color:#fff;background-color:#ed6f00;height:5.6rem;margin-bottom:.1rem;position:relative;z-index:10}
+.gallery .gallery-control button.is-active,.gallery .gallery-control button:hover{background-color:#000}
+.gallery .gallery-control button.is-active:after,.gallery .gallery-control button:hover:after{border-color:#000 transparent transparent transparent}
+.gallery .gallery-control button:after{-webkit-transition:.25s;-o-transition:.25s;transition:.25s;content:'';position:absolute;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);pointer-events:none;top:100%;border-style:solid;border-width:13px 16.5px 0 16.5px;border-color:#ed6f00 transparent transparent transparent}
+.gallery .gallery-img img{max-width:100%;height:auto}
 .gallery .gallery-img+.row{margin-top:3.5rem}
 .gallery .btn-1{width:32rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN.png) center no-repeat;margin-left:-1.5rem;margin-right:-1.5rem}
 .gallery .btn-2{width:28rem;height:6.9rem;font-size:26px;font-weight:500;background:url(../img/data/BTN-S.png) center no-repeat;margin-right:-1.5rem}
@@ -2096,4 +2101,55 @@ a.link-decorated:hover{text-decoration:none}
 .footer .container strong{display:block;text-transform:uppercase;font-size:2.2rem;font-weight:700;margin-bottom:.8rem}
 .footer .container span{display:block;font-size:1.8rem;font-weight:500}
 .footer .container a strong{font-size:2rem;text-transform:none}
+@media (max-width:1199.98px){
+.footer-content .row .col-auto:last-child{margin-left:0}
+.projects ul{-webkit-background-size:70% auto;background-size:70% auto}
+.footer-content{padding-bottom:3.7rem;margin-top:-.1rem}
+.advantages li{max-width:41rem}
+.advantages li:nth-child(2){-webkit-transform:translateX(5rem);-ms-transform:translateX(5rem);transform:translateX(5rem)}
+.advantages li:nth-child(3){-webkit-transform:translateX(10rem);-ms-transform:translateX(10rem);transform:translateX(10rem)}
+.advantages li:nth-child(4){-webkit-transform:translateX(20rem);-ms-transform:translateX(20rem);transform:translateX(20rem)}
+.advantages li:nth-child(5){-webkit-transform:translateX(30rem);-ms-transform:translateX(30rem);transform:translateX(30rem)}
+.advantages li:nth-child(6){-webkit-transform:translateX(40rem);-ms-transform:translateX(40rem);transform:translateX(40rem)}
+.advantages li:nth-child(7){-webkit-transform:translateX(50rem);-ms-transform:translateX(50rem);transform:translateX(50rem)}
+.advantages li:nth-child(8){-webkit-transform:translateX(60rem);-ms-transform:translateX(60rem);transform:translateX(60rem)}
+}
+@media (max-width:991.98px){
+.header strong{font-size:1.6rem}
+.header span{display:none}
+.advantages{height:auto;margin-bottom:5rem;background-image:none!important}
+.advantages li{max-width:100%;-webkit-transform:translateX(0)!important;-ms-transform:translateX(0)!important;transform:translateX(0)!important}
+.btn-1,.btn-2{margin:0 auto 2rem!important}
+.footer .container strong{font-size:1.6rem}
+.footer .container span{font-size:1.4rem}
+.footer-content .row{padding-bottom:6rem}
+}
+@media (max-width:767.98px){
+.header strong{display:none!important}
+.gallery .gallery-control button:after{display:none}
+.discount .container:first-child strong{font-size:3rem}
+.discount .container:first-child strong em{font-size:6rem}
+.projects ul{background:0 0}
+.projects ul li{max-width:100%}
+.footer{background:0 0}
+.footer-content{background:0 0;padding-bottom:3rem;text-align:center}
+.footer-content .row{padding-bottom:0}
+.footer-content .row .col-auto:nth-child(2){position:relative;left:auto;-webkit-transform:none;-ms-transform:none;transform:none}
+.projects{margin-bottom:5rem}
+.header .container>.row>.col-auto:nth-child(2){position:relative;left:auto;top:auto;-webkit-transform:none;-ms-transform:none;transform:none;margin-right:auto}
+.header .container>.row>.col-auto:nth-child(2) img{width:7rem}
+}
+@media (max-width:575.98px){
+.discount{padding-bottom:0}
+.advantages{padding-top:5rem}
+.gallery span,.projects span{margin-bottom:3rem}
+.discount button{margin-top:3rem}
+.promo{margin-bottom:12rem}
+.gallery{margin-bottom:5rem}
+.discount .container:last-child>.row>.col-auto:first-child span{margin-top:5rem;margin-bottom:5rem}
+}
+@media (max-width:409.98px){
+.footer-content+.container img{width:5rem}
+.discount .container:last-child .image{width:15rem;height:15rem}
+}
 /*# sourceMappingURL=main.min.css.map */
