@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="127" height="26" viewBox="0 0 127 26">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <rect width="125" height="24" fill="#FFF" fill-rule="nonzero" stroke="#061058" stroke-opacity=".1" rx="3"/>
+        <text fill="#061058" font-family="Muli-Bold, Muli" font-size="12" font-weight="bold">
+            <tspan x="12" y="15">Finnish e-banking</tspan>
+        </text>
+    </g>
+</svg>
