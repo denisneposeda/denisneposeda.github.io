@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="./css/jquery.fancybox.min.css">
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/nouislider.css">
+    <link rel="stylesheet" href="./css/TimeCircles.css">
     <link rel="stylesheet" href="./css/main.min.css">
   </head>
   <body>
     <header class="header">
       <div class="container">
         <div class="row">
-          <div class="col-auto mr-auto"><strong class="d-block">Полный цикл производства <br>уличных спортивных площадок</strong><span>эволюция спортивной инфраструктуры</span></div>
+          <div class="col-auto mr-auto d-md-block d-none"><strong class="d-block">Полный цикл производства <br>уличных спортивных площадок</strong><span>эволюция спортивной инфраструктуры</span></div>
           <div class="col-auto"><a href=""><img src="./img/data/logo.png" alt=""></a></div>
           <div class="col-auto">
             <ul class="list-unstyled">
@@ -29,7 +30,7 @@
               <li><img class="icon icon-left" src="./img/data/mail.png" alt=""><a href="">info@iron-tiger.pro</a></li>
             </ul>
           </div>
-          <div class="col-auto">
+          <div class="col-auto d-xl-block d-none">
             <div class="row">
               <div class="col-auto"><a href=""><img src="./img/data/soc_1.png" alt=""></a></div>
               <div class="col-auto"><a href=""><img src="./img/data/soc_2.png" alt=""></a></div>
@@ -43,15 +44,15 @@
     <main class="main">
       <div class="promo">
         <div class="container">
-          <div class="col-5 offset-2"><span>Мы создаем</span><strong style="margin-bottom:3.4rem;">современные <br>решения</strong><span>для развития</span><strong style="margin-bottom:.8rem;">массового спорта<br>и физкультуры, </strong><span>адаптируя их к любому<br>городскому контексту. </span>
-            <button class="btn">Оставить заявку</button>
+          <div class="col-lg-5 col-md-7 col-12 offset-xl-2 offset-lg-1"><span>Строительство</span><strong style="margin-bottom:3.4rem;">спортивных<br> площадок</strong><span>для</span><strong style="margin-bottom:.8rem;">загородных</strong><span>участков </span>
+            <button class="btn" data-fancybox data-src="#order">Оставить заявку</button>
           </div>
         </div>
       </div>
       <div class="discount">
         <div class="container">
           <div class="row justify-content-center align-items-center">
-            <div class="col-auto"><span>Только в этом месяце мы <br>предоставляем нашим клиентам<br>выгодную акцию.</span></div>
+            <div class="col-md-auto col-12 text-center text-md-left"><span>Ограниченное предложение <br>только в этом месяце!<br> Успей заказать</span></div>
             <div class="col-auto"><strong>скидка<em>20%</em></strong></div>
           </div>
         </div>
@@ -59,23 +60,10 @@
           <div class="row justify-content-center">
             <div class="col-auto"><span>До конца акции осталось:</span></div>
             <div class="col-12">
-              <div class="row justify-content-center">
-                <div class="col-auto">
-                  <div class="image image-con" style="background-image: url(./img/data/Layer_8.png)"><em>10</em></div><span>Дней</span>
-                </div>
-                <div class="col-auto">
-                  <div class="image image-con" style="background-image: url(./img/data/Layer_9.png)"><em>5</em></div><span>Часов</span>
-                </div>
-                <div class="col-auto">
-                  <div class="image image-con" style="background-image: url(./img/data/Layer_10.png)"><em>35</em></div><span>Минут</span>
-                </div>
-                <div class="col-auto">
-                  <div class="image image-con" style="background-image: url(./img/data/Layer_12.png)"><em>20</em></div><span>Секунд</span>
-                </div>
-              </div>
+              <div class="demo row justify-content-center" data-date="2020-10-07 00:00:00"></div>
             </div>
             <div class="col-auto">
-              <button class="btn">Оставить заявку</button>
+              <button class="btn" data-fancybox data-src="#order">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -97,38 +85,45 @@
       <div class="gallery">
         <div class="container"><span>Спортивное оборудование для загородного дома</span>
           <div class="gallery-control row no-gutters">
-            <div class="col">
-              <button class="btn">Комплекс 1</button>
+            <div class="col-md col-6">
+              <button class="btn is-active" data-price="117 000" data-size="3">Комплекс 1</button>
             </div>
-            <div class="col">
-              <button class="btn">Комплекс 2</button>
+            <div class="col-md col-6">
+              <button class="btn" data-price="196 000" data-size="10">Комплекс 2</button>
             </div>
-            <div class="col">
-              <button class="btn">Комплекс 3</button>
+            <div class="col-md col-6">
+              <button class="btn" data-price="260 000" data-size="11">Комплекс 3</button>
             </div>
-            <div class="col">
-              <button class="btn">Комплекс 4</button>
+            <div class="col-md col-6">
+              <button class="btn" data-price="200 000" data-size="21">Комплекс 4</button>
             </div>
-            <div class="col">
-              <button class="btn">Комплекс 5</button>
+            <div class="col-md col-6">
+              <button class="btn" data-price="318 000" data-size="32">Комплекс 5</button>
             </div>
-            <div class="col">
-              <button class="btn">Комплекс 6</button>
+            <div class="col-md col-6">
+              <button class="btn" data-price="300 000" data-size="31">Комплекс 6</button>
             </div>
           </div>
-          <div class="gallery-img text-center"><img src="./img/data/1___1500-2000.png" alt=""></div>
+          <div class="gallery-img text-center"><span class="gallery-size">3 м<sup>2</sup></span>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/1 _ 1500-2000.jpg" alt=""><img src="./img/data/cata/1 _ 1500-20002.jpg" alt=""></div>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/2 _ 2000-4500.jpg" alt=""><img src="./img/data/cata/2 _ 2000-45002.jpg" alt=""><img src="./img/data/cata/2.1 _ 2000-4500.jpg" alt=""></div>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/3 _ 3000-3000.jpg" alt=""><img src="./img/data/cata/3 _ 3000-30002.jpg" alt=""></div>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/4 _ 3000-3000.jpg" alt=""><img src="./img/data/cata/4 _ 3000-30002.jpg" alt=""></div>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/5 _ 3000-6000.jpg" alt=""><img src="./img/data/cata/5 _ 3000-60002.jpg" alt=""></div>
+            <div class="tabs-carousel owl-carousel"><img src="./img/data/cata/6 _ 5500-6000.jpg" alt=""><img src="./img/data/cata/6 _ 5500-60002.jpg" alt=""><img src="./img/data/cata/6.1 _ 5500-6000.jpg" alt=""></div>
+          </div>
           <div class="row no-gutters justify-content-center">
-            <div class="col-auto">
-              <button class="btn btn-3"><img src="./img/data/2-layers.png" alt=""></button>
+            <div class="col-auto order-lg-1 order-3">
+              <button class="btn btn-3 prev"><img src="./img/data/2-layers.png" alt=""></button>
             </div>
-            <div class="col-auto">
-              <button class="btn btn-1">Купить в один клик</button>
+            <div class="col-lg-auto col-md-6 col-12 order-lg-2">
+              <button class="btn btn-1" data-fancybox data-src="#buy">Купить в один клик</button>
             </div>
-            <div class="col-auto">
-              <button class="btn btn-2">Цена: 20 000 руб.</button>
+            <div class="col-lg-auto col-md-6 col-12 order-lg-3">
+              <button class="btn btn-2">Цена: 117 000 руб.</button>
             </div>
-            <div class="col-auto">
-              <button class="btn btn-3"><img src="./img/data/asd.png" alt=""></button>
+            <div class="col-auto order-lg-4 order-4">
+              <button class="btn btn-3 next"><img src="./img/data/asd.png" alt=""></button>
             </div>
           </div>
         </div>
@@ -164,16 +159,16 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="container">
-          <div class="row align-items-end">
-            <div class="col-auto mr-auto"><strong class="d-block">Полный цикл производства <br>уличных спортивных площадок</strong><span>эволюция спортивной инфраструктуры</span></div>
-            <div class="col-auto"><a href=""><img src="./img/data/logo.png" alt=""></a></div>
-            <div class="col-auto">
+          <div class="row align-items-end justify-content-center justify-content-md-start">
+            <div class="col-md-auto col-12 mr-md-auto"><strong class="d-block">Полный цикл производства <br>уличных спортивных площадок</strong><span>эволюция спортивной инфраструктуры</span></div>
+            <div class="col-auto my-md-0 my-5"><a href=""><img src="./img/data/logo.png" alt=""></a></div>
+            <div class="col-md-auto col-12">
               <ul class="list-unstyled">
                 <li><img class="icon icon-left" src="./img/data/phone.png" alt=""><a href="">8-499-39-08-348</a></li>
                 <li><img class="icon icon-left" src="./img/data/mail.png" alt=""><a href="">info@iron-tiger.pro</a></li>
               </ul>
             </div>
-            <div class="col-auto"><img src="./img/data/qr.png" alt=""></div>
+            <div class="col-auto mt-md-0 mt-5 d-lg-block d-none"><img src="./img/data/qr.png" alt=""></div>
           </div>
         </div>
       </div>
@@ -187,6 +182,39 @@
         </div>
       </div>
     </footer>
+    <div class="popup" id="order"><span class="popup-title">Оставить заявку</span>
+      <form class="form" action="">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Имя">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Номер телефона" required>
+        </div>
+        <div class="form-submit">
+          <button type="submit">Оставить заявку</button>
+        </div>
+      </form>
+    </div>
+    <div class="popup" id="buy"><span class="popup-title">Купить <strong>"Комплекс 1"</strong></span>
+      <form class="form" action="">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Имя">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="E-mail">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Номер телефона" required>
+        </div>
+        <input type="hidden" name="prod" value="Комплекс 1">
+        <div class="form-submit">
+          <button type="submit">Оставить заявку</button>
+        </div>
+      </form>
+    </div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/jquery.fancybox.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
@@ -195,6 +223,7 @@
     <script src="./js/jquery.maskedinput.min.js"></script>
     <script src="./js/wNumb.min.js"></script>
     <script src="./js/nouislider.min.js"></script>
+    <script src="./js/TimeCircles.js"></script>
     <script src="./js/common.js"></script>
   </body>
 </html>
