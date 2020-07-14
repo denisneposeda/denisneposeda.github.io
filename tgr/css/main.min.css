@@ -2143,5 +2143,10 @@ a.link-decorated:hover{text-decoration:none}
 @media (max-width:409.98px){
 .footer-content+.container img{width:5rem}
 .discount .container:last-child .image{width:15rem;height:15rem}
+body{background:url(../img/data/12-layers.jpg) no-repeat;background-position:center -4rem}
+.header{padding-top:2rem}
+.promo{padding-top:14.5rem}
+.promo span{font-size:2rem}
+.promo strong{font-size:2.2rem;margin-bottom:0!important}
 }
 /*# sourceMappingURL=main.min.css.map */
