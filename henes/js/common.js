@@ -56,4 +56,19 @@ $(function() {
         }
     })
 
+    $('.menu-list_link').click(function(e){
+        var href = $(this).attr('href')
+        if ( $(href).length > 0 ) {
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(href).offset().top - 20
+              }, 1000);
+        } else {
+            if(href.indexOf('#') + 1){
+                e.preventDefault();
+                location.href = "./index.html"+href;
+            }
+        }
+    })
+
 });
