@@ -2029,6 +2029,7 @@ a.link-decorated:hover{text-decoration:none}
 .header .container>.row>.col-auto:last-child{margin-left:2.8rem}
 .header .container>.row>.col-auto:last-child .col-auto:not(:first-child){margin-left:-1.1rem}
 .header .container>.row>.col-auto:nth-child(3) ul li{font-size:1.9rem;font-weight:700;margin-bottom:.9rem}
+.header .container>.row>.col-auto:nth-child(3) ul li img{width:2rem}
 .header strong{display:block;text-transform:uppercase;font-size:2.2rem;font-weight:700;margin-bottom:.8rem}
 .header span{display:block;font-size:1.8rem;font-weight:500}
 .header a strong{font-size:2rem;text-transform:none}
@@ -2086,6 +2087,8 @@ a.link-decorated:hover{text-decoration:none}
 .footer .container ul li{font-size:2.6rem;font-weight:700}
 .footer .container ul li:not(:first-child){margin-top:1.2rem}
 .footer .container ul li:last-child{margin-bottom:1.2rem}
+.footer .container ul li img{width:2rem;top:-.5rem}
+.footer .container ul li a{vertical-align:middle}
 .footer .container strong{display:block;text-transform:uppercase;font-size:2.2rem;font-weight:700;margin-bottom:.8rem}
 .footer .container span{display:block;font-size:1.8rem;font-weight:500}
 .footer .container a strong{font-size:2rem;text-transform:none}
