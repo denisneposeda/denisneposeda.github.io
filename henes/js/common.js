@@ -78,4 +78,8 @@ $(function() {
           }, 1000);
     })
 
+    $('.toggle').click(function(){
+        $(this).closest('.row').next().slideToggle();
+    })
+
 });
