@@ -20,16 +20,16 @@
     <header class="header">
       <div class="container">
         <div class="row">
-          <div class="logo col-auto mr-auto"><a class="logo__link" href="./"><img class="logo__img" src="./img/data/logo.png" alt=""></a></div>
+          <div class="logo col-auto mr-lg-auto"><a class="logo__link" href="./"><img class="logo__img" src="./img/data/logo.png" alt=""></a></div>
           <div class="menu col-auto">
             <ul class="menu-list row">
-              <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">Каталог</a></li>
-              <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">Контакты</a></li>
-              <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">Доставка и оплата</a></li>
-              <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">О нас</a></li>
+              <li class="menu-list__item col-lg-auto col-12"><a class="menu-list__link" href="#">Каталог</a></li>
+              <li class="menu-list__item col-lg-auto col-12"><a class="menu-list__link" href="#">Контакты</a></li>
+              <li class="menu-list__item col-lg-auto col-12"><a class="menu-list__link" href="#">Доставка и оплата</a></li>
+              <li class="menu-list__item col-lg-auto col-12"><a class="menu-list__link" href="#">О нас</a></li>
             </ul>
           </div>
-          <div class="search col-auto">
+          <div class="search col-auto d-lg-block d-none">
             <button class="search-btn">
               <svg class="icon icon--size_m">
                 <use xlink:href="#icon-search"></use>
@@ -51,102 +51,213 @@
                   </svg></a></div>
             </div>
           </div>
+          <div class="col-auto d-lg-none">
+            <button class="hamburger hamburger--collapse" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+          </div>
         </div>
       </div>
     </header>
     <main class="main">
       <section class="promo">
-        <div class="container">
+        <div class="container"><img class="promo__img lazy" data-src="./img/data/promo-img.png">
           <h1 class="promo__title">Наборы органических продуктов из экологически чистых ферм к вашему завтраку</h1>
-          <button class="promo__action">Выбрать набор</button><img class="promo__img lazy" data-src="./img/data/promo-img.png">
+          <button class="promo__action">Выбрать набор</button>
         </div>
       </section>
-      <section class="collections section">
-        <div class="container">
-          <h2 class="collections__title section-title">Выберите готовый набор </h2>
-          <div class="collections-items row">
-            <div class="collections-item col-6">
-              <div class="collections-item__img img-wrapper"><img class="img img--cov lazy" data-src="./img/data/collections-img_01.jpg" alt=""></div>
-              <h3 class="collections-item__title">Набор номер 1</h3>
-              <ul class="composition-list">
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-              </ul>
-              <button class="composition-action">Еще 9 продуктов</button>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="collections-item col-6">
-              <div class="collections-item__img img-wrapper"><img class="img img--cov lazy" data-src="./img/data/collections-img_02.jpg" alt=""></div>
-              <h3 class="collections-item__title">Набор номер 2</h3>
-              <ul class="composition-list">
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-                <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
-                <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
-                <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
-              </ul>
-              <button class="composition-action">Еще 9 продуктов</button>
-              <button class="add-to-card">В корзину</button>
+      <div class="basket-zone">
+        <section class="collections section">
+          <div class="container">
+            <h2 class="collections__title section-title">Выберите готовый набор </h2>
+            <div class="collections-items row">
+              <div class="collections-item col-lg-6 col-12">
+                <div class="collections-item__img img-wrapper"><img class="img img--cov lazy" data-src="./img/data/collections-img_01.jpg" alt=""></div>
+                <h3 class="collections-item__title">Набор номер 1</h3>
+                <ul class="composition-list">
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                </ul>
+                <button class="composition-action">Еще 9 продуктов</button>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="collections-item col-lg-6 col-12">
+                <div class="collections-item__img img-wrapper"><img class="img img--cov lazy" data-src="./img/data/collections-img_02.jpg" alt=""></div>
+                <h3 class="collections-item__title">Набор номер 2</h3>
+                <ul class="composition-list">
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                  <li class="composition-list__item">Кефир из цельного молока 0,5л.</li>
+                  <li class="composition-list__item">Молоко коровье цельное 0,75л.</li>
+                  <li class="composition-list__item">Сливки из коровьего молока 20% 0,25л.</li>
+                </ul>
+                <button class="composition-action">Еще 9 продуктов</button>
+                <button class="add-to-card">В корзину</button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="products section">
-        <div class="container">
-          <h2 class="products__title section-title">Самостоятельно составьте набор из 14 продуктов</h2>
-          <div class="products-items row">
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
-            </div>
-            <div class="products-item col-4">
-              <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
-              <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
-              <p class="products-item__description">Краткое описание</p>
-              <button class="add-to-card">В корзину</button>
+        </section>
+        <section class="products section">
+          <div class="container">
+            <h2 class="products__title section-title">Самостоятельно составьте набор из 14 продуктов</h2>
+            <div class="products-items row">
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
+              <div class="products-item col-lg-4 col-6">
+                <div class="products-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/products-img_01.jpg" alt=""></div>
+                <h2 class="products-item__title">Молоко коровье цельное 0,75л.</h2>
+                <p class="products-item__description">Краткое описание</p>
+                <button class="add-to-card">В корзину</button>
+              </div>
             </div>
           </div>
+        </section>
+        <div class="basket-block-overlay">
+          <div class="basket-block"><span class="basket-block__title">Корзина</span>
+            <div class="basket-block__wrapper">
+              <div class="basket-block-item row">
+                <div class="col-auto">
+                  <div class="basket-block-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/basket-img.jpg" alt="">
+                    <button class="basket-block-item__delete"></button>
+                  </div>
+                </div>
+                <div class="basket-block-item__content col"><span class="basket-block-item__title">Молоко коровье цельное 0,75л.</span>
+                  <div class="row justify-content-between align-content-center no-gutters">
+                    <div class="col-auto">
+                      <div class="counter">
+                        <button class="counter-control counter-control--inc"></button>
+                        <input class="counter-input" type="text" readonly value="1">
+                        <button class="counter-control counter-control--dec"></button>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="basket-block-item__count">1шт.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-block-item row">
+                <div class="col-auto">
+                  <div class="basket-block-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/basket-img.jpg" alt="">
+                    <button class="basket-block-item__delete"></button>
+                  </div>
+                </div>
+                <div class="basket-block-item__content col"><span class="basket-block-item__title">Молоко коровье цельное 0,75л.</span>
+                  <div class="row justify-content-between align-content-center no-gutters">
+                    <div class="col-auto">
+                      <div class="counter">
+                        <button class="counter-control counter-control--inc"></button>
+                        <input class="counter-input" type="text" readonly value="1">
+                        <button class="counter-control counter-control--dec"></button>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="basket-block-item__count">1шт.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-block-item row">
+                <div class="col-auto">
+                  <div class="basket-block-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/basket-img.jpg" alt="">
+                    <button class="basket-block-item__delete"></button>
+                  </div>
+                </div>
+                <div class="basket-block-item__content col"><span class="basket-block-item__title">Молоко коровье цельное 0,75л.</span>
+                  <div class="row justify-content-between align-content-center no-gutters">
+                    <div class="col-auto">
+                      <div class="counter">
+                        <button class="counter-control counter-control--inc"></button>
+                        <input class="counter-input" type="text" readonly value="1">
+                        <button class="counter-control counter-control--dec"></button>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="basket-block-item__count">1шт.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-block-item row">
+                <div class="col-auto">
+                  <div class="basket-block-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/basket-img.jpg" alt="">
+                    <button class="basket-block-item__delete"></button>
+                  </div>
+                </div>
+                <div class="basket-block-item__content col"><span class="basket-block-item__title">Молоко коровье цельное 0,75л.</span>
+                  <div class="row justify-content-between align-content-center no-gutters">
+                    <div class="col-auto">
+                      <div class="counter">
+                        <button class="counter-control counter-control--inc"></button>
+                        <input class="counter-input" type="text" readonly value="1">
+                        <button class="counter-control counter-control--dec"></button>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="basket-block-item__count">1шт.</span></div>
+                  </div>
+                </div>
+              </div>
+              <div class="basket-block-item row">
+                <div class="col-auto">
+                  <div class="basket-block-item__img img-wrapper"><img class="img img-cov lazy" data-src="./img/data/basket-img.jpg" alt="">
+                    <button class="basket-block-item__delete"></button>
+                  </div>
+                </div>
+                <div class="basket-block-item__content col"><span class="basket-block-item__title">Молоко коровье цельное 0,75л.</span>
+                  <div class="row justify-content-between align-content-center no-gutters">
+                    <div class="col-auto">
+                      <div class="counter">
+                        <button class="counter-control counter-control--inc"></button>
+                        <input class="counter-input" type="text" readonly value="1">
+                        <button class="counter-control counter-control--dec"></button>
+                      </div>
+                    </div>
+                    <div class="col-auto"><span class="basket-block-item__count">1шт.</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="basket-block-total row no-gutters justify-content-between align-items-center">
+              <div class="col-auto"><span class="basket-block-total__count">4 из 14</span></div>
+              <div class="col-auto"><span class="basket-block-total__price">5 000 руб.</span></div>
+            </div>
+            <button class="basket-block__order btn btn--size_m btn--type_trans">оформить заказ</button>
+          </div>
         </div>
-      </section>
+      </div>
       <section class="about-section section">
         <div class="container">
           <h2 class="about-section__title section-title">Наши продукты производятся на собственных ферамах в экологически чистом регионе</h2><span class="about-section__description">В Переславском районе Ярославской области</span><a class="btn btn--size_m btn--type_trans" href="#">подробнее</a><img class="about-section-img-02 lazy" data-src="./img/data/about-section_02.png" alt=""><img class="about-section-img-03 lazy" data-src="./img/data/about-section_03.png" alt="">
@@ -154,33 +265,33 @@
       </section>
       <section class="cert section">
         <div class="container">
-          <h2 class="cert__title section-title">Подарочные сертификаты</h2>
+          <h2 class="cert__title section-title">Подарочные сертификаты</h2><img class="cert-img lazy" data-src="./img/data/cert-img.png" alt="">
           <form class="form" action="">
             <div class="cert-items row justify-content-between">
-              <div class="cert-item col-auto">
+              <div class="cert-item col-lg-auto col-6">
                 <input class="form-radio hidden" type="radio" name="cert" value="50000" id="cert_1" checked>
                 <label class="cert-item__title form-label" for="cert_1"><strong>50 000 руб.</strong>10 завтраков</label>
               </div>
-              <div class="cert-item col-auto">
+              <div class="cert-item col-lg-auto col-6">
                 <input class="form-radio hidden" type="radio" name="cert" value="5000" id="cert_2">
                 <label class="cert-item__title form-label" for="cert_2"><strong>5 000 руб.</strong>1 завтрак</label>
               </div>
             </div>
             <button class="btn btn--size_m btn--type_trans">заказать</button>
-          </form><img class="cert-img lazy" data-src="./img/data/cert-img.png" alt="">
+          </form>
         </div>
       </section>
       <section class="news-section section">
         <div class="container">
           <h2 class="news-section__title section-title">Актуальные новости</h2>
           <div class="news-items row">
-            <div class="news-item col-6"><a class="news-item__title" href="as">Как приготовить полезный завтрак из фермеских продуктов</a>
+            <div class="news-item col-lg-6 col-12"><a class="news-item__title" href="as">Как приготовить полезный завтрак из фермеских продуктов</a>
               <div class="news-item-info row">
                 <div class="col-auto"><span class="news-item-info__text">15.08.2020</span></div>
                 <div class="col-auto"><span class="news-item-info__text">Рецепты</span></div>
               </div>
             </div>
-            <div class="news-item col-6"><a class="news-item__title" href="as">Статьи о пользе продуктов, советы диетологов, полезный завтрак</a>
+            <div class="news-item col-lg-6 col-12"><a class="news-item__title" href="as">Статьи о пользе продуктов, советы диетологов, полезный завтрак</a>
               <div class="news-item-info row">
                 <div class="col-auto"><span class="news-item-info__text">10.08.2020</span></div>
                 <div class="col-auto"><span class="news-item-info__text">Советы диетолога</span></div>
@@ -215,10 +326,10 @@
           </div>
         </div>
         <div class="footer__center row">
-          <div class="information col-auto">
+          <div class="information col-lg-auto col-12">
             <p class="information__text">ООО «Экопродукты»<br>ИНН 123456789<br>г. Москва, ул.Кунцевская, 6<br>пн-вс: 9:00 - 23:00</p><a class="information__mail" href="mailto:hello@khachatryan.ru">hello@khachatryan.ru</a>
           </div>
-          <div class="menu col-auto mr-auto">
+          <div class="menu col-lg-auto mr-lg-auto col-12">
             <ul class="menu-list row">
               <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">Каталог</a></li>
               <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">Контакты</a></li>
@@ -226,11 +337,11 @@
               <li class="menu-list__item col-auto"><a class="menu-list__link" href="#">О нас</a></li>
             </ul>
           </div>
-          <div class="develop col-auto"><span class="develop__text">Создано в XXX</span></div>
+          <div class="develop col-lg-auto col-12"><span class="develop__text">Создано в XXX</span></div>
         </div>
         <div class="footer__bottom row">
-          <div class="copy col-auto"><span class="copy__text">© 2020 Khachatryan products</span></div>
-          <div class="pages col-auto">
+          <div class="copy col-lg-auto col-12"><span class="copy__text">© 2020 Khachatryan products</span></div>
+          <div class="pages col-lg-auto col-12">
             <ul class="pages-list row">
               <li class="pages-list__item col-auto"><a class="pages-list__link" href="#">Оферта</a></li>
               <li class="pages-list__item col-auto"><a class="pages-list__link" href="#">Пользовательское соглашение</a></li>
