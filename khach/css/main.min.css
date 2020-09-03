@@ -2499,7 +2499,7 @@ html.is-menu .header .menu,html.is-menu body .header .menu{opacity:1;visibility:
 .promo__action:after{left:1.825rem}
 .basket-zone{padding-top:5rem}
 .section{margin-bottom:5rem}
-.section-title{margin-bottom:3rem;text-align:center}
+.section-title{margin-bottom:3rem;text-align:center;letter-spacing:normal}
 .collections-items,.products-items{width:auto;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-1.5rem;margin-left:-1.5rem;margin-bottom:-2.3rem}
 .collections-items>*,.products-items>*{padding-left:1.5rem;padding-right:1.5rem}
 .collections-item,.products-item{margin-bottom:2.3rem}
