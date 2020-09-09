@@ -16,12 +16,23 @@ $(function() {
     })
 
     $('.video-carousel').owlCarousel({
-        items:3,
-        center: true,
         loop: false,
         nav: false,
         dots: false,
-        startPosition: 1
+        responsive: {
+            0: {
+                items: 1,
+                startPosition: 0,
+                center: false,
+                margin: 15
+            },
+            992: {
+                items: 3,
+                startPosition: 1,
+                center: true,
+                margin: 0
+            }
+        }
     })
 
     $('.faq-item').click(function(e){
@@ -39,11 +50,20 @@ $(function() {
     })
 
     $('.article-carousel').owlCarousel({
-        items:3,
-        margin: 20,
         loop: false,
-        nav: true,
         dots: false,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                margin: 15
+            },
+            992: {
+                items: 3,
+                nav: true,
+                margin: 20
+            }
+        }
     })
 
 });
