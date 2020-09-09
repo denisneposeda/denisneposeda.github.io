@@ -2331,6 +2331,7 @@ figure,img,picture{max-width:100%;height:auto}
 .btn-trans:hover{background-color:#ba9151;color:#fff}
 .hidden{position:absolute;top:0;left:0;opacity:0;visibility:hidden;pointer-events:none}
 .container{max-width:145rem}
+.section{max-width:1920px;margin-left:auto;margin-right:auto}
 .section__title{font-size:7.2rem;margin-bottom:3.5rem;text-align:center}
 .form{display:block}
 .form-control{background:#fff;border:.1rem solid #ba9151;height:6.5rem;line-height:5.8rem;padding:0 2.4rem;color:#000;-webkit-box-shadow:inset 0 4px 26px rgba(0,0,0,.08);box-shadow:inset 0 4px 26px rgba(0,0,0,.08)}
@@ -2350,18 +2351,19 @@ figure,img,picture{max-width:100%;height:auto}
 .menu-list__item{padding-left:1.7rem;padding-right:1.7rem}
 .menu-list__link{font-size:1.6rem}
 .menu-list__link:hover{color:#ba9151;text-decoration:none}
-.promo{background-position:center;background-repeat:no-repeat;-webkit-background-size:cover;background-size:cover;background-color:#000;color:#fff;margin-top:8rem;margin-bottom:5.3rem}
-.promo .container{height:76rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-top:4.3rem}
+.promo{background-color:#000;color:#fff;margin-top:8rem;margin-bottom:5.3rem;position:relative}
+.promo-img{max-width:100%;height:auto}
+.promo .container{height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;padding-top:4.3rem;margin-left:auto;margin-right:auto;position:absolute;z-index:2;top:0;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}
 .promo .btn{color:#fff;-webkit-align-self:self-start;-ms-flex-item-align:self-start;align-self:self-start}
 .promo__title{font-size:9.6rem;margin-bottom:1.5rem}
 .promo p{font-size:2.8rem;font-weight:700;margin-bottom:7rem}
 .promo p em{display:block;font-size:3.9rem}
 .promo p b{color:#ba9151;font-size:3.9rem}
-.section--mission{padding-bottom:8.8rem;position:relative;max-width:1920px;margin-left:auto;margin-right:auto}
+.section--mission{padding-bottom:8.8rem;position:relative;max-width:1920px}
 .section--mission .row:nth-child(odd){-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .section--mission .row:nth-child(odd) .mission-img{left:10rem}
 .section--mission .row:not(:last-child){margin-bottom:10rem}
-.mission-img{position:absolute;height:100%;width:-webkit-calc(100vw - 10rem);width:calc(100vw - 10rem);max-width:96rem;-o-object-fit:cover;object-fit:cover;right:10rem}
+.mission-img{position:absolute;height:auto;width:-webkit-calc(50vw - 10rem);width:calc(50vw - 10rem);max-width:86rem;right:10rem;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}
 .mission-img-wrapper{position:relative}
 .mission-content{padding-top:4.2rem;padding-bottom:7.5rem;position:relative;z-index:1}
 .mission-content .section__title{text-align:left;margin-bottom:2.8rem}
@@ -2384,7 +2386,7 @@ figure,img,picture{max-width:100%;height:auto}
 .article-carousel .owl-next.disabled,.article-carousel .owl-prev.disabled{opacity:0}
 .article-carousel .owl-next span,.article-carousel .owl-prev span{display:none}
 .article-carousel .owl-next{-webkit-transform:rotate(-180deg);-ms-transform:rotate(-180deg);transform:rotate(-180deg)}
-.section--video{padding-top:8.7rem;padding-bottom:6rem;max-width:1920px}
+.section--video{padding-top:8.7rem;padding-bottom:6rem}
 .section--video .container{max-width:none;padding-left:9.4rem;padding-right:9.4rem}
 .section--video .section__title{margin-bottom:4.6rem}
 .video-carousel .owl-stage-outer{padding-top:4rem;padding-bottom:4rem}
