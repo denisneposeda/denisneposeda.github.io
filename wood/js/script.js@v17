@@ -1,0 +1,205 @@
+function headerFixed(){
+	var header = $('#header.fixed'), scroll = $(window).scrollTop();
+	if (header.length) {
+		if (scroll >= 50) {
+			header.addClass('active');
+		} else {
+			header.removeClass('active');
+		}				
+	}
+	
+	var min = 20, r = $('#header').outerHeight() - ($(window).height() + scroll);
+	if (r>0) {
+		var bottom = r + min;
+		$('.header__mouse').css('bottom', bottom);
+	}
+	$('video').each(function(){
+		var video = $(this)[0];
+		if ($(this).is(":in-viewport")) {
+			video.play();
+		} else {
+			video.pause();
+		}
+	})
+}
+	
+$(document).ready(function() {
+
+	$(document).ready(function() {headerFixed();});
+	$(window).scroll(function() {headerFixed();});
+	$(window).resize(function() {headerFixed();});
+	
+  $('.two__slider').bxSlider({
+    auto: false,
+    pager: false,
+    prevSelector: "#two__prev",
+    nextSelector: "#two__next",
+    prevText: "<img src=\"images/whitearrow.png\" alt=\"пред слайд\">",
+    nextText: "<img src=\"images/larrow.png\" alt=\"след слайд\">",
+    responsive: true,
+  });    
+	$('.three__slider').bxSlider({
+		pagerCustom: "#three__slider-pager",
+		prevSelector: ".three__prev",
+		nextSelector: ".three__next",
+		responsive: true,
+		prevText: "<img src=\"images/blarrow.svg\" alt=\"пред слайд\">",
+		nextText: "<img src=\"images/blarrow.svg\" alt=\"след слайд\">",
+		onSlideBefore: function($slideElement, oldIndex, newIndex){
+			var num = newIndex + 1;
+			if (num < 10) {
+				num = "0" + num;  
+			}
+			$(".three__current-slide").text(num);  
+		}
+	});  
+  $('.five__slider').bxSlider({
+    auto: true,
+    minSlides: 2,
+    maxSlides: 6,
+    moveSlides: 1,
+    slideWidth: 160,
+    pager: false,
+    controls: false,
+    responsive: true,
+    slideMargin:40,
+    infiniteLoop: true
+  });
+  var number = $(".six__current-slide");
+  $('.six-slider').bxSlider({
+    /*pager: false,*/
+    responsive: true,
+	pagerCustom: "#six__slider-pager",
+    prevSelector: "#six__prev",
+    nextSelector: "#six__next",
+    prevText: "<img src=\"images/six-arr.png\" alt=\"пред слайд\">",
+    nextText: "<img src=\"images/six-arr.png\" alt=\"след слайд\">",
+    onSlideAfter: function($slideElement, oldIndex, newIndex){
+      var num = newIndex + 1;
+      number.text(num);
+      if (num < 10) {
+        number.text("0" + num);  
+      } else {
+        number.text(num);    
+      }
+    }
+  });
+
+  $(function(){
+    $('.header__menu a').on('click', function(e){
+      let $href = $(this).attr('href');
+      $('html,body').stop().animate({ scrollTop: $($href).offset().top }, 1000);
+      e.preventDefault();
+    });
+  });
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > $('#header').outerHeight()) {
+			$('.to-top').addClass('to-top--active');
+		} else {
+			$('.to-top').removeClass('to-top--active');
+		}
+	});
+    $(".to-top").click(function () {
+    	$("body, html").animate({
+            scrollTop: 0
+        }, 100);
+        return false;
+    });
+  function f_acc(){
+    /*
+	$('.seven__accordeon .acc-body').not($(this).next()).slideUp(400);
+    console.log($(this));
+    $('.seven__accordeon img').removeClass('rotate');
+    $(this).find('img').addClass('rotate');
+    $('.seven__accordeon .acc-body').not($(this).find('span')).removeClass('rotate');
+	// открываем или скрываем блок под заголовком, по которому кликнули
+	$(this).next().slideToggle(400);
+	*/
+	$('.seven__accordeon .acc-head').not($(this)).next().slideUp(400);
+	$('.seven__accordeon .acc-head').not($(this)).find('img').removeClass('rotate');
+	if($(this).find('img').hasClass('rotate')) {
+		$(this).find('img').removeClass('rotate');
+		$(this).next().slideUp(400);
+	} else {
+		$(this).find('img').addClass('rotate');
+		$(this).next().slideDown(400);
+	}
+}  
+$('.seven__accordeon .acc-head').on('click', f_acc);
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+
+setTimeout(function(){
+  $('.counter').each(function(){
+    var i = 1,
+		num = $(this).data('num'),
+		step = ($(this).data('step') ? $(this).data('step') : 1),
+		time = ($(this).data('time') ? $(this).data('time') : 1000) * step / num,
+		that = $(this);
+    var int = setInterval(function(){
+	  if (that.isInViewport()) {
+		  if (i <= num) {
+			that.html(i);
+		  }
+		  else {
+			that.html(num);
+			clearInterval(int);
+		  }
+		  i+=step;
+	  }
+	  
+    },time);
+  });  
+},1000);
+$('.popup-open').click(function() {
+  $('#order-popup').fadeIn();
+  return false;
+}); 
+
+$('.popup-close').click(function() {
+  $(this).parents('#order-popup').fadeOut();
+  return false;
+});   
+
+$(document).keydown(function(e) {
+  if (e.keyCode === 27) {
+    e.stopPropagation();
+    $('.popup-fade').fadeOut();
+  }
+});
+	$("form").submit(function(event) {
+		event.preventDefault();
+		var form = $(this), data = form.serialize();
+		$.ajax({
+			url: 'mail.php',
+			data: data,
+		})
+		.done(function(data) {
+			if (data ==='OK') {
+				$(form)[0].reset();
+				$('#order-popup').fadeOut();      
+				$("#order-complete").fadeIn();
+				$('.popup-close').click(function() {
+					$(this).parents('#order-complete').fadeOut();   
+				});
+				yaCounter41011439.reachGoal('zayavka');
+				gtag('event', 'SITE', { 'event_category': 'SITE', 'event_action': 'LEAD' });
+			}
+		})
+		.fail(function() {
+		});
+	});
+	$("input[name=phone]").mask("+7 (999) 999 99 99");
+	Revealator.effects_padding = '-300';
+});
+
+
