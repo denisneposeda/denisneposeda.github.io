@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>OptimizedHTML 5</title>
+	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/preview.jpg">	
+	<link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+<header class="header">
+	<div class="header__container">
+		<button class="hamburger"></button>
+		<span class="header__title">Atla-s</span>
+	</div>
+</header>
+<div class="nav">
+	<span class="nav__title">Atla-s</span>
+	<ul class="nav__list">
+		<li class="nav__item"><a href="./add.html" class="nav__link">Разместить задание</a></li>
+		<li class="nav__item"><a href="./about.html" class="nav__link">Как это работает?</a></li>
+		<li class="nav__item"><a href="#" class="nav__link">Обратная связь “Telegram”</a></li>
+		<li class="nav__item"><a href="./order.html" class="nav__link">Заявка на добавление</a></li>
+	</ul>
+</div>
+<div class="nav-overlay"></div>
+<main class="main">
+<div class="controls">
+	<button class="controls__item active">Организатор<br /> Бизнес</button>
+	<button class="controls__item">Организатор<br /> Блогер</button>
+</div>
+
+<div class="filter">
+	<div class="filter__header">
+		<span class="filter__title page-title">Актуальные задания</span>
+		<button class="filter__control"></button>
+	</div>
+	<div class="filter__content">
+		<div class="filter-select">
+			<label for="select-1" class="filter-select">Страна</label>
+			<select name="country" id="select-1">
+				<option value="1">Беларусь</option>
+			</select>
+		</div>
+		<div class="filter-select">
+			<label for="select-2" class="filter-select">Город</label>
+			<select name="city" id="select-2">
+				<option value="1">Минск</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="no-items">
+	<span class="no-item__text">Размещать и видеть задания могут только добавленные пользователи!</span>
+	<a href="#" class="no-items__link">Заявка на добавление</a>
+</div> -->
+
+<div class="items">
+	<div class="item card">
+		<div class="item-header">
+			<span class="item-header__text">Кафе “Smile”</span>
+			<span class="item-header__text">Адрес - г. Минск</span>
+			<span class="item-header__text">Ссылки - www.instagram.com</span>
+		</div>
+		<span class="card-subtitle">Задание</span>
+		<div class="item__content">
+			<p>Посетить нашу кофейню и сделать сторис с информацией, и отзывом о нашей кофейне в обмен на вкусный кофе. Так же рассмотрим ваше предложение</p>
+		</div>
+		<span class="card-subtitle">Ценность</span>
+		<span class="item__price">5р</span>
+		<div class="card-action">
+			<span class="card-action__text">После нажатия кнопки "Выполнить" Вы перейдёте к переписке с организатором в Telegram. <a href="#">Пример письма</a></span>
+			<button class="card-action__btn">Выполнить</button>
+		</div>
+	</div>
+</div>
+	</main>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
