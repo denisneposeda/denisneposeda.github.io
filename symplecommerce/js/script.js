@@ -23,7 +23,7 @@ var userAgent = navigator.userAgent.toLowerCase(),
     bootstrapTabs: $(".tabs"),
    
     captcha: $('.recaptcha'),
-    rdGoogleMaps: null,
+    rdGoogleMaps: $(".rd-google-map2"),
     rdNavbar: $(".rd-navbar"),
    
     wow: $(".wow"),
@@ -265,7 +265,7 @@ $(function () {
    * isValidated
    * @description  check if all elemnts pass validation
    */
-  function isValidated(elements, captcha) {
+  function isValidated(elements) {
     var results, errors = 0;
 
     if (elements.length) {
@@ -279,12 +279,6 @@ $(function () {
           }
         } else {
           $input.siblings(".form-validation").text("").parent().removeClass("has-error")
-        }
-      }
-
-      if (captcha) {
-        if (captcha.length) {
-          return validateReCaptcha(captcha) && errors === 0
         }
       }
 
@@ -408,7 +402,7 @@ $(function () {
    * @description Enables RD Google Maps plugin
    */
   if (plugins.rdGoogleMaps.length) {
-    $.getScript("//maps.google.com/maps/api/js?key=AIzaSyAwH60q5rWrS8bXwpkZwZwhw9Bw0pqKTZM&sensor=false&libraries=geometry,places&v=3.7", function () {
+    $.getScript("https://maps.google.com/maps/api/js?key=AIzaSyAwH60q5rWrS8bXwpkZwZwhw9Bw0pqKTZM&sensor=false&libraries=geometry,places&v=3.7", function () {
       var head = document.getElementsByTagName('head')[0],
         insertBefore = head.insertBefore;
 
@@ -986,63 +980,17 @@ $(function () {
       var $form = $(plugins.rdMailForm[i]),
         formHasCaptcha = false;
 
-      $form.attr('novalidate', 'novalidate').ajaxForm({
-        data: {
-          "form-type": $form.attr("data-form-type") || "contact",
-          "counter": i
-        },
-        beforeSubmit: function (arr, $form, options) {
-          if (isNoviBuilder)
-            return;
+      $form.attr('novalidate', 'novalidate').on('submit', function(e){
+        e.preventDefault();
 
-          var form = $(plugins.rdMailForm[this.extraData.counter]),
+        var form = $(this),
             inputs = form.find("[data-constraints]"),
             output = $("#" + form.attr("data-form-output")),
-            captcha = form.find('.recaptcha'),
-            captchaFlag = true;
+            select = form.find('select');
 
           output.removeClass("active error success");
 
-          if (isValidated(inputs, captcha)) {
-
-            // veify reCaptcha
-            if (captcha.length) {
-              var captchaToken = captcha.find('.g-recaptcha-response').val(),
-                captchaMsg = {
-                  'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-                  'CPT002': 'Something wrong with google reCaptcha'
-                };
-
-              formHasCaptcha = true;
-
-              $.ajax({
-                method: "POST",
-                url: "bat/reCaptcha.php",
-                data: {'g-recaptcha-response': captchaToken},
-                async: false
-              })
-                .done(function (responceCode) {
-                  if (responceCode !== 'CPT000') {
-                    if (output.hasClass("snackbars")) {
-                      output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + captchaMsg[responceCode] + '</span></p>')
-
-                      setTimeout(function () {
-                        output.removeClass("active");
-                      }, 3500);
-
-                      captchaFlag = false;
-                    } else {
-                      output.html(captchaMsg[responceCode]);
-                    }
-
-                    output.addClass("active");
-                  }
-                });
-            }
-
-            if (!captchaFlag) {
-              return false;
-            }
+          if (isValidated(inputs)) {
 
             form.addClass('form-in-process');
 
@@ -1053,67 +1001,44 @@ $(function () {
           } else {
             return false;
           }
-        },
-        error: function (result) {
-          if (isNoviBuilder)
-            return;
 
-          var output = $("#" + $(plugins.rdMailForm[this.extraData.counter]).attr("data-form-output")),
-            form = $(plugins.rdMailForm[this.extraData.counter]);
+        form
+          .addClass('success')
+          .removeClass('form-in-process');
 
-          output.text(msg[result]);
-          form.removeClass('form-in-process');
-
-          if (formHasCaptcha) {
-            grecaptcha.reset();
-          }
-        },
-        success: function (result) {
-          if (isNoviBuilder)
-            return;
-
-          var form = $(plugins.rdMailForm[this.extraData.counter]),
-            output = $("#" + form.attr("data-form-output")),
-            select = form.find('select');
-
-          form
-            .addClass('success')
-            .removeClass('form-in-process');
-
-          if (formHasCaptcha) {
-            grecaptcha.reset();
-          }
-
-          result = result.length === 5 ? result : 'MF255';
-          output.text(msg[result]);
-
-          if (result === "MF000") {
-            if (output.hasClass("snackbars")) {
-              output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
-            } else {
-              output.addClass("active success");
-            }
-          } else {
-            if (output.hasClass("snackbars")) {
-              output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
-            } else {
-              output.addClass("active error");
-            }
-          }
-
-          form.clearForm();
-
-          if (select.length) {
-            select.select2("val", "");
-          }
-
-          form.find('input, textarea').trigger('blur');
-
-          setTimeout(function () {
-            output.removeClass("active error success");
-            form.removeClass('success');
-          }, 3500);
+        if (formHasCaptcha) {
+          grecaptcha.reset();
         }
+
+        let result = 'MF000';
+        output.text(msg[result]);
+
+        if (result === "MF000") {
+          if (output.hasClass("snackbars")) {
+            output.html('<p><span class="icon text-middle mdi mdi-check icon-xxs"></span><span>' + msg[result] + '</span></p>');
+          } else {
+            output.addClass("active success");
+          }
+        } else {
+          if (output.hasClass("snackbars")) {
+            output.html(' <p class="snackbars-left"><span class="icon icon-xxs mdi mdi-alert-outline text-middle"></span><span>' + msg[result] + '</span></p>');
+          } else {
+            output.addClass("active error");
+          }
+        }
+
+        form.clearForm();
+
+        if (select.length) {
+          select.select2("val", "");
+        }
+
+        form.find('input, textarea').trigger('blur');
+
+        setTimeout(function () {
+          output.removeClass("active error success");
+          form.removeClass('success');
+        }, 3500);
       });
     }
   }
