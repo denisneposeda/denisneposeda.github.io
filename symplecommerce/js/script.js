@@ -23,7 +23,7 @@ var userAgent = navigator.userAgent.toLowerCase(),
     bootstrapTabs: $(".tabs"),
    
     captcha: $('.recaptcha'),
-    rdGoogleMaps: $(".rd-google-map"),
+    rdGoogleMaps: null,
     rdNavbar: $(".rd-navbar"),
    
     wow: $(".wow"),
