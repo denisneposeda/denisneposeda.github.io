@@ -51,8 +51,8 @@
 <main class="main">
 <section class="promo">
 	<div class="promo__container">
-		<video muted loop playsinline class="promo__video promo__media">
-			<source data-src="./video/title.mp4" type="video/mp4" />
+		<video autoplay muted loop playsinline class="promo__video promo__media">
+			<source src="./video/title-s1.mp4" type="video/mp4" />
 		</video>
 		<picture>
 			<source srcset="./images/dist/promo-image_xs.jpg" media="(max-width: 576px)">
@@ -430,7 +430,10 @@
 				</symbol>
 				<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 9" id="icon-svg-corner">
 					<path d="M0 0a9 9 0 0 1 9 9V0H0Z" fill="#fff"></path>
-				  </symbol>
+				</symbol>
+				<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-file">
+					<path d="M12.177 3.072a3.78 3.78 0 0 0-5.34 0L2.76 7.147a.14.14 0 0 0-.04.1.14.14 0 0 0 .04.1l.577.576a.14.14 0 0 0 .198 0l4.079-4.075a2.663 2.663 0 0 1 1.895-.784c.715 0 1.389.278 1.894.784.506.507.784 1.18.784 1.894a2.66 2.66 0 0 1-.784 1.894l-4.157 4.155-.673.673a1.615 1.615 0 0 1-2.755-1.14c0-.432.167-.836.472-1.141L8.413 6.06a.551.551 0 0 1 .389-.16h.001a.545.545 0 0 1 .386.936l-3.37 3.366a.14.14 0 0 0-.04.1.14.14 0 0 0 .04.1l.576.577a.14.14 0 0 0 .199 0L9.963 7.61c.31-.311.48-.723.48-1.163 0-.439-.171-.853-.48-1.162a1.649 1.649 0 0 0-2.329 0l-.4.402-3.721 3.72a2.691 2.691 0 0 0-.794 1.917 2.707 2.707 0 0 0 2.71 2.706 2.7 2.7 0 0 0 1.916-.792l4.832-4.828a3.757 3.757 0 0 0 1.104-2.669 3.744 3.744 0 0 0-1.104-2.67Z" fill="#D22D2B"></path>
+				</symbol>
 			</svg>
 			<ul class="footer-contact">
 				<li class="footer-contact__item">
@@ -473,7 +476,7 @@
 		<form action="">
 			<div class="popup-form__group">
 				<label for="" class="popup-form__label">Как вас зовут?</label>
-				<input type="text" class="popup-form__input" placeholder="Василиса Пупкина" required />
+				<input type="text" class="popup-form__input" placeholder="Логист Экспедиторский" required />
 			</div>
 			<div class="popup-form__group">
 				<label for="" class="popup-form__label">Ваш Еmail</label>
@@ -482,6 +485,17 @@
 			<div class="popup-form__group">
 				<label for="" class="popup-form__label">Контактный телефон</label>
 				<input type="tel" class="popup-form__input" placeholder="+ 375 (ХХ) ХХХ ХХ ХХ" required />
+			</div>
+			<div class="popup-form__group">
+				<label for="" class="popup-form__label">Загрузите резюме</label>
+				<div class="popup-form-file">
+					<input type="file" class="popup-form-file__input" id="file" />
+					<div class="popup-form-file-item">
+						<span class="popup-form-file-item__src"></span>
+						<button class="popup-form-file-item__delete" type="button"><svg class="icon"><use xlink:href="#icon-svg-close"></use></svg></button>
+					</div>
+					<label for="file" class="popup-form-file__label"><svg class="icon"><use xlink:href="#icon-svg-file"></use></svg> Загрузить резюме</label>
+				</div>
 			</div>
 			<div class="popup-form__group">
 				<label for="" class="popup-form__label">Расскажите немного о себе</label>
