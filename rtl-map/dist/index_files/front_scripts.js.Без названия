@@ -1,0 +1,497 @@
+/// Получаем категории и обяъвления в них
+function getShopAdvertsCat(user_id = null, content_result, cat_id = null, search_input_selector = null, search_word = null,) {
+    if (user_id != null){
+        $.ajax({
+            url: '/shop/s/get-product-by-category',
+            type: 'post',
+            data: {
+                user_id: user_id,
+                search_word:search_word,
+                cat_id: cat_id
+            },
+            success: function (data) {
+                if(data){
+                    content_result.html(data);
+                }
+                if(search_input_selector != null){
+                    $(search_input_selector).attr('disabled',false).focus();
+                }
+            },
+            error: function (data) {}
+        });
+    }
+}
+
+/// Клик добавления/убавления в корзину товара
+$(document).on('click','.cart_manipul',function(){
+    const advert_id = $(this).data('id');
+    const count = $(this).data('count');
+    const shop_slug = $(this).data('shop_slug');
+
+    $.ajax({
+        url: '/shop/s/change-count-in-cart',
+        type: 'post',
+        data: {
+            advert_id: advert_id,
+            count: count,
+            shop_slug: shop_slug
+        },
+        success: function (data) {
+            if(data){
+                getUserCart(shop_slug,$('#cart'))
+            }
+        },
+        error: function (data) {}
+    });
+
+});
+
+
+//// Текущее состояние корзины
+function getUserCart(shop_slug = null,content_result) {
+    if (shop_slug != null){
+        $.ajax({
+            url: '/shop/s/get-shop-cart',
+            type: 'post',
+            data: {
+                shop_slug: shop_slug
+            },
+            success: function (data) {
+                if(data){
+                    content_result.html(data);
+                }
+            },
+            error: function (data) {}
+        });
+    }
+}
+
+if($('.gallery').length){
+    baguetteBox.run('.gallery');
+
+}
+
+/// Плавный скрол к якорю
+$(document).on('click','a[href*="#"]',function () {
+    var scroll_top = $($.attr(this, 'data-anchor')).offset().top;
+    var $page = $('html, body');
+    $page.animate({
+        scrollTop: scroll_top - 40
+    }, 400);
+    return false;
+});
+
+
+// Обработка контактной формы на фронте
+$(document).on('beforeSubmit', '#contact-form-front', function () {
+    var form = $(this);
+    $('.button').attr('disabled', true);
+
+    $.ajax({
+        url: 'contact-form', //todo
+        type: 'post',
+        data: form.serialize(),
+        success: function (data) {
+            if(data.result == false){
+                alert('произошла ошибка, перезагрузите страницу и попробуйте еще раз')
+            }else{
+                window.location.reload();
+            }
+            $('.button').attr('disabled', false);
+        },
+        error: function (data) {
+            // alert(data);
+            window.location.reload();
+        }
+    });
+    return false; //reject the usual form submit
+});
+
+
+// --------------------------------------------Новые скрипты
+/// Обработка формы сбора заявок
+$(document).on('beforeSubmit', '#request-form-edit', function () {
+    var form = $(this);
+    $.ajax({
+        url: '/bet-request/save', //todo
+        type: 'post',
+        data: form.serialize(),
+        success: function (data) {
+            if(data.result == true){
+                $('#success_modal').addClass('animate__fadeIn');
+                /// очищаем форму
+                $('#request-form-edit input').val('');
+                $('#request-form-edit input').parent().removeClass('has-success');
+            }else{
+                // window.location.reload();
+            }
+        },
+        error: function (data) {
+            // alert(data);
+        }
+    });
+
+    return false; //reject the usual form submit
+});
+
+
+//// Выпадающая менюшка
+$(document).on('click','.dropdown-changer',function () {
+   var id = $(this).data('id');
+   if($('#dropdown_'+id).hasClass('animate__fadeInUp')){
+       $('#dropdown_'+id).addClass('animate__fadeOutDown');
+       $('#dropdown_'+id).removeClass('animate__fadeInUp');
+       $(this).removeClass('opened');
+   }else{
+       $('#dropdown_'+id).removeClass('animate__fadeOutDown');
+       $('#dropdown_'+id).addClass('animate__fadeInUp');
+       $(this).addClass('opened');
+   }
+
+});
+
+/// Переключалка города
+$(document).on('click','.change_current_town',function(){
+    var town_id = $(this).data('id');
+    var box_id = $(this).data('box_id');
+    $.ajax({
+        url: '/change-city', //todo
+        type: 'post',
+        data: {
+            town_id: town_id
+        },
+        success: function (data) {
+            if(!data){
+                alert('ошибка');
+            }else{
+                window.location = window.location.href;
+            }
+        },
+        error: function (data) {
+            // alert(data);
+        }
+    });
+    $('#'+box_id).removeClass('opened')
+;});
+
+/// Открытие бокового меню
+$(document).on('click','#menu-btn',function(){
+    $('header .header-top .header_menu').addClass('animate__slideInLeft');
+    $('header .header-top .header_menu').removeClass('animate__slideOutLeft');
+});
+
+/// Закрытие бокового меню
+$(document).on('click','#hide_main_menu',function(){
+    $('header .header-top .header_menu').addClass('animate__slideOutLeft');
+    $('header .header-top .header_menu').removeClass('animate__slideInLeft');
+});
+
+///// Клик вне поля контактов выпадающих
+if($('#main_menu').length > 0){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $("#main_menu"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            if($('#main_menu').hasClass('animate__slideInLeft')){
+                $('#main_menu').addClass('animate__slideOutLeft');
+                $('#main_menu').removeClass('animate__slideInLeft');
+            }
+        }
+    });
+}
+
+/// Открытие закрытие бокового меню
+$(document).on('click','#main_menu .open_btn',function(){
+    $(this).parent().parent().toggleClass('opened');
+});
+
+/// Анимашка верхнего и нижнего меню при загрузке
+function load_top_menu() {
+    var window_width = $(window).width();
+    if(window_width > 900){
+
+    }
+    // $('.header-top').addClass('animate__slideInDown')
+    $('#strange_menu').addClass('animate__slideInUp')
+}
+
+
+//// Отлавливаем скрол для закрашивания меню в шапку
+$(window).scroll(function(){
+    var top = $(this).scrollTop();
+    window_width = $(window).width();
+    if(top > 50){
+        $('header .header-top').addClass('fixed');
+    }else{
+        $('header .header-top').removeClass('fixed');
+    }
+    if(window_width < 900){
+
+    }
+});
+
+
+//// Подгружаем больше новостей
+$(document).on('click','.load-more-news',function () {
+    var limit = $(this).data('limit');
+    var offset = $(this).data('offset');
+    var lang = $(this).data('lang');
+    var container = $(this).data('container');
+
+    /// Скрываем эту кнопку чтобы потом загрузить свою
+    $(this).hide();
+
+    $.ajax({
+        url: '/news/load-more', //todo
+        type: 'post',
+        data: {
+            limit: limit,
+            offset: offset,
+            lang: lang
+        },
+        success: function (data) {
+            if(!data){
+                alert('ошибка');
+            }else{
+                $(container).append(data)
+            }
+        },
+        error: function (data) {
+            // alert(data);
+        }
+    });
+})
+
+///// Меняем в поле загрузки файла
+$(document).on('change','#vacancyrequestform-file_new',function () {
+    var name = $(this).val();
+    $('#upload_resume_name').text(name);
+});
+
+
+
+/// Обработка формы резюме
+$(document).on('beforeSubmit', '#vacancy_request_form', function () {
+    var form = $(this);
+
+    $.ajax({
+        url: '/upload-resume', //todo
+        type: 'post',
+        data: form.serialize(),
+        success: function (data) {
+            if(data.result){
+                $('#vacancyrequestform-resumeid').val(data.result);
+                $("#vacancyrequestform-file_new").fileinput('upload');
+                $('#vacancyrequestform-file_new').on('filebatchuploadcomplete', function(event, files, extra) {
+                    /// Очищаем формы
+                    $('#vacancyrequestform-name').val('');
+                    $('#vacancyrequestform-email').val('');
+                    $('#vacancyrequestform-phone').val('');
+                    $('#vacancyrequestform-file_new').val('');
+                    $('#vacancyrequestform-resumeid').val('');
+                    $('#upload_resume_name').text('');
+                    $('#vacancy_request_modal').css('display','none')
+                    $('#vacancy_request_modal').removeClass('animate__fadeIn')
+                    $('#success_modal').css('display','flex')
+                    $('#success_modal').addClass('animate__fadeIn');
+                });
+            }
+
+        },
+        error: function (data) {
+            alert(data);
+        }
+    });
+    return false; //reject the usual form submit
+});
+
+
+//// Запрос формы загрузки резюме
+$(document).on('click','.ask-resume',function () {
+    $('#vacancy_request_modal').css('display','flex');
+    $('#vacancy_request_modal').removeClass('animate__fadeOut')
+    $('#vacancy_request_modal').addClass('animate__fadeIn')
+})
+
+function hideVacancyModal(){
+    $('#vacancy_request_modal').addClass('animate__fadeOut')
+    $('#vacancy_request_modal').removeClass('animate__fadeIn')
+}
+$(document).on('click','#vacancy_request_modal .close_btn',function () {
+    hideVacancyModal()
+});
+
+///// Клик вне поля модалки резюме
+if($('#vacancy_request_modal').length > 0){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $("#vacancy_request_modal"); // тут указываем ID элемента
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            hideVacancyModal()
+        }
+    });
+}
+
+$(document).on('click','#success_modal .button',function(){
+    $('#success_modal').css('display','none')
+    $('#success_modal').removeClass('animate__fadeIn')
+});
+
+//// Отлавливаем нажал ли пользователь на чекбокс согласия с правилами
+$(document).on('change','#betrequestform-accept_license input',function () {
+    var value = $(this).is(':checked');
+    if(value){
+        $(this).parent().parent().parent().parent().parent().addClass('checked');
+    }else{
+        $(this).parent().parent().parent().parent().parent().removeClass('checked');
+    }
+})
+
+///// Клик вне поля контактов выпадающих
+if($('.phone-changer .dropdown').length > 0){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+        var div = $(".phone-changer .dropdown-changer, .currency_lang_changer .dropdown-changer"); // тут указываем ID элемента
+        var div_dropdown = $(".phone-changer .dropdown, .currency_lang_changer .dropdown");
+        if (!div.is(e.target) // если клик был не по нашему блоку
+            && div.has(e.target).length === 0) { // и не по его дочерним элементам
+            div_dropdown.addClass('animate__fadeOutDown')
+            div_dropdown.removeClass('animate__fadeInUp')
+            $(".dropdown-changer").removeClass('opened')
+        }
+    });
+}
+
+
+
+
+/// Обработка обратной связи в подвале
+$(document).on('beforeSubmit', '#contact_request_form', function () {
+    var form = $(this);
+
+    $.ajax({
+        url: '/send-contact-request', //todo
+        type: 'post',
+        data: form.serialize(),
+        success: function (data) {
+            if(data.result){
+                $('#contactrequestform-name').val('');
+                $('#contactrequestform-company').val('');
+                $('#contactrequestform-phone').val('');
+                $('#contactrequestform-email').val('');
+                $('#contactrequestform-message').val('');
+                $('#success_modal').addClass('animate__fadeIn');
+            }
+
+        },
+        error: function (data) {
+            alert(data);
+        }
+    });
+    return false; //reject the usual form submit
+});
+
+//// Отлавливаем странное меню
+function checkSrangeMenuPosition(){
+    var window_height = $(window).height();
+    var footer_strange_menu_height = $('#footer_strange_menu').height();
+
+    var strange_menu = $('#strange_menu')
+    var footer_strange_menu = $('#footer_strange_menu')
+
+    var waypoint = new Waypoint({
+        element: document.getElementById('footer_strange_menu'),
+        handler: function(direction) {
+            if(direction == 'down'){
+                strange_menu.hide();
+            }else{
+                strange_menu.show();
+            }
+        },
+        offset:window_height - footer_strange_menu_height
+    })
+
+}
+
+var window_width = $(window).width();
+if(window_width > 576){
+    checkSrangeMenuPosition();
+    $(window).scroll(function(e){
+        checkSrangeMenuPosition();
+    })
+}
+
+
+
+/// Работа счетчика числа
+
+function numberCounter(selector, number, count_steps) {
+
+    $({numberValue: 0}).animate({numberValue: number}, {
+
+        duration: 1300, // Продолжительность анимации, где 500 = 0,5 одной секунды, то есть 500 миллисекунд
+        easing: "linear",
+
+        step: function(val) {
+            if(val > 2){
+                selector.text(new Intl.NumberFormat('ru-RU').format((parseFloat(val)).toFixed()));
+            }else{
+                selector.text(new Intl.NumberFormat('ru-RU').format((parseFloat(val)).toFixed(1)));
+            }
+        }
+
+    });
+}
+
+//// Очищаем дополнительное свойство фона блока услуг
+function clearInlineServicesBg() {
+    $('#services .custom_service_bg_item').removeClass('hovered');
+    $('#custom_service_bg_item_1').addClass('hovered');
+    $('#single_service_1').addClass('active');
+}
+
+
+//// Изменяем фон блока услуг в зависимости от того куда навели курсор
+if($('#services').length > 0){
+    ///Чтобы первоначально подвечивался красным первый блок запускаем функцию
+    clearInlineServicesBg();
+
+    $('#services .single-service').mouseover(function () {
+        var hovered_item = $(this).data('id');
+        $('#'+hovered_item).addClass('hovered');
+        $('#single_service_1').removeClass('active');
+    })
+
+    $('#services .single-service').mouseout(function () {
+        clearInlineServicesBg()
+    })
+}
+
+
+//// Переключалка табов в контактах
+$(document).on('click','.tab_link',function () {
+    var tab_id = $(this).data('id');
+
+    $('.tab_link').removeClass('active');
+    $('.single_tab').removeClass('active');
+
+    $(this).addClass('active');
+    $('#single_tab_'+tab_id).addClass('active');
+})
+
+
+//// Обработка согласия на cookie
+$(document).on('click','.accept_cookie',function(){
+    var id = $(this).data('id');
+
+    $.ajax({
+        url: '/change-cookies-status',
+        type: 'post',
+        data: {id: id},
+        success: function (data) {
+            if(data == true){
+                $('#cookie_agreement_block').hide();
+            }
+        },
+        error: function (data) {}
+    });
+})
