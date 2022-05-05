@@ -40,7 +40,9 @@
     <script>window.fileinput_db56f99c = { "showPreview": false, "overwriteInitial": false, "uploadUrl": "\/upload-file", "language": "ru", "resizeImage": false, "autoOrientImage": true };
 
         var s2options_6cc131ae = { "themeCss": ".select2-container--bootstrap", "sizeCss": "", "doReset": true, "doToggle": false, "doOrder": false };
-        window.select2_49def24e = { "allowClear": true, "theme": "bootstrap", "width": "100%", "minimumResultsForSearch": Infinity, "placeholder": "Выберите тип компании...", "language": "ru" };
+        window.select2_49def24e = { "allowClear": true, "theme": "bootstrap", "width": "100%", "minimumResultsForSearch": Infinity, "placeholder": "Выберите тип компании", "language": "ru" };
+        var s2options_6cc131ae1 = { "themeCss": ".select2-container--bootstrap", "sizeCss": "", "doReset": true, "doToggle": false, "doOrder": false };
+        window.select2_49def24e1 = { "allowClear": true, "theme": "bootstrap", "width": "100%", "minimumResultsForSearch": Infinity, "placeholder": "-Выберите-", "language": "ru" };
     </script>
     <link rel="stylesheet" href="./css/style.min.css">
     <style>
@@ -3563,38 +3565,34 @@
                     role="form">
                         <div class="row">
                             <div class="col-sm-4 col-xs-12">
-                                <div class="form-group highlight-addon field-contactrequestform-company">
-                                    <label class="control-label has-star" for="contactrequestform-company">Страна доставки</label>
-                                        <div><select id="contactrequestform-company_type2"
-                                                class="form-control select2-hidden-accessible"
-                                                name="ContactRequestForm[company_type]" aria-required="true"
-                                                data-s2-options="s2options_6cc131ae" data-krajee-select2="select2_49def24e"
-                                                style="width: 1px; height: 1px; visibility: hidden;"
-                                                data-select2-id="contactrequestform-company_type2" tabindex="-1" aria-hidden="true">
-                                                <option value="" data-select2-id="2">Выберите тип компании...</option>
-                                                <option value="1">Физическое лицо</option>
-                                                <option value="2">Юридическое лицо</option>
-                                                <option value="3">Транспортная компания</option>
-                                            </select>
-                                        </div>
+                                <div class="form-group highlight-addon field-contactrequestform-company_type required">
+                                    <label class="control-label has-star" for="contactrequestform-company_type2">Страна отправки</label>
+                                    <div>
+                                        <div class="kv-plugin-loading loading-contactrequestform-company_type">&nbsp;</div>
+                                        <select id="contactrequestform-company_type2" class="form-control" name="ContactRequestForm[company_type]" aria-required="true" data-s2-options="s2options_6cc131ae2" data-krajee-select2="select2_49def24e2" style="width: 1px; height: 1px; visibility: hidden;">
+                                            <option value="">-Выберите-</option>
+                                            <option value="1">Индия</option>
+                                            <option value="2">Казахстан</option>
+                                            <option value="4">Другое</option>
+                                        </select>
+                                    </div>
+                                    <div></div>
                                 </div>
                             </div>
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group highlight-addon field-contactrequestform-company_type required">
-                                    <label class="control-label has-star" for="contactrequestform-company_type">Тип
-                                        компании</label>
-                                    <div><select id="contactrequestform-company_type"
-                                            class="form-control select2-hidden-accessible"
-                                            name="ContactRequestForm[company_type]" aria-required="true"
-                                            data-s2-options="s2options_6cc131ae" data-krajee-select2="select2_49def24e"
-                                            style="width: 1px; height: 1px; visibility: hidden;"
-                                            data-select2-id="contactrequestform-company_type" tabindex="-1" aria-hidden="true">
-                                            <option value="" data-select2-id="2">Выберите тип компании...</option>
-                                            <option value="1">Физическое лицо</option>
-                                            <option value="2">Юридическое лицо</option>
-                                            <option value="3">Транспортная компания</option>
+                                    <label class="control-label has-star" for="contactrequestform-company_type1">Страна доставки</label>
+                                    <div>
+                                        <div class="kv-plugin-loading loading-contactrequestform-company_type">&nbsp;</div>
+                                        <select id="contactrequestform-company_type1" class="form-control" name="ContactRequestForm[company_type]" aria-required="true" data-s2-options="s2options_6cc131ae1" data-krajee-select2="select2_49def24e1" style="width: 1px; height: 1px; visibility: hidden;">
+                                            <option value="">-Выберите-</option>
+                                            <option value="1">Индия</option>
+                                            <option value="2">Казахстан</option>
+                                            <option value="3">Узбекситан</option>
+                                            <option value="4">Другое</option>
                                         </select>
                                     </div>
+                                    <div></div>
                                 </div>
                             </div>
                             <div class="col-xs-12 text-center">
@@ -3647,20 +3645,7 @@
                                     <option value="1">Физическое лицо</option>
                                     <option value="2">Юридическое лицо</option>
                                     <option value="3">Транспортная компания</option>
-                                </select><span class="select2 select2-container select2-container--bootstrap" dir="ltr"
-                                    data-select2-id="1" style="width: 100%;"><span class="selection"><span
-                                            class="select2-selection select2-selection--single" role="combobox"
-                                            aria-haspopup="true" aria-expanded="false" tabindex="0"
-                                            aria-disabled="false"
-                                            aria-labelledby="select2-contactrequestform-company_type-container"><span
-                                                class="select2-selection__rendered"
-                                                id="select2-contactrequestform-company_type-container" role="textbox"
-                                                aria-readonly="true"><span
-                                                    class="select2-selection__placeholder">Выберите тип
-                                                    компании...</span></span><span class="select2-selection__arrow"
-                                                role="presentation"><b
-                                                    role="presentation"></b></span></span></span><span
-                                        class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                </select></div>
                             <div>
                                 <div class="help-block"></div>
                             </div>
@@ -3834,6 +3819,12 @@
             var $el = jQuery("#contact_request_form .kv-hint-special"); if ($el.length) { $el.each(function () { $(this).activeFieldHint() }); }
             if (jQuery('#contactrequestform-company_type').data('select2')) { jQuery('#contactrequestform-company_type').select2('destroy'); }
             jQuery.when(jQuery('#contactrequestform-company_type').select2(select2_49def24e)).done(initS2Loading('contactrequestform-company_type', 's2options_6cc131ae'));
+
+            if (jQuery('#contactrequestform-company_type2').data('select2')) { jQuery('#contactrequestform-company_type2').select2('destroy'); }
+            jQuery.when(jQuery('#contactrequestform-company_type2').select2(select2_49def24e1)).done(initS2Loading('contactrequestform-company_type', 's2options_6cc131ae1'));
+
+            if (jQuery('#contactrequestform-company_type1').data('select2')) { jQuery('#contactrequestform-company_type1').select2('destroy'); }
+            jQuery.when(jQuery('#contactrequestform-company_type1').select2(select2_49def24e1)).done(initS2Loading('contactrequestform-company_type', 's2options_6cc131ae1'));
 
             jQuery('#contact_request_form').yiiActiveForm([{ "id": "contactrequestform-name", "name": "name", "container": ".field-contactrequestform-name", "input": "#contactrequestform-name", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Name» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-company", "name": "company", "container": ".field-contactrequestform-company", "input": "#contactrequestform-company", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.string(value, messages, { "message": "Значение «Company» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-company_type", "name": "company_type", "container": ".field-contactrequestform-company_type", "input": "#contactrequestform-company_type", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); } }, { "id": "contactrequestform-phone", "name": "phone", "container": ".field-contactrequestform-phone", "input": "#contactrequestform-phone", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Phone» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-email", "name": "email", "container": ".field-contactrequestform-email", "input": "#contactrequestform-email", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Email» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-message", "name": "message", "container": ".field-contactrequestform-message", "input": "#contactrequestform-message", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.string(value, messages, { "message": "Значение «Message» должно быть строкой.", "skipOnEmpty": 1 }); } }], []);
         });</script>
