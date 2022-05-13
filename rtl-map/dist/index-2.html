@@ -3561,9 +3561,9 @@
             <div class="container">
                 <div class="product-block">
                     <div class="big_title grey-style">Выберите маршрут</div>
-                    <form id="contact_request_form" class="form-vertical form-product" action="https://rtlalliance.com/contact" method="post"
+                    <form id="contact_request_form" class="form-vertical" action="https://rtlalliance.com/contact" method="post"
                     role="form">
-                        <div class="row">
+                        <div class="row form-product">
                             <div class="col-sm-4 col-xs-12">
                                 <div class="form-group highlight-addon field-contactrequestform-company_type required">
                                     <label class="control-label has-star" for="contactrequestform-company_type2">Страна отправки</label>
@@ -3594,6 +3594,9 @@
                                     </div>
                                     <div></div>
                                 </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-12 form-product__submit" style="display: none;">
+                                <button type="submit" class="button button-red">Открыть</button>
                             </div>
                             <div class="col-xs-12 text-center">
                                 <span class="form-product__not-found">Не нашли нужную страну? Свяжитесь с нами, чтобы получить индивидуальный расчет по вашему маршруту.  </span>
@@ -3826,7 +3829,16 @@
             if (jQuery('#contactrequestform-company_type1').data('select2')) { jQuery('#contactrequestform-company_type1').select2('destroy'); }
             jQuery.when(jQuery('#contactrequestform-company_type1').select2(select2_49def24e1)).done(initS2Loading('contactrequestform-company_type', 's2options_6cc131ae1'));
 
+            jQuery('.form-product select').on('select2:select', function() {
+                    alert('asd');
+                    if ( jQuery('.form-product__submit').is(':hidden') ) {
+                        jQuery('.form-product__submit').show();
+                    }
+                })
+            
             jQuery('#contact_request_form').yiiActiveForm([{ "id": "contactrequestform-name", "name": "name", "container": ".field-contactrequestform-name", "input": "#contactrequestform-name", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Name» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-company", "name": "company", "container": ".field-contactrequestform-company", "input": "#contactrequestform-company", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.string(value, messages, { "message": "Значение «Company» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-company_type", "name": "company_type", "container": ".field-contactrequestform-company_type", "input": "#contactrequestform-company_type", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); } }, { "id": "contactrequestform-phone", "name": "phone", "container": ".field-contactrequestform-phone", "input": "#contactrequestform-phone", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Phone» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-email", "name": "email", "container": ".field-contactrequestform-email", "input": "#contactrequestform-email", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.required(value, messages, { "message": "Поле должно быть обязательно заполнено!" }); yii.validation.string(value, messages, { "message": "Значение «Email» должно быть строкой.", "skipOnEmpty": 1 }); } }, { "id": "contactrequestform-message", "name": "message", "container": ".field-contactrequestform-message", "input": "#contactrequestform-message", "validateOnChange": false, "validate": function (attribute, value, messages, deferred, $form) { yii.validation.string(value, messages, { "message": "Значение «Message» должно быть строкой.", "skipOnEmpty": 1 }); } }], []);
+
+
         });</script>
     <script src="./index_files/front_scripts.js.Без названия"></script>
     <script>
