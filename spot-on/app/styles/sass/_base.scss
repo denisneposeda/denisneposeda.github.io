@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: vwcalc(10, 375);
+  @include media-breakpoint-up(lg) {
+    font-size: vwcalc(10, 1476);
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 10px;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  min-width: 320px;
+  position: relative;
+  line-height: (30/20);
+  font-family: $font-general;
+  color: $color-text;
+  background-color: $color-body;
+  overflow-x: hidden;
+  @include media-breakpoint-up(lg) {
+    font-size: 2rem;
+  }
+  @include media-breakpoint-down(xs) {
+    &.nav-opened {
+      overflow: hidden;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+%container {
+  width: 100%;
+  max-width: $container-wrapper-lg;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-wrapper-xs;
+  padding-right: $container-wrapper-xs;
+  @include media-breakpoint-up(lg) {
+    padding-left: $container-wrapper-lg;
+    padding-right: $container-wrapper-lg;
+  }
+}

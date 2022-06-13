@@ -1,0 +1,32 @@
+.hamburger {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5.6rem;
+	flex: 0 0 5.6rem;
+	height: 5.6rem;
+	margin-left: -1.6rem;
+	margin-right: auto;
+	@include media-breakpoint-up(lg) {
+		display: none;
+	}
+	&-control {
+		&--open {
+			display: block;
+			width: 2.6rem;
+			height: 2.4rem;
+			.nav-opened & {
+				display: none;
+			}
+		}
+		&--close {
+			display: none;
+			width: 2.1rem;
+			height: 2.1rem;
+			.nav-opened & {
+				display: block;
+			}
+		}
+	}
+}

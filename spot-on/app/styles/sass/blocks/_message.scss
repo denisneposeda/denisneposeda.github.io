@@ -1,0 +1,16 @@
+.message {
+	&--success {
+		display: block;
+		width: 100%;
+		flex: 0 0 100%;
+		text-align: center;
+		padding: 0.5em 0.75em;
+		margin-top: 0.75em;
+		font-size: 1em;
+		line-height: 1;
+		border-radius: 0.4rem;
+		color: #0f5132;
+		background-color: #d1e7dd;
+		border: 1px solid #badbcc;
+	}
+}

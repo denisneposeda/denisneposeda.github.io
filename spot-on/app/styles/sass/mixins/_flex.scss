@@ -1,0 +1,24 @@
+@mixin row {
+	display: flex;
+	flex-wrap: wrap;
+}
+@mixin col-half {
+	width: percentage(1/2);
+	max-width: percentage(1/2);
+	flex: 0 0 percentage(1/2);
+}
+@mixin col {
+	width: 100%;
+	max-width: 100%;
+	flex: 1 0 0%;
+}
+@mixin col-auto {
+	width: auto;
+	max-width: 100%;
+	flex: 0 0 auto;
+}
+@mixin col-full {
+	width: 100%;
+	max-width: 100%;
+	flex: 0 0 100%;
+}

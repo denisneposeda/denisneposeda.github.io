@@ -1,0 +1,7 @@
+.lazy {
+	transition: opacity $transition-medium;
+}
+source.lazy:not([srcset]),
+img.lazy:not([src]) {
+	opacity: 0;
+}

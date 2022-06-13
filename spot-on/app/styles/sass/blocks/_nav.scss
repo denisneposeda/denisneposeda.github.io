@@ -1,0 +1,24 @@
+.nav {
+	display: none;
+	@include media-breakpoint-down(xs) {
+		height: 100vh;
+		height: calc(100 * var(--vh));
+		position: absolute;
+		z-index: 15;
+		top: 100%;
+		left: 0;
+		right: 0;
+		.nav-opened & {
+			display: block;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		@include row;
+		align-items: center;
+	}
+	&__item {
+	}
+	&__link {
+		display: block;
+	}
+}

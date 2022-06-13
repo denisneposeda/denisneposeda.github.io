@@ -1,0 +1,17 @@
+.form {
+	&__row {
+		@extend %row;
+	}
+	&__group {
+	}
+	&__input {
+	}
+	input {
+	}
+	textarea {
+	}
+	&-submit {
+		&__btn {
+		}
+	}
+}
