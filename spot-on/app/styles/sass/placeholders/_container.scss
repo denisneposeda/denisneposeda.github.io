@@ -1,12 +1,20 @@
 %container {
   width: 100%;
-  max-width: $container-wrapper-lg;
+  max-width: $container-width;
   margin-left: auto;
   margin-right: auto;
-  padding-left: $container-wrapper-xs;
-  padding-right: $container-wrapper-xs;
-  @include media-breakpoint-up(lg) {
-    padding-left: $container-wrapper-lg;
-    padding-right: $container-wrapper-lg;
+  @include media-breakpoint-down(xs) {
+    padding-left: $container-wrapper-xs;
+    padding-right: $container-wrapper-xs;
   }
+}
+
+%section {
+  padding-top: $container-wrapper-xs;
+	padding-bottom: $container-wrapper-xs;
+	border-bottom: 1px solid $color-gray;
+	@include media-breakpoint-up(lg) {
+		padding-top: $container-wrapper-lg;
+		padding-bottom: $container-wrapper-lg;
+	}
 }

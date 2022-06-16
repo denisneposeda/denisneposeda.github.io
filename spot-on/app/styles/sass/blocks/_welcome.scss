@@ -1,0 +1,45 @@
+.welcome {
+	@extend %section;
+	&__container {
+		@extend %container;
+		@include media-breakpoint-up(lg) {
+			@include row;
+			flex-direction: column;
+		}
+	}
+	&__title {
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+			width: 50%;
+			padding: 0 6.4rem;
+		}
+	}
+	&__text {
+		position: relative;
+		color: $color-additional-text;
+		@include media-breakpoint-down(xs) {
+			margin-top: 2.4rem;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 50%;
+			padding: 0 6.4rem;
+			align-self: flex-end;
+		}
+		&:before {
+			content: '';
+			display: block;
+			width: .8rem;
+			height: .8rem;
+			border-radius: 50%;
+			background-color: $color-green;
+			@include media-breakpoint-down(xs) {
+				margin-bottom: 2.8rem;
+			}
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				left: -7.2rem;
+				bottom: 0;
+			}
+		}
+	}
+}

@@ -1,26 +1,28 @@
 .hamburger {
+	position: absolute;
 	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 5.6rem;
-	flex: 0 0 5.6rem;
-	height: 5.6rem;
-	margin-left: -1.6rem;
-	margin-right: auto;
+	width: 11.2rem;
+	flex: 0 0 11.2rem;
+	height: 11.2rem;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 	@include media-breakpoint-up(lg) {
 		display: none;
 	}
-	&-control {
-		&--open {
+	&__icon {
+		&[data-action="open"] {
 			display: block;
-			width: 2.6rem;
-			height: 2.4rem;
+			width: 2.1rem;
+			height: 1.6rem;
 			.nav-opened & {
 				display: none;
 			}
 		}
-		&--close {
+		&[data-action="close"] {
 			display: none;
 			width: 2.1rem;
 			height: 2.1rem;

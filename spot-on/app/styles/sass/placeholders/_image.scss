@@ -14,3 +14,6 @@
 	@extend %image-full;
 	object-fit: contain;
 }
+%image-wrapper {
+	position: relative;
+}

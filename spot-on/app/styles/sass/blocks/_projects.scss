@@ -1,0 +1,145 @@
+.projects {
+	@extend %section;
+	&__container {
+		@extend %container;
+		@include media-breakpoint-up(lg) {
+			padding-left: $container-wrapper-lg;
+		}
+	}
+	&__title {
+		margin-bottom: 1.6rem;
+	}
+	&-carousel {
+		&-wrapper {
+			@include media-breakpoint-down(xs) {
+				margin-left: -$container-wrapper-xs;
+				margin-right: -$container-wrapper-xs;
+			}
+			@include media-breakpoint-up(lg) {
+				margin-left: -0.2rem;
+				margin-right: calc((100vw - #{$container-width}) * (-1));
+			}
+		}
+		&.owl-carousel {
+			padding-bottom: 2.4rem;
+			&:not(.owl-loaded) {
+				display: flex;
+				overflow: hidden;
+			}
+			.owl-stage {
+				display: flex;
+			}
+			.owl-dots {
+				position: absolute;
+				display: flex;
+				align-items: center;
+				bottom: 0;
+				left: 2.4rem;
+				@include media-breakpoint-up(lg) {
+					left: 0.2rem;
+				}
+			}
+			.owl-dot {
+				display: block;
+				background-color: $color-gray4;
+				width: 0.8rem;
+				height: 0.8rem;
+				border-radius: 0.4rem;
+				transition: $transition-medium background-color, $transition-medium width;
+				span {
+					display: none;
+				}
+				&:not(:first-child) {
+					margin-left: 0.8rem;
+				}
+				&.active {
+					width: 3.2rem;
+					background-color: $color-green;
+				}
+			}
+		}
+	}
+	&-item {
+		position: relative;
+		border-radius: 0.4rem;
+		overflow: hidden;
+		.owl-carousel & {
+			width: 32rem;
+			flex: 0 0 32rem;
+			margin: 0 0.2rem;
+		}
+		.owl-item:first-child & {
+			@include media-breakpoint-down(xs) {
+				margin-left: 2.4rem;
+			}
+		}
+		.owl-item:last-child & {
+			@include media-breakpoint-down(xs) {
+				margin-right: 2.4rem;
+			}
+		}
+		&__link {
+			@extend %image-full;
+			z-index: 2;
+		}
+		&__image {
+			@extend %image-full-cover;
+			&-wrapper {
+				@extend %image-wrapper;
+				width: 100%;
+				height: 48rem;
+				background-color: $color-black;
+			}
+		}
+		&__content {
+			@extend %image-full;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 4rem;
+			color: $color-white;
+			background: rgba($color-black, 0.4);
+		}
+		&__title {
+		}
+		&__info {
+		}
+		&__description {
+			display: block;
+			font-size: 1.6rem;
+			line-height: (19/16);
+			margin-bottom: 0.8rem;
+		}
+		&-category-list {
+			font-size: 1.2rem;
+			line-height: (18/12);
+			@extend %row;
+			&__item {
+				& + & {
+					margin-left: 0.25em;
+					&:before {
+						content: "|";
+						font-family: inherit;
+						font-size: inherit;
+						color: inherit;
+						margin-right: 0.25em;
+					}
+				}
+			}
+		}
+		&__view {
+			@extend %row;
+			justify-content: space-between;
+			align-items: center;
+			font-weight: 700;
+			font-size: 1.2rem;
+			line-height: (18/12);
+			.icon {
+				display: block;
+				width: 2.5rem;
+				flex: 0 0 2.5rem;
+				height: 0.8rem;
+			}
+		}
+	}
+}

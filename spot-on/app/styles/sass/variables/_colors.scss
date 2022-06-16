@@ -1,2 +1,13 @@
-$color-text: #000;
+$color-black: #000;
+$color-white: #fff;
+
+$color-gray: #e0e0e0;
+$color-gray2: #a5a5a5;
+$color-gray3: #666666;
+$color-gray4: #d6d6d6;
+
+$color-green: #d9e021;
+
+$color-text: $color-black;
+$color-additional-text: rgba($color-text, 0.5);
 $color-body: transparent;

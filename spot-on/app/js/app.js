@@ -52,38 +52,58 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	$('.nav__link').on('click', function (e) {
-		e.preventDefault();
-		let id = $(this).attr('href');
-		if ($('body').hasClass('nav-opened')) $('.hamburger').trigger('click');
-		window.scrollTo({
-			top: $(id).offset().top,
-			behavior: "smooth"
-		});
-	})
-
 	$('.hamburger').on('click', function () {
 		$('body').toggleClass('nav-opened');
 	})
 
-	$('form').on('submit', function (e) {
-		e.preventDefault();
-		var serf = $(this);
-		$.ajax({
-			url: 'mail.php',
-			type: "POST",
-			dataType: "html",
-			data: serf.serialize(),
-			success: function (response) {
-				serf.trigger("reset");
-				serf.append('<div class="form-success">Ваша заявка отправлена!</div>');
-				setTimeout(function () {
-					$('.form-success').remove();
-				}, 3000);
-			},
-			error: function (response) {
-				console.log('error');
-			}
-		});
+	$('[type="file"]').on('change', function() {
+		if ( $(this).val() != '' ) {
+			let file = $(this)[0].files[0].name;
+			$(this).next().addClass('form-file-item--upload');
+			$(this).next().children('.form-file-item__src').text(file);
+		} else {
+			$(this).next().removeClass('form-file-item--upload');
+		}
 	});
+
+	$('.form-file-item__delete').on('click', function(){
+		$(this).closest('.form-file').find('[type="file"]').val('');
+		$(this).closest('.form-file').find('[type="file"]').trigger('change');;
+	})
+
+	let loadedCarousel = false;
+
+	$(document).on('mousemove', function() {
+		if ( !loadedCarousel ) {
+			loadCarousel();
+		}
+	})
+
+	$(window).on('scroll', function() {
+		if ( !loadedCarousel ) {
+			loadCarousel();
+		}
+	})
+
+	function loadCarousel() {
+		loadedCarousel = true;
+
+		$('.projects-carousel').owlCarousel({
+			items:5,
+			margin:0,
+			dots: true,
+			nav: false,
+			lazyLoad: true,
+			autoWidth: true,
+			loop: false,
+			touchDrag: true,
+			mouseDrag: false,
+		}).trigger('refresh.owl.carousel')
+	}
+
+	let video = $('.about__video');
+	$('.about__video-control').on('click', function(){
+		$(this).toggleClass('is-play');
+		video[0].paused ? video[0].play() : video[0].pause()
+	})
 })

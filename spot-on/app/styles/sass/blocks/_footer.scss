@@ -1,5 +1,42 @@
 .footer {
+	background-color: $color-black;
+	padding-top: $container-wrapper-xs;
+	padding-bottom: $container-wrapper-xs;
+	@include media-breakpoint-up(lg) {
+		padding-top: $container-wrapper-lg;
+		padding-bottom: $container-wrapper-lg;
+	}
 	&__container {
 		@extend %container;
+		@include media-breakpoint-up(lg) {
+			padding-right: $container-wrapper-lg;
+			padding-left: $container-wrapper-lg;
+		}
+	}
+	&__top {
+		@extend %row;
+		@include media-breakpoint-down(xs) {
+			flex-direction: column;
+		}
+		@include media-breakpoint-up(lg) {
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	&-logo {
+		@extend %col-auto;
+		@include media-breakpoint-down(xs) {
+			align-self: center;
+		}
+		&__image {
+			display: block;
+			width: 8.713rem;
+			height: 4.8rem;
+		}
+	}
+	&__bottom {
+		@extend %row;
+		justify-content: space-between;
+		margin-top: $container-wrapper-lg;
 	}
 }

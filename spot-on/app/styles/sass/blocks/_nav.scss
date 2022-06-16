@@ -1,4 +1,4 @@
-.nav {
+.header-nav {
 	display: none;
 	@include media-breakpoint-down(xs) {
 		height: 100vh;
@@ -8,6 +8,8 @@
 		top: 100%;
 		left: 0;
 		right: 0;
+		background-color: $color-white;
+		border-top: 1px solid $color-gray;
 		.nav-opened & {
 			display: block;
 		}
@@ -17,8 +19,79 @@
 		align-items: center;
 	}
 	&__item {
+		@include media-breakpoint-down(xs) {
+			border-bottom: 1px solid $color-gray;
+		}
+		@include media-breakpoint-up(lg) {
+			@include col-auto;
+		}
+		& + & {
+			@include media-breakpoint-up(lg) {
+				margin-left: 4rem;
+			}
+		}
+	}
+	&__link {
+		position: relative;
+		display: block;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: (16/14);
+		@include media-breakpoint-down(xs) {
+			padding-top: 2.3rem;
+			padding-bottom: 2.4rem;
+			text-align: center;
+		}
+		&.is-active,
+		&:hover {
+			&:after {
+				@include media-breakpoint-up(lg) {
+					width: 1.6rem;
+					background-color: $color-green;
+				}
+			}
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: .4rem;
+			height: .4rem;
+			border-radius: .4rem;
+			background-color: $color-black;
+			margin-top: 1.2rem;
+			margin-left: auto;
+			margin-right: auto;
+			transition: $transition-long width, $transition-long background-color;
+		}
+	}
+}
+
+.footer-nav {
+	@extend %row;
+	@extend %col-full;
+	align-items: center;
+	@include media-breakpoint-down(xs) {
+		justify-content: space-between;
+		margin-top: $container-wrapper-lg;
+	}
+	@include media-breakpoint-up(lg) {
+		@include col-auto;
+	}
+	&__item {
+		& + & {
+			@include media-breakpoint-up(lg) {
+				margin-left: 3.2rem;
+			}
+		}
 	}
 	&__link {
 		display: block;
+		color: $color-gray2;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: (16/14);
+		&:hover {
+			color: $color-green;
+		}
 	}
 }

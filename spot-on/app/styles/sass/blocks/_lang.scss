@@ -1,0 +1,20 @@
+.lang {
+	@extend %row;
+	@extend %col-auto;
+	@include media-breakpoint-up(lg) {
+		margin-left: 6.4rem;
+		padding-bottom: 1.6rem;
+	}
+	&__item {
+		@extend %col-auto;
+		& + & {
+			margin-left: 1rem;
+		}
+	}
+	&__link {
+		display: block;
+		font-weight: 700;
+		font-size: 1.4rem;
+		line-height: (16/14);
+	}
+}
