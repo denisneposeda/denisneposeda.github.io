@@ -86,7 +86,7 @@
         border: none;
         background-color: #000;
         margin: 0;
-		overflow: visible;
+        overflow: visible;
       }
       .zs-card-value hr:before,
       .zs-card-value hr:after {
@@ -99,12 +99,12 @@
         background-color: #000;
         transform: rotate(45deg);
       }
-	  .zs-card-value hr:before {
-		left: 0;
-	  }
-	  .zs-card-value hr:after {
-		right: 0;
-	  }
+      .zs-card-value hr:before {
+        left: 0;
+      }
+      .zs-card-value hr:after {
+        right: 0;
+      }
       .zs-sidebar {
         width: 23%;
         flex: 0 0 23%;
@@ -127,7 +127,7 @@
       .zs-bonus_title {
         color: #d6e24a;
         margin-top: 40px;
-		margin-bottom: 35px;
+        margin-bottom: 35px;
       }
       .zs-bonus_description {
         color: #fff;
@@ -186,6 +186,75 @@
         color: #c9c8c8;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       }
+
+      /* New style for other view card */
+      .zs-cards_big {
+        position: relative;
+        width: 50%;
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+      }
+      .zs-cards_big:before,
+      .zs-cards_big:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 21%;
+        height: 12px;
+        background: #d9d9d9;
+        top: 50%;
+        right: 5%;
+      }
+      .zs-cards_big:before {
+        transform: translateY(-26px);
+      }
+      .zs-cards_big:after {
+        transform: translateY(14px);
+      }
+      .zs-cards_big .zs-card {
+        width: 69%;
+        flex: 0 0 69%;
+        height: 69%;
+      }
+      .zs-cards_big .zs-card_image {
+        top: 14.15px;
+        left: 14.51px;
+        right: 14.51px;
+        bottom: 11px;
+      }
+      .zs-cards_big .zs-card_inner {
+        padding: 25px 40px 18.86px;
+      }
+      .zs-cards_big .zs-card_name {
+        padding: 8px 20px;
+      }
+      .zs-cards_big .zs-card-value_text {
+        padding-top: 18px;
+        padding-bottom: 12px;
+      }
+      .zs-cards_big .zs-card-value hr:before,
+      .zs-cards_big .zs-card-value hr:after {
+        width: 4px;
+        height: 4px;
+      }
+      .zs-cards-result {
+        width: 50%;
+        flex: 0 0 50%;
+      }
+      .zs-cards-result_container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      .zs-cards-result_container .zs-card {
+        width: 50%;
+        flex: 0 0 50%;
+      }
+      /* New style for other view card */ ;
     </style>
   </head>
   <body bgcolor="#11111">
@@ -206,91 +275,53 @@
       <div class="zs-container">
         <div class="zs-cards">
           <div class="zs-cards_container">
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
+            <div class="zs-cards_big">
+              <div class="zs-card">
+                <div class="zs-card_inner">
+                  <div class="zs-card_image"></div>
+                  <div class="zs-card_name">Большой контейнер</div>
+                  <div class="zs-card-value">
+                    <hr />
+                    <div class="zs-card-value_text">x572.2K</div>
+                    <hr />
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
+            <div class="zs-cards-result">
+              <div class="zs-cards-result_container">
+                <div class="zs-card">
+                  <div class="zs-card_inner">
+                    <div class="zs-card_image"></div>
+                    <div class="zs-card_name">Большой контейнер</div>
+                    <div class="zs-card-value">
+                      <hr />
+                      <div class="zs-card-value_text">x572.2K</div>
+                      <hr />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
+                <div class="zs-card">
+                  <div class="zs-card_inner">
+                    <div class="zs-card_image"></div>
+                    <div class="zs-card_name">Большой контейнер</div>
+                    <div class="zs-card-value">
+                      <hr />
+                      <div class="zs-card-value_text">x572.2K</div>
+                      <hr />
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
-                </div>
-              </div>
-            </div>
-            <div class="zs-card">
-              <div class="zs-card_inner">
-                <div class="zs-card_image"></div>
-                <div class="zs-card_name">Большой контейнер</div>
-                <div class="zs-card-value">
-                  <hr />
-                  <div class="zs-card-value_text">x572.2K</div>
-                  <hr />
+                <div class="zs-card">
+                  <div class="zs-card_inner">
+                    <div class="zs-card_image"></div>
+                    <div class="zs-card_name">Большой контейнер</div>
+                    <div class="zs-card-value">
+                      <hr />
+                      <div class="zs-card-value_text">x572.2K</div>
+                      <hr />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
