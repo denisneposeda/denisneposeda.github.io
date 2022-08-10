@@ -31,17 +31,6 @@
         border-bottom-left-radius: 20px;
         padding: 1.7% 0 1.7% 2%;
       }
-      .ndrs-top_block:first-child:after {
-        /* content: ''; */
-        position: absolute;
-        top: 0;
-        left: 100%;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 7.8em 7.8em 0 0;
-        border-color: #d1d1d1 transparent transparent transparent;
-      }
       .ndrs-top_block:first-child .ndrs-users {
         flex-direction: row-reverse;
       }
@@ -52,17 +41,6 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         padding: 1.7% 2% 1.7% 0;
-      }
-      .ndrs-top_block:last-child:after {
-        /* content: ''; */
-        position: absolute;
-        top: 0;
-        right: 100%;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0 7.8em 7.8em;
-        border-color: transparent transparent #d1d1d1 transparent;
       }
       .ndrs-top_block:last-child .ndrs-user + .ndrs-user {
         margin-left: -5.8%;
@@ -93,22 +71,19 @@
         width: 11%;
         flex: 0 0 11%;
       }
+      .ndrs-user:hover {
+        z-index: 2;
+      }
       .ndrs-user:hover .ndrs-user-hover {
         display: flex;
       }
       .ndrs-top_block:first-child .ndrs-user-hover {
         left: 50%;
-        padding: 10% 54% 4% 68%;
-		border-top-right-radius: 22px;
-		border-bottom-right-radius: 22px;
-		text-align: left;
+        text-align: left;
       }
       .ndrs-top_block:last-child .ndrs-user-hover {
         right: 50%;
-        padding: 10% 68% 4% 54%;
-		border-top-left-radius: 22px;
-		border-bottom-left-radius: 22px;
-		text-align: right;
+        text-align: right;
       }
       .ndrs-user-hover {
         display: none;
@@ -120,16 +95,58 @@
         justify-content: space-between;
         height: 100%;
         top: 0;
-        background-color: rgb(0, 0, 0, 0.7);
-		box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .ndrs-top_block:first-child .ndrs-user-hover {
+        align-items: flex-start;
+      }
+      .ndrs-top_block:last-child .ndrs-user-hover {
+        align-items: flex-end;
       }
       .ndrs-user-hover_time {
-		font-size: 13px;
-    	letter-spacing: 0.05em;
+        width: auto;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        padding-top: 3px;
+        padding-bottom: 3px;
+      }
+      .ndrs-top_block:first-child .ndrs-user-hover_time {
+        padding-right: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+      .ndrs-top_block:last-child .ndrs-user-hover_time {
+        padding-left: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
       }
       .ndrs-user-hover_name {
-		font-size: 18px;
-    	letter-spacing: 0.18em;
+        font-size: 18px;
+        letter-spacing: 0.18em;
+        padding-top: 2px;
+        padding-bottom: 2px;
+      }
+      .ndrs-user-hover_time,
+      .ndrs-user-hover_name {
+        background-color: rgb(0, 0, 0, 0.7);
+      }
+      .ndrs-top_block:first-child .ndrs-user-hover_name {
+        padding-right: 27px;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+      .ndrs-top_block:last-child .ndrs-user-hover_name {
+        padding-left: 27px;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+      }
+      .ndrs-top_block:first-child .ndrs-user-hover_time,
+      .ndrs-top_block:first-child .ndrs-user-hover_name {
+        padding-left: 35px;
+      }
+      .ndrs-top_block:last-child .ndrs-user-hover_time,
+      .ndrs-top_block:last-child .ndrs-user-hover_name {
+        padding-right: 35px;
       }
       .ndrs-user-avatar {
         background-color: #6b6b6b;
@@ -153,6 +170,7 @@
         align-items: flex-start;
         justify-content: space-between;
         height: 76.8%;
+        overflow-y: auto;
       }
       .ndrs-stats {
         display: flex;
@@ -161,7 +179,6 @@
         flex: 0 0 33.6%;
         background: rgba(255, 255, 255, 0.3);
         border-radius: 16px;
-        max-height: 100%;
       }
       .ndrs-stats-heading {
         display: flex;
@@ -198,7 +215,6 @@
         font-size: 12px;
       }
       .ndrs-stats-body {
-        overflow: auto;
       }
       .ndrs-stats-container {
         height: 100%;
@@ -528,6 +544,15 @@
           </div>
           <div class="ndrs-top_block">
             <div class="ndrs-users">
+              <div class="ndrs-user">
+                <div class="ndrs-user-avatar">
+                  <div class="ndrs-user-avatar_inner"></div>
+                </div>
+                <div class="ndrs-user-hover">
+                  <div class="ndrs-user-hover_time">[2:10:45]</div>
+                  <div class="ndrs-user-hover_name">Babac</div>
+                </div>
+              </div>
               <div class="ndrs-user">
                 <div class="ndrs-user-avatar">
                   <div class="ndrs-user-avatar_inner"></div>
