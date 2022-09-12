@@ -960,19 +960,11 @@
 		<div class="bk-form-route">
 			<div class="bk-form-route__point">
 				<label for="" class="bk-form__label">Пункт отправления</label>
-				<select class="bk-form__input bk-form-route__select">
-					<option value="">Страна</option>
-					<option value="">Adipisci, quisquam!</option>
-					<option value="">Tempore, voluptatem?</option>
-				</select>
+				<input class="bk-form__input bk-form-route__input" placeholder="Страна" readonly />
 			</div>
 			<div class="bk-form-route__point">
 				<label for="" class="bk-form__label">Пункт прибытия</label>
-				<select class="bk-form__input bk-form-route__select">
-					<option value="">Страна</option>
-					<option value="">Adipisci, quisquam!</option>
-					<option value="">Tempore, voluptatem?</option>
-				</select>
+				<input class="bk-form__input bk-form-route__input" placeholder="Страна" readonly />
 			</div>
 		</div>
 		<div class="bk-form-options">
@@ -980,15 +972,15 @@
 				<label for="" class="bk-form__label">Контейнер</label>
 				<div class="bk-form-containers">
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-1" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-1" />
 						<label class="bk-form-containers-point__control" for="container-1">20</label>
 					</div>
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-2" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-2" />
 						<label class="bk-form-containers-point__control" for="container-2">40</label>
 					</div>
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-3" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-3" />
 						<label class="bk-form-containers-point__control" for="container-3">40HC</label>
 					</div>
 				</div>
@@ -1031,11 +1023,11 @@
 	</div>
 	<div class="bk-filter-options">
 		<div class="bk-filter-options-item">
-			<input class="bk-filter-options-item__input" type="checkbox" value="" id="options-1" />
+			<input class="bk-filter-options-item__input" type="radio" name="filter" value="" id="options-1" />
 			<label for="options-1" class="bk-filter-options-item__control">Быстрее</label>
 		</div>
 		<div class="bk-filter-options-item">
-			<input class="bk-filter-options-item__input" type="checkbox" value="" id="options-2" />
+			<input class="bk-filter-options-item__input" type="radio" name="filter" value="" id="options-2" />
 			<label for="options-2" class="bk-filter-options-item__control">Дешевле</label>
 		</div>
 	</div>

@@ -991,19 +991,43 @@
 		<div class="bk-form-route">
 			<div class="bk-form-route__point">
 				<label for="" class="bk-form__label">Пункт отправления</label>
-				<select class="bk-form__input bk-form-route__select">
-					<option value="">Страна</option>
-					<option value="">Adipisci, quisquam!</option>
-					<option value="">Tempore, voluptatem?</option>
-				</select>
+				<input class="bk-form__input bk-form-route__input" placeholder="Страна" readonly />
+				<div class="bk-form-route-dropdown">
+					<div class="bk-form-route-dropdown-list bk-form-route-dropdown__step bk-form-route-dropdown__step--1">
+						<div class="bk-form-route-dropdown-list-item">
+							<input type="radio" class="bk-form-route-dropdown-list-item__input" name="country-1" id="country-1" />
+							<label for="country-1" class="bk-form-route-dropdown-list-item__control">Страна 1</label>
+						</div>
+					</div>
+					<div class="bk-form-route-dropdown__step bk-form-route-dropdown__step--2">
+						<input class="bk-form__input bk-form-route__input" placeholder="Страна" readonly />
+						<div class="bk-form-route-dropdown-type">
+							<div class="bk-form-route-dropdown-type-item">
+								<input class="bk-form-route-dropdown-type-item__input" type="radio" name="type" value="" id="type-1" />
+								<label for="type-1" class="bk-form-route-dropdown-type-item__control">Город</label>
+							</div>
+							<div class="bk-form-route-dropdown-type-item">
+								<input class="bk-form-route-dropdown-type-item__input" type="radio" name="type" value="" id="type-2" />
+								<label for="type-2" class="bk-form-route-dropdown-type-item__control">Порт</label>
+							</div>
+							<div class="bk-form-route-dropdown-type-item">
+								<input class="bk-form-route-dropdown-type-item__input" type="radio" name="type" value="" id="type-3" />
+								<label for="type-3" class="bk-form-route-dropdown-type-item__control">ЖД станция</label>
+							</div>
+						</div>
+						<input class="bk-form__input bk-form-route__input" placeholder="Город" disabled />
+					</div>
+					<div class="bk-form-route-dropdown-list bk-form-route-dropdown__step bk-form-route-dropdown__step--3">
+						<div class="bk-form-route-dropdown-list-item">
+							<input type="radio" class="bk-form-route-dropdown-list-item__input" name="city-1" id="city-1" />
+							<label for="city-1" class="bk-form-route-dropdown-list-item__control">Город 1</label>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="bk-form-route__point">
 				<label for="" class="bk-form__label">Пункт прибытия</label>
-				<select class="bk-form__input bk-form-route__select">
-					<option value="">Страна</option>
-					<option value="">Adipisci, quisquam!</option>
-					<option value="">Tempore, voluptatem?</option>
-				</select>
+				<input class="bk-form__input bk-form-route__input" placeholder="Страна" readonly />
 			</div>
 		</div>
 		<div class="bk-form-options">
@@ -1011,15 +1035,15 @@
 				<label for="" class="bk-form__label">Контейнер</label>
 				<div class="bk-form-containers">
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-1" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-1" />
 						<label class="bk-form-containers-point__control" for="container-1">20</label>
 					</div>
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-2" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-2" />
 						<label class="bk-form-containers-point__control" for="container-2">40</label>
 					</div>
 					<div class="bk-form-containers-point">
-						<input type="checkbox" class="bk-form-containers-point__input" id="container-3" />
+						<input name="container" type="radio" class="bk-form-containers-point__input" id="container-3" />
 						<label class="bk-form-containers-point__control" for="container-3">40HC</label>
 					</div>
 				</div>
@@ -1685,6 +1709,23 @@
   <script type="text/javascript" src="./index_files/widget-new.js(1).Без названия" async="" charset="UTF-8"></script>
   <script type="text/javascript" src="./index_files/script.min.js.Без названия" async="" charset="UTF-8"></script>
   <script type="text/javascript" src="./index_files/script.min.js.Без названия" async="" charset="UTF-8"></script>
+
+  <script>
+    jQuery('.bk-form-route-dropdown-list-item__control').on('click', function() {
+      $(this).closest('.bk-form-route-dropdown__step--1')
+        .next('.bk-form-route-dropdown__step--2').addClass('is-active')
+        .find('[disabled]').prop('disabled',false);
+      $(this).closest('.bk-form-route-dropdown__step--3')
+        .prev('.bk-form-route-dropdown__step--2').removeClass('is-active')
+        .siblings('.is-active').removeClass('is-active')
+        .closest('.bk-form-route-dropdown').removeClass('is-open')
+        .prev('.bk-form-route__input').val('Страна, Город');
+    })
+    jQuery('.bk-form-route__input').on('click', function(){
+      $(this).next('.bk-form-route-dropdown').toggleClass('is-open');
+      $(this).closest('.bk-form-route-dropdown__step--2').next().addClass('is-active');
+    })
+  </script>
 </body>
 
 </html>
