@@ -1,12 +1,17 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Site</title>
-    <meta name="description" content="Startup HTML template OptimizedHTML 5" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="images/favicon.png" />
+    <title>[ Разработка ] Программного Обеспечения | Веб-сервисов | Сайтов</title>
+    <meta name="description" content="Полный цикл разработки ПО, ERP- и CRM-систем, Веб-сервисов, Мобильных приложений, Сайтов. ☎+375-29-308-1-308 Индивидуальный подход ➔ Гибкая разработка ➔ Пошаговое внедрение" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/dist/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./images/dist/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./images/dist/favicon/safari-pinned-tab.svg" color="#0d99ff">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
     <meta property="og:image" content="images/dist/preview.jpg" />
     <link rel="preload" as="image" href="./images/dist/welcome_lg.jpg" media="(min-width: 1024px)" />
     <link rel="preload" as="image" href="./images/dist/welcome_md.jpg" media="(min-width: 744px) and (max-width: 1023.9px)" />
@@ -70,13 +75,13 @@
 				</svg>
 				<ul class="social">
 					<li class="social__item">
-						<a href="#url" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-telegram"></use></svg></a>
+						<a href="//t.me/TargetSolutions" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-telegram"></use></svg></a>
 					</li>
 					<li class="social__item">
-						<a href="#url" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-whatsapp"></use></svg></a>
+						<a href="//wa.me/375293081308" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-whatsapp"></use></svg></a>
 					</li>
 					<li class="social__item">
-						<a href="#url" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-viber"></use></svg></a>
+						<a href="viber://chat?number=%2B375293081308" class="social__link" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon"><use xlink:href="#icon-svg-viber"></use></svg></a>
 					</li>
 				</ul>
 			</div>
@@ -114,11 +119,13 @@
 </header>
 
 <section class="welcome">
-	<picture>
-		<source srcset="./images/dist/welcome_lg.jpg" media="(min-width: 1024px)">
-		<source srcset="./images/dist/welcome_md.jpg" media="(min-width: 744px)">
-		<img class="welcome__image" src="./images/dist/welcome_xs.jpg" alt="Target Solutions">
-	</picture>
+	<div class="welcome__image-wrapper">
+		<picture>
+			<source srcset="./images/dist/welcome_lg.jpg" media="(min-width: 1024px)">
+			<source srcset="./images/dist/welcome_md.jpg" media="(min-width: 744px)">
+			<img class="welcome__image" src="./images/dist/welcome_xs.jpg" alt="Target Solutions">
+		</picture>
+	</div>
 	<div class="welcome__container">
 		<h1 class="welcome__title">Полный цикл <br />разработки</h1>
 		<span class="welcome__text">программного обеспечения <br /> и веб-сервисов</span>
@@ -152,7 +159,7 @@
 					<img class="services-item__icon lazy" data-src="./images/dist/icon-svg-software.svg" alt="Программного обеспечения" />
 					<h3 class="services-item__title">Программного обеспечения</h3>
 					<div class="services-item__text">
-						<p>Понимание современных технологий нашими специалистами позволяет им разрабатывать сложные решения.</p>
+						<p>Создаем надежное программное обеспечение для вашего бизнеса.</p>
 					</div>
 				</div>
 			</div>
@@ -161,7 +168,7 @@
 					<img class="services-item__icon lazy" data-src="./images/dist/icon-svg-smartphone.svg" alt="Мобильных приложений" />
 					<h3 class="services-item__title">Мобильных <br />приложений</h3>
 					<div class="services-item__text">
-						<p>Мы предлагаем полный цикл разработки мобильных приложений.</p>
+						<p>Разрабатываем мобильные приложения для iOS и Android.</p>
 					</div>
 				</div>
 			</div>
@@ -170,7 +177,7 @@
 					<img class="services-item__icon lazy" data-src="./images/dist/icon-svg-internet.svg" alt="Адаптивных сайтов" />
 					<h3 class="services-item__title">Адаптивных <br />сайтов</h3>
 					<div class="services-item__text">
-						<p>Мы предлагаем полный цикл разработки сайтов различной степени сложности.</p>
+						<p>Создаем адаптивные сайты с любым функционалом.</p>
 					</div>
 				</div>
 			</div>
@@ -265,66 +272,56 @@
 			<div class="partners-tab js_partners-tab" data-id="finance">
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_1.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_2.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
-					</a>
-				</div>
-				<div class="partners-tab-item">
-					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_3.png" alt="" />
 					</a>
 				</div>
 			</div>
 			<div class="partners-tab js_partners-tab" data-id="education">
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_3.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_2.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
-					</a>
-				</div>
-				<div class="partners-tab-item">
-					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_1.png" alt="" />
 					</a>
 				</div>
 			</div>
 			<div class="partners-tab js_partners-tab" data-id="health">
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_1.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_2.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_3.png" alt="" />
 					</a>
 				</div>
 				<div class="partners-tab-item">
 					<a href="#url" class="partners-tab-item__link">
-						<img class="partners-tab-item__image lazy" data-src="./images/dist/" alt="" />
+						<img class="partners-tab-item__image lazy" data-src="./images/dist/partner_1.png" alt="" />
 					</a>
 				</div>
 			</div>
@@ -700,11 +697,11 @@
 		<div class="message__body">
 			<div class="message-contact">
 				<div class="message-map">
-					<a href="#map" class="message-map__link" target="_blank" rel="nofollow noopener noreferrer" ></a>
+					<a href="//yandex.by/maps/-/CCUZa-QVsC" class="message-map__link" target="_blank" rel="nofollow noopener noreferrer"></a>
 					<img class="message-map__image lazy" data-src="./images/dist/map.jpg" alt="Карта" />
 				</div>
 				<ul class="message-contact-list">
-					<li class="message-contact-list__item"><a href="#url" class="message-contact-list__link message-contact-list__link--address"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 20"><mask id="a" fill="#fff"><path fill-rule="evenodd" d="M7.918 20S15 11.072 15 7.16a7.082 7.082 0 1 0-14.163 0C.837 11.072 7.918 20 7.918 20ZM8 9.41a2.301 2.301 0 1 0 0-4.603 2.301 2.301 0 0 0 0 4.602Z" clip-rule="evenodd"/></mask><path fill="#0D99FF" d="m7.918 20-.783.621.783.988.784-.988L7.918 20ZM14 7.16c0 .739-.353 1.856-1.008 3.225-.638 1.332-1.498 2.774-2.371 4.117a71.816 71.816 0 0 1-3.41 4.78l-.058.073-.014.018a.238.238 0 0 0-.004.005l.783.622.784.621.002-.002.004-.005.016-.021.062-.078.23-.297a73.706 73.706 0 0 0 3.282-4.626c.896-1.378 1.807-2.902 2.497-4.344C15.469 9.843 16 8.378 16 7.16h-2ZM7.918 1.08A6.082 6.082 0 0 1 14 7.16h2A8.082 8.082 0 0 0 7.918-.92v2ZM1.837 7.16A6.082 6.082 0 0 1 7.918 1.08v-2A8.082 8.082 0 0 0-.163 7.16h2ZM7.918 20l.784-.621v-.001l-.004-.005-.014-.018A24.033 24.033 0 0 1 8.407 19a71.83 71.83 0 0 1-3.191-4.498c-.874-1.342-1.733-2.784-2.37-4.116-.656-1.369-1.01-2.486-1.01-3.225h-2c0 1.218.533 2.683 1.205 4.088.69 1.442 1.601 2.966 2.498 4.344a73.749 73.749 0 0 0 3.512 4.923l.062.078.016.02.004.006.001.002.784-.621ZM9.301 7.108c0 .718-.582 1.301-1.301 1.301v2a3.301 3.301 0 0 0 3.301-3.301h-2ZM8 5.807c.719 0 1.301.582 1.301 1.3h2A3.301 3.301 0 0 0 8 3.808v2Zm-1.301 1.3c0-.718.582-1.3 1.301-1.3v-2a3.301 3.301 0 0 0-3.301 3.3h2ZM8 8.41a1.301 1.301 0 0 1-1.301-1.301h-2A3.301 3.301 0 0 0 8 10.409v-2Z" mask="url(#a)"/></svg> РБ, г. Минск, ул. Ольшевского, 24, к. 434</a></li>
+					<li class="message-contact-list__item"><a href="//yandex.by/maps/-/CCUZa-QVsCl" class="message-contact-list__link message-contact-list__link--address" target="_blank" rel="nofollow noopener noreferrer"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 20"><mask id="a" fill="#fff"><path fill-rule="evenodd" d="M7.918 20S15 11.072 15 7.16a7.082 7.082 0 1 0-14.163 0C.837 11.072 7.918 20 7.918 20ZM8 9.41a2.301 2.301 0 1 0 0-4.603 2.301 2.301 0 0 0 0 4.602Z" clip-rule="evenodd"/></mask><path fill="#0D99FF" d="m7.918 20-.783.621.783.988.784-.988L7.918 20ZM14 7.16c0 .739-.353 1.856-1.008 3.225-.638 1.332-1.498 2.774-2.371 4.117a71.816 71.816 0 0 1-3.41 4.78l-.058.073-.014.018a.238.238 0 0 0-.004.005l.783.622.784.621.002-.002.004-.005.016-.021.062-.078.23-.297a73.706 73.706 0 0 0 3.282-4.626c.896-1.378 1.807-2.902 2.497-4.344C15.469 9.843 16 8.378 16 7.16h-2ZM7.918 1.08A6.082 6.082 0 0 1 14 7.16h2A8.082 8.082 0 0 0 7.918-.92v2ZM1.837 7.16A6.082 6.082 0 0 1 7.918 1.08v-2A8.082 8.082 0 0 0-.163 7.16h2ZM7.918 20l.784-.621v-.001l-.004-.005-.014-.018A24.033 24.033 0 0 1 8.407 19a71.83 71.83 0 0 1-3.191-4.498c-.874-1.342-1.733-2.784-2.37-4.116-.656-1.369-1.01-2.486-1.01-3.225h-2c0 1.218.533 2.683 1.205 4.088.69 1.442 1.601 2.966 2.498 4.344a73.749 73.749 0 0 0 3.512 4.923l.062.078.016.02.004.006.001.002.784-.621ZM9.301 7.108c0 .718-.582 1.301-1.301 1.301v2a3.301 3.301 0 0 0 3.301-3.301h-2ZM8 5.807c.719 0 1.301.582 1.301 1.3h2A3.301 3.301 0 0 0 8 3.808v2Zm-1.301 1.3c0-.718.582-1.3 1.301-1.3v-2a3.301 3.301 0 0 0-3.301 3.3h2ZM8 8.41a1.301 1.301 0 0 1-1.301-1.301h-2A3.301 3.301 0 0 0 8 10.409v-2Z" mask="url(#a)"/></svg> РБ, г. Минск, ул. Ольшевского, 24, к. 434</a></li>
 					<li class="message-contact-list__item"><a href="tel:+375293081308" class="message-contact-list__link">+375 (29) 308-1-308</a></li>
 					<li class="message-contact-list__item"><a href="mailto:info@t-solutions.by" class="message-contact-list__link">info@t-solutions.by</a></li>
 				</ul>
@@ -729,19 +726,18 @@
 						</symbol>
 					</svg>
 					<div class="message-form-file">
-						<input class="hidden message-form-file__input" type="file" id="file" />
-						<label class="message-form-file__label" for="file">
-							<svg class="icon"><use xlink:href="#icon-svg-file"></use></svg>
-							Прикрепить файлы
-							<span class="message-form-file__note">Максимальный размер 50 Мб <br />(.docx, .doc, .xls, .xlsx, .txt, .pdf, .jpg, .png, .rar, .zip)</span>
-						</label>
+						<svg class="icon"><use xlink:href="#icon-svg-file"></use></svg>
+						<input class="hidden message-form-file__input" type="file" id="attachment" name="files[]" multiple accept=".docx, .doc, .xls, .xlsx, .txt, .pdf, .jpg, .png, .rar, .zip" />
+						<label class="message-form-file__label" for="attachment">Прикрепить файлы</label>
+						<div class="message-form-file-list"></div>
+						<span class="message-form-file__note">Максимальный размер 50 Мб <br />(.docx, .doc, .xls, .xlsx, .txt, .pdf, .jpg, .png, .rar, .zip)</span>
 					</div>
 				</div>
 				<div class="message-form__bottom">
 					<div class="message-form__privacy">
 						<p>Нажав на кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии с <a href="#privacy" data-fancybox>Политикой конфиденциальности</a>.</p>
 					</div>
-					<button class="message-form__submit" type="submit">Отправить</button>
+					<button class="message-form__submit" type="submit" disabled>Отправить</button>
 				</div>
 			</form>
 		</div>
@@ -763,7 +759,7 @@
 			<p>Нажав на кнопку “Заказать”, я соглашаюсь на обработку персональных данных в соответствии с <a href="#privacy" data-fancybox>Политикой конфиденциальности</a>.</p>
 		</div>
 		<div class="popup-form-submit">
-			<button type="submit" class="popup-form-submit__btn">Заказать</button>
+			<button type="submit" class="popup-form-submit__btn" disabled>Заказать</button>
 		</div>
 	</form>
 </div>
@@ -923,9 +919,9 @@
 					<li class="nav__item"><a href="#message" class="nav__link">Контакты</a></li>
 				</ul>
 				<ul class="footer-partners">
-					<li class="footer-partners__item"><a class="footer-partners__link" href="#url" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_1.png" alt="Hoster.by" class="footer-partners__image lazy" /></a></li>
-					<li class="footer-partners__item"><a class="footer-partners__link" href="#url" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_2.png" alt="Битрикс24" class="footer-partners__image lazy" /></a></li>
-					<li class="footer-partners__item"><a class="footer-partners__link" href="#url" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_3.png" alt="ActiveCloud" class="footer-partners__image lazy" /></a></li>
+					<li class="footer-partners__item"><a class="footer-partners__link" href="//hoster.by/" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_1.png" alt="Hoster.by" class="footer-partners__image lazy" /></a></li>
+					<li class="footer-partners__item"><a class="footer-partners__link" href="//www.activecloud.by/" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_2.png" alt="Битрикс24" class="footer-partners__image lazy" /></a></li>
+					<li class="footer-partners__item"><a class="footer-partners__link" href="//www.bitrix24.ru/" target="_blank" rel="nofollow noopener noreferrer"><img data-src="./images/dist/partner_3.png" alt="ActiveCloud" class="footer-partners__image lazy" /></a></li>
 				</ul>
 			</div>
 			<div class="footer__bottom">
