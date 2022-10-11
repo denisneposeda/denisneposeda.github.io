@@ -36,11 +36,7 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header-logo">
-			<picture>
-				<source class="lazy" data-srcset="./images/dist/header-logo_lg.png" media="(min-width: 1024px)">
-				<source class="lazy" data-srcset="./images/dist/header-logo_md.png" media="(min-width: 744px)">
-				<img class="lazy header-logo__image" data-src="./images/dist/header-logo_xs.png" alt="Target Solutions">
-			</picture>
+			<img class="lazy header-logo__image" data-src="./images/dist/header-logo.png" alt="Target Solutions">
 		</div>
 		<div class="navigation">
 			<ul class="nav">
@@ -726,9 +722,11 @@
 						</symbol>
 					</svg>
 					<div class="message-form-file">
-						<svg class="icon"><use xlink:href="#icon-svg-file"></use></svg>
 						<input class="hidden message-form-file__input" type="file" id="attachment" name="files[]" multiple accept=".docx, .doc, .xls, .xlsx, .txt, .pdf, .jpg, .png, .rar, .zip" />
-						<label class="message-form-file__label" for="attachment">Прикрепить файлы</label>
+						<label class="message-form-file__label" for="attachment">
+							<svg class="icon"><use xlink:href="#icon-svg-file"></use></svg>
+							<span class="message-form-file__label-text">Прикрепить файлы</span>
+						</label>
 						<div class="message-form-file-list"></div>
 						<span class="message-form-file__note">Максимальный размер 50 Мб <br />(.docx, .doc, .xls, .xlsx, .txt, .pdf, .jpg, .png, .rar, .zip)</span>
 					</div>
@@ -926,11 +924,7 @@
 			</div>
 			<div class="footer__bottom">
 				<div class="footer-logo">
-					<picture>
-						<source class="lazy" data-srcset="./images/dist/footer-logo_lg.png" media="(min-width: 1024px)">
-						<source class="lazy" data-srcset="./images/dist/footer-logo_md.png" media="(min-width: 744px)">
-						<img class="lazy footer-logo__image" data-src="./images/dist/footer-logo_xs.png" alt="Target Solutions">
-					</picture>
+					<img class="lazy footer-logo__image" data-src="./images/dist/footer-logo.png" alt="Target Solutions">
 				</div>
 				<div class="footer-info">
 					<span class="footer__copy">&copy; 2022 ООО “Таргет Солюшнз”. Все права защищены</span>
