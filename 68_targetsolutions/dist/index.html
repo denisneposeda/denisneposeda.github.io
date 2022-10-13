@@ -909,7 +909,7 @@
 							<input class="message-form__input" type="text" placeholder="Имя" />
 						</div>
 						<div class="message-form__group message-form__group--phone">
-							<input class="message-form__input" type="tel" placeholder="Телефон" />
+							<input class="message-form__input" type="tel" placeholder="Телефон" inputmode="numeric" maxlength="20" />
 						</div>
 						<div class="message-form__group">
 							<input class="message-form__input" type="email" placeholder="Email" />
@@ -932,6 +932,7 @@
 					</div>
 				</div>
 				<div class="message-form__bottom">
+					<span class="form-success">Ваше сообщение доставлено. Мы ответим в ближайшее время.</span>
 					<div class="message-form__privacy">
 						<p>Нажав на кнопку “Отправить”, я соглашаюсь на обработку персональных данных в соответствии с <a href="#privacy" data-fancybox>Политикой конфиденциальности</a>.</p>
 					</div>
@@ -946,17 +947,18 @@
 <div class="popup popup-form" id="callback">
 	<span class="popup-form__title">ЗАКАЗАТЬ ЗВОНОК</span>
 	<span class="popup-form__note">Закажите звонок, и мы перезвоним вам в ближайшее время.</span>
-	<form action="#url">
+	<form>
 		<div class="popup-form__group">
-			<input class="popup-form__input" type="text" name="" placeholder="Имя" />
+			<input class="popup-form__input" type="text" name="y-name" placeholder="Имя" />
 		</div>
 		<div class="popup-form__group">
-			<input class="popup-form__input" type="tel" name="phone" placeholder="Телефон" required />
+			<input class="popup-form__input" type="tel" name="y-phone" placeholder="Телефон" inputmode="numeric" maxlength="20" />
 		</div>
 		<div class="popup-form__privacy">
 			<p>Нажав на кнопку “Заказать”, я соглашаюсь на обработку персональных данных в соответствии с <a href="#privacy" data-fancybox>Политикой конфиденциальности</a>.</p>
 		</div>
 		<div class="popup-form-submit">
+			<span class="form-success">Ваша заявка принята. Мы позвоним в ближайшее время.</span>
 			<button type="submit" class="popup-form-submit__btn" disabled>Заказать</button>
 		</div>
 	</form>
