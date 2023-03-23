@@ -1,24 +1,24 @@
 let preprocessor = 'sass', // Preprocessor (sass, less, styl); 'sass' also work with the Scss syntax in blocks/ folder.
-		fileswatch   = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
+	fileswatch = 'html,htm,txt,json,md,woff2' // List of files extensions for watching & hard reload
 
 const { src, dest, parallel, series, watch } = require('gulp')
-const browserSync  = require('browser-sync').create()
-const bssi         = require('browsersync-ssi')
-const ssi          = require('ssi')
-const webpack      = require('webpack-stream')
-const sass         = require('gulp-sass')
-const sassglob     = require('gulp-sass-glob')
-const less         = require('gulp-less')
-const lessglob     = require('gulp-less-glob')
-const styl         = require('gulp-stylus')
-const stylglob     = require("gulp-noop")
-const cleancss     = require('gulp-clean-css')
+const browserSync = require('browser-sync').create()
+const bssi = require('browsersync-ssi')
+const ssi = require("gulp-ssi")
+const webpack = require('webpack-stream')
+const sass = require('gulp-sass')
+const sassglob = require('gulp-sass-glob')
+const less = require('gulp-less')
+const lessglob = require('gulp-less-glob')
+const styl = require('gulp-stylus')
+const stylglob = require("gulp-noop")
+const cleancss = require('gulp-clean-css')
 const autoprefixer = require('gulp-autoprefixer')
-const rename       = require('gulp-rename')
-const imagemin     = require('gulp-imagemin')
-const newer        = require('gulp-newer')
-const rsync        = require('gulp-rsync')
-const del          = require('del')
+const rename = require('gulp-rename')
+const imagemin = require('gulp-imagemin')
+const newer = require('gulp-newer')
+const rsync = require('gulp-rsync')
+const del = require('del')
 
 function browsersync() {
 	browserSync.init({
@@ -86,13 +86,13 @@ function buildcopy() {
 		'app/fonts/**/*',
 		'app/video/*'
 	], { base: 'app/' })
-	.pipe(dest('dist'))
+		.pipe(dest('dist'))
 }
 
-async function buildhtml() {
-	let includes = new ssi('app/', 'dist/', '/**/*.html')
-	includes.compile()
-	del('dist/parts', { force: true })
+function buildhtml() {
+	return src('./app/*.html',)
+		.pipe(ssi())
+		.pipe(dest("./dist"));
 }
 
 function cleandist() {
@@ -107,7 +107,7 @@ function deploy() {
 			destination: 'yousite/public_html/',
 			// clean: true, // Mirror copy with file deletion
 			include: [/* '*.htaccess' */], // Included files to deploy,
-			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
+			exclude: ['**/Thumbs.db', '**/*.DS_Store'],
 			recursive: true,
 			archive: true,
 			silent: false,
@@ -123,9 +123,9 @@ function startwatch() {
 }
 
 exports.scripts = scripts
-exports.styles  = styles
-exports.images  = images
-exports.deploy  = deploy
-exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
+exports.styles = styles
+exports.images = images
+exports.deploy = deploy
+exports.assets = series(scripts, styles, images)
+exports.build = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
 exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))

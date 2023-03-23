@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Wecatalogo - Homepage</title>
+	<title>WeCatalogo</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="./images/favicon.png">
@@ -46,17 +45,39 @@
 	<div class="header__navbar">
 		<div class="header__container">
 			<ul class="header-nav">
-				<li class="header-nav-item"><a href="#" class="header-nav-item__link">Каталог</a></li>
-				<li class="header-nav-item"><a href="#" class="header-nav-item__link">Новости</a></li>
-				<li class="header-nav-item"><a href="#" class="header-nav-item__link">Работа</a></li>
-				<li class="header-nav-item"><a href="#" class="header-nav-item__link">Услуги</a></li>
-			</ul>
+	<li class="header-nav-item header-nav-item--has-subnav">
+		<a href="#" class="header-nav-item__link">Каталог</a>
+		<ul class="header-subnav hidden-desktop">
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Электроника</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Компьютеры и сети</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Авто и мото</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Бытовая химия</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Стройка и ремонт</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Дом и сад</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Красота и спорт</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Детям и мамам</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Работа и офис</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Одежда и аксессуары</a></li>
+		</ul>
+	</li>
+	<li class="header-nav-item header-nav-item--has-subnav">
+		<a href="#" class="header-nav-item__link">Новости</a>
+		<ul class="header-subnav hidden-desktop">
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Главные новости</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Деньги и власть</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">В мире</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Экономика</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Кругозор</a></li>
+		</ul>
+	</li>
+	<li class="header-nav-item"><a href="#" class="header-nav-item__link">Работа</a></li>
+	<li class="header-nav-item"><a href="#" class="header-nav-item__link">Услуги</a></li>
+</ul>
 			<a href="./" class="header-logo">
 				<svg class="header-logo__icon"><use xlink:href="#icon-svg-logo"></use></svg>
 			</a>
 			<button class="hamburger" type="button">
-				<svg class="hamburger-control hamburger-control--open"><use xlink:href="#icon-svg-hamb"></use></svg>
-				<svg class="hamburger-control hamburger-control--close"><use xlink:href="#icon-svg-cross"></use></svg>
+				<svg class="hamburger-control"><use xlink:href="#icon-svg-hamb"></use></svg>
 			</button>
 		</div>
 	</div>
@@ -74,19 +95,48 @@
 				<div class="header-search-result"></div>
 			</div>
 			<div class="header-customer">
-				<button type="button" class="header-customer-item">
-					<span class="header-customer-item__text">Войти</span>
-					<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-enter"></use></svg>
-				</button>				
-				<button type="button" class="header-customer-item no-display">
-					<span class="header-customer-item__text">Maria K.</span>
-					<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-user"></use></svg>
-				</button>				
-				<a href="#" class="header-customer-item">
-					<span class="header-customer-item__text hidden-desktop">Отложенные</span>
-					<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-star"></use></svg>
-				</a>
-			</div>
+	<div class="header-customer-item">
+		<button type="button" class="header-customer-item__link header-customer-item__link--logined">
+			<span class="header-customer-item__text">Maria K.</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-user"></use></svg>
+		</button>				
+		<div class="header-customer-dropdown">
+			<span class="header-customer-dropdown__username hidden-mobile">Maria Krug</span>
+			<ul class="header-customer-dropdown__list">
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Личный кабинет</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Зарегистрировать компанию</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Войти как работник</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Мои отзывы</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Настройки</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link header-customer-dropdown-item__link--logout">Выход</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-customer-item">
+		<button type="button" class="header-customer-item__link no-display" data-fancybox data-src="#popup-sign-in">
+			<span class="header-customer-item__text">Войти</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-enter"></use></svg>
+		</button>
+	</div>		
+	<div class="header-customer-item">	
+		<a href="#" class="header-customer-item__link" data-fancybox data-src="#popup-sign-in">
+			<span class="header-customer-item__text hidden-desktop">Отложенные</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-star"></use></svg>
+		</a>
+	</div>	
+</div>
 		</div>
 		<div class="header-categories">
 			<div class="header-categories__container">
@@ -136,8 +186,160 @@
 </header>
 <main class="main">
 
-	</main>
+<div class="popup popup-sign-in" id="popup-sign-in">
+	<span class="popup__title">Вход</span>
+	<form action="#" class="popup-form">
+		<div class="popup-form__group">
+			<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
+		</div>
+		<div class="popup-form__group">
+			<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
+		</div>
+		<div class="popup-form__actions popup-form__actions--multiple">
+			<button type="submit" class="popup-form__submit">Войти</button>
+			<button type="button" class="popup-sign-in__code">Войти по коду</button>
+		</div>
+	</form>
+	<div class="popup-social">
+		<span class="popup-social__title">Или продолжить как пользователь:</span>
+		<div class="popup-social__container">
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+		</div>
+	</div>
+	<div class="popup-terms">Нажимая «Войти» или «Продолжить как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+	<button type="button" class="popup-sign-in__sign-up" data-fancybox data-src="#popup-sign-up" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
+</div>
+
+<div class="popup popup-sign-up" id="popup-sign-up">
+	<span class="popup__title">Регистрация</span>
+	<form action="#" class="popup-form">
+		<div class="popup-form__group">
+			<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
+		</div>
+		<div class="popup-form__group">
+			<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
+		</div>
+		<div class="popup-form__group">
+			<input type="password" name="password-repeat" class="popup-form__input" placeholder="Повторите пароль" />
+		</div>
+		<div class="popup-form__actions">
+			<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-up-continue" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
+		</div>
+	</form>
+	<div class="popup-social">
+		<span class="popup-social__title">Зарегистрироваться как пользователь:</span>
+		<div class="popup-social__container">
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+		</div>
+	</div>
+	<div class="popup-terms">Нажимая «Зарегистрироваться» или «Зарегистрироваться как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+</div>
+
+<div class="popup popup-sign-up-continue" id="popup-sign-up-continue">
+	<span class="popup__title">Давайте познакомимся</span>
+	<form action="#" class="popup-form">
+		<div class="popup-form__group">
+			<input type="text" name="first-name" class="popup-form__input" placeholder="Имя" />
+		</div>
+		<div class="popup-form__group">
+			<input type="password" name="last-name" class="popup-form__input" placeholder="Фамилия" />
+		</div>
+		<div class="popup-form__group">
+			<input type="password" name="username" class="popup-form__input" placeholder="Придумайте ник" />
+		</div>
+		<div class="popup-form__actions">
+			<button type="submit" class="popup-form__submit">Продолжить</button>
+		</div>
+	</form>
+</div>
+<div class="navigation-mobile" id="navigation-mobile">
+	<ul class="header-nav">
+	<li class="header-nav-item header-nav-item--has-subnav">
+		<a href="#" class="header-nav-item__link">Каталог</a>
+		<ul class="header-subnav hidden-desktop">
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Электроника</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Компьютеры и сети</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Авто и мото</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Бытовая химия</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Стройка и ремонт</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Дом и сад</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Красота и спорт</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Детям и мамам</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Работа и офис</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Одежда и аксессуары</a></li>
+		</ul>
+	</li>
+	<li class="header-nav-item header-nav-item--has-subnav">
+		<a href="#" class="header-nav-item__link">Новости</a>
+		<ul class="header-subnav hidden-desktop">
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Главные новости</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Деньги и власть</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">В мире</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Экономика</a></li>
+			<li class="header-subnav-item"><a href="#" class="header-subnav-item__link">Кругозор</a></li>
+		</ul>
+	</li>
+	<li class="header-nav-item"><a href="#" class="header-nav-item__link">Работа</a></li>
+	<li class="header-nav-item"><a href="#" class="header-nav-item__link">Услуги</a></li>
+</ul>
+	<div class="header-customer">
+	<div class="header-customer-item">
+		<button type="button" class="header-customer-item__link header-customer-item__link--logined">
+			<span class="header-customer-item__text">Maria K.</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-user"></use></svg>
+		</button>				
+		<div class="header-customer-dropdown">
+			<span class="header-customer-dropdown__username hidden-mobile">Maria Krug</span>
+			<ul class="header-customer-dropdown__list">
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Личный кабинет</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Зарегистрировать компанию</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Войти как работник</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Мои отзывы</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link">Настройки</a>
+				</li>
+				<li class="header-customer-dropdown-item">
+					<a href="#" class="header-customer-dropdown-item__link header-customer-dropdown-item__link--logout">Выход</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-customer-item">
+		<button type="button" class="header-customer-item__link no-display" data-fancybox data-src="#popup-sign-in">
+			<span class="header-customer-item__text">Войти</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-enter"></use></svg>
+		</button>
+	</div>		
+	<div class="header-customer-item">	
+		<a href="#" class="header-customer-item__link" data-fancybox data-src="#popup-sign-in">
+			<span class="header-customer-item__text hidden-desktop">Отложенные</span>
+			<svg class="header-customer-item__icon"><use xlink:href="#icon-svg-star"></use></svg>
+		</a>
+	</div>	
+</div>
+</div>
+</main>
 	<footer class="footer">
+		<div class="footer__container">
+			<ul class="footer-nav">
+				<li class="footer-nav-item"><a href="#" class="footer-nav-item__link">О компании</a></li>
+				<li class="footer-nav-item"><a href="#" class="footer-nav-item__link">Вакансии</a></li>
+				<li class="footer-nav-item"><a href="#" class="footer-nav-item__link">Пользовательское соглашение</a></li>
+				<li class="footer-nav-item"><a href="#" class="footer-nav-item__link">Публичные договоры</a></li>
+			</ul>
+		</div>
 	</footer>
 	<script src="./js/app.min.js"></script>
 </body>

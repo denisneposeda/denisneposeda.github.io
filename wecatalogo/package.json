@@ -26,10 +26,11 @@
 		"gulp-rsync": "0.0.9",
 		"gulp-sass": "^4.1.0",
 		"gulp-sass-glob": "^1.1.0",
+		"gulp-ssi": "^0.1.5",
 		"gulp-stylus": "^2.7.0",
 		"sass": "^1.32.5",
-		"webpack-stream": "^6.1.2",
-		"swiper": "^8.4.3"
+		"swiper": "^8.4.3",
+		"webpack-stream": "^6.1.2"
 	},
 	"dependencies": {
 		"jquery": "^3.5.1",
