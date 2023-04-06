@@ -76,7 +76,7 @@
 			<a href="./" class="header-logo">
 				<svg class="header-logo__icon"><use xlink:href="#icon-svg-logo"></use></svg>
 			</a>
-			<button class="hamburger" type="button">
+			<button class="hamburger hidden-desktop" type="button">
 				<svg class="hamburger-control"><use xlink:href="#icon-svg-hamb"></use></svg>
 			</button>
 		</div>
@@ -98,6 +98,49 @@
 			<button type="button" class="header-search-result-nav__item">Новости</button>
 			<button type="button" class="header-search-result-nav__item">Работа</button>
 			<button type="button" class="header-search-result-nav__item">Услуги</button>
+		</div>
+		<div class="header-search-result__container" style="display: none;">
+			<div class="header-search-result-filter">
+				<div class="header-search-result-filter-item">
+					<button class="header-search-result-filter-item__trigger">В любом разделе</button>
+				</div>
+				<div class="header-search-result-filter-item">
+					<button class="header-search-result-filter-item__trigger">За пол года</button>
+				</div>
+				<div class="header-search-result-filter-item">
+					<button class="header-search-result-filter-item__trigger">Сначала релевантные</button>
+				</div>
+			</div>
+			<div class="header-search-result-news">
+				<div class="header-search-result-news-item">
+					<a href="#" class="header-search-result-news-item__link"></a>
+					<div class="header-search-result-news-item__image-wrapper">
+						<img class="header-search-result-news-item__image" src="./images/dist/news.jpg" alt="">
+						<a href="#" class="header-search-result-news-item__category">Технологии</a>
+					</div>
+					<div class="header-search-result-news-item__content">
+						<span class="header-search-result-news-item__title">«Андор» — это самая взрослая часть «Звездных войн». И один из лучших сериалов года</span>
+						<div class="header-search-result-news-item__excerpt hidden-mobile">
+							<p>Сериал про то, как хмурый наемник потихонбку становится лидером повстанцев, — это лучшее, что случалось со «Звёздными войнами» за долгие годы. Новая история из далекой-далекой галактики лишилась джадаев со световыми мечами и наконец-то повзрослела: после просмотра захочется не аказать игрушку-дроида, а выйти и долго смотреть вдаль</p>
+						</div>
+						<span class="header-search-result-news-item__date">7 декабря 2022 в 20:10</span>
+					</div>
+				</div>
+				<div class="header-search-result-news-item">
+					<a href="#" class="header-search-result-news-item__link"></a>
+					<div class="header-search-result-news-item__image-wrapper">
+						<img class="header-search-result-news-item__image" src="./images/dist/news.jpg" alt="">
+						<a href="#" class="header-search-result-news-item__category">Технологии</a>
+					</div>
+					<div class="header-search-result-news-item__content">
+						<span class="header-search-result-news-item__title">«Андор» — это самая взрослая часть «Звездных войн». И один из лучших сериалов года</span>
+						<div class="header-search-result-news-item__excerpt hidden-mobile">
+							<p>Сериал про то, как хмурый наемник потихонбку становится лидером повстанцев, — это лучшее, что случалось со «Звёздными войнами» за долгие годы. Новая история из далекой-далекой галактики лишилась джадаев со световыми мечами и наконец-то повзрослела: после просмотра захочется не аказать игрушку-дроида, а выйти и долго смотреть вдаль</p>
+						</div>
+						<span class="header-search-result-news-item__date">7 декабря 2022 в 20:10</span>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="header-search-result__container">
 			<div class="header-search-result-categories">
@@ -317,6 +360,9 @@
 <main class="main">
 
 <div class="popup popup-sign-in" id="popup-sign-in">
+	<div class="popup-logo hidden-desktop">
+		<svg class="popup-logo__icon"><use xlink:href="#icon-svg-logo"></use></svg>
+	</div>
 	<span class="popup__title">Вход</span>
 	<form action="#" class="popup-form">
 		<div class="popup-form__group">
@@ -327,7 +373,7 @@
 		</div>
 		<div class="popup-form__actions popup-form__actions--multiple">
 			<button type="submit" class="popup-form__submit">Войти</button>
-			<button type="button" class="popup-sign-in__code">Войти по коду</button>
+			<button type="button" class="popup-sign-in__code" data-fancybox data-src="#popup-sign-code" data-options='{"closeExisting" : true}'>Войти по коду</button>
 		</div>
 	</form>
 	<div class="popup-social">
@@ -339,52 +385,57 @@
 		</div>
 	</div>
 	<div class="popup-terms">Нажимая «Войти» или «Продолжить как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
-	<button type="button" class="popup-sign-in__sign-up" data-fancybox data-src="#popup-sign-up" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
+	<a href="./registration.html" class="popup-sign-in__sign-up">Зарегистрироваться</a>
 </div>
 
-<div class="popup popup-sign-up" id="popup-sign-up">
-	<span class="popup__title">Регистрация</span>
+<div class="popup popup-sign-code" id="popup-sign-code">
+	<div class="popup-logo hidden-desktop">
+		<svg class="popup-logo__icon"><use xlink:href="#icon-svg-logo"></use></svg>
+	</div>
+	<span class="popup__title">Вход по коду</span>
 	<form action="#" class="popup-form">
 		<div class="popup-form__group">
 			<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
 		</div>
-		<div class="popup-form__group">
-			<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
-		</div>
-		<div class="popup-form__group">
-			<input type="password" name="password-repeat" class="popup-form__input" placeholder="Повторите пароль" />
-		</div>
-		<div class="popup-form__actions">
-			<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-up-continue" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
+		<div class="popup-form__actions popup-form__actions--multiple">
+			<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-enter-code" data-options='{"closeExisting" : true}'>Продолжить</button>
 		</div>
 	</form>
 	<div class="popup-social">
-		<span class="popup-social__title">Зарегистрироваться как пользователь:</span>
+		<span class="popup-social__title">Или продолжить как пользователь:</span>
 		<div class="popup-social__container">
 			<button type="button" class="popup-social__link"></button>
 			<button type="button" class="popup-social__link"></button>
 			<button type="button" class="popup-social__link"></button>
 		</div>
 	</div>
-	<div class="popup-terms">Нажимая «Зарегистрироваться» или «Зарегистрироваться как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+	<div class="popup-terms">Нажимая «Войти» или «Продолжить как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+	<a href="./registration.html" class="popup-sign-in__sign-up">Зарегистрироваться</a>
 </div>
 
-<div class="popup popup-sign-up-continue" id="popup-sign-up-continue">
-	<span class="popup__title">Давайте познакомимся</span>
+<div class="popup popup-sign-enter-code" id="popup-sign-enter-code">
+	<div class="popup-logo hidden-desktop">
+		<svg class="popup-logo__icon"><use xlink:href="#icon-svg-logo"></use></svg>
+	</div>
+	<span class="popup__title">Введите код, который пришел на эл. почту <strong>1234567@mail.ru</strong></span>
 	<form action="#" class="popup-form">
 		<div class="popup-form__group">
-			<input type="text" name="first-name" class="popup-form__input" placeholder="Имя" />
+			<input type="text" name="code" class="popup-form__input" placeholder="Введите код" />
 		</div>
-		<div class="popup-form__group">
-			<input type="password" name="last-name" class="popup-form__input" placeholder="Фамилия" />
-		</div>
-		<div class="popup-form__group">
-			<input type="password" name="username" class="popup-form__input" placeholder="Придумайте ник" />
-		</div>
-		<div class="popup-form__actions">
+		<div class="popup-form__actions popup-form__actions--multiple">
 			<button type="submit" class="popup-form__submit">Продолжить</button>
 		</div>
 	</form>
+	<div class="popup-social">
+		<span class="popup-social__title">Или продолжить как пользователь:</span>
+		<div class="popup-social__container">
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+			<button type="button" class="popup-social__link"></button>
+		</div>
+	</div>
+	<div class="popup-terms">Нажимая «Войти» или «Продолжить как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+	<a href="./registration.html" class="popup-sign-in__sign-up">Зарегистрироваться</a>
 </div>
 <div class="navigation-mobile" id="navigation-mobile">
 	<ul class="header-nav">
@@ -460,8 +511,6 @@
 	</div>	
 </div>
 </div>
-
-<!-- ../Project_Git/denisneposeda.github.io/wecatalogo/app/ -->
 </main>
 	<footer class="footer">
 		<div class="footer__container">
