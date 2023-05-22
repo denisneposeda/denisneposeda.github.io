@@ -359,40 +359,200 @@
 </header>
 <main class="main">
 
+<div class="breadcrumbs">
+	<div class="breadcrumbs__container">
+		<ul class="breadcrumbs__list">
+			<li class="breadcrumbs-item"><a href="#url" class="breadcrumbs-item__link">Каталог</a></li>
+			<li class="breadcrumbs-item"><a href="#url" class="breadcrumbs-item__link">Мобильные телефоны</a></li>
+			<li class="breadcrumbs-item"><span class="breadcrumbs-item__link">Samsung</span></li>
+		</ul>
+	</div>
+</div>
 <div class="container">
-	<svg width="0" height="0" class="hidden">
-		<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" id="icon-svg-eye">
-			<path fill="#969696" d="M9 4.5c-.331.005-.66.058-.976.156.146.258.224.548.226.844A1.75 1.75 0 0 1 6.5 7.25a1.731 1.731 0 0 1-.844-.226A3.49 3.49 0 1 0 9 4.5Zm8.891 3.044C16.197 4.237 12.841 2 9 2 5.158 2 1.802 4.239.109 7.544a1.01 1.01 0 0 0 0 .912C1.803 11.763 5.159 14 9 14s7.198-2.239 8.891-5.544a1.01 1.01 0 0 0 0-.912ZM9 12.5c-3.083 0-5.91-1.719-7.435-4.5C3.09 5.219 5.917 3.5 9 3.5c3.083 0 5.909 1.719 7.435 4.5-1.526 2.781-4.352 4.5-7.435 4.5Z"></path>
-		</symbol>
-	</svg>
-	<div class="popup popup-inline">
-		<span class="popup__title">Регистрация</span>
-		<form action="#" class="popup-form">
-			<div class="popup-form__group">
-				<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
+	<!--#include file="parts/catalog-product-heading.html" -->
+	<div class="catalog-product">
+		<div class="catalog-product-description">
+			<div class="catalog-product-description__image-wrapper">
+				<img class="catalog-product-description__image" src="./images/dist/search-result.jpg" alt="">
 			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
-			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password-repeat" class="popup-form__input" placeholder="Повторите пароль" />
-			</div>
-			<div class="popup-form__actions">
-				<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-up-continue" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
-			</div>
-		</form>
-		<div class="popup-social">
-			<span class="popup-social__title">Зарегистрироваться как пользователь:</span>
-			<div class="popup-social__container">
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
+			<div class="catalog-product-description__content">
+				<a href="#url" class="catalog-product-description-reviews">
+					<div class="catalog-product-description-reviews__stars stars">
+						<div class="stars__inner" style="width: 80%"></div>
+					</div>
+					<span class="catalog-product-description-reviews__count">109 отзывов</span>
+				</a>
+				<a href="#url" class="catalog-product-description__add-review">Добавить отзыв</a>
+				<div class="catalog-product-description__text">
+					<p>Android, экран 6.47" AMOLED (1080x2340), Qualcomm Snapdragon 730G, ОЗУ 8 ГБ, флэш-память 128 ГБ, камера 64 Мп, аккумулятор 5260 мАч, 2 SIM</p>
+				</div>
+				<div class="catalog-product-description__info">
+					<span class="catalog-product-description__price">От 125$</span>
+					<a href="#" class="catalog-product-description__shops">22 предложения</a>
+				</div>
 			</div>
 		</div>
-		<div class="popup-terms">Нажимая «Зарегистрироваться» или «Зарегистрироваться как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+		<div class="catalog-product-aside">
+			<div class="catalog-product-aside__container">
+				<svg width="0" height="0" class="hidden">
+					<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-telegram">
+						<path fill="#2AABEE" d="M16 0A15.998 15.998 0 0 0 0 16a16.005 16.005 0 0 0 16 16 15.998 15.998 0 0 0 16-16A16.005 16.005 0 0 0 16 0Z"></path>
+						<path fill="#fff" d="M7.242 15.831c4.665-2.032 7.775-3.372 9.33-4.019 4.445-1.848 5.368-2.17 5.97-2.18.133-.002.428.03.62.186.16.131.205.309.228.434.02.124.047.408.025.63-.24 2.53-1.283 8.669-1.813 11.503-.222 1.199-.665 1.6-1.092 1.64-.93.085-1.635-.614-2.535-1.204-1.408-.923-2.203-1.498-3.57-2.398-1.58-1.041-.555-1.614.345-2.549.235-.244 4.33-3.968 4.407-4.306.01-.042.02-.2-.075-.283-.092-.083-.23-.054-.33-.032-.142.032-2.39 1.52-6.75 4.46-.637.44-1.215.653-1.735.642-.57-.012-1.67-.323-2.487-.589-1-.325-1.798-.498-1.728-1.05.035-.289.433-.584 1.19-.885Z"></path>
+					</symbol>
+					<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-whatsapp">
+						<path fill="#60D669" d="M.682 15.809c0 2.688.708 5.313 2.054 7.627L.554 31.342l8.154-2.121a15.47 15.47 0 0 0 7.35 1.857h.006c8.477 0 15.378-6.845 15.381-15.257.002-4.077-1.596-7.91-4.5-10.794C24.04 2.143 20.178.554 16.063.552 7.586.552.686 7.396.683 15.81"></path>
+						<path fill="#fff" d="M12.085 9.197c-.299-.658-.613-.671-.896-.683-.232-.01-.498-.01-.763-.01-.266 0-.697.1-1.062.495-.365.395-1.393 1.351-1.393 3.294 0 1.944 1.426 3.822 1.625 4.086.2.263 2.754 4.38 6.8 5.962 3.364 1.316 4.048 1.055 4.778.989.73-.066 2.356-.956 2.687-1.878.332-.922.332-1.713.233-1.878-.1-.165-.365-.264-.764-.461-.398-.198-2.355-1.153-2.72-1.285-.365-.132-.63-.197-.896.198-.265.395-1.028 1.285-1.26 1.548-.232.264-.465.297-.863.1-.398-.199-1.68-.616-3.201-1.961-1.184-1.047-1.983-2.34-2.215-2.736-.232-.395-.025-.609.175-.806.179-.177.398-.46.597-.691.199-.231.265-.396.398-.66.133-.263.066-.494-.033-.691-.1-.198-.873-2.151-1.227-2.932"></path>
+					</symbol>
+				</svg>
+				<div class="catalog-product-offers">
+					<div class="catalog-product-offers-item">
+						<div class="catalog-product-offers-item-company">
+							<a href="#url" class="catalog-product-offers-item-company__image-wrapper">
+								<img src="./images/dist/company.png" alt="" class="catalog-product-offers-item-company__image">
+							</a>
+							<a href="#url" class="catalog-product-offers-item-company-reviews">
+								<div class="catalog-product-offers-item-company-reviews__stars stars">
+									<div class="stars__inner" style="width: 80%"></div>
+								</div>
+								<span class="catalog-product-offers-item-company-reviews__count">109 отзывов</span>
+							</a>
+						</div>
+						<div class="catalog-product-offers-item__info">
+							<span class="catalog-product-offers-item__price">130$</span>
+							<div class="catalog-product-offers-item-contacts">
+								<div class="catalog-product-offers-item-contacts-faster">
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-telegram"></use></svg>
+									</a>
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-whatsapp"></use></svg>
+									</a>
+								</div>
+								<a href="#url" class="catalog-product-offers-item-contacts__action">Контакты</a>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-product-offers-item">
+						<div class="catalog-product-offers-item-company">
+							<a href="#url" class="catalog-product-offers-item-company__image-wrapper">
+								<img src="./images/dist/company.png" alt="" class="catalog-product-offers-item-company__image">
+							</a>
+							<a href="#url" class="catalog-product-offers-item-company-reviews">
+								<div class="catalog-product-offers-item-company-reviews__stars stars">
+									<div class="stars__inner" style="width: 80%"></div>
+								</div>
+								<span class="catalog-product-offers-item-company-reviews__count">109 отзывов</span>
+							</a>
+						</div>
+						<div class="catalog-product-offers-item__info">
+							<span class="catalog-product-offers-item__price">130$</span>
+							<div class="catalog-product-offers-item-contacts">
+								<div class="catalog-product-offers-item-contacts-faster">
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-telegram"></use></svg>
+									</a>
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-whatsapp"></use></svg>
+									</a>
+								</div>
+								<a href="#url" class="catalog-product-offers-item-contacts__action">Контакты</a>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-product-offers-item">
+						<div class="catalog-product-offers-item-company">
+							<a href="#url" class="catalog-product-offers-item-company__image-wrapper">
+								<img src="./images/dist/company.png" alt="" class="catalog-product-offers-item-company__image">
+							</a>
+							<a href="#url" class="catalog-product-offers-item-company-reviews">
+								<div class="catalog-product-offers-item-company-reviews__stars stars">
+									<div class="stars__inner" style="width: 80%"></div>
+								</div>
+								<span class="catalog-product-offers-item-company-reviews__count">109 отзывов</span>
+							</a>
+						</div>
+						<div class="catalog-product-offers-item__info">
+							<span class="catalog-product-offers-item__price">130$</span>
+							<div class="catalog-product-offers-item-contacts">
+								<div class="catalog-product-offers-item-contacts-faster">
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-telegram"></use></svg>
+									</a>
+									<a href="#url" class="catalog-product-offers-item-contacts-faster__item">
+										<svg class="icon"><use xlink:href="#icon-svg-whatsapp"></use></svg>
+									</a>
+								</div>
+								<a href="#url" class="catalog-product-offers-item-contacts__action">Контакты</a>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-product-offers-all">
+						<a href="#url" class="catalog-product-offers-all__action">Все предложения</a>
+						<div class="catalog-product-offers-all__note">
+							<p>Приведенные предложения продавцов являются рекламной информацией и их приглашением делать оферты. При покупке всегда запоминайте полное наименование юридического лица или индивидуального предпринимателя. Обязятельно уточняйте комплект поставки, цвет товара и иную информацию заказа.</p>
+							<p>Проблемы с наличием или ценой? Хотите пожаловаться ли похвалить продавца? Вы можете оставить отзыв на странице магазина!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="catalog-product-gallery">
+			<div class="catalog-product-gallery__thumbs swiper">
+				<div class="swiper-wrapper"></div>
+			</div>
+		</div>
+		<div class="catalog-product-specs">
+			<h2 class="catalog-product-specs__title">Характеристики</h2>
+			<div class="catalog-product-specs__table-wrapper">
+				<table class="catalog-product-specs__table">
+					<tr>
+						<th colspan="2">Основные</th>
+					</tr>
+					<tr>
+						<td>Производитель</td>
+						<td><strong>Samsung</strong></td>
+					</tr>
+					<tr>
+						<td>Дата выхода на рынок</td>
+						<td><strong>2019</strong></td>
+					</tr>
+				</table>
+			</div>
+			<div class="catalog-product-specs-different">
+				<button type="button" class="catalog-product-specs-different__control">Заметили неточность в описании?</button>
+				<div class="catalog-product-specs-different__container">
+					<form class="catalog-product-specs-different-form" action="">
+						<div class="catalog-product-specs-different-form__row">
+							<label for="" class="catalog-product-specs-different-form__label">Где допущена ошибка?</label>
+							<div class="catalog-product-specs-different-form__group">
+								<textarea name="" id="" class="catalog-product-specs-different-form__input"></textarea>
+							</div>
+						</div>
+						<div class="catalog-product-specs-different-form__row">
+							<label for="" class="catalog-product-specs-different-form__label">Электронная почта</label>
+							<div class="catalog-product-specs-different-form__group">
+								<input type="email" class="catalog-product-specs-different-form__input" />
+							</div>
+						</div>
+						<div class="catalog-product-specs-different-form-submit">
+							<button class="catalog-product-specs-different-form-submit__action" type="submit">Отправить</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="catalog-product-specs__note">
+				<p>Вышеприведенная информация получена из открытых источников, в том числе с официальных сайтов и из каталогов. Поскольку мы не можем гарантировать 100%-ную точность и полноту описаний товаров, ОБЯЗАТЕЛЬНО уточняйте у продавца важные для вас параметры и осматривайте товар при получении. После оплаты вернуть или обменять неподходящий товар будет проблематично.</p>
+				<p>Все опубликованные в данном каталоге материалы являются собственностью ООО «Rubi», любая публикация или копирование (полное или частичное) без предварительного согласия запрещены.</p>
+			</div>
+		</div>
 	</div>
+</div>
+<div class="compare-action">
+	<svg width="0" height="0" class="hidden">
+		<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21" id="icon-svg-basket"><path fill="currentColor" d="M7.5 14.667h1.667v-7.5H7.5v7.5Zm3.334 0H12.5v-7.5h-1.666v7.5ZM4.167 18V5.5h-.833V3.833H7.5V3h5v.833h4.167V5.5h-.834V18H4.168Z"></path></symbol>
+	</svg>
+	<a href="#url" class="compare-action__link">5 товаров в сравнении</a>
+	<button type="button" class="compare-action__delete"><svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg></button>
 </div>
 
 <div class="popup popup-sign-in" id="popup-sign-in">

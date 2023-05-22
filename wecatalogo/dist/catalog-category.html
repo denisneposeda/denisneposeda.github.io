@@ -360,39 +360,206 @@
 <main class="main">
 
 <div class="container">
-	<svg width="0" height="0" class="hidden">
-		<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" id="icon-svg-eye">
-			<path fill="#969696" d="M9 4.5c-.331.005-.66.058-.976.156.146.258.224.548.226.844A1.75 1.75 0 0 1 6.5 7.25a1.731 1.731 0 0 1-.844-.226A3.49 3.49 0 1 0 9 4.5Zm8.891 3.044C16.197 4.237 12.841 2 9 2 5.158 2 1.802 4.239.109 7.544a1.01 1.01 0 0 0 0 .912C1.803 11.763 5.159 14 9 14s7.198-2.239 8.891-5.544a1.01 1.01 0 0 0 0-.912ZM9 12.5c-3.083 0-5.91-1.719-7.435-4.5C3.09 5.219 5.917 3.5 9 3.5c3.083 0 5.909 1.719 7.435 4.5-1.526 2.781-4.352 4.5-7.435 4.5Z"></path>
-		</symbol>
-	</svg>
-	<div class="popup popup-inline">
-		<span class="popup__title">Регистрация</span>
-		<form action="#" class="popup-form">
-			<div class="popup-form__group">
-				<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
-			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
-			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password-repeat" class="popup-form__input" placeholder="Повторите пароль" />
-			</div>
-			<div class="popup-form__actions">
-				<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-up-continue" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
-			</div>
-		</form>
-		<div class="popup-social">
-			<span class="popup-social__title">Зарегистрироваться как пользователь:</span>
-			<div class="popup-social__container">
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
+	<div class="catalog-category">
+		<div id="filter" class="catalog-category__sidebar">
+			<div class="filter">
+				<div class="filter-block">
+					<div class="filter-block__container">
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="1" value="" />
+							<span class="filter-checkbox__text">В наличии</span>
+						</label>
+					</div>
+				</div>
+				<div class="filter-block">
+					<div class="filter-block-heading">
+						<span class="filter-block-heading__title">Производитель</span>
+					</div>
+					<div class="filter-block__container">
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">Xiaomi</span>
+						</label>
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">Apple</span>
+						</label>
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">Samsung</span>
+						</label>
+					</div>
+					<div class="filter-block-footer">
+						<button type="button" class="filter-block-footer__action">Все варианты</button>
+					</div>
+				</div>
+				<div class="filter-block">
+					<div class="filter-block-heading">
+						<span class="filter-block-heading__title">Цена в $</span>
+					</div>
+					<div class="filter-block__container">
+						<div class="filter-item filter-range">
+							<input type="text" class="filter-range__input" name="" value="" placeholder="От" />
+							<input type="text" class="filter-range__input" name="" value="" placeholder="До" />
+						</div>
+					</div>
+				</div>
+				<div class="filter-block">
+					<div class="filter-block-heading">
+						<span class="filter-block-heading__title">Дата выхода на рынок</span>
+					</div>
+					<div class="filter-block__container">
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">2022</span>
+						</label>
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">2019</span>
+						</label>
+						<label class="filter-item filter-checkbox">
+							<input class="filter-checkbox__input custom-checkbox" type="checkbox" name="" value="" />
+							<span class="filter-checkbox__text">2018</span>
+						</label>
+						<div class="filter-item filter-range">
+							<input type="text" class="filter-range__input" name="" value="" placeholder="От" />
+							<input type="text" class="filter-range__input" name="" value="" placeholder="До" />
+						</div>
+					</div>
+				</div>
+				<div class="filter-block">
+					<div class="filter-block-heading">
+						<span class="filter-block-heading__title">Поддержка карт памяти</span>
+						<button type="button" class="filter-block-heading__info"></button>
+					</div>
+					<div class="filter-block__container">
+						<div class="filter-item filter-radio">
+							<label class="filter-radio-item">
+								<input type="radio" class="filter-radio-item__input hidden" name="test" value="" />
+								<span class="filter-radio-item__text">Да</span>
+							</label>
+							<label class="filter-radio-item">
+								<input type="radio" class="filter-radio-item__input hidden" name="test" value="" />
+								<span class="filter-radio-item__text">Нет</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="filter__more">Дополнительные параметры</button>
 			</div>
 		</div>
-		<div class="popup-terms">Нажимая «Зарегистрироваться» или «Зарегистрироваться как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
+		<div class="catalog-category__container">
+			<div class="catalog-category-heading">
+				<h1 class="catalog-category-heading__title">Смартфоны</h1>
+				<button class="catalog-category-heading__filter-action filter-action hidden-desktop" type="button" data-fancybox data-src="#filter" data-options='{"baseClass" : "filter-opened"}'>Фильтр</button>
+				<div class="catalog-category-heading__sort sort">Сначала популярные</div>
+				<div class="catalog-category-heading__filter-selected filter-selected">
+					<svg width="0" height="0" class="hidden">
+						<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" id="icon-svg-delete">
+							<path d="M1 1L10 10M10 1L1 10" stroke="currentColor" stroke-width="2"></path>
+						</symbol>
+					</svg>
+					<button class="filter-selected-item">Apple <svg class="icon"><use xlink:href="#icon-svg-delete"></use></svg></button>
+					<button class="filter-selected-item">Carabobo <svg class="icon"><use xlink:href="#icon-svg-delete"></use></svg></button>
+				</div>
+			</div>
+			<div class="catalog-category-products">
+				<div class="catalog-product-card">
+					<div class="catalog-product-card-add-to-compare">
+						<input class="catalog-product-card-add-to-compare__checkbox" type="checkbox" name="catalogProduct" value="" id="product-ID" />
+						<label class="catalog-product-card-add-to-compare__control" for="product-ID"></label>
+					</div>
+					<div class="catalog-product-card__inner">
+						<a href="#" class="catalog-product-card__link"></a>
+						<div class="catalog-product-card__image-wrapper">
+							<img class="catalog-product-card__image lazy" data-src="./images/dist/search-result.jpg" alt="" loading="lazy" />
+						</div>
+						<div class="catalog-product-card__content">
+							<div class="catalog-product-card__description">
+								<h2 class="catalog-product-card__title">Смартфон Apple iPhone 13 Pro 128GB (графитовый)</h2>
+								<span class="catalog-product-card__attr">Apple iOS, экран 6.1" OLED (1170x2532), Apple A15 Bionic, ОЗУ 6 ГБ, флэш-память 128 ГБ, камера 12 Мп, аккумулятор 3095 мАч, 1 SIM, влагозащита IP68</span>
+								<div class="catalog-product-card__communication">
+									<a href="#url" class="catalog-product-card-reviews">
+										<div class="catalog-product-card-reviews__stars stars">
+											<div class="stars__inner" style="width: 80%"></div>
+										</div>
+										<span class="catalog-product-card-reviews__count">109 отзывов</span>
+									</a>
+									<a href="#url" class="catalog-product-card__topic">900 обсуждений</a>
+								</div>
+							</div>
+							<div class="catalog-product-card__info">
+								<span class="catalog-product-card__price">От 125$</span>
+								<a href="#" class="catalog-product-card__shops">22 предложения</a>
+							</div>
+						</div>
+					</div>
+					<div class="catalog-product-card-variants">
+						<div class="catalog-product-card-variants-products">
+							<div class="variant-product-card">
+								<div class="variant-product-card-add-to-compare">
+									<input class="variant-product-card-add-to-compare__checkbox" type="checkbox" name="catalogProduct" value="" id="product-ID2" />
+									<label class="variant-product-card-add-to-compare__control" for="product-ID2"></label>
+								</div>
+								<div class="variant-product-card__inner">
+									<a href="#" class="variant-product-card__link"></a>
+									<div class="variant-product-card__image-wrapper">
+										<img class="variant-product-card__image lazy" data-src="./images/dist/search-result.jpg" alt="" loading="lazy" />
+									</div>
+									<div class="variant-product-card__content">
+										<div class="variant-product-card__description">
+											<h2 class="variant-product-card__title">Смартфон Apple iPhone 13 Pro 128GB (графитовый)</h2>
+											<span class="variant-product-card__attr">Apple iOS, экран 6.1" OLED (1170x2532), Apple A15 Bionic, ОЗУ 6 ГБ, флэш-память 128 ГБ, камера 12 Мп, аккумулятор 3095 мАч, 1 SIM, влагозащита IP68</span>
+										</div>
+										<div class="variant-product-card__info">
+											<span class="variant-product-card__price">От 125$</span>
+											<a href="#" class="variant-product-card__shops">22 предложения</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="catalog-product-card-variants__more">
+							<button type="button" class="catalog-product-card-variants__action">Показать все варианты</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="pagination-wrapper">
+  <ul class="pagination">
+    <li class="disabled" aria-disabled="true" aria-label="« Previous">
+      <span aria-hidden="true">&laquo;</span>
+    </li>
+
+    <li class="active" aria-current="page"><span>1</span></li>
+    <li><a href="http://wecatalogo.com/noticias/america?page=2">2</a></li>
+    <li><a href="http://wecatalogo.com/noticias/america?page=3">3</a></li>
+    <li><a href="http://wecatalogo.com/noticias/america?page=4">4</a></li>
+
+    <li class="disabled" aria-disabled="true"><span>...</span></li>
+
+    <li><a href="http://wecatalogo.com/noticias/america?page=14">14</a></li>
+    <li><a href="http://wecatalogo.com/noticias/america?page=15">15</a></li>
+
+    <li>
+      <a
+        href="http://wecatalogo.com/noticias/america?page=2"
+        rel="next"
+        aria-label="Next »"
+        >&raquo;</a
+      >
+    </li>
+  </ul>
+</div>
+		</div>
 	</div>
+</div>
+<div class="compare-action">
+	<svg width="0" height="0" class="hidden">
+		<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 21" id="icon-svg-basket"><path fill="currentColor" d="M7.5 14.667h1.667v-7.5H7.5v7.5Zm3.334 0H12.5v-7.5h-1.666v7.5ZM4.167 18V5.5h-.833V3.833H7.5V3h5v.833h4.167V5.5h-.834V18H4.168Z"></path></symbol>
+	</svg>
+	<a href="#url" class="compare-action__link">5 товаров в сравнении</a>
+	<button type="button" class="compare-action__delete"><svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg></button>
 </div>
 
 <div class="popup popup-sign-in" id="popup-sign-in">

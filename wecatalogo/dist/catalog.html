@@ -360,39 +360,33 @@
 <main class="main">
 
 <div class="container">
-	<svg width="0" height="0" class="hidden">
-		<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16" id="icon-svg-eye">
-			<path fill="#969696" d="M9 4.5c-.331.005-.66.058-.976.156.146.258.224.548.226.844A1.75 1.75 0 0 1 6.5 7.25a1.731 1.731 0 0 1-.844-.226A3.49 3.49 0 1 0 9 4.5Zm8.891 3.044C16.197 4.237 12.841 2 9 2 5.158 2 1.802 4.239.109 7.544a1.01 1.01 0 0 0 0 .912C1.803 11.763 5.159 14 9 14s7.198-2.239 8.891-5.544a1.01 1.01 0 0 0 0-.912ZM9 12.5c-3.083 0-5.91-1.719-7.435-4.5C3.09 5.219 5.917 3.5 9 3.5c3.083 0 5.909 1.719 7.435 4.5-1.526 2.781-4.352 4.5-7.435 4.5Z"></path>
-		</symbol>
-	</svg>
-	<div class="popup popup-inline">
-		<span class="popup__title">Регистрация</span>
-		<form action="#" class="popup-form">
-			<div class="popup-form__group">
-				<input type="text" name="login" class="popup-form__input" placeholder="Телефон или эл. почта" />
-			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password" class="popup-form__input" placeholder="Пароль" />
-			</div>
-			<div class="popup-form__group">
-				<button class="popup-form__eye" type="button"><svg class="icon"><use xlink:href="#icon-svg-eye"></use></svg></button>
-				<input type="password" name="password-repeat" class="popup-form__input" placeholder="Повторите пароль" />
-			</div>
-			<div class="popup-form__actions">
-				<button type="submit" class="popup-form__submit" data-fancybox data-src="#popup-sign-up-continue" data-options='{"closeExisting" : true}'>Зарегистрироваться</button>
-			</div>
-		</form>
-		<div class="popup-social">
-			<span class="popup-social__title">Зарегистрироваться как пользователь:</span>
-			<div class="popup-social__container">
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
-				<button type="button" class="popup-social__link"></button>
-			</div>
-		</div>
-		<div class="popup-terms">Нажимая «Зарегистрироваться» или «Зарегистрироваться как пользователь», вы соглашаетесь с <a href="#">Условиями использования и Политикой конфиденциальности Wecatalogo</a></div>
-	</div>
+	<ul class="catalog-categories">
+		<li class="catalog-categories-item">
+			<a href="#url" class="catalog-categories-item__link hidden-desktop">Электроника</a>
+			<ul class="catalog-subcategories">
+				<li class="catalog-subcategories-item">
+					<a href="#url" class="catalog-subcategories-item__link">Мобильные телефоны и аксессуары</a>
+					<div class="catalog-subcategories-block">
+						<button class="catalog-subcategories-block__back hidden-desktop" type="button">Назад</button>
+						<span class="catalog-subcategories-block__title hidden-desktop">Мобильные телефоны и аксессуары</span>
+						<ul class="catalog-subsubcategories">
+							<li class="catalog-subsubcategories-item">
+								<a href="#url" class="catalog-subsubcategories-item__link"></a>
+								<div class="catalog-subsubcategories-item__content">
+									<span class="catalog-subsubcategories-item__title">Смартфоны</span>
+									<span class="catalog-subsubcategories-item__count">6237 товаров</span>
+									<span class="catalog-subsubcategories-item__price">от 79 BsS (17 US)</span>
+								</div>
+								<div class="catalog-subsubcategories-item__image-wrapper">
+									<img class="catalog-subsubcategories-item__image" src="./images/dist/search-result.jpg" alt="">
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+	</ul>
 </div>
 
 <div class="popup popup-sign-in" id="popup-sign-in">
