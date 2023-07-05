@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WeCatalogo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="icon" href="./images/favicon.png">
+	<link rel="preconnect" href="//fonts.googleapis.com">
+	<link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+ 	<link rel="preload" as="style" href="//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /> 
+ 	<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" type="text/css" media="print" onload="this.media='all'" />	
+	<link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+<svg width="0" height="0" class="hidden">
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-search">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18.75 18.75-4.697-4.697m0 0A7.5 7.5 0 1 0 3.446 3.446a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-customer">
+		<ellipse cx="9.999" cy="5.416" stroke="currentColor" stroke-width="1.5" rx="3.333" ry="3.75"></ellipse>
+		<path stroke="currentColor" stroke-width="1.5" d="M16.667 15.834c0 2.917-3.333 2.083-6.666 2.083-3.334 0-6.667.834-6.667-2.083 0-1.667 2.985-3.75 6.667-3.75 3.681 0 6.666 2.083 6.666 3.75Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-heart">
+		<path stroke="currentColor" stroke-width="1.5" d="M10.5 17.546c-16.667-9.212-5-19.212 0-12.889 5-6.323 16.667 3.677 0 12.889Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-basket">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.944 7.722H4.278L2.5 17.5h16l-1.778-9.778h-2.666m-7.112 0V5.056A3.556 3.556 0 0 1 10.5 1.5v0a3.556 3.556 0 0 1 3.556 3.556v2.666m-7.112 0h7.112m-7.112 0v2.667m7.112-2.667v2.667"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-menu">
+		<path fill="currentColor" d="M28 23a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-.667a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1V23Zm0-6.667a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v.666Zm0-6.666a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v.667Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-cross">
+		<path stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="M23.543 23.542 8.457 8.457M23.542 8.457 8.457 23.542"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-phone">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.225 9.751a6.59 6.59 0 0 0 3.05 3.038.619.619 0 0 0 .612-.047l1.956-1.304a.625.625 0 0 1 .593-.055l3.66 1.569a.623.623 0 0 1 .374.648 3.75 3.75 0 0 1-3.72 3.275A10.625 10.625 0 0 1 3.125 6.25 3.75 3.75 0 0 1 6.4 2.53a.623.623 0 0 1 .648.375l1.57 3.662a.625.625 0 0 1-.052.589l-1.3 1.985a.62.62 0 0 0-.041.61v0Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-email">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 4.375h15V15a.624.624 0 0 1-.625.625H3.125A.625.625 0 0 1 2.5 15V4.375Z"></path>
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.5 4.375 10 11.25 2.5 4.375"></path>
+	</symbol>
+</svg>
+<header class="header">
+	<div class="header__container">
+		<a href="./" class="header-logo">
+			<img src="./images/dist/logo.png" alt="" class="header-logo__image" loading="lazy" />
+		</a>
+		<ul class="header-nav hidden-mobile">
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Каталог</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Новинки</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Доставка и оплата</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Отзывы</a>
+			</li>
+		</ul>
+		<ul class="header-actions">
+			<li class="header-actions-item">
+				<a href="" class="header-actions-item__link">
+					<svg class="icon"><use xlink:href="#icon-svg-search"></use></svg>
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="" class="header-actions-item__link">
+					<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="" class="header-actions-item__link" data-count="0">
+					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>					  
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="" class="header-actions-item__link" data-count="0">
+					<svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg>
+				</a>
+			</li>
+		</ul>
+		<button class="hamburger hidden-desktop" type="button">
+			<svg class="hamburger__control hamburger__control--is-open"><use xlink:href="#icon-svg-menu"></use></svg>
+			<svg class="hamburger__control hamburger__control--is-close"><use xlink:href="#icon-svg-cross"></use></svg>
+		</button>
+	</div>
+</header>
+<main class="main">
+<section class="welcome">
+	<div class="welcome__container">
+		<h1 class="welcome__title">Одежда <strong>для женщин не терпящих</strong> однообразие</h1>
+		<div class="welcome__text">
+			<p>любящих себя на столько, что каждая деталь в гардеробе, и даже нижнее белье, должны отвечать высоким требованиям</p>
+		</div>
+		<div class="welcome__image-wrapper">
+			<picture>
+				<source srcset="./images/dist/welcome_xs.jpg" media="(max-width: 992px)" />
+				<img class="welcome__image" src="./images/dist/welcome_lg.jpg" alt="" />
+			</picture>
+		</div>
+		<a href="" class="welcome-sticker">
+			<img src="./images/dist/welcome-sticker.svg" alt="" class="welcome-sticker__image" loading="lazy" />
+			<span class="welcome-sticker__text">Смотреть каталог <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 41 40"><path stroke="#FCFCFC" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M35.5 20h-30m30 0-10-10m10 10-10 10"/></svg></span>
+		</a>
+	</div>
+</section>
+<section class="widget">
+	<div class="widget__container">
+		<h2 class="widget__title">Хиты сезона</h2>
+		<div class="widget-products">
+			<div class="widget-products__carousel swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #fff;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="product-card">
+							<div class="product-card__inner">
+								<a href="#url" class="product-card__link"></a>
+								<div class="product-card__image-wrapper">
+									<img class="product-card__image" src="" alt="" loading="lazy" />
+									<button type="button" class="product-card__add-to-wishlist">
+										<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+									</button>
+								</div>
+								<div class="product-card__info">
+									<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+									<div class="product-card-badges">
+										<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+									</div>
+									<div class="product-card-price">
+										<strong class="product-card-price__regular">5 500 р.</strong>
+										<span class="product-card-price__old-price">3 400 р.</span>
+									</div>
+								</div>
+								<div class="product-card-sizes">
+									<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+									<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+								</div>
+								<div class="product-card-color">
+									<span class="product-card-color__label hidden-mobile">Цвет:</span>
+									<span class="product-card-color__value" style="--color: #000;">Черный</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+			<div class="swiper-nav">
+				<div class="swiper-button-prev"></div>
+  				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="widget">
+	<div class="widget__container">
+		<h2 class="widget__title">Категории</h2>
+		<div class="widget-categories">
+			<a href="#url" class="widget-categories__item">Майки</a>
+			<a href="#url" class="widget-categories__item">Футболки</a>
+			<a href="#url" class="widget-categories__item">Леггинсы</a>
+			<a href="#url" class="widget-categories__item">Брюки</a>
+			<a href="#url" class="widget-categories__item">Головные уборы</a>
+			<a href="#url" class="widget-categories__item">Верхняя одежда</a>
+			<a href="#url" class="widget-categories__item">Домашняя одежда</a>
+			<a href="#url" class="widget-categories__item">Джинсы</a>
+			<a href="#url" class="widget-categories__item">Джемперы</a>
+			<a href="#url" class="widget-categories__item">Свитеры</a>
+			<a href="#url" class="widget-categories__item">Костюмы</a>
+			<a href="#url" class="widget-categories__item">Комплекты</a>
+			<a href="#url" class="widget-categories__item">Рубашки</a>
+			<a href="#url" class="widget-categories__item">Туники</a>
+			<a href="#url" class="widget-categories__item">Топы</a>
+			<a href="#url" class="widget-categories__item">Юбки</a>
+			<a href="#url" class="widget-categories__item">Худи, свитшоты</a>
+			<a href="#url" class="widget-categories__item">Сарафаны</a>
+			<a href="#url" class="widget-categories__item">Платья</a>
+			<a href="#url" class="widget-categories__item">Блузы</a>
+
+		</div>
+	</div>
+</section>
+<section class="about widget">
+	<div class="about__container">
+		<div class="about__content">
+			<h2 class="about__title">Бренд ModLav</h2>
+			<div class="about__text">
+				<p>Магазин ModLav был создан специально для женщин не терпящих однообразие, желающих выделиться и быть интересными в эксклюзивной одежде</p>
+				<p>Открылся магазин ModLav в 2010 г. Первоначально ассортимент был представлен купальниками, нижним бельем, эксклюзивными чулками и эротической одеждой высокого качества от малоизвестных в России европейских брендов. Через некоторое время ассортимент пополнился повседневными и нарядными платьями, верхней одеждой, обувью, аксессуарами</p>
+				<p>Все модели одежды, представленные в магазине, разрабатываются производителями с учетом последних тенденций моды небольшими партиями, а быстро меняющийся ассортимент, дает гарантию уникальности</p>
+			</div>
+			<div class="about-benefits">
+				<div class="about-benefits-item">
+					<span class="about-benefits-item__title">12+</span>
+					<span class="about-benefits-item__text">лет на рынке</span>
+				</div>
+				<div class="about-benefits-item">
+					<span class="about-benefits-item__title">3-7</span>
+					<span class="about-benefits-item__text">дней на доставку</span>
+				</div>
+			</div>
+		</div>
+		<div class="about__image-wrapper">
+			<img class="about__image" src="./images/dist/about.jpg" alt="" loading="lazy" />
+		</div>
+	</div>
+</section>
+<section class="subscribe widget">
+	<div class="subscribe__container">
+		<h2 class="subscribe__title"><strong>Подписывайся</strong> на рассылку и <strong>получи доступ</strong> к секретным <strong>распродажам</strong> и <strong>скидкам</strong> до 70%</h2>
+		<form action="" class="subscribe-form">
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">E-mail</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите e-mail" />
+			</div>
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">Имя</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите имя" />
+			</div>
+			<div class="subscribe-form__group">
+				<button type="submit" class="subscribe-form__submit">Подписаться</button>
+			</div>
+		</form>
+	</div>
+</section>
+<div class="navigation-mobile hidden-desktop">
+</div>
+<!--#include virtual="/parts/footer.html" -->
