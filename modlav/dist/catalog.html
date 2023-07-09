@@ -6,10 +6,8 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<link rel="icon" href="./images/favicon.png">
-	<link rel="preconnect" href="//fonts.googleapis.com">
-	<link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
- 	<link rel="preload" as="style" href="//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" /> 
- 	<link rel="stylesheet" href="//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" type="text/css" media="print" onload="this.media='all'" />	
+ 	<link rel="preload" as="style" href="./css/fonts.min.css" /> 
+ 	<link rel="stylesheet" href="./css/fonts.min.css" type="text/css" media="print" onload="this.media='all'" />	
 	<link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
@@ -24,7 +22,7 @@
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-heart">
 		<path stroke="currentColor" stroke-width="1.5" d="M10.5 17.546c-16.667-9.212-5-19.212 0-12.889 5-6.323 16.667 3.677 0 12.889Z"></path>
 	</symbol>
-	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-basket">
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-bag">
 		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.944 7.722H4.278L2.5 17.5h16l-1.778-9.778h-2.666m-7.112 0V5.056A3.556 3.556 0 0 1 10.5 1.5v0a3.556 3.556 0 0 1 3.556 3.556v2.666m-7.112 0h7.112m-7.112 0v2.667m7.112-2.667v2.667"></path>
 	</symbol>
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-menu">
@@ -39,6 +37,18 @@
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-email">
 		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 4.375h15V15a.624.624 0 0 1-.625.625H3.125A.625.625 0 0 1 2.5 15V4.375Z"></path>
 		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.5 4.375 10 11.25 2.5 4.375"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-eye">
+		<path fill="currentColor" fill-rule="evenodd" d="M10 14.875c-2.53 0-5.182-1.54-7.25-4.875C4.818 6.665 7.47 5.125 10 5.125c2.53 0 5.182 1.54 7.25 4.875-2.068 3.335-4.72 4.875-7.25 4.875Zm8.773-5.253C16.496 5.72 13.314 3.625 10 3.625S3.504 5.719 1.227 9.622a.75.75 0 0 0 0 .756C3.504 14.28 6.686 16.375 10 16.375s6.496-2.094 8.773-5.997a.75.75 0 0 0 0-.756ZM10 13.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="icon-svg-basket">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m14 10-.3 7m-3.4 0-.3-7M6 6l.876 13.133A2 2 0 0 0 8.87 21h6.258a2 2 0 0 0 1.996-1.867L18 6M6 6h3M6 6H4m14 0h2m-2 0h-3m0 0V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1m6 0H9"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="icon-svg-plus">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 2v6m0 6V8m0 0h6M8 8H2"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="icon-svg-minus">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 8H2"></path>
 	</symbol>
 </svg>
 <header class="header">
@@ -62,23 +72,23 @@
 		</ul>
 		<ul class="header-actions">
 			<li class="header-actions-item">
-				<a href="" class="header-actions-item__link">
+				<a href="#" class="header-actions-item__link">
 					<svg class="icon"><use xlink:href="#icon-svg-search"></use></svg>
 				</a>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="" class="header-actions-item__link">
+				<a href="#popup-sign-up" class="header-actions-item__link" data-fancybox>
 					<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
 				</a>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="" class="header-actions-item__link" data-count="0">
+				<a href="#" class="header-actions-item__link" data-count="0">
 					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>					  
 				</a>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="" class="header-actions-item__link" data-count="0">
-					<svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg>
+				<a href="#cart" class="header-actions-item__link" data-count="0" data-fancybox>
+					<svg class="icon"><use xlink:href="#icon-svg-bag"></use></svg>
 				</a>
 			</li>
 		</ul>
@@ -472,4 +482,145 @@
 </section>
 <div class="navigation-mobile hidden-desktop">
 </div>
-<!--#include virtual="/parts/footer.html" -->
+<!--#include virtual="/parts/auth.html" -->
+<div class="cart" id="cart">
+	<div class="cart__inner">
+		<span class="cart__title" data-count="1">Корзина</span>
+		<div class="cart__body">
+			<div class="cart-product">
+				<div class="cart-product__image-wrapper">
+					<img src="" alt="" class="cart-product__image" loading="lazy" />
+				</div>
+				<div class="cart-product__content">
+					<button type="button" class="cart-product__remove">
+						<svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg>
+					</button>
+					<span class="cart-product__title">Легкая летняя ветровка MODLAV</span>
+					<div class="cart-product-options">
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Размер:</span>
+							<span class="cart-product-options-item__value">42</span>
+						</div>
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Цвет:</span>
+							<span class="cart-product-options-item__value">Розовый</span>
+						</div>
+					</div>
+				</div>
+				<div class="cart-product__footer">
+					<div class="cart-product-qty">
+						<button type="button" class="cart-product-qty__control" disabled>
+							<svg class="icon"><use xlink:href="#icon-svg-minus"></use></svg>
+						</button>
+						<input class="cart-product-qty__input" type="text" name="qty" value="1" readonly />
+						<button type="button" class="cart-product-qty__control">
+							<svg class="icon"><use xlink:href="#icon-svg-plus"></use></svg>
+						</button>
+					</div>
+					<div class="cart-product-price">
+						<span class="cart-product-price__regular">5 500 р.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart__footer">
+			<div class="cart-notification">
+				<svg class="cart-notification__icon"></svg>
+				<div class="cart-notification__text">
+					<p>Бесплатная доставка при заказе от 3000 рублей в пределах территории Российской Федерации</p>
+				</div>
+			</div>
+			<div class="cart-total">
+				<div class="cart-total__row">
+					<span class="cart-total__label">Сумма заказа:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Доставка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Скидка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Итого:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+			</div>
+			<a href="#url" class="cart__go-to-checkout">Перейти к оформлению</a>
+		</div>
+	</div>
+</div>
+</main>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__section">
+				<a href="./" class="footer-logo hidden-mobile">
+					<img src="./images/dist/logo.png" alt="" class="footer-logo__image" loading="lazy" />
+				</a>
+			</div>				
+			<div class="footer__section">
+				<ul class="footer-nav">
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Каталог</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Новинки</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Доставка и оплата</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Отзывы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__section">
+				<ul class="footer-nav">
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">О промокодах</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Политика конфиденциальности</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Обработка персональных данных</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Оферта</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__section">
+				<div class="footer-contact">
+					<ul class="footer-contact-list">
+						<li class="footer-contact-list-item">
+							<a href="tel:+7 (800) 350-75-28" class="footer-contact-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> +7 (800) 350-75-28</a>
+						</li>
+						<li class="footer-contact-list-item">
+							<a href="mailto:modlav@gmail.com" class="footer-contact-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-email"></use></svg> modlav@gmail.com</a>
+						</li>
+					</ul>
+					<ul class="footer-contact-social">
+						<li class="footer-contact-social-item">
+							<a href="" class="footer-contact-social-item__link">
+								<img class="icon" src="./images/dist/ok.svg" alt="" loading="lazy">
+							</a>
+						</li>
+						<li class="footer-contact-social-item">
+							<a href="" class="footer-contact-social-item__link">
+								<img class="icon" src="./images/dist/tg.svg" alt="" loading="lazy">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./libs/jquery/dist/jquery.min.js"></script>
+	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./js/app.min.js"></script>
+</body>
+</html>

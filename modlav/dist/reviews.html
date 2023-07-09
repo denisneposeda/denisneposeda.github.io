@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WeCatalogo</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="icon" href="./images/favicon.png">
+ 	<link rel="preload" as="style" href="./css/fonts.min.css" /> 
+ 	<link rel="stylesheet" href="./css/fonts.min.css" type="text/css" media="print" onload="this.media='all'" />	
+	<link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+<svg width="0" height="0" class="hidden">
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-search">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18.75 18.75-4.697-4.697m0 0A7.5 7.5 0 1 0 3.446 3.446a7.5 7.5 0 0 0 10.607 10.607Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-customer">
+		<ellipse cx="9.999" cy="5.416" stroke="currentColor" stroke-width="1.5" rx="3.333" ry="3.75"></ellipse>
+		<path stroke="currentColor" stroke-width="1.5" d="M16.667 15.834c0 2.917-3.333 2.083-6.666 2.083-3.334 0-6.667.834-6.667-2.083 0-1.667 2.985-3.75 6.667-3.75 3.681 0 6.666 2.083 6.666 3.75Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-heart">
+		<path stroke="currentColor" stroke-width="1.5" d="M10.5 17.546c-16.667-9.212-5-19.212 0-12.889 5-6.323 16.667 3.677 0 12.889Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-bag">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.944 7.722H4.278L2.5 17.5h16l-1.778-9.778h-2.666m-7.112 0V5.056A3.556 3.556 0 0 1 10.5 1.5v0a3.556 3.556 0 0 1 3.556 3.556v2.666m-7.112 0h7.112m-7.112 0v2.667m7.112-2.667v2.667"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-menu">
+		<path fill="currentColor" d="M28 23a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-.667a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1V23Zm0-6.667a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-.666a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v.666Zm0-6.666a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v.667Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 32 32" id="icon-svg-cross">
+		<path stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="M23.543 23.542 8.457 8.457M23.542 8.457 8.457 23.542"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-phone">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.225 9.751a6.59 6.59 0 0 0 3.05 3.038.619.619 0 0 0 .612-.047l1.956-1.304a.625.625 0 0 1 .593-.055l3.66 1.569a.623.623 0 0 1 .374.648 3.75 3.75 0 0 1-3.72 3.275A10.625 10.625 0 0 1 3.125 6.25 3.75 3.75 0 0 1 6.4 2.53a.623.623 0 0 1 .648.375l1.57 3.662a.625.625 0 0 1-.052.589l-1.3 1.985a.62.62 0 0 0-.041.61v0Z"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-email">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2.5 4.375h15V15a.624.624 0 0 1-.625.625H3.125A.625.625 0 0 1 2.5 15V4.375Z"></path>
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.5 4.375 10 11.25 2.5 4.375"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-eye">
+		<path fill="currentColor" fill-rule="evenodd" d="M10 14.875c-2.53 0-5.182-1.54-7.25-4.875C4.818 6.665 7.47 5.125 10 5.125c2.53 0 5.182 1.54 7.25 4.875-2.068 3.335-4.72 4.875-7.25 4.875Zm8.773-5.253C16.496 5.72 13.314 3.625 10 3.625S3.504 5.719 1.227 9.622a.75.75 0 0 0 0 .756C3.504 14.28 6.686 16.375 10 16.375s6.496-2.094 8.773-5.997a.75.75 0 0 0 0-.756ZM10 13.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="icon-svg-basket">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="m14 10-.3 7m-3.4 0-.3-7M6 6l.876 13.133A2 2 0 0 0 8.87 21h6.258a2 2 0 0 0 1.996-1.867L18 6M6 6h3M6 6H4m14 0h2m-2 0h-3m0 0V5a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v1m6 0H9"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="icon-svg-plus">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 2v6m0 6V8m0 0h6M8 8H2"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="icon-svg-minus">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M14 8H2"></path>
+	</symbol>
+</svg>
+<header class="header">
+	<div class="header__container">
+		<a href="./" class="header-logo">
+			<img src="./images/dist/logo.png" alt="" class="header-logo__image" loading="lazy" />
+		</a>
+		<ul class="header-nav hidden-mobile">
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Каталог</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Новинки</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Доставка и оплата</a>
+			</li>
+			<li class="header-nav-item">
+				<a href="" class="header-nav-item__link">Отзывы</a>
+			</li>
+		</ul>
+		<ul class="header-actions">
+			<li class="header-actions-item">
+				<a href="#" class="header-actions-item__link">
+					<svg class="icon"><use xlink:href="#icon-svg-search"></use></svg>
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="#popup-sign-up" class="header-actions-item__link" data-fancybox>
+					<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="#" class="header-actions-item__link" data-count="0">
+					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>					  
+				</a>
+			</li>
+			<li class="header-actions-item hidden-mobile">
+				<a href="#cart" class="header-actions-item__link" data-count="0" data-fancybox>
+					<svg class="icon"><use xlink:href="#icon-svg-bag"></use></svg>
+				</a>
+			</li>
+		</ul>
+		<button class="hamburger hidden-desktop" type="button">
+			<svg class="hamburger__control hamburger__control--is-open"><use xlink:href="#icon-svg-menu"></use></svg>
+			<svg class="hamburger__control hamburger__control--is-close"><use xlink:href="#icon-svg-cross"></use></svg>
+		</button>
+	</div>
+</header>
+<main class="main">
+<div class="reviews">
+	<div class="reviews__container">
+		<div class="reviews-heading">
+			<h1 class="reviews-heading__title">Отзывы</h1>
+			<button class="reviews-heading__action" type="button" data-src="#reviews-add" data-fancybox>Оставить отзыв</button>
+		</div>
+		<div class="reviews__items">
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<a href="#url" class="reviews-card__link"></a>
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-card">
+				<div class="reviews-card__inner">
+					<div class="reviews-card__image-wrapper">
+						<img class="reviews-card__image" src="" alt="" loading="lazy" />
+					</div>
+					<div class="reviews-card__info">
+						<span class="reviews-card__author">Татьяна</span>
+						<div class="reviews-card__text">
+							<p>Заказ получила. Платье шикарное. Получаю много комплементов. Спасибо вам)</p>
+						</div>
+						<span class="reviews-card__date">20-08-2022</span>
+					</div>
+				</div>
+			</div>
+			<div class="reviews-load">
+				<button type="button" class="reviews-load__action">Показать еще</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="popup popup-reviews" id="reviews-add">
+	<span class="popup__title">Оставить отзыв</span>
+	<form class="popup-form" action="">
+		<div class="popup-form__group">
+			<label for="" class="popup-form__label">Имя</label>
+			<input type="email" class="popup-form__input" placeholder="Введите имя">
+		</div>
+		<div class="popup-form__group">
+			<label for="" class="popup-form__label">Отзыв</label>
+			<textarea class="popup-form__textarea" placeholder="Введите отзыв"></textarea>
+		</div>
+		<div class="popup-form__group">
+			<button type="submit" class="popup-form__submit" disabled>Отправить</button>
+		</div>
+	</form>
+</div>
+<section class="subscribe widget">
+	<div class="subscribe__container">
+		<h2 class="subscribe__title"><strong>Подписывайся</strong> на рассылку и <strong>получи доступ</strong> к секретным <strong>распродажам</strong> и <strong>скидкам</strong> до 70%</h2>
+		<form action="" class="subscribe-form">
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">E-mail</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите e-mail" />
+			</div>
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">Имя</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите имя" />
+			</div>
+			<div class="subscribe-form__group">
+				<button type="submit" class="subscribe-form__submit">Подписаться</button>
+			</div>
+		</form>
+	</div>
+</section>
+<div class="navigation-mobile hidden-desktop">
+</div>
+<!--#include virtual="/parts/auth.html" -->
+<div class="cart" id="cart">
+	<div class="cart__inner">
+		<span class="cart__title" data-count="1">Корзина</span>
+		<div class="cart__body">
+			<div class="cart-product">
+				<div class="cart-product__image-wrapper">
+					<img src="" alt="" class="cart-product__image" loading="lazy" />
+				</div>
+				<div class="cart-product__content">
+					<button type="button" class="cart-product__remove">
+						<svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg>
+					</button>
+					<span class="cart-product__title">Легкая летняя ветровка MODLAV</span>
+					<div class="cart-product-options">
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Размер:</span>
+							<span class="cart-product-options-item__value">42</span>
+						</div>
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Цвет:</span>
+							<span class="cart-product-options-item__value">Розовый</span>
+						</div>
+					</div>
+				</div>
+				<div class="cart-product__footer">
+					<div class="cart-product-qty">
+						<button type="button" class="cart-product-qty__control" disabled>
+							<svg class="icon"><use xlink:href="#icon-svg-minus"></use></svg>
+						</button>
+						<input class="cart-product-qty__input" type="text" name="qty" value="1" readonly />
+						<button type="button" class="cart-product-qty__control">
+							<svg class="icon"><use xlink:href="#icon-svg-plus"></use></svg>
+						</button>
+					</div>
+					<div class="cart-product-price">
+						<span class="cart-product-price__regular">5 500 р.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart__footer">
+			<div class="cart-notification">
+				<svg class="cart-notification__icon"></svg>
+				<div class="cart-notification__text">
+					<p>Бесплатная доставка при заказе от 3000 рублей в пределах территории Российской Федерации</p>
+				</div>
+			</div>
+			<div class="cart-total">
+				<div class="cart-total__row">
+					<span class="cart-total__label">Сумма заказа:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Доставка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Скидка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Итого:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+			</div>
+			<a href="#url" class="cart__go-to-checkout">Перейти к оформлению</a>
+		</div>
+	</div>
+</div>
+</main>
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__section">
+				<a href="./" class="footer-logo hidden-mobile">
+					<img src="./images/dist/logo.png" alt="" class="footer-logo__image" loading="lazy" />
+				</a>
+			</div>				
+			<div class="footer__section">
+				<ul class="footer-nav">
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Каталог</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Новинки</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Доставка и оплата</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Отзывы</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__section">
+				<ul class="footer-nav">
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">О промокодах</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Политика конфиденциальности</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Обработка персональных данных</a>
+					</li>
+					<li class="footer-nav-item">
+						<a href="" class="footer-nav-item__link">Оферта</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer__section">
+				<div class="footer-contact">
+					<ul class="footer-contact-list">
+						<li class="footer-contact-list-item">
+							<a href="tel:+7 (800) 350-75-28" class="footer-contact-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> +7 (800) 350-75-28</a>
+						</li>
+						<li class="footer-contact-list-item">
+							<a href="mailto:modlav@gmail.com" class="footer-contact-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-email"></use></svg> modlav@gmail.com</a>
+						</li>
+					</ul>
+					<ul class="footer-contact-social">
+						<li class="footer-contact-social-item">
+							<a href="" class="footer-contact-social-item__link">
+								<img class="icon" src="./images/dist/ok.svg" alt="" loading="lazy">
+							</a>
+						</li>
+						<li class="footer-contact-social-item">
+							<a href="" class="footer-contact-social-item__link">
+								<img class="icon" src="./images/dist/tg.svg" alt="" loading="lazy">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="./libs/jquery/dist/jquery.min.js"></script>
+	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./js/app.min.js"></script>
+</body>
+</html>
