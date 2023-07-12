@@ -61,6 +61,14 @@
 		<circle cx="6.5" cy="7.5" r="4" stroke="currentColor" stroke-width="1.8"></circle>
 		<circle cx="18.5" cy="16.5" r="4" stroke="currentColor" stroke-width="1.8"></circle>
 	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" id="icon-svg-payment">
+		<rect width="40" height="40" fill="currentColor" rx="20"></rect>
+		<path fill="#FCFCFC" fill-rule="evenodd" d="M9.1 15a2.9 2.9 0 0 1 2.9-2.9h16a2.9 2.9 0 0 1 2.9 2.9v10a2.9 2.9 0 0 1-2.9 2.9H12A2.9 2.9 0 0 1 9.1 25V15Zm2.9-1.1a1.1 1.1 0 0 0-1.1 1.1v1.1h18.2V15a1.1 1.1 0 0 0-1.1-1.1H12Zm17.1 4H10.9V25a1.1 1.1 0 0 0 1.1 1.1h16a1.1 1.1 0 0 0 1.1-1.1v-7.1Zm-8 5.1a.9.9 0 0 1 .9-.9h4a.9.9 0 0 1 0 1.8h-4a.9.9 0 0 1-.9-.9Z" clip-rule="evenodd"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40" id="icon-svg-delivery">
+		<rect width="40" height="40" fill="currentColor" rx="20"></rect>
+		<path fill="#FCFCFC" d="M27.667 12.222c-.223-.666-.89-1.11-1.556-1.11H13.89c-.778 0-1.333.444-1.556 1.11L10 18.89v8.889c0 .667.444 1.111 1.111 1.111h1.111c.667 0 1.111-.444 1.111-1.111v-1.111h13.334v1.111c0 .667.444 1.111 1.11 1.111h1.112c.667 0 1.111-.444 1.111-1.111v-8.889l-2.333-6.667ZM13.889 23.334c-.889 0-1.667-.778-1.667-1.667S13 20 13.89 20s1.667.778 1.667 1.667-.778 1.666-1.667 1.666Zm12.222 0c-.889 0-1.667-.778-1.667-1.667S25.222 20 26.111 20s1.667.778 1.667 1.667-.778 1.666-1.667 1.666Zm-13.889-5.556 1.667-5H26.11l1.667 5H12.222Z"></path>
+	</symbol>
 </svg>
 <header class="header">
 	<div class="header__container">
@@ -75,7 +83,7 @@
 				<a href="./catalog.html" class="header-nav-item__link">Новинки</a>
 			</li>
 			<li class="header-nav-item">
-				<a href="#" class="header-nav-item__link">Доставка и оплата</a>
+				<a href="./delivery-payment.html" class="header-nav-item__link">Доставка и оплата</a>
 			</li>
 			<li class="header-nav-item">
 				<a href="./reviews.html" class="header-nav-item__link">Отзывы</a>
@@ -102,7 +110,7 @@
 				</button>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="#" class="header-actions-item__link" data-count="0">
+				<a href="./wishlist.html" class="header-actions-item__link" data-count="0">
 					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
 				</a>
 			</li>
@@ -124,76 +132,80 @@
 		<div class="catalog__sidebar hidden-mobile">
 			<ul class="categories">
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Благотворительность</a>
+					<a href="./catalog.html" class="categories-item__link">Благотворительность</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Все категории</a>
+					<a href="./catalog.html" class="categories-item__link">Все категории</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Новинки</a>
+					<a href="./catalog.html" class="categories-item__link">Новинки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Распродажа</a>
+					<a href="./catalog.html" class="categories-item__link">Распродажа</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Майки</a>
+					<a href="./catalog.html" class="categories-item__link">Майки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Футболки</a>
+					<a href="./catalog.html" class="categories-item__link">Футболки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Рубашки</a>
+					<a href="./catalog.html" class="categories-item__link">Рубашки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Туники</a>
+					<a href="./catalog.html" class="categories-item__link">Туники</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Топы</a>
+					<a href="./catalog.html" class="categories-item__link">Топы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Худи, свитшоты</a>
+					<a href="./catalog.html" class="categories-item__link">Худи, свитшоты</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Блузы</a>
+					<a href="./catalog.html" class="categories-item__link">Блузы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Джемперы</a>
+					<a href="./catalog.html" class="categories-item__link">Джемперы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Свитеры</a>
+					<a href="./catalog.html" class="categories-item__link">Свитеры</a>
+				</li>
+				<li class="categories-item categories-item--subnav">
+					<a href="./catalog.html" class="categories-item__link">Верхняя одежда</a>
+					<ul class="categories-subnav">
+						<li class="categories-subnav-item"><a href="./catalog.html" class="categories-subnav-item__link">Куртки</a></li>
+						<li class="categories-subnav-item"><a href="./catalog.html" class="categories-subnav-item__link">Плащ</a></li>
+					</ul>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Верхняя одежда</a>
+					<a href="./catalog.html" class="categories-item__link">Леггинсы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Леггинсы</a>
+					<a href="./catalog.html" class="categories-item__link">Брюки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Брюки</a>
+					<a href="./catalog.html" class="categories-item__link">Джинсы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Джинсы</a>
+					<a href="./catalog.html" class="categories-item__link">Сарафаны</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Сарафаны</a>
+					<a href="./catalog.html" class="categories-item__link">Платья</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Платья</a>
+					<a href="./catalog.html" class="categories-item__link">Юбки</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Юбки</a>
+					<a href="./catalog.html" class="categories-item__link">Костюмы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Костюмы</a>
+					<a href="./catalog.html" class="categories-item__link">Домашняя одежда</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Домашняя одежда</a>
+					<a href="./catalog.html" class="categories-item__link">Головные уборы</a>
 				</li>
 				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Головные уборы</a>
-				</li>
-				<li class="categories-item">
-					<a href="#url" class="categories-item__link">Комплекты</a>
+					<a href="./catalog.html" class="categories-item__link">Комплекты</a>
 				</li>
 			</ul>
 		</div>
@@ -237,7 +249,7 @@
 			<div class="catalog__products products-grid">
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -266,7 +278,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -295,7 +307,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -324,7 +336,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -353,7 +365,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -382,7 +394,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -411,7 +423,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -440,7 +452,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -469,7 +481,7 @@
 				</div>
 				<div class="product-card">
 					<div class="product-card__inner">
-						<a href="#url" class="product-card__link"></a>
+						<a href="./product.html" class="product-card__link"></a>
 						<div class="product-card__image-wrapper">
 							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
 							<button type="button" class="product-card__add-to-wishlist">
@@ -495,6 +507,38 @@
 							<span class="product-card-color__value" style="--color: #fff;">Черный</span>
 						</div>
 					</div>
+				</div>
+				<div class="product-card">
+					<div class="product-card__inner">
+						<a href="./product.html" class="product-card__link"></a>
+						<div class="product-card__image-wrapper">
+							<img class="product-card__image" src="./images/dist/product.jpg" alt="" loading="lazy" />
+							<button type="button" class="product-card__add-to-wishlist">
+								<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+							</button>
+						</div>
+						<div class="product-card__info">
+							<h3 class="product-card__title">Стильная ветровка-парка MODLAV</h3>
+							<div class="product-card-badges">
+								<span class="product-card-badges__item product-card-badges__item--new">NEW</span>
+							</div>
+							<div class="product-card-price">
+								<strong class="product-card-price__regular">5 500 р.</strong>
+								<span class="product-card-price__old-price">3 400 р.</span>
+							</div>
+						</div>
+						<div class="product-card-sizes">
+							<span class="product-card-sizes__label hidden-mobile">Размер:</span>
+							<span class="product-card-sizes__value">42-44, 46-48, 50-52, 54-56</span>
+						</div>
+						<div class="product-card-color">
+							<span class="product-card-color__label hidden-mobile">Цвет:</span>
+							<span class="product-card-color__value" style="--color: #fff;">Черный</span>
+						</div>
+					</div>
+				</div>
+				<div class="catalog-load">
+					<button type="button" class="catalog-load__action">Показать еще</button>
 				</div>
 			</div>
 		</div>
@@ -521,7 +565,7 @@
 			</a>
 		</li>
 		<li class="navigation-mobile-item">
-			<button type="button" href="" class="navigation-mobile-item__link" data-fancybox data-src="#popup-sign-up">
+			<button type="button" class="navigation-mobile-item__link" data-fancybox data-src="#popup-sign-up">
 				<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
 				Профиль
 			</button>
@@ -532,76 +576,76 @@
 <div class="menu-mobile hidden-desktop">
 	<ul class="categories">
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Благотворительность</a>
+			<a href="./catalog.html" class="categories-item__link">Благотворительность</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Все категории</a>
+			<a href="./catalog.html" class="categories-item__link">Все категории</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Новинки</a>
+			<a href="./catalog.html" class="categories-item__link">Новинки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Распродажа</a>
+			<a href="./catalog.html" class="categories-item__link">Распродажа</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Майки</a>
+			<a href="./catalog.html" class="categories-item__link">Майки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Футболки</a>
+			<a href="./catalog.html" class="categories-item__link">Футболки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Рубашки</a>
+			<a href="./catalog.html" class="categories-item__link">Рубашки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Туники</a>
+			<a href="./catalog.html" class="categories-item__link">Туники</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Топы</a>
+			<a href="./catalog.html" class="categories-item__link">Топы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Худи, свитшоты</a>
+			<a href="./catalog.html" class="categories-item__link">Худи, свитшоты</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Блузы</a>
+			<a href="./catalog.html" class="categories-item__link">Блузы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Джемперы</a>
+			<a href="./catalog.html" class="categories-item__link">Джемперы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Свитеры</a>
+			<a href="./catalog.html" class="categories-item__link">Свитеры</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Верхняя одежда</a>
+			<a href="./catalog.html" class="categories-item__link">Верхняя одежда</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Леггинсы</a>
+			<a href="./catalog.html" class="categories-item__link">Леггинсы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Брюки</a>
+			<a href="./catalog.html" class="categories-item__link">Брюки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Джинсы</a>
+			<a href="./catalog.html" class="categories-item__link">Джинсы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Сарафаны</a>
+			<a href="./catalog.html" class="categories-item__link">Сарафаны</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Платья</a>
+			<a href="./catalog.html" class="categories-item__link">Платья</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Юбки</a>
+			<a href="./catalog.html" class="categories-item__link">Юбки</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Костюмы</a>
+			<a href="./catalog.html" class="categories-item__link">Костюмы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Домашняя одежда</a>
+			<a href="./catalog.html" class="categories-item__link">Домашняя одежда</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Головные уборы</a>
+			<a href="./catalog.html" class="categories-item__link">Головные уборы</a>
 		</li>
 		<li class="categories-item">
-			<a href="#url" class="categories-item__link">Комплекты</a>
+			<a href="./catalog.html" class="categories-item__link">Комплекты</a>
 		</li>
 	</ul>
 </div>
@@ -700,7 +744,7 @@
 		<div class="cart__body">
 			<div class="cart-product">
 				<div class="cart-product__image-wrapper">
-					<img src="" alt="" class="cart-product__image" loading="lazy" />
+					<img src="./images/dist/product.jpg" alt="" class="cart-product__image" loading="lazy" />
 				</div>
 				<div class="cart-product__content">
 					<button type="button" class="cart-product__remove">
@@ -736,7 +780,7 @@
 		</div>
 		<div class="cart__footer">
 			<div class="cart-notification">
-				<svg class="cart-notification__icon"></svg>
+				<img class="cart-notification__icon" src="./images/dist/free.svg" alt="" loading="lazy" />
 				<div class="cart-notification__text">
 					<p>Бесплатная доставка при заказе от 3000 рублей в пределах территории Российской Федерации</p>
 				</div>
@@ -759,47 +803,47 @@
 					<span class="cart-total__value">5 500 р.</span>
 				</div>
 			</div>
-			<a href="#url" class="cart__go-to-checkout">Перейти к оформлению</a>
+			<a href="./checkout-delivery.html" class="cart__go-to-checkout">Перейти к оформлению</a>
 		</div>
 	</div>
 </div>
 </main>
 	<footer class="footer">
 		<div class="footer__container">
-			<div class="footer__section">
-				<a href="./" class="footer-logo hidden-mobile">
+			<div class="footer__section hidden-mobile">
+				<a href="./" class="footer-logo">
 					<img src="./images/dist/logo.png" alt="" class="footer-logo__image" loading="lazy" />
 				</a>
 			</div>				
 			<div class="footer__section">
 				<ul class="footer-nav">
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Каталог</a>
+						<a href="./catalog.html" class="footer-nav-item__link">Каталог</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Новинки</a>
+						<a href="./catalog.html" class="footer-nav-item__link">Новинки</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Доставка и оплата</a>
+						<a href="./delivery-payment.html" class="footer-nav-item__link">Доставка и оплата</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Отзывы</a>
+						<a href="./reviews.html" class="footer-nav-item__link">Отзывы</a>
 					</li>
 				</ul>
 			</div>
 			<div class="footer__section">
 				<ul class="footer-nav">
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">О промокодах</a>
+						<a href="./promocodes.html" class="footer-nav-item__link">О промокодах</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Политика конфиденциальности</a>
+						<a href="./policy.html" class="footer-nav-item__link">Политика конфиденциальности</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Обработка персональных данных</a>
+						<a href="./ob.html" class="footer-nav-item__link">Обработка персональных данных</a>
 					</li>
 					<li class="footer-nav-item">
-						<a href="" class="footer-nav-item__link">Оферта</a>
+						<a href="./of.html" class="footer-nav-item__link">Оферта</a>
 					</li>
 				</ul>
 			</div>
@@ -815,12 +859,12 @@
 					</ul>
 					<ul class="footer-contact-social">
 						<li class="footer-contact-social-item">
-							<a href="" class="footer-contact-social-item__link">
+							<a href="#url" class="footer-contact-social-item__link">
 								<img class="icon" src="./images/dist/ok.svg" alt="" loading="lazy">
 							</a>
 						</li>
 						<li class="footer-contact-social-item">
-							<a href="" class="footer-contact-social-item__link">
+							<a href="#url" class="footer-contact-social-item__link">
 								<img class="icon" src="./images/dist/tg.svg" alt="" loading="lazy">
 							</a>
 						</li>

@@ -127,100 +127,57 @@
 	</div>
 </header>
 <main class="main">
-<div class="checkout">
-	<div class="checkout__container">
-		<div class="checkout__content">
-			<ul class="checkout-navigation">
-				<li class="checkout-navigation-item is-active">
-					<svg class="icon"><use xlink:href="#icon-svg-delivery"></use></svg>
-					<span class="checkout-navigation-item__text">Доставка</span>
-				</li>
-				<li class="checkout-navigation-item">
-					<svg class="icon"><use xlink:href="#icon-svg-payment"></use></svg>
-					<span class="checkout-navigation-item__text">Оплата</span>
-				</li>
-			</ul>
-			<form action="" class="checkout-form">
-				<fieldset class="checkout-form__fieldset">
-					<legend class="checkout-form__legend">Контактные данные получателя</legend>
-					<div class="checkout-form__group">
-						<label for="" class="checkout-form__label">ФИО</label>
-						<input type="text" class="checkout-form__input" placeholder="Введите ФИО" />
-					</div>
-					<div class="checkout-form__group checkout-form__group--half">
-						<label for="" class="checkout-form__label">Телефон</label>
-						<input type="text" class="checkout-form__input" placeholder="Введите телефон" />
-					</div>
-					<div class="checkout-form__group checkout-form__group--half">
-						<label for="" class="checkout-form__label">E-mail</label>
-						<input type="text" class="checkout-form__input" placeholder="Введите e-mail" />
-					</div>
-				</fieldset>
-				<fieldset class="checkout-form__fieldset">
-					<legend class="checkout-form__legend">Выберите тип доставки</legend>
-					<div class="checkout-form__group checkout-form__group--auto">
-						<input type="radio" name="delivery" class="checkout-form__radio" id="delivery1" checked>
-						<label for="delivery1" class="checkout-form__label">Почта России</label>
-					</div>
-					<div class="checkout-form__group checkout-form__group--auto">
-						<input type="radio" name="delivery" class="checkout-form__radio" id="delivery2">
-						<label for="delivery2" class="checkout-form__label">За пределы России (свяжется менджер)</label>
-					</div>
-					<div class="checkout-form__group checkout-form__group--auto">
-						<input type="radio" name="delivery" class="checkout-form__radio" id="delivery3">
-						<label for="delivery3" class="checkout-form__label">Самовывоз, склад Самара</label>
-					</div>
-				</fieldset>
-				<fieldset class="checkout-form__fieldset">
-					<legend class="checkout-form__legend">Адрес доставки</legend>
-					<div class="checkout-form__group">
-						<label for="" class="checkout-form__label">Адрес для определения условия доставки</label>
-						<input type="text" class="checkout-form__input" placeholder="Введите адрес" />
-					</div>
-				</fieldset>
-			</form>
-		</div>
-		<div class="checkout__sidebar">
-			<div class="checkout__total">
-				<div class="cart-notification">
-					<img class="cart-notification__icon" src="./images/dist/free.svg" alt="" loading="lazy" />
-					<div class="cart-notification__text">
-						<p>Бесплатная доставка при заказе от 3000 рублей в пределах территории Российской Федерации</p>
-					</div>
-				</div>
-				<div class="cart-total">
-					<div class="cart-total__row">
-						<span class="cart-total__label">Сумма заказа:</span>
-						<span class="cart-total__value">5 500 р.</span>
-					</div>
-					<div class="cart-total__row">
-						<span class="cart-total__label">Доставка:</span>
-						<span class="cart-total__value">0 р.</span>
-					</div>
-					<div class="cart-total__row">
-						<span class="cart-total__label">Скидка:</span>
-						<span class="cart-total__value">0 р.</span>
-					</div>
-					<div class="cart-total__row">
-						<span class="cart-total__label">Итого:</span>
-						<span class="cart-total__value">5 500 р.</span>
-					</div>
+<div class="page">
+	<div class="page__container">
+		<div class="page__columns">
+			<div class="page__content">
+				<h2 class="page__title">Оплата</h2>
+				<div class="page__text">
+					<h3>Виды оплат</h3>
+					<ol>
+						<li><strong>100% оплата.</strong> Сумма за заказ. Вы экономите 10% за наложенный платёж! И в подарок Вам доставка по России (курьерская или почта РФ)</li>
+						<li><strong>Наложенным платежом</strong> - оплата при получении на почте. Внимание: за наложенный платеж – сверху от суммы 10% удерживает служба отправления! (почта РФ или курьерская доставка)</li>
+						<li>Если сумма Вашего заказа превышает 6000 руб., то берется в обязательном порядке <strong>предоплата 20% от заказа.</strong> Остальная сумма оформляется наложенным платежом (оплата при получении посылки)</li>
+					</ol>
+					<h3>Способы оплаты</h3>
+					<ol>
+						<li>Оплата банковской картой: VISA, Maestro , MaestroCard, карта МИР с нашего сайта через платежную систему сайта Ю-Касса, доступно при оформлении заказа на сайте</li>
+						<li>Расчетный счет на банковские реквизиты ООО «МОДЛАВ»</li>
+					</ol>
 				</div>
 			</div>
-			<div class="checkout-promocode hidden-mobile">
-				<button type="button" class="checkout-promocode__action">Применить промокод</button>
-				<div class="checkout-promocode__container">
-					<form action="">
-						<label class="checkout-promocode__label">Применить промокод</label>
-						<input class="checkout-promocode__input" type="text" name="" placeholder="Введите промокод" />
-						<button class="checkout-promocode__submit" type="submit">Применить </button>
-					</form>
+			<div class="page__content">
+				<h2 class="page__title">Доставка</h2>
+				<div class="page__text">
+					<h3>Бесплатная доставка</h3>
+					<p>Акция! Доставка в подарок в пределах территории Российской Федерации при заказе товаров на сумму от 5000 руб</p>
+					<h3>Почта России</h3>
+					<p>В любой населённый пункт России мы можем отправить ваш заказ почтой</p>
+					<h3>СДЭК</h3>
+					<p>В случае отдаленного района от города (поселок, деревня, хутор) отправки будут производиться только почтой России.Курьерская служба СДЭК заранее извещает получателя по телефону, оговаривая удобное время получения заказа. Режим работы пунктов выдачи с 9:00 до 17:00</p>
 				</div>
 			</div>
-			<a href="./checkout-payment.html" class="checkout__go-to-payment">Перейти к оплате</a>
 		</div>
 	</div>
 </div>
+<section class="subscribe widget">
+	<div class="subscribe__container">
+		<h2 class="subscribe__title"><strong>Подписывайся</strong><br class="hidden-desktop" /> на рассылку и <strong>получи доступ</strong><br class="hidden-mobile" /> к секретным <strong>распродажам</strong> и <strong>скидкам</strong> до 70%</h2>
+		<form action="" class="subscribe-form">
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">E-mail</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите e-mail" />
+			</div>
+			<div class="subscribe-form__group">
+				<label for="" class="subscribe-form__label">Имя</label>
+				<input type="text" class="subscribe-form__input" placeholder="Введите имя" />
+			</div>
+			<div class="subscribe-form__group">
+				<button type="submit" class="subscribe-form__submit">Подписаться</button>
+			</div>
+		</form>
+	</div>
+</section>
 <div class="navigation-mobile hidden-desktop">
 	<ul class="navigation-mobile__list">
 		<li class="navigation-mobile-item">
@@ -414,6 +371,75 @@
 		<p>Письмо подтверждения регистрации отправлено на почту <a href="mailto:linasiriellin@gmail.com">linasiriellin@gmail.com</a>. Проверьте свою почту и завершите регистрацию</p>
 	</div>
 	<button class="popup-sign__action">Отправить письмо повторно</button>
+</div>
+<div class="cart" id="cart">
+	<div class="cart__inner">
+		<span class="cart__title" data-count="1">Корзина</span>
+		<div class="cart__body">
+			<div class="cart-product">
+				<div class="cart-product__image-wrapper">
+					<img src="./images/dist/product.jpg" alt="" class="cart-product__image" loading="lazy" />
+				</div>
+				<div class="cart-product__content">
+					<button type="button" class="cart-product__remove">
+						<svg class="icon"><use xlink:href="#icon-svg-basket"></use></svg>
+					</button>
+					<span class="cart-product__title">Легкая летняя ветровка MODLAV</span>
+					<div class="cart-product-options">
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Размер:</span>
+							<span class="cart-product-options-item__value">42</span>
+						</div>
+						<div class="cart-product-options-item">
+							<span class="cart-product-options-item__label">Цвет:</span>
+							<span class="cart-product-options-item__value">Розовый</span>
+						</div>
+					</div>
+				</div>
+				<div class="cart-product__footer">
+					<div class="cart-product-qty">
+						<button type="button" class="cart-product-qty__control" disabled>
+							<svg class="icon"><use xlink:href="#icon-svg-minus"></use></svg>
+						</button>
+						<input class="cart-product-qty__input" type="text" name="qty" value="1" readonly />
+						<button type="button" class="cart-product-qty__control">
+							<svg class="icon"><use xlink:href="#icon-svg-plus"></use></svg>
+						</button>
+					</div>
+					<div class="cart-product-price">
+						<span class="cart-product-price__regular">5 500 р.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart__footer">
+			<div class="cart-notification">
+				<img class="cart-notification__icon" src="./images/dist/free.svg" alt="" loading="lazy" />
+				<div class="cart-notification__text">
+					<p>Бесплатная доставка при заказе от 3000 рублей в пределах территории Российской Федерации</p>
+				</div>
+			</div>
+			<div class="cart-total">
+				<div class="cart-total__row">
+					<span class="cart-total__label">Сумма заказа:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Доставка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Скидка:</span>
+					<span class="cart-total__value">0 р.</span>
+				</div>
+				<div class="cart-total__row">
+					<span class="cart-total__label">Итого:</span>
+					<span class="cart-total__value">5 500 р.</span>
+				</div>
+			</div>
+			<a href="./checkout-delivery.html" class="cart__go-to-checkout">Перейти к оформлению</a>
+		</div>
+	</div>
 </div>
 </main>
 	<footer class="footer">
