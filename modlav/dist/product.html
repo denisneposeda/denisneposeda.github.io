@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>WeCatalogo</title>
+	<title>ModLav</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 	<link rel="icon" href="./images/favicon.png">
@@ -32,7 +32,7 @@
 		<path stroke="currentColor" stroke-linecap="round" stroke-width="2.5" d="M23.543 23.542 8.457 8.457M23.542 8.457 8.457 23.542"></path>
 	</symbol>
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-close">
-		<path stroke="#0D0D0D" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.166 4.167 9.999 10m0 0 5.834 5.834M9.999 10l5.834-5.833M9.999 10l-5.833 5.834"></path>
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4.166 4.167 9.999 10m0 0 5.834 5.834M9.999 10l5.834-5.833M9.999 10l-5.833 5.834"></path>
 	  </symbol>
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-phone">
 		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7.225 9.751a6.59 6.59 0 0 0 3.05 3.038.619.619 0 0 0 .612-.047l1.956-1.304a.625.625 0 0 1 .593-.055l3.66 1.569a.623.623 0 0 1 .374.648 3.75 3.75 0 0 1-3.72 3.275A10.625 10.625 0 0 1 3.125 6.25 3.75 3.75 0 0 1 6.4 2.53a.623.623 0 0 1 .648.375l1.57 3.662a.625.625 0 0 1-.052.589l-1.3 1.985a.62.62 0 0 0-.041.61v0Z"></path>
@@ -56,7 +56,11 @@
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 21 20" id="icon-svg-slider-arrow">
 		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 10H3m15 0-5-5m5 5-5 5"></path>
 	</symbol>
-
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 24" id="icon-svg-filter">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19.5 7.5h-9M14.5 16.5h-9"></path>
+		<circle cx="6.5" cy="7.5" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+		<circle cx="18.5" cy="16.5" r="4" stroke="currentColor" stroke-width="1.8"></circle>
+	</symbol>
 </svg>
 <header class="header">
 	<div class="header__container">
@@ -65,23 +69,23 @@
 		</a>
 		<ul class="header-nav hidden-mobile">
 			<li class="header-nav-item">
-				<a href="" class="header-nav-item__link">Каталог</a>
+				<a href="./catalog.html" class="header-nav-item__link">Каталог</a>
 			</li>
 			<li class="header-nav-item">
-				<a href="" class="header-nav-item__link">Новинки</a>
+				<a href="./catalog.html" class="header-nav-item__link">Новинки</a>
 			</li>
 			<li class="header-nav-item">
-				<a href="" class="header-nav-item__link">Доставка и оплата</a>
+				<a href="#" class="header-nav-item__link">Доставка и оплата</a>
 			</li>
 			<li class="header-nav-item">
-				<a href="" class="header-nav-item__link">Отзывы</a>
+				<a href="./reviews.html" class="header-nav-item__link">Отзывы</a>
 			</li>
 		</ul>
 		<ul class="header-actions">
 			<li class="header-actions-item">
-				<a href="#" class="header-actions-item__link" id="search-action">
+				<button type="button" class="header-actions-item__link" id="search-action">
 					<svg class="icon"><use xlink:href="#icon-svg-search"></use></svg>
-				</a>
+				</button>
 				<div class="header-search" id="search">
 					<form class="header-search__form" action="">
 						<svg class="header-search__icon hidden-desktop"><use xlink:href="#icon-svg-search"></use></svg>
@@ -93,19 +97,19 @@
 				</div>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="#popup-sign-up" class="header-actions-item__link" data-fancybox>
+				<button type="button" class="header-actions-item__link" data-fancybox data-src="#popup-sign-up">
 					<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
-				</a>
+				</button>
 			</li>
 			<li class="header-actions-item hidden-mobile">
 				<a href="#" class="header-actions-item__link" data-count="0">
-					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>					  
+					<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
 				</a>
 			</li>
 			<li class="header-actions-item hidden-mobile">
-				<a href="#cart" class="header-actions-item__link" data-count="0" data-fancybox>
+				<button type="button" class="header-actions-item__link minicart-action" data-count="0">
 					<svg class="icon"><use xlink:href="#icon-svg-bag"></use></svg>
-				</a>
+				</button>
 			</li>
 		</ul>
 		<button class="hamburger hidden-desktop" type="button">
@@ -460,6 +464,109 @@
 	</div>
 </section>
 <div class="navigation-mobile hidden-desktop">
+	<ul class="navigation-mobile__list">
+		<li class="navigation-mobile-item">
+			<a href="./catalog.html" class="navigation-mobile-item__link">
+				<svg class="icon"><use xlink:href="#icon-svg-filter"></use></svg>
+				Каталог
+			</a>
+		</li>
+		<li class="navigation-mobile-item">
+			<button type="button" class="navigation-mobile-item__link minicart-action">
+				<svg class="icon"><use xlink:href="#icon-svg-bag"></use></svg>
+				Корзина
+			</button>
+		</li>
+		<li class="navigation-mobile-item">
+			<a href="./wishlist.html" class="navigation-mobile-item__link">
+				<svg class="icon"><use xlink:href="#icon-svg-heart"></use></svg>
+				Избранное
+			</a>
+		</li>
+		<li class="navigation-mobile-item">
+			<button type="button" href="" class="navigation-mobile-item__link" data-fancybox data-src="#popup-sign-up">
+				<svg class="icon"><use xlink:href="#icon-svg-customer"></use></svg>
+				Профиль
+			</button>
+		</li>
+	</ul>
+</div>
+
+<div class="menu-mobile hidden-desktop">
+	<ul class="categories">
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Благотворительность</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Все категории</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Новинки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Распродажа</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Майки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Футболки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Рубашки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Туники</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Топы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Худи, свитшоты</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Блузы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Джемперы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Свитеры</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Верхняя одежда</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Леггинсы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Брюки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Джинсы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Сарафаны</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Платья</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Юбки</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Костюмы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Домашняя одежда</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Головные уборы</a>
+		</li>
+		<li class="categories-item">
+			<a href="#url" class="categories-item__link">Комплекты</a>
+		</li>
+	</ul>
 </div>
 <div class="popup popup-sign popup-sign--up" id="popup-sign-up">
 	<span class="popup__title">Авторизация</span>
