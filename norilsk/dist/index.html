@@ -15,10 +15,10 @@
 <body>
 <svg width="0" height="0" class="hidden">
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16" id="icon-svg-cross">
-		<path stroke="#000" d="M1 15 15 1M1 1l14 14"></path>
+		<path stroke="currentColor" d="M1 15 15 1M1 1l14 14"></path>
 	</symbol>
 	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 37" id="icon-svg-hamb">
-		<path fill="#fff" d="M4.5 27.5h27v-3h-27v3Zm0-7.5h27v-3h-27v3Zm0-10.5v3h27v-3h-27Z"></path>
+		<path fill="currentColor" d="M4.5 27.5h27v-3h-27v3Zm0-7.5h27v-3h-27v3Zm0-10.5v3h27v-3h-27Z"></path>
 	</symbol>
 	<symbol xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512" id="icon-svg-support">
 		<path fill="currentColor" d="M307.66 465.229c0-17.696-14.346-32.042-32.042-32.042h-39.236a32.042 32.042 0 0 0-32.042 32.042c0 17.696 14.346 32.042 32.042 32.042h39.236c17.696 0 32.042-14.346 32.042-32.042zM67.361 382.606c5.352.409 11.827.644 18.331.263a90.96 90.96 0 0 0 89.238 73.36h12.226a50.247 50.247 0 0 0-.008 18H174.93a108.957 108.957 0 0 1-107.569-91.623zm-9.156-19.153A69.812 69.812 0 0 1 0 294.613V252.07a69.812 69.812 0 0 1 69.811-69.812h4.647C81.886 88.502 160.328 14.729 256 14.729s174.114 73.773 181.542 167.529h4.647A69.812 69.812 0 0 1 512 252.07v42.543a69.812 69.812 0 0 1-69.811 69.812h-20.601c-8.544 0-15.47-6.927-15.47-15.47V196.847c0-82.908-67.21-150.118-150.118-150.118s-150.118 67.21-150.118 150.118v152.108c0 6.032-3.453 11.259-8.491 13.81-13.868 4.812-35.375 1.331-39.186.688z"></path>
@@ -56,87 +56,36 @@
 		<path d="M68.516 62.226 39.512 29.272a3 3 0 0 0-2.252-1.018H13.176a3.001 3.001 0 0 0-2.186 5.057l20.076 21.344 7.625 9.326-7.814 9.234-19.902 21.49a3 3 0 0 0 2.201 5.039H37.26c.855 0 1.67-.365 2.24-1.004l29.004-32.537a2.998 2.998 0 0 0 .012-3.977z" fill="currentColor"></path>
 	</symbol>
 </svg>
-<header class="header">
-	<div class="header__container">
+<header class="airport-header">
+	<div class="airport-header__container">
+		<a href="" class="airport-header-logo">
+			<img src="./images/dist/logo.png" alt="" class="airport-header-logo__image">
+		</a>
+		<div class="airport-header-nav">
+			<div class="airport-header-nav-overlay hidden-lg"></div>
+			<ul class="airport-header-nav__list">
+				<li class="airport-header-nav-item">
+					<a href="" class="airport-header-nav-item__link">iOS и Android</a>
+				</li>
+				<li class="airport-header-nav-item">
+					<a href="" class="airport-header-nav-item__link">Тарифы</a>
+				</li>
+				<li class="airport-header-nav-item">
+					<a href="" class="airport-header-nav-item__link">Контакты</a>
+				</li>
+			</ul>
+		</div>
+		<div id="wh" class="airport-header__weather"></div>
+		<img class="airport-header__loop hidden-mobile" src="./images/dist/loop.jpg" alt="" />
+		<img class="airport-header__eye" src="./images/dist/eye.jpg" alt="" />
+		<div class="airport-header__lang">RU</div>
 		<button class="hamburger hidden-desktop" type="button">
 			<svg class="hamburger__icon hamburger__icon--open"><use xlink:href="#icon-svg-hamb"></use></svg>
 			<svg class="hamburger__icon hamburger__icon--close"><use xlink:href="#icon-svg-cross"></use></svg>
 		</button>
-		<div class="header-logo">
-			<a href="" class="header-logo__link">
-				<img src="./images/dist/logo.png" alt="" class="header-logo__image hidden-mobile">
-				<div class="header-site-name">
-					<span class="header-site-name__title">TRANSFER</span>
-					<span class="header-site-name__description">НОРТРАНС-НОРИЛЬСК</span>
-				</div>
-			</a>
-		</div>
-		<div class="header-nav">
-			<div class="header-nav-overlay hidden-lg"></div>
-			<ul class="header-nav__list">
-				<li class="header-nav-item">
-					<a href="" class="header-nav-item__link">
-						<svg class="header-nav-item__icon hidden-mobile"><use xlink:href="#icon-svg-home"></use></svg>
-						<span class="hidden-desktop">Главная</span>
-					</a>
-				</li>
-				<li class="header-nav-item">
-					<a href="" class="header-nav-item__link">iOS и Android</a>
-				</li>
-				<li class="header-nav-item">
-					<a href="" class="header-nav-item__link">Тарифы</a>
-				</li>
-				<li class="header-nav-item">
-					<a href="" class="header-nav-item__link">Контакты</a>
-				</li>
-				<li class="header-nav-item header-nav-item--has-subnav">
-					<span class="header-nav-item__link">
-						<svg class="header-nav-item__icon hidden-mobile"><use xlink:href="#icon-svg-more"></use></svg>
-						<span class="hidden-desktop">Еще</span>
-					</span>
-					<ul class="header-subnav">
-						<li class="header-subnav-item"><a href="" class="header-subnav-item__link">text</a></li>
-						<li class="header-subnav-item"><a href="" class="header-subnav-item__link">test</a></li>
-						<li class="header-subnav-item"><a href="" class="header-subnav-item__link">tcac</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<a href="tel:" class="header-support hidden-desktop">
-			<span class="header-support__text">24 / 7</span>
-			<svg class="header-support__icon"><use xlink:href="#icon-svg-support"></use></svg>
-		</a>
-	</div>
-	<div class="header__container hidden-mobile">
-		<div class="header-information">
-			<svg class="header-information__icon"><use xlink:href="#icon-svg-clock"></use></svg>
-			<div class="header-information__content">
-				<span class="header-information__title">Диспетчерская</span>
-				<span class="header-information__text">24/7</span>
-			</div>
-		</div>
-		<div class="header-information">
-			<svg class="header-information__icon"><use xlink:href="#icon-svg-email"></use></svg>
-			<div class="header-information__content">
-				<span class="header-information__title">Email для связи</span>
-				<a href="#" class="header-information__text">minsk2.by@gmail.com</a>
-			</div>
-		</div>
-		<div class="header-information">
-			<svg class="header-information__icon"><use xlink:href="#icon-svg-phone"></use></svg>
-			<div class="header-information__content">
-				<span class="header-information__title">Телефон диспетчерской</span>
-				<a href="#" class="header-information__text">+375 29 670 00 00</a>
-			</div>
-		</div>
-		<div class="header-social">
-			<a href="#" class="header-social__link"><svg class="header-social__icon"><use xlink:href="#icon-svg-fb"></use></svg></a>
-			<a href="#" class="header-social__link"><svg class="header-social__icon"><use xlink:href="#icon-svg-inst"></use></svg></a>
-			<a href="#" class="header-social__link"><svg class="header-social__icon"><use xlink:href="#icon-svg-vk"></use></svg></a>
-		</div>
 	</div>
 </header>
-<main class="main">
+<main class="airport-main">
 
 <div class="promo">
 	<div class="promo__container">
@@ -158,14 +107,27 @@
 				</li>
 			</ul>
 		</div>
+		<div class="airport-schedules hidden-desktop">
+			<a href="https://airport.by/raspisanie-rejsov/prilety" class="airport-schedules-item">
+				<img class="airport-schedules-item__icon" src="./images/dist/arrival.jpg" alt="">
+				<span class="airport-schedules-item__text">Прилеты</span>
+				<img src="./images/dist/arrow.jpg" alt="" class="airport-schedules-item__arrow">
+			</a>
+			<a href="https://airport.by/raspisanie-rejsov/vylety" class="airport-schedules-item">
+				<img class="airport-schedules-item__icon" src="./images/dist/departure.jpg" alt="">
+				<span class="airport-schedules-item__text">Вылеты</span>
+				<img src="./images/dist/arrow.jpg" alt="" class="airport-schedules-item__arrow">
+			</a>
+			<a href="https://airport.by/upload/files/21b1509e564f1288c206701cb180f014.pdf" class="airport-schedules-item" target="_blank">
+				<span class="airport-schedules-item__text">Сезонное расписание</span>
+				<img src="./images/dist/arrow.jpg" alt="" class="airport-schedules-item__arrow">				
+			</a>
+		</div>
 		<div class="promo__iframe">
 			<iframe  src="//zakaz.minsk2.by/schedules/embedded?from_id=10&to_id=9&individual"></iframe>
 		</div>
 	</div>
-	<picture>
-		<source srcset="./images/dist/bg.png" media="(max-width: 992px)">
-		<img class="promo__bg" src="./images/dist/bg.png" alt="">
-	</picture>
+	<video class="promo__bg" playsinline="" autoplay="autoplay" loop="loop" muted="muted" poster="https://airport.by/static/img/tmp/home_page-canopy.jpg"><source src="https://airport.by/upload/files/312381f74667dc159b7722961facfcc3.mp4" type="video/mp4"></video>
 </div>
 
 <div class="content">
