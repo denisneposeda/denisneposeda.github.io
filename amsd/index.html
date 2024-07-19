@@ -10,6 +10,13 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.min.css">
+	<script>
+		const price = {
+			'old': 330,
+			'regular': 149,
+			'discount': 40
+		}
+	</script>
 </head>
 <body>
 <svg width="0" height="0" class="hidden">
@@ -75,7 +82,14 @@
 			</li>
 		</ul>
 		<a href="tel:4055550128" class="header__phone"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> (405) 555-0128</a>
-		<button type="button" class="header__order" data-fancybox data-src="#order">Order your kit</button>
+		<button type="button" class="header-order" data-fancybox data-src="#order">
+			<span class="header-order__label">Order your kit</span>
+			<div class="header-order-price">
+				<span class="header-order-price__old">$<script>document.write(price.old)</script></span>
+                <span class="header-order-price__regular">$<script>document.write(price.regular)</script></span>
+				<span class="header-order-price__discount"><script>document.write(price.discount)</script>% OFF</span>
+			</div>
+		</button>
 	</div>
 </header>
 <main class="main">
@@ -93,12 +107,12 @@
         </div>
         <form action="#" class="promo-form">
             <div class="promo-form__heading">
-                <span class="promo-form__discount">40% OFF</span>
+                <span class="promo-form__discount"><script>document.write(price.discount)</script>% OFF</span>
                 <span class="promo-form__title">Get your start kit</span> 
                 <div class="promo-form-price">
                     <span class="promo-form-price__label">Total price:</span>
-                    <span class="promo-form-price__old">$330</span>
-                    <span class="promo-form-price__regular">$149</span>
+                    <span class="promo-form-price__old">$<script>document.write(price.old)</script></span>
+                    <span class="promo-form-price__regular">$<script>document.write(price.regular)</script></span>
                 </div>
             </div>
             <div class="promo-form__body">
@@ -189,7 +203,7 @@
                     </div>
                     <h3 class="kit-item__title">8 cannabis seeds of your choice</h3>
                     <div class="kit-item-price">
-                        <span class="kit-item-price__regular">$149</span>
+                        <span class="kit-item-price__regular">$<script>document.write(price.regular)</script></span>
                     </div>
                 </div>
             </div>
@@ -233,11 +247,11 @@
             </div>
         </div>
         <div class="kit-order">
-            <span class="kit-order__discount">40% OFF</span>
+            <span class="kit-order__discount"><script>document.write(price.discount)</script>% OFF</span>
             <div class="kit-order-price">
                 <span class="kit-order-price__label">Total price:</span>
-                <span class="kit-order-price__old">$330</span>
-                <span class="kit-order-price__regular">$149</span>
+                <span class="kit-order-price__old">$<script>document.write(price.old)</script></span>
+                <span class="kit-order-price__regular"><script>document.write(price.regular)</script>149</span>
             </div>
             <button type="submit" class="kit-order__action" data-fancybox data-src="#order">Order your start kit</button>
         </div>
@@ -838,9 +852,9 @@
             <h2 class="leave__title">Leave a request <br> to order <strong>grow kit</strong></h2>
             <div class="leave-price">
                 <span class="leave-price__label">Total price:</span>
-                <span class="leave-price__old">$330</span>
-                <span class="leave-price__regular">$149</span>
-                <span class="leave-price__discount">40% OFF</span>
+                <span class="leave-price__old">$<script>document.write(price.old)</script></span>
+                <span class="leave-price__regular">$<script>document.write(price.regular)</script></span>
+                <span class="leave-price__discount"><script>document.write(price.discount)</script>% OFF</span>
             </div>
             <ul class="leave-contact">
                 <li class="leave-contact__item">
@@ -885,8 +899,8 @@
             </div>
             <div class="order-price">
                 <span class="order-price__label">Total price:</span>
-                <span class="order-price__old">$330</span>
-                <span class="order-price__regular">$149</span>
+                <span class="order-price__old">$<script>document.write(price.old)</script></span>
+                <span class="order-price__regular">$<script>document.write(price.regular)</script></span>
             </div>
         </div>
         <form action="#" class="order-form">
