@@ -67,7 +67,7 @@
 <header class="header">
 	<div class="header__container">
 		<svg class="logo"><use xlink:href="#logo"></use></svg>
-		<ul class="header-nav">
+		<ul class="header-nav hidden-mobile">
 			<li class="header-nav-item">
 				<a href="#how-it-works" class="header-nav-item__link">How it works?</a>
 			</li>
@@ -88,7 +88,7 @@
 			</li>
 		</ul>
 		<a href="tel:4055550128" class="header__phone"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> (405) 555-0128</a>
-		<button type="button" class="header-order" data-fancybox data-src="#order">
+		<button type="button" class="header-order" data-src="#order">
 			<span class="header-order__label">Order your kit</span>
 			<div class="header-order-price">
 				<span class="header-order-price__old">$<script>document.write(price.old)</script></span>
@@ -106,16 +106,25 @@
             <h2 class="promo__subtitle"><strong>Grow your own</strong> cannabis at home</h2>
             <div class="promo-banner">
                 <div class="promo-banner__image-wrapper">
-                    <img class="promo-banner__image" src="./images/dist/promo__lg.jpg" alt="" loading="eager">
+                    <picture>
+                        <source srcset="./images/dist/promo__lg.jpg" media="(min-width: 992px)">
+                        <img class="promo-banner__image" src="./images/dist/promo__xs.jpg" alt="" loading="eager">
+                    </picture>
                 </div>
-                <span class="promo-banner__text">Everything you need is <strong>in our package</strong></span>
+                <span class="promo-banner__text">Everything you need is <br class="hidden-desktop"> <strong>in our package</strong></span>
+                <div class="promo-banner-price hidden-desktop">
+                    <span class="promo-banner-price__label">Total price:</span>
+                    <span class="promo-banner-price__old">$<script>document.write(price.old)</script></span>
+                    <span class="promo-banner-price__regular">$<script>document.write(price.regular)</script></span>
+                    <span class="promo-banner-price__discount"><script>document.write(price.discount)</script>% OFF</span>
+                </div>
             </div>
         </div>
         <form action="#" class="promo-form">
             <div class="promo-form__heading">
-                <span class="promo-form__discount"><script>document.write(price.discount)</script>% OFF</span>
+                <span class="promo-form__discount hidden-mobile"><script>document.write(price.discount)</script>% OFF</span>
                 <span class="promo-form__title">Get your start kit</span> 
-                <div class="promo-form-price">
+                <div class="promo-form-price hidden-mobile">
                     <span class="promo-form-price__label">Total price:</span>
                     <span class="promo-form-price__old">$<script>document.write(price.old)</script></span>
                     <span class="promo-form-price__regular">$<script>document.write(price.regular)</script></span>
@@ -152,7 +161,7 @@
                 <h3 class="how-step__title">Leave a request</h3>
                 <div class="how-step__text">
                     <p>Contact the consultant via the form below or leave your number and we'll call you back. We'll help you find the right place, set up the space, and make your journey smooth and fun.</p>
-                    <a href="#order" data-fancybox>Order your start kit <svg class="icon"><use xlink:href="#icon-svg-arrow-right"></use></svg></a>
+                    <a href="#order">Order your start kit <svg class="icon"><use xlink:href="#icon-svg-arrow-right"></use></svg></a>
                 </div>
             </div>
             <div class="how-step">
@@ -193,7 +202,10 @@
                     <p>In 7-12 weeks, cut down and dry your buds. You may expect ¼ pound of buds, or about 112g from one plant.</p>
                 </div>
             </div>
-            <img class="how-steps__bg" src="./images/dist/how-bg.jpg" alt="" loading="lazy">
+            <picture>
+                <source srcset="./images/dist/how-bg__lg.jpg" media="(min-width: 992px)">
+                <img class="how-steps__bg" src="./images/dist/how-bg__xs.jpg" alt="" loading="lazy">
+            </picture>
         </div>
     </div>
 </div>
@@ -237,7 +249,7 @@
                     </div>
                 </div>
             </div>
-            <div class="kit-item">
+            <div class="kit-item hidden-mobile">
                 <div class="kit-item__inner">
                     <span class="kit-item__consultant">Access to the private growing community</span>
                     <div class="kit-item-price">
@@ -251,15 +263,54 @@
                     </div>
                 </div>
             </div>
+            <div class="kit-item hidden-desktop">
+                <div class="kit-item__inner">
+                    <div class="kit-item__image-wrapper kit-item__image-wrapper--small">
+                        <img src="./images/dist/kit-item-support.jpg" alt="" class="kit-item__image" loading="lazy">
+                    </div>
+                    <h3 class="kit-item__title">Constant support  from consultant</h3>
+                    <div class="kit-item-price">
+                        <span class="kit-item-price__old">$50/consultation</span>
+                        <span class="kit-item-price__regular">FREE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kit-item hidden-desktop">
+                <div class="kit-item__inner">
+                    <div class="kit-item__image-wrapper kit-item__image-wrapper--icon">
+                        <img src="./images/dist/kit-item-icon.png" alt="" class="kit-item__image" loading="lazy">
+                    </div>
+                    <h3 class="kit-item__title">Access to the private growing community</h3>
+                    <div class="kit-item-price">
+                        <span class="kit-item-price__old">$50/month</span>
+                        <span class="kit-item-price__regular">FREE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="kit-item hidden-desktop">
+                <div class="kit-item__inner">
+                    <div class="kit-order">
+                        <span class="kit-order__discount"><script>document.write(price.discount)</script>% OFF</span>
+                        <div class="kit-order-price">
+                            <span class="kit-order-price__label">Total price:</span>
+                            <span class="kit-order-price__old">$<script>document.write(price.old)</script></span>
+                            <span class="kit-order-price__regular">$<script>document.write(price.regular)</script></span>
+                        </div>
+                        <button type="submit" class="kit-order__action" data-src="#order">
+                            Order <span class="hidden-mobile">your start kit</span> <span class="hidden-desktop">now</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="kit-order">
+        <div class="kit-order hidden-mobile">
             <span class="kit-order__discount"><script>document.write(price.discount)</script>% OFF</span>
             <div class="kit-order-price">
                 <span class="kit-order-price__label">Total price:</span>
                 <span class="kit-order-price__old">$<script>document.write(price.old)</script></span>
                 <span class="kit-order-price__regular">$<script>document.write(price.regular)</script></span>
             </div>
-            <button type="submit" class="kit-order__action" data-fancybox data-src="#order">Order your start kit</button>
+            <button type="submit" class="kit-order__action" data-src="#order">Order your start kit</button>
         </div>
     </div>
 </div>
@@ -295,7 +346,7 @@
     <div class="benefits__container">
         <div class="benefits__content">
             <h2 class="benefits__title">With our grow packages, you'll can:</h2>
-            <button type="button" class="benefits__order" data-src="#order" data-fancybox>Order your start kit</button>
+            <button type="button" class="benefits__order hidden-mobile" data-src="#order">Order your start kit</button>
         </div>
         <div class="benefits-items">
             <div class="benefits-item">
@@ -346,9 +397,12 @@
 <div class="get">
     <div class="get__container">
         <h2 class="get__title">Get about ¼ pound of buds, <br> or up to 112g from a single seed!</h2>
-        <button type="button" class="get__order" data-src="#order" data-fancybox>Order your start kit</button>
+        <button type="button" class="get__order" data-src="#order">Order your start kit</button>
     </div>
-    <img class="get__bg" src="./images/dist/get-bg__lg.jpg" alt="" loading="lazy">
+    <picture>
+        <source srcset="./images/dist/get-bg__lg.jpg" media="(min-width: 992px)">
+        <img class="get__bg" src="./images/dist/get-bg__xs.png" alt="" loading="lazy">
+    </picture>
 </div>
 <div id="popular" class="seeds">
     <div class="seeds__container">
@@ -686,7 +740,7 @@
             </div>  
         </div>
         <div class="seeds-order">
-            <button type="button" class="seeds-order__action" data-src="#order" data-fancybox>Order your start kit</button>
+            <button type="button" class="seeds-order__action" data-src="#order">Order your start kit</button>
         </div>
     </div>
 </div>
@@ -800,13 +854,14 @@
     </div>
 </div>
 <div id="faq" class="faq">
-    <img class="faq__bg" src="./images/dist/faq-bg.jpg" alt="" loading="lazy">
+    <img class="faq__bg hidden-mobile" src="./images/dist/faq-bg.jpg" alt="" loading="lazy">
     <div class="faq__container">
         <h2 class="faq__title">Any questions left?</h2>
         <div class="faq-items">
             <div class="faq-item">
-                <img src="./images/dist/faq-icon-1.jpg" alt="" class="faq-item__icon" loading="lazy">
+                <img src="./images/dist/faq-icon-1.jpg" alt="" class="faq-item__icon hidden-mobile" loading="lazy">
                 <div class="faq-item__content">
+                    <img src="./images/dist/faq-icon-1.jpg" alt="" class="faq-item__icon hidden-desktop" loading="lazy">
                     <h3 class="faq-item__title">What if my seeds fail to germinate?</h3>
                     <div class="faq-item__text">
                         <p>The seeds we sell provide 99,99% germination rate if you do everything right. But if it happens that the seeds don't sprout, we'll send you more seeds.</p>
@@ -814,8 +869,9 @@
                 </div>
             </div>
             <div class="faq-item">
-                <img src="./images/dist/faq-icon-2.jpg" alt="" class="faq-item__icon" loading="lazy">
+                <img src="./images/dist/faq-icon-2.jpg" alt="" class="faq-item__icon hidden-mobile" loading="lazy">
                 <div class="faq-item__content">
+                    <img src="./images/dist/faq-icon-2.jpg" alt="" class="faq-item__icon hidden-desktop" loading="lazy">
                     <h3 class="faq-item__title">Will I have problems with the law?</h3>
                     <div class="faq-item__text">
                         <p>Growing marijuana is legal in {the state}. You have to be 21 years age to grow cannabis plants in any state of the US.</p>
@@ -823,8 +879,9 @@
                 </div>
             </div>
             <div class="faq-item">
-                <img src="./images/dist/faq-icon-3.jpg" alt="" class="faq-item__icon" loading="lazy">
+                <img src="./images/dist/faq-icon-3.jpg" alt="" class="faq-item__icon hidden-mobile" loading="lazy">
                 <div class="faq-item__content">
+                    <img src="./images/dist/faq-icon-3.jpg" alt="" class="faq-item__icon hidden-desktop" loading="lazy">
                     <h3 class="faq-item__title">What if my plant dies before it blooms?</h3>
                     <div class="faq-item__text">
                         <p>We won't let that happen! You'll get the visual grow guide on how to germinate, plant, and care of your crops. Moreover, if you have any issues, feel free to send a photo to our expert to get to know how to deal with it.</p>
@@ -832,8 +889,9 @@
                 </div>
             </div>
             <div class="faq-item">
-                <img src="./images/dist/faq-icon-4.jpg" alt="" class="faq-item__icon" loading="lazy">
+                <img src="./images/dist/faq-icon-4.jpg" alt="" class="faq-item__icon hidden-mobile" loading="lazy">
                 <div class="faq-item__content">
+                    <img src="./images/dist/faq-icon-4.jpg" alt="" class="faq-item__icon hidden-desktop" loading="lazy">
                     <h3 class="faq-item__title">I've no judge of cannabis strains and have no idea which seeds to choose...</h3>
                     <div class="faq-item__text">
                         <p>We offer seeds of more than 100 strains from renowned brands. Can't make up your mind? Leave a request and we'll find the perfect seeds based on your grow space and environment.</p>
@@ -841,8 +899,9 @@
                 </div>
             </div>
             <div class="faq-item">
-                <img src="./images/dist/faq-icon-5.jpg" alt="" class="faq-item__icon" loading="lazy">
+                <img src="./images/dist/faq-icon-5.jpg" alt="" class="faq-item__icon hidden-mobile" loading="lazy">
                 <div class="faq-item__content">
+                    <img src="./images/dist/faq-icon-5.jpg" alt="" class="faq-item__icon hidden-desktop" loading="lazy">
                     <h3 class="faq-item__title">How long should I wait for your shipping?</h3>
                     <div class="faq-item__text">
                         <p>We provide stealth and discreet shipping across the USA to the states where growing marijuana is legal. The shipping takes up to 14 business days.</p>
@@ -862,7 +921,7 @@
                 <span class="leave-price__regular">$<script>document.write(price.regular)</script></span>
                 <span class="leave-price__discount"><script>document.write(price.discount)</script>% OFF</span>
             </div>
-            <ul class="leave-contact">
+            <ul class="leave-contact hidden-mobile">
                 <li class="leave-contact__item">
                     <a href="tel:4055550128"><svg class="icon"><use xlink:href="#icon-svg-call"></use></svg> (405) 555-0128</a>
                 </li>
@@ -872,10 +931,10 @@
             </ul>
         </div>
         <form action="#" class="leave-form">
-            <img class="leave-form__bg" src="./images/dist/leave-bg.jpg" alt="" loading="lazy">
+            <img class="leave-form__bg hidden-mobile" src="./images/dist/leave-bg.jpg" alt="" loading="lazy">
             <div class="leave-form__heading">
                 <span class="leave-form__title">Order your start kit</span> 
-                <span class="leave-form__note">Leave your request and we’ll contact you right away</span>
+                <span class="leave-form__note hidden-mobile">Leave your request and we’ll contact you right away</span>
             </div>
             <div class="leave-form__body">
                 <div class="leave-form__group">
@@ -895,13 +954,28 @@
                 <button type="submit" class="leave-form__submit">Order now</button>
             </div>
         </form>
+        <ul class="leave-contact hidden-desktop">
+            <li class="leave-contact__item">
+                <a href="tel:4055550128"><svg class="icon"><use xlink:href="#icon-svg-call"></use></svg> (405) 555-0128</a>
+            </li>
+            <li class="leave-contact__item">
+                <a href="mailro:info@gmail.com"><svg class="icon"><use xlink:href="#icon-svg-mail"></use></svg> info@gmail.com</a>
+            </li>
+        </ul>
     </div>
 </div>
 <div id="order" class="order">
     <div class="order__container">
+        <div class="order__heading hidden-desktop">
+                <span class="order__title">Order your start kit</span> 
+                <span class="order__note">Leave your request and we’ll contact you right away</span>
+            </div>
         <div class="order__content">
             <div class="order__image-wrapper">
-                <img class="order__image" src="./images/dist/order.jpg" alt="" loading="lazy">
+                <picture>
+                    <source srcset="./images/dist/order__lg.jpg" media="(min-width: 992px)">
+                    <img class="order__image" src="./images/dist/order__xs.jpg" alt="" loading="lazy">
+                </picture>
             </div>
             <div class="order-price">
                 <span class="order-price__label">Total price:</span>
@@ -910,7 +984,7 @@
             </div>
         </div>
         <form action="#" class="order-form">
-            <div class="order-form__heading">
+            <div class="order-form__heading hidden-mobile">
                 <span class="order-form__title">Order your start kit</span> 
                 <span class="order-form__note">Leave your request and we’ll contact you right away</span>
             </div>
@@ -939,12 +1013,13 @@
     <div class="footer__container">
         <svg class="logo"><use xlink:href="#logo"></use></svg>
         <span class="footer__copy">© Copyright 2024 <br> American Marijuana Seeds Distributor  <br>All Rights Reserved.</span>
-        <a href="tel:4055550128" class="footer__phone"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> (405) 555-0128</a>
+        <a href="tel:4055550128" class="footer__phone hidden-mobile"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> (405) 555-0128</a>
     </div>
 </footer>
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./libs/swipe-detector/swipe-detector.js"></script>
 	<script src="./js/app.min.js"></script>
 </body>
 </html>

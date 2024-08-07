@@ -65,10 +65,16 @@
   </symbol>
 </svg>
 <main class="main success">
-    <img src="./images/dist/success-bg-left.jpg" alt="" class="success__bg success__bg--left" loading="eager">
-    <img src="./images/dist/success-bg-right.jpg" alt="" class="success__bg success__bg--right" loading="eager">
+    <picture>
+        <source srcset="./images/dist/success-bg-left__lg.jpg" media="(min-width: 992px)">
+        <img src="./images/dist/success-bg-left__xs.jpg" alt="" class="success__bg success__bg--left" loading="eager">
+    </picture>
+    <picture>
+        <source srcset="./images/dist/success-bg-right__lg.jpg" media="(min-width: 992px)">
+        <img src="./images/dist/success-bg-right__xs.jpg" alt="" class="success__bg success__bg--right" loading="eager">
+    </picture>
     <div class="success__container">
-        <h1 class="success__title">Thank you for your order!</h1>
+        <h1 class="success__title">Thank you for <br class="hidden-desktop">your order!</h1>
         <span class="success__note">Our manager will contact you shortly.</span>
         <form action="#" class="success-form">
             <div class="success-form__heading">
@@ -94,7 +100,7 @@
             </div>
         </form>
         <div class="success-subscribe">
-            <span class="success-subscribe__title">If you want to receive newsletter about new <br> promotions and growing tips, <strong>leave your email.</strong></span>
+            <span class="success-subscribe__title">If you want to receive newsletter about <br class="hidden-desktop"> new <br class="hidden-mobile"> promotions and growing tips, <br class="hidden-desktop"><strong>leave your email.</strong></span>
             <form action="#" class="success-subscribe-form">
                 <div class="success-subscribe-form__group">
                     <input type="email" class="success-subscribe-form__input" id="success-subscribe-email" name="email" placeholder required>
@@ -123,6 +129,7 @@
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./libs/swipe-detector/swipe-detector.js"></script>
 	<script src="./js/app.min.js"></script>
 </body>
 </html>
