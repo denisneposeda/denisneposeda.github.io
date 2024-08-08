@@ -19,9 +19,9 @@
 	<script>
 		const price = {
 			'old': 330,
-			'regular': 149,
-			'discount': 40
-		}
+			'regular': 149
+		},
+		discount = Math.round(100 - (( price.regular / price.old ) * 100))
 	</script>
 </head>
 <body>
@@ -93,7 +93,7 @@
 			<div class="header-order-price">
 				<span class="header-order-price__old">$<script>document.write(price.old)</script></span>
                 <span class="header-order-price__regular">$<script>document.write(price.regular)</script></span>
-				<span class="header-order-price__discount"><script>document.write(price.discount)</script>% OFF</span>
+				<span class="header-order-price__discount"><script>document.write(discount)</script>% OFF</span>
 			</div>
 		</button>
 	</div>
@@ -116,13 +116,13 @@
                     <span class="promo-banner-price__label">Total price:</span>
                     <span class="promo-banner-price__old">$<script>document.write(price.old)</script></span>
                     <span class="promo-banner-price__regular">$<script>document.write(price.regular)</script></span>
-                    <span class="promo-banner-price__discount"><script>document.write(price.discount)</script>% OFF</span>
+                    <span class="promo-banner-price__discount"><script>document.write(discount)</script>% OFF</span>
                 </div>
             </div>
         </div>
         <form action="#" class="promo-form">
             <div class="promo-form__heading">
-                <span class="promo-form__discount hidden-mobile"><script>document.write(price.discount)</script>% OFF</span>
+                <span class="promo-form__discount hidden-mobile"><script>document.write(discount)</script>% OFF</span>
                 <span class="promo-form__title">Get your start kit</span> 
                 <div class="promo-form-price hidden-mobile">
                     <span class="promo-form-price__label">Total price:</span>
@@ -132,15 +132,15 @@
             </div>
             <div class="promo-form__body">
                 <div class="promo-form__group">
-                    <input type="text" class="promo-form__input" id="promo-name" name="name" placeholder required>
+                    <input type="text" class="promo-form__input" id="promo-name" name="name" placeholder="Your Name" required>
                     <label for="promo-name" class="promo-form__label">Your Name</label>
                 </div>
                 <div class="promo-form__group">
-                    <input type="tel" class="promo-form__input" id="promo-phone" name="phone" placeholder required>
+                    <input type="tel" class="promo-form__input" id="promo-phone" name="phone" placeholder="Phone number" required>
                     <label for="promo-phone" class="promo-form__label">Phone number</label>
                 </div>
                 <div class="promo-form__group">
-                    <input type="email" class="promo-form__input" id="promo-email" placeholder name="email">
+                    <input type="email" class="promo-form__input" id="promo-email" placeholder="Your Email" name="email">
                     <label for="promo-email" class="promo-form__label">Your Email</label>
                 </div>
             </div>
@@ -290,7 +290,7 @@
             <div class="kit-item hidden-desktop">
                 <div class="kit-item__inner">
                     <div class="kit-order">
-                        <span class="kit-order__discount"><script>document.write(price.discount)</script>% OFF</span>
+                        <span class="kit-order__discount"><script>document.write(discount)</script>% OFF</span>
                         <div class="kit-order-price">
                             <span class="kit-order-price__label">Total price:</span>
                             <span class="kit-order-price__old">$<script>document.write(price.old)</script></span>
@@ -304,7 +304,7 @@
             </div>
         </div>
         <div class="kit-order hidden-mobile">
-            <span class="kit-order__discount"><script>document.write(price.discount)</script>% OFF</span>
+            <span class="kit-order__discount"><script>document.write(discount)</script>% OFF</span>
             <div class="kit-order-price">
                 <span class="kit-order-price__label">Total price:</span>
                 <span class="kit-order-price__old">$<script>document.write(price.old)</script></span>
@@ -318,26 +318,44 @@
     <div class="brands__container">
         <h2 class="brands__title">Brands we work with</h2>
         <div class="brands-items">
-            <div class="brands-item">
-                <img src="./images/dist/brands-1.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-2.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-3.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-4.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-5.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-6.png" alt="" class="brands-item__image" loading="lazy">
-            </div>
-            <div class="brands-item">
-                <img src="./images/dist/brands-7.png" alt="" class="brands-item__image" loading="lazy">
+            <div class="brands-items__carousel swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="brands-item">
+                            <img src="./images/dist/brands-1.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-2.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-3.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-4.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-5.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-6.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                            <div class="brands-item">
+                            <img src="./images/dist/brands-7.png" alt="" class="brands-item__image" loading="lazy">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -919,7 +937,7 @@
                 <span class="leave-price__label">Total price:</span>
                 <span class="leave-price__old">$<script>document.write(price.old)</script></span>
                 <span class="leave-price__regular">$<script>document.write(price.regular)</script></span>
-                <span class="leave-price__discount"><script>document.write(price.discount)</script>% OFF</span>
+                <span class="leave-price__discount"><script>document.write(discount)</script>% OFF</span>
             </div>
             <ul class="leave-contact hidden-mobile">
                 <li class="leave-contact__item">
@@ -938,15 +956,15 @@
             </div>
             <div class="leave-form__body">
                 <div class="leave-form__group">
-                    <input type="text" class="leave-form__input" id="leave-name" name="name" placeholder required>
+                    <input type="text" class="leave-form__input" id="leave-name" name="name" placeholder="Your Name" required>
                     <label for="leave-name" class="leave-form__label">Your Name</label>
                 </div>
                 <div class="leave-form__group">
-                    <input type="tel" class="leave-form__input" id="leave-phone" name="phone" placeholder required>
+                    <input type="tel" class="leave-form__input" id="leave-phone" name="phone" placeholder="Phone number" required>
                     <label for="leave-phone" class="leave-form__label">Phone number</label>
                 </div>
                 <div class="leave-form__group">
-                    <input type="email" class="leave-form__input" id="leave-email" placeholder name="email">
+                    <input type="email" class="leave-form__input" id="leave-email" placeholder="Your Email" name="email">
                     <label for="leave-email" class="leave-form__label">Your Email</label>
                 </div>
             </div>
@@ -990,15 +1008,15 @@
             </div>
             <div class="order-form__body">
                 <div class="order-form__group">
-                    <input type="text" class="order-form__input" id="order-name" name="name" placeholder required>
+                    <input type="text" class="order-form__input" id="order-name" name="name" placeholder="Your Name" required>
                     <label for="order-name" class="order-form__label">Your Name</label>
                 </div>
                 <div class="order-form__group">
-                    <input type="tel" class="order-form__input" id="order-phone" name="phone" placeholder required>
+                    <input type="tel" class="order-form__input" id="order-phone" name="phone" placeholder="Phone number" required>
                     <label for="order-phone" class="order-form__label">Phone number</label>
                 </div>
                 <div class="order-form__group">
-                    <input type="email" class="order-form__input" id="order-email" placeholder name="email">
+                    <input type="email" class="order-form__input" id="order-email" placeholder="Your Email" name="email">
                     <label for="order-email" class="order-form__label">Your Email</label>
                 </div>
             </div>

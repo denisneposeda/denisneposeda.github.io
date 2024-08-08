@@ -19,9 +19,9 @@
 	<script>
 		const price = {
 			'old': 330,
-			'regular': 149,
-			'discount': 40
-		}
+			'regular': 149
+		},
+		discount = Math.round(100 - (( price.regular / price.old ) * 100))
 	</script>
 </head>
 <body>
@@ -82,15 +82,15 @@
             </div>
             <div class="success-form__body">
                 <div class="success-form__group">
-                    <input type="text" value="testValue" class="success-form__input" id="sucess-name" name="name" placeholder required>
+                    <input type="text" value="testValue" class="success-form__input" id="sucess-name" name="name" placeholder="Your Name" required>
                     <label for="sucess-name" class="success-form__label">Your Name</label>
                 </div>
                 <div class="success-form__group">
-                    <input type="tel" value="testValue" class="success-form__input" id="sucess-phone" name="phone" placeholder required>
+                    <input type="tel" value="testValue" class="success-form__input" id="sucess-phone" name="phone" placeholder="Phone number" required>
                     <label for="sucess-phone" class="success-form__label">Phone number</label>
                 </div>
                 <div class="success-form__group">
-                    <input type="email" value="testValue" class="success-form__input" id="sucess-email" placeholder name="email">
+                    <input type="email" value="testValue" class="success-form__input" id="sucess-email" placeholder="Your Email" name="email">
                     <label for="sucess-email" class="success-form__label">Your Email</label>
                 </div>
             </div>
@@ -103,7 +103,7 @@
             <span class="success-subscribe__title">If you want to receive newsletter about <br class="hidden-desktop"> new <br class="hidden-mobile"> promotions and growing tips, <br class="hidden-desktop"><strong>leave your email.</strong></span>
             <form action="#" class="success-subscribe-form">
                 <div class="success-subscribe-form__group">
-                    <input type="email" class="success-subscribe-form__input" id="success-subscribe-email" name="email" placeholder required>
+                    <input type="email" class="success-subscribe-form__input" id="success-subscribe-email" name="email" placeholder="Your Email" required>
                     <label for="success-subscribe-email" class="success-subscribe-form__label">Your Email</label>
                 </div>
                 <button type="submit" class="success-subscribe-form__submit">Subscribe</button>
