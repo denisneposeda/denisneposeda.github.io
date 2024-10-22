@@ -1,0 +1,17 @@
+ul,
+ol {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $transition-short;
+}

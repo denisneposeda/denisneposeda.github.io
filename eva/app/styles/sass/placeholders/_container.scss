@@ -1,0 +1,47 @@
+%container {
+  width: 100%;
+  max-width: $container-width;
+  padding-left: $container-wrapper-xs;
+  padding-right: $container-wrapper-xs;
+  @include media-breakpoint-up(lg) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $container-wrapper-lg;
+    padding-right: $container-wrapper-lg;
+  }
+}
+
+%full-width-bg {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $container-wrapper-xs;
+    background: inherit;
+  }
+  &:before {
+    right: 100%;
+  }
+  &:after {
+    left: 100%;
+  }
+}
+
+%section {
+  padding-top: 60rem;
+  padding-bottom: 60rem;
+  @include media-breakpoint-up(lg) {
+    padding-top: 100rem;
+    padding-bottom: 100rem;
+  }
+}
+
+%section-radius {
+  border-radius: 24rem;
+  @include media-breakpoint-up(lg) {
+    border-radius: 64rem;
+  }
+}

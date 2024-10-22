@@ -1,0 +1,120 @@
+@use "sass:math";
+
+.info {
+	@extend %section;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		text-align: left;
+		margin-bottom: 42rem;
+	}
+	&-content {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		&__section {
+			@include media-breakpoint-down(xs) {
+				& + & {
+					margin-top: 42rem;
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				width: 600rem;
+				flex: 0 0 600rem;
+				&:nth-child(n + 3) {
+					margin-top: 42rem;
+				}
+				&:last-child {
+					width: 100%;
+					flex: 0 0 100%;
+				}
+			}
+		}
+		&__title {
+			font-weight: 500;
+			font-size: 20rem;
+			line-height: (26 * 0.05);
+			margin-bottom: 20rem;
+			@include media-breakpoint-up(lg) {
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+			}
+		}
+		&-list {
+			display: flex;
+			@include media-breakpoint-down(xs) {
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			@include media-breakpoint-up(lg) {
+				flex-wrap: wrap;
+				margin-right: -10rem;
+			}
+			&-item {
+				@include media-breakpoint-down(xs) {
+					& + & {
+						margin-top: 10rem;
+					}
+				}
+				@include media-breakpoint-up(lg) {
+					margin-top: 10rem;
+					margin-right: 10rem;
+				}
+				&__link {
+					display: flex;
+					align-items: center;
+					border: .2rem solid $color-blue-1;
+					height: 64rem;
+					border-radius: 16rem;
+					padding-left: 20rem;
+					padding-right: 20rem;
+					@include media-breakpoint-up(lg) {
+						height: 69rem;
+					}
+					.icon {
+						display: block;
+						width: 24rem;
+						flex: 0 0 24rem;
+						height: 24rem;
+						margin-right: 5rem;
+						&:last-of-type:not(:first-of-type) {
+							margin-right: 0;
+							margin-left: 5rem;
+						}
+					}
+				}
+			}
+		}
+		&-map {
+			&-item {
+				&__image {
+					@extend %image-full-contain;
+					&-wrapper {
+						@extend %image-wrapper;
+						&:after {
+							padding-bottom: percentage(math.div(156, 350));
+							@include media-breakpoint-up(lg) {
+								padding-bottom: percentage(math.div(593, 1290));
+							}
+						}
+					}
+				}
+				&__name {
+					display: block;
+					text-align: center;
+					margin-top: 8rem;
+					font-size: 18rem;
+					line-height: math.div(23, 18);
+					@include media-breakpoint-up(lg) {
+						font-size: 22rem;
+						line-height: math.div(29, 22);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,87 @@
+@use "sass:math";
+
+.popular-routes-list {
+	@extend %section;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		margin-bottom: 20rem;
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+	}
+	&__description {
+		@extend %section-description-medium;
+	}
+	&__groups {
+		margin-top: 106rem;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -5rem;
+			margin-right: -5rem;
+		}
+	}
+	&-group {
+		@include media-breakpoint-down(xs) {
+			& + & {
+				margin-top: 66rem;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: 5rem;
+			padding-right: 5rem;
+			width: percentage(1 * 0.25);
+			flex: 0 0 percentage(1 * 0.25);
+			&:nth-child(n + 5) {
+				margin-top: 66rem;
+			}
+		}
+		&__inner {
+			position: relative;
+			border: .2rem solid $color-blue-1;
+			border-radius: 16rem;
+			padding: 20rem;
+			&:before {
+				content: attr(data-letter);
+				position: absolute;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				left: 20rem;
+				bottom: 100%;
+				background-color: $color-blue-1;
+				color: $color-white;
+				font-weight: 500;
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+				width: 41rem;
+				height: 56rem;
+				border-top-left-radius: 16rem;
+				border-top-right-radius: 16rem;
+			}
+		}
+		&__list {
+		}
+		&-item {
+			&__link {
+				display: block;
+				font-size: 18rem;
+				line-height: math.div(23, 18);
+				padding-top: 8rem;
+				padding-bottom: 8rem;
+				@include media-breakpoint-up(lg) {
+					font-size: 22rem;
+					line-height: math.div(29, 22);
+				}
+				&:before {
+					content: '🠖';
+					margin-right: 0.25em; 
+				}
+			}
+		}
+	}
+}

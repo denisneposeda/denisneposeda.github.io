@@ -1,0 +1,21 @@
+.hidden {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+.hidden-desktop {
+	@include media-breakpoint-up(lg) {
+		display: none !important;
+	}
+}
+.hidden-mobile {
+	@include media-breakpoint-down(xs) {
+		display: none !important;
+	}
+}
+.no-display {
+	display: none !important;
+}

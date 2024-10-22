@@ -1,0 +1,170 @@
+@use "sass:math";
+
+.routes {
+	@extend %section;
+	background-color: $color-blue-1;
+	color: $color-white;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		text-align: left;
+		margin-bottom: 20rem;
+	}
+	&__description {
+		@extend %section-description-small;
+	}
+	&-items {
+		margin: 50rem (-$container-wrapper-xs) 0;
+		@include media-breakpoint-up(lg) {
+			margin-left: -10rem;
+			margin-right: -10rem;
+		}
+	}
+}
+.web-routes {
+	&-carousel {
+		overflow: visible;
+	}
+	&-item {
+		&.swiper-slide {
+			box-sizing: content-box;
+			padding-left: 10rem;
+			padding-right: 10rem;
+			width: 296rem;
+			flex: 0 0 296rem;
+			@include media-breakpoint-down(xs) {
+				&:first-child {
+					padding-left: 20rem;
+				}
+				&:last-child {
+					padding-right: 20rem;
+				}
+			}
+		}
+		&__inner {
+			border-radius: 16rem;
+			background-color: #fff;
+			overflow: hidden;
+		}
+		&__image {
+			@extend %image-full-contain;
+			&-wrapper {
+				position: relative;
+				&:after {
+					content: "";
+					display: block;
+					padding-bottom: percentage(math.div(170, 296));
+				}
+			}
+		}
+		&__date {
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: 10rem;
+			left: 20rem;
+			background-color: #eae5d5;
+			color: #045d99;
+			font-weight: 500;
+			font-size: 20rem;
+			line-height: (24*0.05);
+			padding-left: 10rem;
+			padding-right: 10rem;
+			border-radius: 19rem;
+			height: 34rem;
+		}
+		&__info {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			padding: 10rem 20rem 20rem;
+		}
+		&__price {
+			display: flex;
+			align-items: center;
+			font-weight: 500;
+			font-size: 22rem;
+			line-height: math.div(27, 22);
+			color: #a2a2a2;
+			strong {
+				display: block;
+				font-weight: 500;
+				color: #000;
+				margin-right: 0.25em;
+			}
+		}
+		&-services {
+			display: flex;
+			align-items: center;
+			&__item {
+				display: block;
+				width: 24rem;
+				flex: 0 0 24rem;
+				height: 24rem;
+				& + & {
+					margin-left: 10rem;
+				}
+			}
+		}
+		&-time {
+			display: flex;
+			align-items: flex-end;
+			width: 100%;
+			flex: 0 0 100%;
+			margin-top: 10rem;
+			font-size: 20rem;
+			line-height: (24*0.05);
+			&__from,
+			&__to {
+				display: block;
+				color: #000;
+				font-weight: 500;
+			}
+			&__count {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				flex: 1 0 0%;
+				margin-left: 10rem;
+				margin-right: 10rem;
+				padding-bottom: 24rem;
+				strong {
+					display: block;
+					font-weight: 40;
+					font-size: 20rem;
+					color: #a2a2a2;
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						left: 10rem;
+						right: 10rem;
+						bottom: 11rem;
+						border-bottom: 1px dashed #bfbfbf;
+					}
+				}
+				&:before,
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					background-color: #bfbfbf;
+					width: 10rem;
+					height: 10rem;
+					border-radius: 50%;
+					bottom: 7rem;
+				}
+				&:before {
+					left: 0;
+				}
+				&:after {
+					right: 0;
+				}
+			}
+		}
+	}
+}

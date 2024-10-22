@@ -1,0 +1,60 @@
+@use "sass:math";
+
+%section-title {
+	font-weight: 600;
+	font-size: 26rem;
+	line-height: math.div(32, 26);
+	text-align: center;
+	@include media-breakpoint-up(lg) {
+		font-size: 45rem;
+		line-height: math.div(54, 45);
+		margin-bottom: 16rem;
+	}
+}
+
+%section-description {
+	text-align: center;
+	font-weight: 500;
+	font-size: 20rem;
+	line-height: math.div(26, 20);
+	margin-bottom: 34rem;
+	@include media-breakpoint-up(lg) {
+		font-size: 28rem;
+		line-height: math.div(36, 28);
+		max-width: 800rem;
+		margin: 0 auto;
+		margin-bottom: 50rem;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+%section-description-medium {
+	font-size: 18rem;
+	line-height: math.div(23, 18);
+	@include media-breakpoint-down(xs) {
+		text-align: center;
+	}
+	@include media-breakpoint-up(lg) {
+		font-size: 22rem;
+		line-height: math.div(29, 22);
+		max-width: 604rem;
+	}
+	p {
+		margin: 0;
+	}
+}
+
+%section-description-small {
+	max-width: 705rem;
+	font-size: 16rem;
+	line-height: math.div(21, 16);
+	@include media-breakpoint-up(lg) {
+		font-size: 22rem;
+		line-height: math.div(29, 22);
+	}
+	p {
+		margin: 0;
+	}
+}

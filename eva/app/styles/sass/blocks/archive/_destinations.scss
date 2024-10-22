@@ -1,0 +1,81 @@
+@use "sass:math";
+
+.archive-destinations {
+	@extend %section;
+	@extend %section-radius;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		margin-bottom: 34rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 50rem;
+		}
+	}
+	&__items {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -8rem;
+			margin-right: -8rem;
+		}
+	}
+	&-item {
+		@include media-breakpoint-up(lg) {
+			padding-left: 8rem;
+			padding-right: 8rem;
+			width: percentage(math.div(1, 2));
+			flex: 0 0 percentage(math.div(1, 2));
+		}
+		& + & {
+			@include media-breakpoint-down(xs) {
+				margin-top: 16rem;
+			}
+		}
+		&:nth-child(n + 3) {
+			@include media-breakpoint-up(lg) {
+				margin-top: 16rem;
+			}
+		}
+		&__inner {
+			position: relative;
+			background-color: $color-white;
+			box-shadow: 0 0 16rem 0 rgba(41, 42, 82, 0.08);
+			border-radius: 16rem;
+			padding: 16rem;
+			@include media-breakpoint-up(lg) {
+				border-radius: 32rem;
+				padding: 32rem;
+			}
+		}
+		&__link {
+			@extend %link-full;
+		}
+		&__image {
+			@extend %image-full-cover;
+			&-wrapper {
+				overflow: hidden;
+				border-radius: 16rem;
+				margin-bottom: 16rem;
+				@include media-breakpoint-up(lg) {
+					margin-bottom: 32rem;
+				}
+				@extend %image-wrapper;
+				&:after {
+					padding-bottom: 56%;
+				}
+			}
+		}
+		&__title {
+			font-weight: 500;
+			font-size: 20rem;
+			line-height: (26 * 0.05);
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+			}
+		}
+	}
+}

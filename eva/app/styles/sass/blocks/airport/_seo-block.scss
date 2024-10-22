@@ -1,0 +1,50 @@
+@use "sass:math";
+
+.seo-block-a {
+	@extend %section;
+	&__container {
+		@extend %container;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+		}
+	}
+	&__title {
+		@extend %section-title;
+		margin-bottom: 20rem;
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+			margin-bottom: 0;
+			width: 573rem;
+			flex: 0 0 573rem;
+			margin-right: 72rem;
+		}
+	}
+	&__description {
+		@extend %section-description-medium;
+		@include media-breakpoint-up(lg) {
+			width: 423rem;
+			flex: 0 0 423rem;
+		}
+	}
+	&__image {
+		@extend %image-full-cover;
+		&-wrapper {
+			margin-top: 50rem;
+			border-radius: 4rem;
+			overflow: hidden;
+			@include media-breakpoint-up(lg) {
+				width: 100%;
+				flex: 0 0 100%;
+			}
+			@extend %image-wrapper;
+			&:after {
+				padding-bottom: percentage(math.div(156, 349));
+				@include media-breakpoint-up(lg) {
+					padding-bottom: percentage(math.div(404, 1290));
+				}
+			}
+		}
+	}
+}

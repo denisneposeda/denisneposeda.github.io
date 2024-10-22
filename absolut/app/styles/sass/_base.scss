@@ -1,0 +1,62 @@
+@use "sass:math";
+
+$vw-base: 1440 !default;
+
+@function convert-to-vw($value, $base-value: $vw-base) {
+  $value: (math.div($value, $base-value * 0.01) * 1) * 1vw;
+  @if ($value == 0vw) {
+    $value: 0;
+  }
+  @return $value;
+}
+
+@function vwcalc($values, $base-value: $vw-base) {
+  $max: length($values);
+
+  @if $max == 1 {
+    @return convert-to-vw(nth($values, 1), $base-value);
+  }
+
+  $vwValues: ();
+  @for $i from 1 through $max {
+    $vwValues: append($vwValues, convert-to-vw(nth($values, $i), $base-value));
+  }
+  @return $vwValues;
+}
+
+html {
+  height: 100%;
+  font-size: vwcalc(1, 390);
+  @include media-breakpoint-up(lg) {
+    font-size: vwcalc(1, 1440);
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1px;
+  }
+}
+
+body {
+  font-size: 16rem;
+  line-height: math.div(24, 16);
+  min-width: 375px;
+  position: relative;
+  font-family: $font-general;
+  color: $color-text;
+  background-color: $color-body;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  main.main {
+    flex: 1 0 0%;
+    padding-top: 48rem;
+    @include media-breakpoint-down(xs) {
+      .is-sale-header & {
+        padding-top: 60rem;
+      }
+    }
+    @include media-breakpoint-up(lg) {
+      padding-top: 96rem;
+    }
+  }
+}

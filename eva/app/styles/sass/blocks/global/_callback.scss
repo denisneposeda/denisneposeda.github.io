@@ -1,0 +1,25 @@
+@use "sass:math";
+
+.callback {
+	@extend %section;
+	background-color: $color-body;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+	}
+	&__description {
+		@extend %section-description;
+	}
+	&__form {
+		box-shadow: 0 0 16rem 0 rgba(41, 42, 82, 0.08);
+		background-color: $color-white;
+		padding: 16rem;
+		border-radius: 32rem;
+		width: 100%;
+		max-width: 800rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

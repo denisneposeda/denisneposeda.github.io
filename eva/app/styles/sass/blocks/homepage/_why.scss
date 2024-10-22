@@ -1,0 +1,115 @@
+@use "sass:math";
+
+.why-h {
+	@extend %section;
+	@extend %section-radius;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		margin-bottom: 34rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 50rem;
+		}
+	}
+	&__items {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -8rem;
+			margin-right: -8rem;
+		}
+	}
+	&-item {
+		@include media-breakpoint-up(lg) {
+			padding-left: 8rem;
+			padding-right: 8rem;
+			width: percentage(math.div(1, 2));
+			flex: 0 0 percentage(math.div(1, 2));
+		}
+		& + & {
+			@include media-breakpoint-down(xs) {
+				margin-top: 16rem;
+			}
+		}
+		&:nth-child(n + 3) {
+			@include media-breakpoint-up(lg) {
+				margin-top: 16rem;
+			}
+		}
+		&__inner {
+			display: flex;
+			align-items: center;
+			background-color: $color-white;
+			box-shadow: 0 0 16rem 0 rgba(41, 42, 82, 0.08);
+			border-radius: 16rem;
+			padding: 16rem;
+			height: 220rem;
+			@include media-breakpoint-up(lg) {
+				border-radius: 32rem;
+				padding: 32rem;
+				height: 350rem;
+			}
+		}
+		&__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			flex: 1 0 0%;
+			height: 100%;
+			margin-right: 8rem;
+			@include media-breakpoint-up(lg) {
+				margin-right: 4rem;
+			}
+		}
+		&__title {
+			font-weight: 500;
+			font-size: 20rem;
+			line-height: (26 * 0.05);
+			@include media-breakpoint-up(lg) {
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+			}
+		}
+		&__description {
+			color: $color-gray;
+			font-size: 16rem;
+			line-height: math.div(21, 16);
+			@include media-breakpoint-up(lg) {
+				font-size: 22rem;
+				line-height: math.div(29, 22);
+			}
+			p {
+				margin: 0;
+			}
+		}
+		&__image {
+			display: block;
+			object-fit: contain;
+			width: 82rem;
+			flex: 0 0 82rem;
+			height: 82rem;
+			@include media-breakpoint-up(lg) {
+				width: 192rem;
+				flex: 0 0 192rem;
+				height: 192rem;
+			}
+		}
+		&__robot {
+			display: block;
+			object-fit: contain;
+			width: 100rem;
+			flex: 0 0 100rem;
+			height: 142rem;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(lg) {
+				width: 150rem;
+				flex: 0 0 150rem;
+				height: 214rem;
+			}
+		}
+	}
+}

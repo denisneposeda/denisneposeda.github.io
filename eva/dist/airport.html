@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Eva</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/styles.min.css">
+</head>
+<body>
+<svg width="0" height="0" class="hidden">
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="icon-svg-social-vk">
+	  	<path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0ZM25.9534 31.5763C25.7167 31.8258 25.2547 31.8762 25.2547 31.8762H23.7246C23.7246 31.8762 20.349 32.0753 17.3752 29.0371C14.1323 25.7223 11.2688 19.1456 11.2688 19.1456C11.2688 19.1456 11.1035 18.7142 11.2825 18.5065C11.4841 18.2718 12.0338 18.257 12.0338 18.257L15.6912 18.2337C15.6912 18.2337 16.0355 18.289 16.2822 18.4672C16.4862 18.6147 16.6002 18.8888 16.6002 18.8888C16.6002 18.8888 17.1912 20.3563 17.9737 21.6836C19.5025 24.2757 20.2137 24.8423 20.7321 24.5645C21.4884 24.1602 21.2617 20.9007 21.2617 20.9007C21.2617 20.9007 21.2755 19.7184 20.8811 19.1911C20.5756 18.7831 19.9996 18.6638 19.7455 18.6307C19.5389 18.6036 19.8769 18.1341 20.3152 17.924C20.9738 17.6081 22.1357 17.5897 23.5093 17.6032C24.5798 17.6142 24.8878 17.6794 25.306 17.7789C26.2766 18.0088 26.2463 18.7456 26.1809 20.3358C26.1614 20.8113 26.1387 21.3632 26.1387 22.0007C26.1387 22.144 26.1344 22.2967 26.13 22.4538C26.1073 23.2684 26.0813 24.2013 26.6282 24.5486C26.9087 24.7255 27.5936 24.5744 29.3077 21.718C30.1203 20.3636 30.7288 18.772 30.7288 18.772C30.7288 18.772 30.8628 18.4881 31.0694 18.3664C31.281 18.2423 31.5665 18.2804 31.5665 18.2804L35.4154 18.257C35.4154 18.257 36.5724 18.1206 36.7589 18.6343C36.9555 19.1714 36.327 20.4275 34.7543 22.485C33.2626 24.4372 32.5366 25.1559 32.6032 25.7916C32.6519 26.2561 33.1238 26.6762 34.0294 27.5007C35.9198 29.2236 36.4265 30.13 36.5482 30.3477C36.5583 30.3658 36.5658 30.3791 36.5711 30.3878C37.4188 31.768 35.6308 31.8762 35.6308 31.8762L32.2113 31.9229C32.2113 31.9229 31.4776 32.0655 30.511 31.4141C30.0046 31.0731 29.5098 30.5163 29.0386 29.9859C28.3189 29.1759 27.654 28.4277 27.0865 28.6044C26.1337 28.9019 26.1625 30.9163 26.1625 30.9163C26.1625 30.9163 26.17 31.3477 25.9534 31.5763Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="icon-svg-social-whatsapp">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24ZM39.0625 23.0816C39.0594 30.9483 32.6599 37.3494 24.7915 37.3526H24.7856C22.3971 37.3517 20.0502 36.7525 17.9657 35.6155L10.4004 37.6L12.425 30.2049C11.1761 28.0406 10.519 25.5855 10.52 23.0703C10.5232 15.2017 16.9252 8.80005 24.7913 8.80005C28.609 8.8017 32.1922 10.2879 34.8866 12.9855C37.581 15.6829 39.064 19.2684 39.0625 23.0816Z" fill="currentColor"></path>
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M13.827 34.2096L18.3164 33.0319L18.7495 33.289C20.5707 34.3697 22.6583 34.9415 24.7868 34.9424H24.7916C31.3293 34.9424 36.6504 29.6212 36.653 23.0807C36.6543 19.9112 35.4217 16.9311 33.1822 14.689C30.9427 12.4469 27.9645 11.2115 24.7963 11.2104C18.2534 11.2104 12.9323 16.5311 12.9297 23.0711C12.9288 25.3124 13.5559 27.4951 14.7432 29.3836L15.0253 29.8324L13.827 34.2096ZM31.492 26.154C31.7407 26.2742 31.9086 26.3554 31.9803 26.4751C32.0694 26.6238 32.0694 27.3377 31.7724 28.1708C31.4752 29.0038 30.0506 29.764 29.3654 29.8663C28.7511 29.9582 27.9737 29.9965 27.1195 29.725C26.6016 29.5607 25.9374 29.3413 25.0867 28.9739C21.7437 27.5304 19.4846 24.2904 19.0576 23.678C19.0277 23.6351 19.0068 23.6051 18.9951 23.5895L18.9922 23.5857C18.8035 23.3339 17.5391 21.6468 17.5391 19.9008C17.5391 18.2582 18.3459 17.3973 18.7173 17.001C18.7427 16.9738 18.7661 16.9489 18.7871 16.926C19.1139 16.569 19.5003 16.4797 19.738 16.4797C19.9757 16.4797 20.2137 16.4819 20.4214 16.4924C20.4471 16.4937 20.4737 16.4935 20.5013 16.4933C20.7091 16.4921 20.9682 16.4906 21.2237 17.1045C21.322 17.3407 21.4659 17.691 21.6177 18.0604C21.9245 18.8074 22.2635 19.6328 22.3231 19.7522C22.4123 19.9307 22.4717 20.1388 22.3529 20.3769C22.335 20.4126 22.3185 20.4463 22.3028 20.4785C22.2135 20.6608 22.1478 20.7948 21.9963 20.9718C21.9367 21.0413 21.8751 21.1163 21.8136 21.1913C21.6909 21.3407 21.5682 21.4901 21.4614 21.5965C21.2829 21.7743 21.0971 21.9672 21.3051 22.3242C21.5131 22.6812 22.2287 23.8489 23.2888 24.7945C24.4283 25.8109 25.4187 26.2405 25.9207 26.4582C26.0188 26.5007 26.0982 26.5352 26.1564 26.5644C26.5129 26.7429 26.7209 26.713 26.9289 26.4751C27.1369 26.2371 27.8203 25.4338 28.058 25.0769C28.2957 24.72 28.5335 24.7795 28.8603 24.8984C29.1872 25.0176 30.9404 25.8801 31.2969 26.0586C31.3666 26.0934 31.4316 26.1249 31.492 26.154Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" id="icon-svg-social-tg">
+		<path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24ZM19.5994 35L20.0078 28.8822L20.0075 28.882L31.1364 18.839C31.6248 18.4055 31.0297 18.1941 30.3813 18.5873L16.6467 27.2523L10.7141 25.4006C9.43295 25.0084 9.42375 24.128 11.0018 23.495L34.1198 14.5808C35.1756 14.1015 36.1947 14.8344 35.7916 16.4505L31.8547 35.0031C31.5797 36.3215 30.7831 36.6368 29.6794 36.0278L23.6822 31.5969L20.7994 34.4C20.7904 34.4088 20.7813 34.4176 20.7723 34.4264C20.4499 34.7403 20.1832 35 19.5994 35Z" fill="currentColor"></path>
+	</symbol>
+	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 125 113" id="icon-svg-marks">
+		<path d="M45.0863 0.605469C51.5129 0.605469 56.7227 5.81525 56.7227 12.2418V48.1627C56.7227 78.0881 35.6929 92.3041 28.7217 96.1945C27.4711 96.8924 25.9543 96.4116 25.2178 95.1832C24.5533 94.075 24.7075 92.6634 25.5549 91.688C28.8763 87.8649 36.8496 77.7196 38.8954 66.3279C39.8926 60.7755 34.8868 56.6268 29.2456 56.6268H12.359C5.93244 56.6268 0.722656 51.417 0.722656 44.9904V12.2418C0.722656 5.81524 5.93243 0.605469 12.359 0.605469H45.0863Z" fill="#F2F2F2"></path>
+		<path d="M112.723 0.605469C119.15 0.605469 124.359 5.81525 124.359 12.2418V48.1627C124.359 78.0881 103.33 92.3041 96.3584 96.1945C95.1078 96.8924 93.591 96.4116 92.8545 95.1832C92.1901 94.075 92.3442 92.6634 93.1916 91.688C96.513 87.8649 104.486 77.7196 106.532 66.3279C107.529 60.7755 102.524 56.6268 96.8823 56.6268H79.9957C73.5692 56.6268 68.3594 51.417 68.3594 44.9904V12.2418C68.3594 5.81524 73.5692 0.605469 79.9957 0.605469H112.723Z" fill="#F2F2F2"></path>
+	</symbol>
+</svg>
+<header class="header">
+	<div class="header__container">
+		<div class="logo"></div>
+		<nav class="header__nav"></nav>
+		<a class="header-phone" href="tel:">
+			<svg class="icon hidden-desktop"></svg>
+			<span class="header-phone__text hidden-mobile">+7 978 278-40-09</span>
+		</a>
+	</div>
+</header>
+<main class="main">
+<div class="promo">
+	<div class="promo__container">
+		<div class="promo__content">
+			<h1 class="promo__title">Сотни удобных трансферов в аэропорт</h1>
+			<div class="promo__description hidden-mobile">
+				<p>Найдите подходящую поездку более чем по 30 городам Европы</p>
+			</div>
+			<img class="promo__image" src="./images/dist/promo-img.png" alt="" loading="eager" />
+		</div>
+		<div class="promo__iframe"></div>
+	</div>
+</div>
+<div class="seo-block-a">
+	<div class="seo-block-a__container">
+		<h1 class="seo-block-a__title">Удобные трансферы из аэропорта Сочи</h1>
+		<div class="seo-block-a__description">
+			<p>Безопасные и комфортные поездки с опытными водителями</p>
+		</div>
+		<div class="seo-block-a__image-wrapper">
+			<img class="seo-block-a__image" src="" alt="" loading="lazy" />
+		</div>
+	</div>
+</div>
+<div class="popular-routes-list">
+	<div class="popular-routes-list__container">
+		<h2 class="popular-routes-list__title">Популярные рейсы из Аэропорта Сочи</h2>
+		<div class="popular-routes-list__description">
+			<p>Перейдите к заинтересовавшему направлению прямо из списка</p>
+		</div>
+		<div class="popular-routes-list__groups">
+			<div class="popular-routes-list-group">
+				<div class="popular-routes-list-group__inner" data-letter="А">
+					<ul class="popular-routes-list-group__list">
+						<li class="popular-routes-list-group-item">
+							<a href="#" class="popular-routes-list-group-item__link">Алушта</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="info">
+	<div class="info__container">
+		<h2 class="info__title">Информация о <br> аэропорте</h2>
+		<div class="info-content">
+			<div class="info-content__section">
+				<h3 class="info-content__title">Контакты аэропорта</h3>
+				<ul class="info-content-list">
+					<li class="info-content-list-item">
+						<a href="mailto:" class="info-content-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-mail"></use></svg> aeroinfo@aer.aero</a>
+					</li>
+					<li class="info-content-list-item">
+						<a href="tel:" class="info-content-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-phone"></use></svg> 8-800-301-19-91</a>
+					</li>
+					<li class="info-content-list-item">
+						<a href="" class="info-content-list-item__link"><svg class="icon"><use xlink:href="#icon-svg-url"></use></svg> Официальный сайт <svg class="icon"><use xlink:href="#icon-svg-arrow"></use></svg></a>
+					</li>
+				</ul>
+			</div>
+			<div class="info-content__section">
+				<h3 class="info-content__title">Услуги аэропорта</h3>
+				<ul class="info-content-list">
+					<li class="info-content-list-item">
+						<a href="#" class="info-content-list-item__link">Банкоматы</a>
+					</li>
+					<li class="info-content-list-item">
+						<a href="#" class="info-content-list-item__link">Больше <svg class="icon"><use xlink:href="#icon-svg-arrow"></use></svg></a>
+					</li>
+				</ul>
+			</div>
+			<div class="info-content__section">
+				<h3 class="info-content__title">Карта аэропорта</h3>
+				<div class="info-content-map">
+					<div class="info-content-map__carousel swiper">
+						<div class="swiper-wrapper">
+							<div class="info-content-map-item swiper-slide">
+								<div class="info-content-map-item__image-wrapper" data-fancybox="maps" data-src="">
+									<img class="info-content-map-item__image" src="" alt="" loading="lazy">
+								</div>
+								<span class="info-content-map-item__name">1 этаж</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<svg width="0" height="0" class="hidden">
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-svg-arrow">
+			<path d="M13.2431 4.0437L18.51 4.04442L3 19.5536L4.44994 21L19.9505 5.50017L19.9505 10.736L22 10.7367L22 5.06844C22 4.66547 21.9205 4.26645 21.7659 3.89416C21.6113 3.52186 21.3848 3.18358 21.0991 2.89865C20.8135 2.61371 20.4744 2.38769 20.1011 2.2335C19.7279 2.07931 19.3279 1.99997 18.924 2L13.2416 2L13.2431 4.0437Z" fill="black"></path>
+			<path d="M13.2431 4.0437L18.51 4.04442L3 19.5536L4.44994 21L19.9505 5.50017L19.9505 10.736L22 10.7367L22 5.06844C22 4.66547 21.9205 4.26645 21.7659 3.89416C21.6113 3.52186 21.3848 3.18358 21.0991 2.89865C20.8135 2.61371 20.4744 2.38769 20.1011 2.2335C19.7279 2.07931 19.3279 1.99997 18.924 2L13.2416 2L13.2431 4.0437Z" fill="black" fill-opacity="0.2"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-svg-url">
+			<path fill-rule="evenodd" clip-rule="evenodd" d="M1.98202 9.48837C1.5719 11.1295 1.5719 12.8705 1.98202 14.5116H6.39449C6.03771 12.8571 6.05733 11.1588 6.4519 9.48837H1.98202ZM2.55818 7.81395H6.97327C7.77616 5.73818 9.15046 3.69679 11.0592 1.7167C7.25336 2.06045 4.04325 4.4693 2.55818 7.81395ZM12.9408 1.7167C14.8495 3.69679 16.2238 5.73818 17.0267 7.81395H21.4418C19.9568 4.4693 16.7466 2.06045 12.9408 1.7167ZM22.018 9.48837H17.5481C17.9427 11.1588 17.9623 12.8571 17.6055 14.5116H22.018C22.4281 12.8705 22.4281 11.1295 22.018 9.48837ZM21.4418 16.186H17.1136C16.3278 18.2943 14.9303 20.3359 12.9614 22.2814C16.7582 21.9309 19.9594 19.5247 21.4418 16.186ZM11.0386 22.2814C9.06975 20.3359 7.67221 18.2943 6.88636 16.186H2.55818C4.04057 19.5247 7.24178 21.9309 11.0386 22.2814ZM8.69249 16.186C9.37813 17.7557 10.4723 19.3239 12 20.8746C13.5277 19.3239 14.6219 17.7557 15.3075 16.186H8.69249ZM15.8851 14.5116C16.3094 12.8407 16.2882 11.1866 15.8192 9.48837H8.18075C7.71185 11.1866 7.6906 12.8407 8.11485 14.5116H15.8851ZM8.78757 7.81395H15.2124C14.5225 6.27597 13.459 4.71925 12 3.15763C10.541 4.71925 9.4775 6.27597 8.78757 7.81395ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12Z" fill="#0574BF"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-svg-phone">
+			<path d="M14.2002 16.261C11.2886 15.0282 8.97325 12.7075 7.7472 9.793L11.1472 6.387L4.8872 0.122L1.7162 3.292C1.1662 3.84514 0.731342 4.50186 0.436795 5.22415C0.142247 5.94645 -0.00614821 6.71998 0.000195101 7.5C0.000195101 14.748 9.25219 24 16.5002 24C17.2801 24.0068 18.0536 23.8586 18.7758 23.5641C19.498 23.2695 20.1545 22.8344 20.7072 22.284L23.8782 19.113L17.6132 12.848L14.2002 16.261ZM19.2922 20.87C18.925 21.234 18.489 21.5214 18.0097 21.7154C17.5304 21.9094 17.0172 22.0061 16.5002 22C10.2672 22 2.0002 13.733 2.0002 7.5C1.99431 6.98283 2.09116 6.46964 2.28514 5.99019C2.47911 5.51074 2.76635 5.07458 3.1302 4.707L4.8872 2.95L8.3242 6.387L5.38919 9.322L5.63419 9.936C6.35544 11.8653 7.48296 13.6171 8.94035 15.0725C10.3977 16.528 12.1509 17.6533 14.0812 18.372L14.6872 18.603L17.6132 15.676L21.0502 19.113L19.2922 20.87ZM14.0002 2V0C16.6515 0.0029116 19.1933 1.05742 21.068 2.93215C22.9428 4.80688 23.9973 7.34873 24.0002 10H22.0002C21.9978 7.879 21.1542 5.84555 19.6544 4.34578C18.1546 2.846 16.1212 2.00238 14.0002 2ZM14.0002 6V4C15.591 4.00159 17.1162 4.63424 18.2411 5.75911C19.366 6.88399 19.9986 8.40919 20.0002 10H18.0002C18.0002 8.93913 17.5788 7.92172 16.8286 7.17157C16.0785 6.42143 15.0611 6 14.0002 6Z" fill="#0574BF"></path>
+		</symbol>
+		<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-svg-mail">
+			<path d="M21 1H3C2.20435 1 1.44129 1.31607 0.87868 1.87868C0.31607 2.44129 0 3.20435 0 4L0 23H24V4C24 3.20435 23.6839 2.44129 23.1213 1.87868C22.5587 1.31607 21.7956 1 21 1ZM3 3H21C21.2652 3 21.5196 3.10536 21.7071 3.29289C21.8946 3.48043 22 3.73478 22 4V4.667L14.122 12.546C13.5584 13.1073 12.7954 13.4225 12 13.4225C11.2046 13.4225 10.4416 13.1073 9.878 12.546L2 4.667V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM2 21V7.5L8.464 13.96C9.40263 14.8963 10.6743 15.422 12 15.422C13.3257 15.422 14.5974 14.8963 15.536 13.96L22 7.5V21H2Z" fill="#0574BF"></path>
+		</symbol>
+	</svg>
+</div>
+<div class="tips">
+	<div class="tips__container">
+		<h2 class="tips__title">Советы и <br>рекомендации</h2>
+		<div class="tips-content">
+			<div class="tips-content__section">
+				<h3 class="tips-content__title">Советы для пассажиров</h3>
+				<div class="tips-content__description">
+					<p>Необходимо заранее ознакомиться с правилами провоза багажа и ограничениями по весу и размеру, для того, чтобы посадка прошла без неожидонностей</p>
+					<p>Рекомендуем выбрать Вам удобную одежду и обувь для комфортного передвижения в аэропорту и прибывания в самолете</p>
+					<p>Во время ожидания вылета, вы как можете пройтись по аэропорту и изучить его, так и заняться своими делами, например чтением, работой, либо просто отдохнуть</p>
+					<p>Вы можете зарегистрироваться онлайн для ускорения процесса регистрации, как это сделать смотрите на сайте авиакомпании</p>
+				</div>
+			</div>
+			<div class="tips-content__section">
+				<h3 class="tips-content__title">Рекомендации по времени прибытия в аэропорт</h3>
+				<div class="tips-content__description">
+					<p>Рекомендуем вам прибывать в аэропорт за 1,5 — 2 часа, если Вы летите внутренним рейсом, либо за 2 — 2,5 часа, если летите международным, так вы точно успеете оформиться на рейс</p>
+					<p>Регистрация на рейс занимает 30 — 45 минут, контроль безопасности: 15 — 30 минут, посадка на рейс: 20 — 30 минут. Для международных рейсов регистрация на рейс: 45 — 60 минут, контроль безопасности: 20 — 40 минут, паспортный контроль: 20 — 30 минут, посадка на рейс: 30 — 40 минут</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="why">
+	<div class="why__container">
+		<h2 class="why__title">Почему мы?</h2>
+		<div class="why__items">
+			<div class="why-item">
+				<div class="why-item__inner">
+					<h3 class="why-item__title">Комфорт во время поезки</h3>
+					<div class="why-item__description">
+						<p>Автомобили оборудованы Wi-Fi, кондиционерами и розетками для зарядки гаджетов</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="reviews">
+	<div class="reviews__container">
+		<h1 class="reviews__title">Отзывы клиентов</h1>
+		<div class="reviews__items">
+			<div class="reviews-item">
+				<div class="reviews-item__inner">
+					<svg class="icon"><use xlink:href="#icon-svg-marks"></use></svg>
+					<div class="reviews-item__description">
+						<p>Осталась очень рада прошедшей поездкой, водитель помог с багажом. Немного задержались из-за пробок, но в целом отлично.</p>
+					</div>
+					<span class="reviews-item__author">Марина</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="callback">
+	<div class="callback__container">
+		<h2 class="callback__title">Остались вопросы?</h2>
+		<div class="callback__description">
+			<p>Заполните форму и вам перезвонят через 20 минут</p>
+		</div>
+		<div class="callback__form">
+
+		</div>
+	</div>
+</div>
+</main>
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer-section">
+            <span class="footer-section__title">Юридическая информация</span>
+            <div class="footer-section__legal">
+                <p>ИП Васильев Юрий Алексеевич<br>
+                    ИНН 920160187347<br>
+                    БИК 043510607<br>
+                    РНКБ БАНК (ПАО) Г. Симферополь<br>
+                    Севастополь, ул. Фадеева 1</p>
+            </div>
+        </div>
+        <div class="footer-section">
+            <span class="footer-section__title">Навигация</span>
+            <ul>
+                <li><a href="#url">Направления</a></li>
+                <li><a href="#url">Аэропорты</a></li>
+                <li><a href="#url">Автопарк</a></li>
+                <li><a href="#url">О нас</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <span class="footer-section__title">Контакты</span>
+            <ul>
+                <li><a href="">+7 978 278-40-09</a></li>
+                <li><a href="">ausoltsev2012@yandex.ru</a></li>
+                <li>Севастополь, ул. Фадеева 1</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <a href="#" class="footer__link hidden-desktop">Едем в аэропорт.рф</a>
+            <ul class="footer-social">
+                <li class="footer-social-item">
+                    <a href="#" class="footer-social-item__link">
+                        <svg class="icon"><use xlink:href="#icon-svg-social-tg"></use></svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <a href="#" class="footer__link hidden-mobile">Едем в аэропорт.рф</a>
+            <span class="footer__copy">&copy; 2024</span>
+        </div>
+    </div>
+</footer>
+<script src="./libs/jquery/jquery.min.js"></script>
+	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./js/app.min.js"></script>
+</body>
+</html>

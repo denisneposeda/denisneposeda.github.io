@@ -1,0 +1,240 @@
+@use "sass:math";
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: $color-white;
+	border-bottom-left-radius: 24rem;
+	border-bottom-right-radius: 24rem;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+	@include media-breakpoint-down(xs) {
+		.show-nav & {
+			border-radius: 0;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		padding-top: 8.5rem;
+		padding-bottom: 8.5rem;
+		border-bottom-left-radius: 64rem;
+		border-bottom-right-radius: 64rem;
+	}
+	&__container {
+		@extend %container;
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	&-logo {
+		display: flex;
+		align-items: center;
+		&__src {
+			display: block;
+			width: 44rem;
+			height: 44rem;
+			object-fit: contain;
+			@include media-breakpoint-up(lg) {
+				width: 53rem;
+				height: 53rem;
+			}
+		}
+		&__text {
+			display: block;
+			font-weight: 500;
+			font-size: 22rem;
+			line-height: 1;
+			margin-left: 0.5em;
+		}
+	}
+	&-nav {
+		position: absolute;
+		@include media-breakpoint-down(xs) {
+			top: 100%;
+			left: 0;
+			right: 0;
+			background-color: $color-white;
+			display: none;
+			border-bottom-left-radius: 24rem;
+			border-bottom-right-radius: 24rem;
+			padding-top: 16rem;
+			padding-bottom: 16rem;
+			.show-nav & {
+				display: block;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			align-items: center;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		&-item {
+			position: relative;
+			@include media-breakpoint-down(xs) {
+				& + & {
+					margin-top: 8rem;
+				}
+			}
+			&__link {
+				display: block;
+				font-size: 16rem;
+				line-height: math.div(48, 16);
+				@include media-breakpoint-down(xs) {
+					padding-left: 20rem;
+					padding-right: 20rem;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 18rem;
+					line-height: math.div(22, 18);
+				}
+			}
+			&:hover {
+				& > a {
+					color: $color-blue-1;
+				}
+				> div {
+					display: block;
+				}
+			}
+			&__container {
+				display: none;
+				@include media-breakpoint-up(lg) {
+					position: absolute;
+					top: 61.5rem;
+					left: 50%;
+					background-color: $color-white;
+					transform: translateX(-50%);
+					border-radius: 16rem;
+					padding: 32rem;
+					width: 640rem;
+					&::before {
+						content: "";
+						display: block;
+						position: absolute;
+						bottom: 100%;
+						height: 39.5rem;
+						left: 0;
+						width: 100%;
+					}
+					&::after {
+						content: "";
+						display: block;
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 9rem 15.5rem 9rem;
+						border-color: transparent transparent $color-white transparent;
+						transform: rotate(0deg);
+						position: absolute;
+						bottom: 100%;
+						left: 50%;
+						transform: translateX(-50%);
+					}
+				}
+			}
+			&__input {
+				display: block;
+				width: 100%;
+				height: 48rem;
+				margin-bottom: 8rem;
+				font-size: 16rem;
+				padding: 0 10rem;
+				border-radius: 8rem;
+				@include media-breakpoint-up(lg) {
+					height: 53rem;
+					border-radius: 16rem;
+					font-size: 22rem;
+				}
+				&::placeholder {
+					color: $color-gray2;
+				}
+			}
+			&-results {
+				&-item {
+					@include media-breakpoint-up(lg) {
+						margin-top: 16rem;
+					}
+					&__link {
+						display: block;
+						@include media-breakpoint-up(lg) {
+							font-size: 18rem;
+							line-height: 22rem;
+						}
+						&:hover {
+							color: $color-blue-1;
+						}
+					}
+				}
+			}
+		}
+		.menu {
+			@include media-breakpoint-down(xs) {
+				margin-top: 8rem;
+				&-item {
+					& + .menu-item {
+						margin-top: 8rem;
+					}
+					& > a {
+						font-size: 16rem;
+						line-height: math.div(48, 16);
+						padding-left: 20rem;
+						padding-right: 20rem;
+					}
+				}
+			}
+			@include media-breakpoint-up(lg) {
+				display: flex;
+				align-items: center;
+				margin-left: 31rem;
+				&-item {
+					position: relative;
+					& + .menu-item {
+						margin-left: 31rem;
+					}
+					& > a {
+						display: block;
+						@include media-breakpoint-up(lg) {
+							font-size: 18rem;
+							line-height: math.div(22, 18);
+						}
+					}
+					&:hover {
+						& > a {
+							color: $color-blue-1;
+						}
+					}
+					.sub-menu {
+						position: absolute;
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	&-phone {
+		margin-left: auto;
+		.icon {
+			display: block;
+			width: 50rem;
+			height: 50rem;
+		}
+		&__text {
+			display: block;
+			font-weight: 500;
+			font-size: 22rem;
+			line-height: math.div(27, 22);
+		}
+	}
+	&-hamburger {
+		cursor: pointer;
+		margin-left: 16rem;
+		.icon {
+			display: block;
+			width: 50rem;
+			height: 50rem;
+		}
+	}
+}

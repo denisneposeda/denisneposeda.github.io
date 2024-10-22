@@ -1,0 +1,105 @@
+@use "sass:math";
+
+.available-transfers {
+	@extend %section;
+	@extend %section-radius;
+	background-color: $color-white;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		margin-bottom: 28rem;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 16rem;
+		}
+	}
+	&__description {
+		@extend %section-description;
+	}
+	&__items {}
+	&-item {
+		& + & {
+			margin-top: 50rem;
+		}
+		&__content {
+			position: relative;
+		}
+		&__link {
+			@extend %link-full;
+		}
+		&__image {
+			@extend %image-full-cover;
+			&-wrapper {
+				overflow: hidden;
+				border-radius: 4rem;
+				margin-bottom: 10rem;
+				@extend %image-wrapper;
+				&:after {
+					padding-bottom: percentage(math.div(156, 349));
+					@include media-breakpoint-up(lg) {
+						padding-bottom: percentage(math.div(404, 1290));
+					}
+				}
+			}
+		}
+		&__title {
+			text-align: center;
+			font-weight: 500;
+			font-size: 20rem;
+			line-height: (26 * 0.05);
+			margin-bottom: 32rem;
+			@include media-breakpoint-up(lg) {
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+			}
+		}
+	}
+	&-routes {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			margin-right: -4rem;
+			margin-left: -4rem;
+		}
+		&-item {
+			@include media-breakpoint-up(lg) {
+				padding-left: 4rem;
+				padding-right: 4rem;
+				width: percentage(math.div(1, 4));
+				flex: 0 0 percentage(math.div(1, 4));
+			}
+			& + & {
+				@include media-breakpoint-down(xs) {
+					margin-top: 8rem;
+				}
+			}
+			&:nth-child(n + 5) {
+				@include media-breakpoint-up(lg) {
+					margin-top: 8rem;
+				}
+			}
+			&__inner {
+				position: relative;
+				display: flex;
+				align-items: center;
+				background-color: $color-blue;
+				height: 32rem;
+				border-radius: 16rem;
+				padding-left: 16rem;
+				padding-right: 16rem;
+				@include media-breakpoint-up(lg) {
+				}
+			}
+			&__link {
+				@extend %link-full;
+			}
+			&__title {
+				font-weight: 400;
+				font-size: 16rem;
+				line-height: math.div(16, 16);
+				margin-bottom: 0;
+			}
+		}
+	}
+}

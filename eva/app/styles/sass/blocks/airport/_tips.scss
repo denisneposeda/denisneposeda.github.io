@@ -1,0 +1,56 @@
+@use "sass:math";
+
+.tips {
+	@extend %section;
+	&__container {
+		@extend %container;
+	}
+	&__title {
+		@extend %section-title;
+		text-align: left;
+		margin-bottom: 42rem;
+	}
+	&-content {
+		@include media-breakpoint-up(lg) {
+			display: flex;
+		}
+		&__section {
+			@include media-breakpoint-up(lg) {
+				width: 560rem;
+				flex: 0 0 560rem;
+			}
+			& + & {
+				@include media-breakpoint-down(xs) {
+					margin-top: 32rem;
+				}
+				@include media-breakpoint-up(lg) {
+					margin-left: 86rem;
+				}
+			}
+		}
+		&__title {
+			font-weight: 500;
+			font-size: 22rem;
+			line-height: math.div(29, 22);
+			margin-bottom: 30rem;
+			@include media-breakpoint-up(lg) {
+				font-size: 28rem;
+				line-height: math.div(36, 28);
+			}
+		}
+		&__description {
+			font-size: 18rem;
+			line-height: math.div(23, 18);
+			@include media-breakpoint-up(lg) {
+				font-size: 22rem;
+				line-height: math.div(29, 22);	
+			}
+			p {
+				margin: 0;
+				& + p {
+					margin-top: 20rem;
+				}
+			}
+		}
+	}
+}

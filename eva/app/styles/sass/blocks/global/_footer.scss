@@ -1,0 +1,118 @@
+@use "sass:math";
+
+.footer {
+	border-top-left-radius: 24rem;
+	border-top-right-radius: 24rem;
+	background-color: $color-black1;
+	color: $color-white;
+	padding-top: 60rem;
+	padding-bottom: 30rem;
+	@include media-breakpoint-up(lg) {
+		border-top-left-radius: 64rem;
+		border-top-right-radius: 64rem;
+		padding-top: 100rem;
+	}
+	&__container {
+		@extend %container;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+	&-section {
+		& + & {
+			@include media-breakpoint-down(xs) {
+				margin-top: 48rem;
+			}
+		}
+		&__title {
+			display: block;
+			color: $color-gray;
+			font-size: 22rem;
+			line-height: math.div(29, 22);
+			margin-bottom: 30rem;
+		}
+		ul {
+			li {
+				font-size: 18rem;
+				line-height: math.div(22, 18);
+				& + li {
+					margin-top: 20rem;
+				}
+				a {
+					&:hover {
+						color: $color-blue-1;
+					}
+				}
+			}
+		}
+		&__legal {
+			font-size: 18rem;
+			line-height: math.div(42, 18);
+			margin-top: -10rem;
+			margin-bottom: -10rem;
+			p {
+				margin: 0;
+			}
+			br {
+				line-height: 20rem;
+				&:after {
+					content: "";
+					display: block;
+					height: 20rem;
+				}
+			}
+		}
+	}
+	&-social {
+		@include media-breakpoint-down(xs) {
+			display: flex;
+			align-items: center;
+			margin-top: 20rem;
+		}
+		&-item {
+			& + & {
+				@include media-breakpoint-down(xs) {
+					margin-left: 20rem;
+					margin-top: 0;
+				}
+			}
+			&__link {
+				display: block;
+				.icon {
+					display: block;
+					width: 48rem;
+					height: 48rem;
+				}
+				
+			}
+		}
+	}
+	&__bottom {
+		width: 100%;
+		flex: 0 0 100%;
+		margin-top: 20rem;
+		@include media-breakpoint-up(lg) {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-top: 50rem;
+		}
+	}
+	&__link {
+		display: block;
+		font-weight: 500;
+		font-size: 28rem;
+		line-height: math.div(36, 28);
+		@include media-breakpoint-up(lg) {
+			font-weight: 600;
+			font-size: 45rem;
+			line-height: math.div(54, 45);
+		}
+	}
+	&__copy {
+		font-size: 18rem;
+		line-height: math.div(22, 18);
+	}
+}
