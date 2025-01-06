@@ -72,6 +72,24 @@
 		<a href="./" class="header-logo hidden-desktop">
 			<svg class="header-logo__icon"><use xlink:href="#logo"></use></svg>
 		</a>
+		<div class="header-search hidden-mobile">
+			<svg class="header-search__icon"><use xlink:href="#icon-svg-loope"></use></svg>
+			<form action="">
+				<input type="text" name="s" placeholder="Поиск" />
+			</form>
+		</div>
+		<div class="header-actions hidden-mobile">
+			<a href="#" class="header-subscription">
+				<svg class="header-subscription__icon"><use xlink:href="#icon-svg-fire"></use></svg>
+				Подписка: <span class="header-subscription__status">Неактивна</span>
+			</a>
+			<a href="./basket.html" class="header-actions__btn">
+				<svg class="icon"><use xlink:href="#icon-svg-cart"></use></svg>
+			</a>
+			<a href="./profile.html" class="header-actions__btn">
+				<svg class="icon"><use xlink:href="#icon-svg-user"></use></svg>
+			</a>
+		</div>
 		<button type="button" class="header-hamburger hidden-desktop">
 			<svg class="header-hamburger__icon header-hamburger__icon--open"><use xlink:href="#icon-svg-hamburger-open"></use></svg>
 			<svg class="header-hamburger__icon header-hamburger__icon--close"><use xlink:href="#icon-svg-hamburger-close"></use></svg>
@@ -84,44 +102,164 @@
 	});
 </script>
 <main class="main">
-<svg width="0" height="0" class="hidden">
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45 44" id="icon-svg-upload">
-		<path d="M37.625 8.25H7.375C6.61561 8.25 6 8.86561 6 9.625V34.375C6 35.1344 6.61561 35.75 7.375 35.75H37.625C38.3844 35.75 39 35.1344 39 34.375V9.625C39 8.86561 38.3844 8.25 37.625 8.25Z" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M6 28.8757L14.6527 20.223C14.7804 20.0954 14.932 19.9941 15.0988 19.925C15.2656 19.8559 15.4444 19.8203 15.625 19.8203C15.8055 19.8203 15.9843 19.8559 16.1512 19.925C16.318 19.9941 16.4696 20.0954 16.5972 20.223L24.2777 27.9035C24.4054 28.0312 24.557 28.1325 24.7238 28.2016C24.8906 28.2707 25.0694 28.3062 25.25 28.3062C25.4305 28.3062 25.6093 28.2707 25.7762 28.2016C25.943 28.1325 26.0946 28.0312 26.2222 27.9035L29.7777 24.348C29.9054 24.2204 30.057 24.1191 30.2238 24.05C30.3906 23.9809 30.5694 23.9453 30.75 23.9453C30.9305 23.9453 31.1093 23.9809 31.2762 24.05C31.443 24.1191 31.5946 24.2204 31.7222 24.348L39 31.6258" stroke="#C4C4C4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M27.3125 19.25C28.4516 19.25 29.375 18.3266 29.375 17.1875C29.375 16.0484 28.4516 15.125 27.3125 15.125C26.1734 15.125 25.25 16.0484 25.25 17.1875C25.25 18.3266 26.1734 19.25 27.3125 19.25Z" fill="#C4C4C4"></path>
-	</symbol>
-	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" id="icon-svg-add">
-		<path d="M8.5 3.33398V10.6673" stroke="#097CBF" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M5.1665 7.33398L8.49984 10.6673L11.8332 7.33398" stroke="#097CBF" stroke-linecap="round" stroke-linejoin="round"></path>
-		<path d="M4.5 12H12.5" stroke="#097CBF" stroke-linecap="round" stroke-linejoin="round"></path>
-	</symbol>
-</svg>
-
-<section class="auth">
-	<div class="auth-sidebar hidden-mobile">
-		<img loading="eager" class="auth-sidebar__bg" src="./images/dist/auth.jpg" alt="">
-		<a href="./" class="auth-sidebar-logo">
-			<svg class="auth-sidebar-logo__icon"><use xlink:href="#logo"></use></svg>
+<div class="catalog">
+	<div class="sidebar">
+		<svg width="0" height="0" class="hidden">
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-6">
+				<path d="M8 5.5C8 4.96957 8.21071 4.46086 8.58579 4.08579C8.96086 3.71071 9.46957 3.5 10 3.5H14C14.1326 3.5 14.2598 3.55268 14.3536 3.64645C14.4473 3.74021 14.5 3.86739 14.5 4V12C14.5 12.1326 14.4473 12.2598 14.3536 12.3536C14.2598 12.4473 14.1326 12.5 14 12.5H10C9.46957 12.5 8.96086 12.7107 8.58579 13.0858C8.21071 13.4609 8 13.9696 8 14.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="M1.5 12C1.5 12.1326 1.55268 12.2598 1.64645 12.3536C1.74021 12.4473 1.86739 12.5 2 12.5H6C6.53043 12.5 7.03914 12.7107 7.41421 13.0858C7.78929 13.4609 8 13.9696 8 14.5V5.5C8 4.96957 7.78929 4.46086 7.41421 4.08579C7.03914 3.71071 6.53043 3.5 6 3.5H2C1.86739 3.5 1.74021 3.55268 1.64645 3.64645C1.55268 3.74021 1.5 3.86739 1.5 4V12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-5">
+				<path d="M8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="M10.5986 9.5C10.3351 9.95589 9.95619 10.3344 9.50006 10.5976C9.04394 10.8607 8.52661 10.9993 8.00001 10.9993C7.47342 10.9993 6.95608 10.8608 6.49995 10.5976C6.04382 10.3344 5.66495 9.95593 5.40137 9.50004" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="M5.75 7.5C6.16421 7.5 6.5 7.16421 6.5 6.75C6.5 6.33579 6.16421 6 5.75 6C5.33579 6 5 6.33579 5 6.75C5 7.16421 5.33579 7.5 5.75 7.5Z" fill="currentColor"></path>
+				<path d="M10.25 7.5C10.6642 7.5 11 7.16421 11 6.75C11 6.33579 10.6642 6 10.25 6C9.83579 6 9.5 6.33579 9.5 6.75C9.5 7.16421 9.83579 7.5 10.25 7.5Z" fill="currentColor"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-4">
+				<path d="M10 6L1.5 14.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+				<path d="M2.92394 13.0761C2.4443 11.6615 2.37001 10.1409 2.70945 8.68624C3.04889 7.23161 3.78854 5.90096 4.84475 4.84475C5.90096 3.78854 7.23161 3.04889 8.68624 2.70945C10.1409 2.37001 11.6615 2.4443 13.0761 2.92394C13.5557 4.33855 13.63 5.85913 13.2906 7.31376C12.9511 8.76839 12.2115 10.099 11.1553 11.1553C10.099 12.2115 8.76839 12.9511 7.31376 13.2906C5.85913 13.63 4.33855 13.5557 2.92394 13.0761V13.0761Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-3">
+				<path d="M12.339 7.87941V13.6415C12.339 13.8532 12.1672 14.025 11.9555 14.025H4.04416C3.8325 14.025 3.66091 13.8532 3.66091 13.6415C3.66091 11.7208 3.66091 9.80018 3.66091 7.87941L3.00138 8.46676C2.84358 8.60717 2.6015 8.59318 2.4609 8.4352L0.290867 6.2336C0.142897 6.08299 0.144787 5.84091 0.295402 5.69294L4.16359 2.07798C4.23729 2.00938 4.33084 1.97555 4.424 1.97555L6.41016 1.97461C6.60726 1.97461 6.7696 2.12352 6.79095 2.31496C6.90925 2.88114 7.43158 3.25853 7.99984 3.25853C8.57774 3.25853 9.10725 2.8681 9.21402 2.28907C9.24766 2.10463 9.40867 1.97555 9.58971 1.97593L11.5757 1.97461C11.6859 1.97461 11.7851 2.0211 11.855 2.09556L15.6969 5.68557C15.8517 5.82938 15.8604 6.07146 15.7166 6.22604L13.5256 8.44861C13.3819 8.59469 13.1501 8.60093 12.9989 8.46619L12.339 7.87941ZM8.78542 6.45376C8.42882 6.09735 8.97081 5.55517 9.32741 5.91177L9.88584 6.4702L11.0433 5.31271C11.3999 4.95611 11.9419 5.4981 11.5855 5.8547L10.1568 7.28338C10.0072 7.43286 9.76452 7.43286 9.61485 7.28338L8.78542 6.45376ZM4.42759 8.70732H11.5723L11.5728 7.02523C11.5727 6.70038 11.961 6.51745 12.2101 6.73931L13.2362 7.65302L14.8885 5.97697L11.4258 2.74129H9.87904C9.58952 3.52196 8.82851 4.02502 7.99984 4.02502C7.17117 4.02502 6.41035 3.52196 6.12083 2.74129H4.57405L1.11141 5.97697L2.76364 7.65302L3.77656 6.75103C4.01581 6.51726 4.42759 6.68337 4.42759 7.02523V8.70732ZM11.5723 9.47382H4.42759V10.2645H11.5723V9.47382ZM11.5723 11.0312H4.42759V11.8219H11.5723V11.0312ZM11.5723 12.5884H4.42759V13.2583H11.5723V12.5884Z" fill="currentColor"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-2">
+				<path d="M6 10H2.5C2.36739 10 2.24021 9.94732 2.14645 9.85355C2.05268 9.75979 2 9.63261 2 9.5V6.5C2 6.36739 2.05268 6.24021 2.14645 6.14645C2.24021 6.05268 2.36739 6 2.5 6H6V2.5C6 2.36739 6.05268 2.24021 6.14645 2.14645C6.24021 2.05268 6.36739 2 6.5 2H9.5C9.63261 2 9.75979 2.05268 9.85355 2.14645C9.94732 2.24021 10 2.36739 10 2.5V6H13.5C13.6326 6 13.7598 6.05268 13.8536 6.14645C13.9473 6.24021 14 6.36739 14 6.5V9.5C14 9.63261 13.9473 9.75979 13.8536 9.85355C13.7598 9.94732 13.6326 10 13.5 10H10V13.5C10 13.6326 9.94732 13.7598 9.85355 13.8536C9.75979 13.9473 9.63261 14 9.5 14H6.5C6.36739 14 6.24021 13.9473 6.14645 13.8536C6.05268 13.7598 6 13.6326 6 13.5V10Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-1">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M7.6665 1.83301C6.46989 1.83301 5.49984 2.80306 5.49984 3.99967V5.49967H9.83317V3.99967C9.83317 2.80306 8.86312 1.83301 7.6665 1.83301ZM10.8332 5.49967V3.99967C10.8332 2.25077 9.41541 0.833008 7.6665 0.833008C5.9176 0.833008 4.49984 2.25077 4.49984 3.99967V5.49967H3.6665C2.83808 5.49967 2.1665 6.17125 2.1665 6.99967V13.6663C2.1665 14.4948 2.83808 15.1663 3.6665 15.1663H11.6665C12.4949 15.1663 13.1665 14.4948 13.1665 13.6663V6.99967C13.1665 6.17125 12.4949 5.49967 11.6665 5.49967H10.8332ZM3.6665 6.49967C3.39036 6.49967 3.1665 6.72353 3.1665 6.99967V13.6663C3.1665 13.9425 3.39036 14.1663 3.6665 14.1663H11.6665C11.9426 14.1663 12.1665 13.9425 12.1665 13.6663V6.99967C12.1665 6.72353 11.9426 6.49967 11.6665 6.49967H10.3332H4.99984H3.6665ZM5.6665 7.99967C5.6665 8.36786 5.36803 8.66634 4.99984 8.66634C4.63165 8.66634 4.33317 8.36786 4.33317 7.99967C4.33317 7.63148 4.63165 7.33301 4.99984 7.33301C5.36803 7.33301 5.6665 7.63148 5.6665 7.99967ZM10.3332 8.66634C10.7014 8.66634 10.9998 8.36786 10.9998 7.99967C10.9998 7.63148 10.7014 7.33301 10.3332 7.33301C9.96498 7.33301 9.6665 7.63148 9.6665 7.99967C9.6665 8.36786 9.96498 8.66634 10.3332 8.66634Z" fill="currentColor"></path>
+			</symbol>
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-category-arrow">
+				<path d="M12 6L8 10L4 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+		</svg>
+		<button type="button" class="sidebar__overlay hidden-desktop"></button>
+		<button type="button" class="sidebar-close hidden-desktop">
+			<svg class="sidebar-close__icon"><use xlink:href="#icon-svg-hamburger-close"></use></svg>
+		</button>
+		<a href="./" class="sidebar-logo hidden-mobile">
+			<svg class="sidebar-logo__icon"><use xlink:href="#logo"></use></svg>
 		</a>
+		<ul class="sidebar-category">
+			<li class="sidebar-category-item">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-1"></use></svg>
+					<span class="sidebar-category-item__title">Все товары</span>
+				</a>
+			</li>
+			<li class="sidebar-category-item is-active">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-2"></use></svg>
+					<span class="sidebar-category-item__title">Здоровье</span>
+					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
+				</a>
+			</li>
+			<li class="sidebar-category-item">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-3"></use></svg>
+					<span class="sidebar-category-item__title">Одежда</span>
+					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
+				</a>
+			</li>
+			<li class="sidebar-category-item">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-4"></use></svg>
+					<span class="sidebar-category-item__title">Питание</span>
+					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
+				</a>
+			</li>
+			<li class="sidebar-category-item">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-5"></use></svg>
+					<span class="sidebar-category-item__title">Консультации</span>
+					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
+				</a>
+			</li>
+			<li class="sidebar-category-item">
+				<a class="sidebar-category-item__link" href="#">
+					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-6"></use></svg>
+					<span class="sidebar-category-item__title">Все услуги</span>
+					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
+				</a>
+			</li>
+		</ul>
+		<a href="#" class="sidebar-help">Помощь</a>
 	</div>
-	<div class="auth__content">
-		<div class="auth-block">
-			<span class="auth-block__title">Фото профиля</span>
-			<form class="auth-form" action="">
-				<div class="auth-form-upload">
-					<svg class="auth-form-upload__icon"><use xlink:href="#icon-svg-upload"></use></svg>
-					<span class="auth-form-upload__notice">Бросьте сюда файл<br> для загрузки</span>
-					<label class="auth-form-upload__action" for="upload">
-						<svg class="icon"><use xlink:href="#icon-svg-add"></use></svg>
-						Загрузить файл
-					</label>
-					<input type="file" class="no-display" name="" placeholder="" id="upload">
+	<div class="catalog__container">
+		<div class="breadcrumbs">
+			<a href="./catalog.html" class="breadcrumbs__item">Профиль</a>
+			<span class="breadcrumbs__item">Подписка</span>
+		</div>
+		<svg width="0" height="0" class="hidden">
+			<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="icon-svg-mark">
+			  <path d="M2 8L6 12L14 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+			</symbol>
+		  </svg>
+		<div class="profile">
+			<div class="profile-pricing">
+				<div class="profile-pricing-item">
+					<div class="profile-pricing-item__inner">
+						<span class="profile-pricing-item__title">Тариф 1</span>
+						<div class="profile-pricing-item-price">
+							<span class="profile-pricing-item-price__cost">1290 ₽</span>
+							<span class="profile-pricing-item-price__period">в месяц</span>
+						</div>
+						<ul class="profile-pricing-item-points">
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Неограниченное количество заказов
+							</li>
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Нет комисии за заказ
+							</li>
+						</ul>
+						<button type="button" class="profile-pricing-item__action">Получить доступ</button>
+					</div>
 				</div>
-				<button class="auth-form__submit" type="submit">Продолжить</button>
-			</form>
+				<div class="profile-pricing-item is-active">
+					<div class="profile-pricing-item__inner">
+						<span class="profile-pricing-item__title">Тариф 2</span>
+						<div class="profile-pricing-item-price">
+							<span class="profile-pricing-item-price__cost">690 ₽</span>
+							<span class="profile-pricing-item-price__period">в месяц</span>
+						</div>
+						<ul class="profile-pricing-item-points">
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Неограниченное количество заказов
+							</li>
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Нет комисии за заказ
+							</li>
+						</ul>
+						<span class="profile-pricing-item__status">Подписка активна до 24.04.2024</span>
+					</div>
+				</div>
+				<div class="profile-pricing-item">
+					<div class="profile-pricing-item__inner">
+						<span class="profile-pricing-item__title">Тариф 3</span>
+						<div class="profile-pricing-item-price">
+							<span class="profile-pricing-item-price__cost">1290 ₽</span>
+							<span class="profile-pricing-item-price__period">в месяц</span>
+						</div>
+						<ul class="profile-pricing-item-points">
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Неограниченное количество заказов
+							</li>
+							<li class="profile-pricing-item-points__item">
+								<svg class="icon"><use xlink:href="#icon-svg-mark"></use></svg>
+								Нет комисии за заказ
+							</li>
+						</ul>
+						<button type="button" class="profile-pricing-item__action">Получить доступ</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-</section>
+</div>
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
