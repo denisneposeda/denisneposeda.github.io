@@ -66,6 +66,12 @@
 		<path d="M7.5 7.5H8V11H8.5" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M8 6C8.41421 6 8.75 5.66421 8.75 5.25C8.75 4.83579 8.41421 4.5 8 4.5C7.58579 4.5 7.25 4.83579 7.25 5.25C7.25 5.66421 7.58579 6 8 6Z" fill="#808080"></path>
 	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-next">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 6 4 4-4 4"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-prev">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12 14-4-4 4-4"></path>
+	</symbol>
   </svg>
 <header class="header header--shop">
 	<div class="header__container">
@@ -83,7 +89,7 @@
 				<svg class="header-subscription__icon"><use xlink:href="#icon-svg-fire"></use></svg>
 				Подписка: <span class="header-subscription__status">Неактивна</span>
 			</a>
-			<a href="./basket.html" class="header-actions__btn">
+			<a href="./basket.html" class="header-actions__btn" data-count="1">
 				<svg class="icon"><use xlink:href="#icon-svg-cart"></use></svg>
 			</a>
 			<a href="./profile.html" class="header-actions__btn">
@@ -152,6 +158,17 @@
 					<span class="sidebar-category-item__title">Здоровье</span>
 					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
 				</a>
+				<ul class="sidebar-subcategory">
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Витамины и БАДы</a>
+					</li>
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Парафармацевтика</a>
+					</li>
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Оптика</a>
+					</li>
+				</ul>
 			</li>
 			<li class="sidebar-category-item">
 				<a class="sidebar-category-item__link" href="#">
@@ -159,26 +176,34 @@
 					<span class="sidebar-category-item__title">Одежда</span>
 					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
 				</a>
+				<ul class="sidebar-subcategory">
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Одежда 1</a>
+					</li>
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Одежда 2</a>
+					</li>
+					<li class="sidebar-subcategory-item">
+						<a href="#" class="sidebar-subcategory-item__link">Одежда 3</a>
+					</li>
+				</ul>
 			</li>
 			<li class="sidebar-category-item">
 				<a class="sidebar-category-item__link" href="#">
 					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-4"></use></svg>
 					<span class="sidebar-category-item__title">Питание</span>
-					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
 				</a>
 			</li>
 			<li class="sidebar-category-item">
 				<a class="sidebar-category-item__link" href="#">
 					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-5"></use></svg>
 					<span class="sidebar-category-item__title">Консультации</span>
-					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
 				</a>
 			</li>
 			<li class="sidebar-category-item">
 				<a class="sidebar-category-item__link" href="#">
 					<svg class="sidebar-category-item__icon"><use xlink:href="#icon-svg-category-6"></use></svg>
 					<span class="sidebar-category-item__title">Все услуги</span>
-					<svg class="sidebar-category-item__arrow"><use xlink:href="#icon-svg-category-arrow"></use></svg>
 				</a>
 			</li>
 		</ul>
@@ -466,6 +491,26 @@
 				</div>
 			</div>
 		</div>
+		<div class="pagination">
+			<div class="pagination-block">
+				<a href="#" class="pagination-link pagination-link_active">1</a>
+				<a class="pagination-link" href="/?page=2">2</a>
+				<a class="pagination-link" href="/?page=3">3</a>
+				<a class="pagination-link" href="/?page=4">4</a>
+				<a class="pagination-link" href="/?page=5">5</a>
+				<a class="pagination-link" href="/?page=6">6</a>
+				<a class="pagination-link" href="/?page=7">7</a>
+				<a class="pagination-link" href="/?page=8">8</a>
+				<a class="pagination-link" href="/?page=9">9</a>
+				<a class="pagination-link" href="/?page=10">10</a>
+				<span class="pagination-link"><a href="#">...</a></span>
+				<a class="pagination-link" href="/?page=26">26</a>
+				<a class="pagination-link" href="/?page=27">27</a>
+				<a class="pagination-link pagination-link_disabled" href="/?page=2">
+					<svg class="icon"><use xlink:href="#icon-svg-pagination-next"></use></svg>
+				</a>
+			</div>
+		</div>
 	</div>
 </div>
 <script>
@@ -480,10 +525,17 @@
 			this.classList.toggle("is-active");
 		});
 	});
+	document.querySelectorAll('.sidebar-category-item__arrow').forEach(button => {
+		button.addEventListener('click',  function(e) {
+			e.preventDefault();
+			this.parentNode.parentNode.classList.toggle("is-show");
+		});
+	});
 </script>
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./libs/mask/jquery.mask.min.js"></script>
 	<script src="./js/app.min.js"></script>
 </body>
 </html>

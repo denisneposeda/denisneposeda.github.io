@@ -66,6 +66,12 @@
 		<path d="M7.5 7.5H8V11H8.5" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M8 6C8.41421 6 8.75 5.66421 8.75 5.25C8.75 4.83579 8.41421 4.5 8 4.5C7.58579 4.5 7.25 4.83579 7.25 5.25C7.25 5.66421 7.58579 6 8 6Z" fill="#808080"></path>
 	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-next">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 6 4 4-4 4"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-prev">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12 14-4-4 4-4"></path>
+	</symbol>
   </svg>
 <header class="header header--shop">
 	<div class="header__container">
@@ -83,7 +89,7 @@
 				<svg class="header-subscription__icon"><use xlink:href="#icon-svg-fire"></use></svg>
 				Подписка: <span class="header-subscription__status">Неактивна</span>
 			</a>
-			<a href="./basket.html" class="header-actions__btn">
+			<a href="./basket.html" class="header-actions__btn" data-count="1">
 				<svg class="icon"><use xlink:href="#icon-svg-cart"></use></svg>
 			</a>
 			<a href="./profile.html" class="header-actions__btn">
@@ -540,6 +546,7 @@
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./libs/mask/jquery.mask.min.js"></script>
 	<script src="./js/app.min.js"></script>
 </body>
 </html>

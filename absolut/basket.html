@@ -66,6 +66,12 @@
 		<path d="M7.5 7.5H8V11H8.5" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
 		<path d="M8 6C8.41421 6 8.75 5.66421 8.75 5.25C8.75 4.83579 8.41421 4.5 8 4.5C7.58579 4.5 7.25 4.83579 7.25 5.25C7.25 5.66421 7.58579 6 8 6Z" fill="#808080"></path>
 	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-next">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m8 6 4 4-4 4"></path>
+	</symbol>
+	<symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" id="icon-svg-pagination-prev">
+		<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m12 14-4-4 4-4"></path>
+	</symbol>
   </svg>
 <header class="header header--shop">
 	<div class="header__container">
@@ -83,7 +89,7 @@
 				<svg class="header-subscription__icon"><use xlink:href="#icon-svg-fire"></use></svg>
 				Подписка: <span class="header-subscription__status">Неактивна</span>
 			</a>
-			<a href="./basket.html" class="header-actions__btn">
+			<a href="./basket.html" class="header-actions__btn" data-count="1">
 				<svg class="icon"><use xlink:href="#icon-svg-cart"></use></svg>
 			</a>
 			<a href="./profile.html" class="header-actions__btn">
@@ -194,7 +200,7 @@
 							<path d="M11.6668 8.33333L11.4168 14.1667M8.5835 14.1667L8.3335 8.33333M5.00016 5L5.70903 15.633C5.77907 16.6836 6.65167 17.5 7.7046 17.5H12.2957C13.3487 17.5 14.2213 16.6836 14.2913 15.633L15.0002 5M5.00016 5H7.50016M5.00016 5H3.3335M15.0002 5H16.6668M15.0002 5H12.5002M12.5002 5V4.5C12.5002 3.39543 11.6047 2.5 10.5002 2.5H9.50016C8.39559 2.5 7.50016 3.39543 7.50016 4.5V5M12.5002 5H7.50016" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
 						</symbol>
 						<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="icon-svg-basket-heart">
-							<path d="M12.5303 19.864L20.1271 12.2672C21.9937 10.4006 22.2691 7.32976 20.5027 5.36811C20.0602 4.87533 19.522 4.47786 18.9208 4.19997C18.3197 3.92207 17.6682 3.76956 17.0062 3.75176C16.3441 3.73396 15.6854 3.85123 15.0702 4.09642C14.455 4.34161 13.8962 4.70957 13.4279 5.17786L12 6.60571L10.7672 5.3729C8.9006 3.5063 5.82976 3.23091 3.86811 4.99735C3.37533 5.43981 2.97786 5.97804 2.69997 6.57919C2.42207 7.18034 2.26956 7.83181 2.25176 8.49384C2.23396 9.15588 2.35123 9.8146 2.59642 10.4298C2.84161 11.045 3.20957 11.6038 3.67786 12.0721L11.4697 19.864C11.6103 20.0046 11.8011 20.0836 12 20.0836C12.1989 20.0836 12.3897 20.0046 12.5303 19.864Z" fill="transparent" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
+							<path d="M12.5303 19.864L20.1271 12.2672C21.9937 10.4006 22.2691 7.32976 20.5027 5.36811C20.0602 4.87533 19.522 4.47786 18.9208 4.19997C18.3197 3.92207 17.6682 3.76956 17.0062 3.75176C16.3441 3.73396 15.6854 3.85123 15.0702 4.09642C14.455 4.34161 13.8962 4.70957 13.4279 5.17786L12 6.60571L10.7672 5.3729C8.9006 3.5063 5.82976 3.23091 3.86811 4.99735C3.37533 5.43981 2.97786 5.97804 2.69997 6.57919C2.42207 7.18034 2.26956 7.83181 2.25176 8.49384C2.23396 9.15588 2.35123 9.8146 2.59642 10.4298C2.84161 11.045 3.20957 11.6038 3.67786 12.0721L11.4697 19.864C11.6103 20.0046 11.8011 20.0836 12 20.0836C12.1989 20.0836 12.3897 20.0046 12.5303 19.864Z" fill="currentColor" stroke="#808080" stroke-linecap="round" stroke-linejoin="round"></path>
 						</symbol>
 						<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" id="icon-svg-basket-minus">
 							<rect width="28" height="28" rx="10" fill="#DADADA"></rect>
@@ -210,9 +216,10 @@
 							<img loading="lazy" class="basket-item__image" src="./images/dist/product.jpg" alt="">
 						</div>
 						<div class="basket-item__content">
-							<div class="basket-item__info">
-								<h2 class="basket-item__title">Спирулина в таблетках для диет</h2>
-								<span class="basket-item__price">1 049 ₽</span>
+							<h2 class="basket-item__title">Спирулина в таблетках для диет</h2>
+							<div class="basket-item-price">
+								<span class="basket-item-price__label">Цена</span>
+								<span class="basket-item-price__value">1 049 ₽</span>
 							</div>
 							<form class="basket-item__form">
 								<div class="basket-item-counter">
@@ -221,7 +228,7 @@
 									<button type="button" class="basket-item-counter__action"><svg class="icon"><use xlink:href="#icon-svg-basket-plus"></use></svg></button>
 								</div>
 								<div class="basket-item__actions">
-									<button type="button" class="basket-item__action"><svg class="icon"><use xlink:href="#icon-svg-basket-heart"></use></svg></button>
+									<button type="button" class="basket-item__action js_add-to-wishlist"><svg class="icon"><use xlink:href="#icon-svg-basket-heart"></use></svg></button>
 									<button type="button" class="basket-item__action"><svg class="icon"><use xlink:href="#icon-svg-basket-remove"></use></svg></button>
 								</div>
 							</form>
@@ -263,10 +270,14 @@
 	document.querySelectorAll('.sidebar__overlay, .sidebar-close').forEach(button => {
 		button.addEventListener('click', () => document.body.classList.remove("nav-open"));
 	});
+	document.querySelectorAll(".js_add-to-wishlist").forEach(elem => elem.addEventListener("click", function(){
+		this.classList.toggle("is-active")
+	}))
 </script>
 <script src="./libs/jquery/jquery.min.js"></script>
 	<script src="./libs/fancybox/dist/jquery.fancybox.min.js"></script>
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+	<script src="./libs/mask/jquery.mask.min.js"></script>
 	<script src="./js/app.min.js"></script>
 </body>
 </html>
