@@ -1,0 +1,158 @@
+/* Base */
+body:has(.section-description) h1 {
+  margin-bottom: 0.417em;
+}
+.section-description {
+  width: 100%;
+  max-width: 1272px;
+  margin-bottom: 3.3em;
+}
+.section-description p {
+  line-height: 1.3;
+}
+.section-description p:last-child {
+  margin: 0;
+}
+.section-description a {
+  text-decoration: underline;
+  color: #374785;
+}
+body.archive .blog__img + .blog__content {
+  margin-top: 1.25em;
+}
+.gallery__title {
+  font-size: 1.125em;
+  line-height: 1.3;
+  margin: 1.11em 0 0;
+}
+
+/* Portfolio */
+
+body.archive.post-type-archive-portfolio .blog__img {
+  height: auto;
+  aspect-ratio: 384 / 270;
+}
+
+/* Portfolio Single */
+.portfolio {
+  margin-bottom: 3.75em;
+}
+.portfolio__meta {
+  margin-top: 3.75em;
+  margin-bottom: 1.875em;
+}
+.portfolio-gallery {
+  position: relative;
+  margin-bottom: 3.75em;
+}
+.portfolio-gallery .swiper-button-prev,
+.portfolio-gallery .swiper-button-next {
+  background-color: unset;
+  border: 1.5px solid #374785;
+}
+.portfolio-gallery .swiper-button-prev:after,
+.portfolio-gallery .swiper-button-next:after {
+  color: #374785;
+}
+.portfolio-gallery .swiper-button-prev.swiper-button-disabled,
+.portfolio-gallery .swiper-button-next.swiper-button-disabled {
+  opacity: 0.2;
+}
+.portfolio-gallery__src {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 518 / 367;
+}
+.portfolio__description {
+  line-height: 1.3;
+}
+.portfolio__description p {
+  font-size: 1em;
+  margin-bottom: 1.25em;
+}
+.portfolio__description ul {
+  list-style: disc;
+  padding-left: 1.75em;
+  font-size: 1em;
+  margin-bottom: 1.25em;
+}
+.portfolio__description ul li::marker {
+  color: #374785;
+}
+.portfolio__reviews {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+}
+@media screen and (min-width: 992px) {
+  .portfolio__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .portfolio__description {
+    width: 100%;
+    flex: 1 0 0%;
+  }
+  .portfolio__form {
+    width: 30%;
+    flex: 0 0 30%;
+    margin-left: 10%;
+    background-color: #fff;
+    box-shadow: 0px 10px 110px 0px #0f0f0f1a;
+    border-radius: 6px;
+  }
+  .portfolio__reviews {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-top: 3.75em;
+    justify-content: flex-start;
+  }
+}
+/* Equipment */
+
+body.archive.post-type-archive-equipment .blog__img {
+  height: auto;
+  aspect-ratio: 384 / 270;
+}
+
+.blog-spoiler:not(.is-expanded) .blog-spoiler__description {
+  -webkit-line-clamp: 6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.blog-spoiler__description {
+  line-height: 1.3;
+}
+.blog-spoiler__description p {
+  font-size: 1em;
+  margin-bottom: 0.625em;
+}
+.blog-spoiler__description ul {
+  list-style: disc;
+  padding-left: 1em;
+  font-size: 1em;
+}
+.blog-spoiler__description h5 {
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-bottom: 0.625em;
+}
+.blog-spoiler__action {
+  display: inline-block;
+  outline: none;
+  border: 0;
+  background-color: unset;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.125em;
+  line-height: 1.56;
+  font-weight: 600;
+  color: #374785;
+  margin-top: 1.11em;
+}
+.blog-spoiler.is-expanded .blog-spoiler__action {
+  display: none;
+}
