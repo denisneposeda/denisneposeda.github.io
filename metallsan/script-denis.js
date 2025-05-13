@@ -1,5 +1,5 @@
 document.querySelectorAll('.blog-spoiler__action').forEach(button =>
-	button.addEventListener('click', () => button.parentElement.classList.add('is-expanded'))
+	button.addEventListener('click', () => button.parentElement.classList.toggle('is-expanded'))
 );
 
 new Swiper(".portfolio-gallery__slider", {
@@ -18,4 +18,22 @@ new Swiper(".portfolio-gallery__slider", {
 			slidesPerView: 3,
 		}
 	},
+});
+
+const portfolioGallery = document.querySelector(".portfolio-gallery__slider");
+const portfolioGalleryItem = portfolioGallery.querySelectorAll(".portfolio-gallery__element");
+const portfolioGalleryModal = document.querySelector(".gallery__modal");
+
+portfolioGalleryItem.forEach((slide) => {
+	slide.addEventListener("click", () => {
+		const imageSrc = slide.querySelector("img").src;
+		portfolioGalleryModal.innerHTML = `<img src="${imageSrc}" class="gallery__modal-source">`;
+		portfolioGalleryModal.classList.add("gallery__modal_active");
+	});
+});
+
+portfolioGalleryModal.addEventListener("click", (event) => {
+	if (event.target.classList.contains("gallery__modal")) {
+		portfolioGalleryModal.classList.remove("gallery__modal_active");
+	}
 });
