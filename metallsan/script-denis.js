@@ -20,6 +20,27 @@ new Swiper(".portfolio-gallery__slider", {
 	},
 });
 
+new Swiper(".equipment-items__slider", {
+	slidesPerView: 1,
+	spaceBetween: 20,
+	loop: false,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1200: {
+			slidesPerView: 4
+		}
+	},
+});
+
 const portfolioGallery = document.querySelector(".portfolio-gallery__slider");
 const portfolioGalleryItem = portfolioGallery.querySelectorAll(".portfolio-gallery__element");
 const portfolioGalleryModal = document.querySelector(".gallery__modal");

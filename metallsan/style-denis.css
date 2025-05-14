@@ -116,6 +116,37 @@ body.archive.post-type-archive-portfolio .blog__img {
   }
 }
 /* Equipment */
+.equipment-items {
+  position: relative;
+  margin-bottom: 3.75em;
+}
+.equipment-items__nav {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5em;
+  gap: 1.25em;
+}
+.equipment-items__nav .swiper-button-prev,
+.equipment-items__nav .swiper-button-next {
+  position: relative;
+  left: unset;
+  top: unset;
+  right: unset;
+  margin: 0;
+  background-color: unset;
+  border: 1.5px solid #374785;
+}
+.equipment-items__nav .swiper-button-prev:after,
+.equipment-items__nav .swiper-button-next:after {
+  color: #374785;
+}
+.equipment-items__nav .swiper-button-prev.swiper-button-disabled,
+.equipment-items__nav .swiper-button-next.swiper-button-disabled {
+  opacity: 0.2;
+}
 
 body.archive.post-type-archive-equipment .blog__img {
   height: auto;
